@@ -1,0 +1,25 @@
+@import "key-height";
+
+$breakpoint-sm: 320px;
+$breakpoint-md: 672px;
+$breakpoint-lg: 1056px;
+$breakpoint-xlg: 1312px;
+$breakpoint-max: 1584px;
+
+@mixin spacer($property, $steps) {
+  @media (max-width: $breakpoint-sm) {
+    #{$property}: carbon--key-height(sm, 1) * $steps;
+  }
+  @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+    #{$property}: carbon--key-height(md, 1) * $steps;
+  }
+  @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+    #{$property}: carbon--key-height(lg, 1) * $steps;
+  }
+  @media (min-width: $breakpoint-lg) and (max-width: $breakpoint-xlg) {
+    #{$property}: carbon--key-height(xlg, 1) * $steps;
+  }
+  @media (min-width: $breakpoint-xlg) {
+    #{$property}: carbon--key-height(max, 1) * $steps;
+  }
+}

@@ -1,0 +1,77 @@
+//import layout
+@import "./../layout/convert";
+@import "font-family";
+@import "styles";
+
+@mixin type-reset(
+  $body-font-family: function-font-family("Montserrat"),
+  $mono-font-family: function-font-family("Space-Mono")
+) {
+  html {
+    font-size: 100%;
+  }
+
+  body {
+    @include font-weight("regular");
+
+    font-family: $body-font-family;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  code {
+    font-family: $mono-font-family;
+  }
+
+  strong {
+    @include font-weight("semibold");
+  }
+}
+
+/// Include default type styles
+/// @access public
+/// @group @carbon/type
+@mixin default-type {
+  h1 {
+    @include type-style("productive-heading-06");
+  }
+
+  h2 {
+    @include type-style("productive-heading-05");
+  }
+
+  h3 {
+    @include type-style("productive-heading-04");
+  }
+
+  h4 {
+    @include type-style("productive-heading-03");
+  }
+
+  h5 {
+    @include type-style("productive-heading-02");
+  }
+
+  h6 {
+    @include type-style("productive-heading-01");
+  }
+
+  p {
+    @include type-style("body-long-02");
+  }
+
+  a {
+    @if global-variable-exists("theme") and
+      map-has-key($theme, "link-01")
+    {
+      color: map-get($theme, "link-01");
+    } @else {
+      color: #0062fe;
+    }
+  }
+
+  em {
+    font-style: italic;
+  }
+}

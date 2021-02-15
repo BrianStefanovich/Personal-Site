@@ -1,0 +1,65 @@
+//
+// Copyright IBM Corp. 2018, 2018
+//
+// This source code is licensed under the Apache-2.0 license found in the
+// LICENSE file in the root directory of this source tree.
+//
+
+/// Font family fallbacks for: IBM Plex Mono, IBM Plex Sans, IBM Plex Sans
+/// Condensed, IBM Plex Sans Hebrew, and IBM Plex Serif
+/// @type Map
+/// @access public
+/// @group @carbon/type
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Montserrat:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+$font-families: (
+  "Montserrat": unquote("'Montserrat', sans-serif"),
+  "Montserrat-Alternates": unquote("'Montserrat Alternates', sans-serif"),
+  "Open-Sans": unquote("'Open Sans', sans-serif"),
+  "Space-Mono": unquote("'Space Mono', monospace"),
+) !default;
+
+/// Get the font-family for an IBM Plex font
+/// @param {String} $name
+/// @return {String}
+/// @access public
+/// @group @carbon/type
+@function function-font-family($name) {
+  @return map-get($font-families, $name);
+}
+
+/// Include the `font-family` definition for the given name in your selector
+/// @param {String} $name
+/// @access public
+/// @group @carbon/type
+@mixin function-font-family($name) {
+  font-family: font-family($name);
+}
+
+/// Suggested font weights to be used in product
+/// @type Map
+/// @access public
+/// @group @carbon/type
+$font-weights: (
+  "light": 300,
+  "regular": 400,
+  "semibold": 600,
+) !default;
+
+/// Retrieve the font-weight value for a given name
+/// @param {String} $weight
+/// @return {Number}
+/// @access public
+/// @group @carbon/type
+@function font-weight($weight) {
+  @return map-get($font-weights, $weight);
+}
+
+/// Set the `font-weight` property with the value for a given name
+/// @param {String} $weight
+/// @access public
+/// @group @carbon/type
+@mixin font-weight($weight) {
+  font-weight: font-weight($weight);
+}
