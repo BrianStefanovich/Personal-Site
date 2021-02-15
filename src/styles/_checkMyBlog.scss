@@ -1,0 +1,32 @@
+.checkMyBlog {
+  @include spacer(margin-top, 2);
+  .checkMyBlog-title {
+    @include type-style(display-01, true);
+  }
+  .blogCard {
+    @include spacer(margin-top, 0.5);
+    .blogCardBody {
+      background-color: $grey-90;
+      p {
+        margin: 0;
+      }
+      display: flex;
+      padding: 1rem;
+      flex-direction: column;
+      justify-content: space-around;
+      .blogCardTitle {
+        @include type-style(productive-heading-03, true);
+      }
+      .blogCardDate {
+        @include type-style(code-01, true);
+      }
+      .blogCardText {
+        @include type-style(body-short-01, true);
+      }
+      .blogIcon {
+        color: $blue-50;
+      }
+    }
+  }
+}
+

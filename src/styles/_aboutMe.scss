@@ -1,0 +1,19 @@
+.aboutMe {
+  margin-top: 100vh;
+
+  .aboutMeTitle {
+    @include type-style(display-01, true);
+    margin-top: 0;
+  }
+  .aboutMeBody {
+    @include type-style(body-long-02, true);
+  }
+
+  .aboutMeImage {
+    height: min-content;
+
+    img {
+      width: 100%;
+    }
+  }
+}

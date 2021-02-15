@@ -1,0 +1,44 @@
+.thingsIBuild {
+  @include spacer(margin-top, 2);
+  padding: 1rem;
+
+  .thingsIBuildTitle {
+    @include type-style(display-01, true);
+  }
+
+  .thingsIBuildCard {
+    @include spacer(margin-top, 0.5);
+  }
+
+  .thingsIBuildText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $grey-90;
+    border-top: 5px solid $blue-60;
+
+    .thingsIBuildTextTitle {
+      @include type-style(productive-heading-04, true);
+      margin: 1rem;
+    }
+
+    .thingsIBuildTextBody {
+      @include type-style(body-short-02, true);
+      margin: 1rem;
+    }
+
+    .thingsIBuildTextFooter {
+      @include type-style(code-02, true);
+      margin: 0 1rem;
+    }
+
+    .thingsIBuildTextButtons {
+      text-align: end;
+      margin: 1rem;
+      .thingsIBuildIcon {
+        height: 1.5rem;
+        margin: 0 0.5rem;
+      }
+    }
+  }
+}

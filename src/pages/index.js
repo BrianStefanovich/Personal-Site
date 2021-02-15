@@ -1,15 +1,19 @@
-import React from "react"
-import HeroBanner from "./../components/HeroBanner"
-import NavBar from "./../components/NavBar"
-import AboutMe from "./../components/AboutMe"
-import ThingsIBuild from "./../components/ThingsIBuild"
-import OtherProjects from "./../components/OtherProjects"
-import SideGadgetLeft from "./../components/SideGadgetLeft"
-import SideGadgetRigth from "./../components/SideGadgetRigth"
-import MobileGadget from "./../components/MobileGadget"
-import CheckMyBlog from "./../components/CheckMyBlog"
+import React from "react";
+import {
+  HeroBanner,
+  NavBar,
+  AboutMe,
+  ThingsIBuild,
+  OtherProjects,
+  SideGadgetLeft,
+  SideGadgetRigth,
+  MobileGadget,
+  CheckMyBlog,
+  Footer,
+  content,
+} from "./../components";
 
-const BlogIndex = props => {
+const BlogIndex = (props) => {
   return (
     <div className="blackBackground">
       <MobileGadget />
@@ -17,16 +21,15 @@ const BlogIndex = props => {
       <SideGadgetRigth />
       <div className="bx--grid">
         <NavBar />
-        <div className="hero">
-          <HeroBanner />
-        </div>
-        <AboutMe />
-        <ThingsIBuild />
-        <OtherProjects />
-        <CheckMyBlog />
+        <HeroBanner data={content.heroBanner.data} />
+        <AboutMe data={content.aboutMe.data} />
+        <ThingsIBuild data={content.thingsIBuild.data} />
+        <OtherProjects data={content.otherProjects.data} />
+        <CheckMyBlog data={content.checkMyBlog.data} />
+        <Footer />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default BlogIndex
+export default BlogIndex;

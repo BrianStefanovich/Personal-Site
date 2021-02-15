@@ -1,0 +1,15 @@
+@import "./type/reset";
+@import "./color";
+@import "./layout/spacer";
+
+@include type-reset;
+@include default-type;
+
+
+.blogHeader {
+  background-color: $grey-100;
+
+  .blogHeaderIcon {
+    color: $blue-60;
+  }
+}
