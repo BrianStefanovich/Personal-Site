@@ -33,7 +33,7 @@ export default function HeroBanner(props) {
   };
 
   return (
-    <div className="hero">
+    <div className="hero" ref={props.navRef}>
       <div className="bx--row" style={{ margin: "0px" }}>
         <div className={gridPlacement(grid, "heroBanner")}>
           <CSSTransition

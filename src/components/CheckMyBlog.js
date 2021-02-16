@@ -17,7 +17,7 @@ const titleGrid = {
     offset: "2",
   },
   max: {
-    offset: "2",
+    offset: "3",
   },
 };
 
@@ -51,10 +51,10 @@ const cardBodyGrid = {
     col: "3",
   },
   lg: {
-    col: "7",
+    col: "6",
   },
   xlg: {
-    col: "8",
+    col: "7",
   },
   max: {
     col: "7",
@@ -62,7 +62,7 @@ const cardBodyGrid = {
 };
 
 export default function CheckMyBlog(props) {
-  const [isInViewport, targetRef] = useIsInViewportOnce({ threshold: 40 });
+  const [isInViewport, targetRef] = useIsInViewportOnce({ threshold: 20 });
   return (
     <div className="checkMyBlog" ref={targetRef}>
       <CSSTransition
@@ -90,6 +90,7 @@ export default function CheckMyBlog(props) {
               style={{ transitionDelay: `${(i + 1) * 3}00ms` }}
               className="bx--row blogCard bx--no-gutter"
               key={i}
+              ref={props.scrollRef}
             >
               <img
                 src={elm.image}

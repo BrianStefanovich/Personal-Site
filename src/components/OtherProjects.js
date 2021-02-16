@@ -37,6 +37,7 @@ const otherProjectsLayoutGrid = {
   },
   max: {
     offset: "3",
+    col: "11"
   },
 };
 
@@ -48,8 +49,14 @@ const otherProjectsCardGrid = {
     col: "3",
   },
   lg: {
-    offset: "4",
+    col: "4",
   },
+  xlg: {
+    col: "4"
+  },
+  max: {
+    col: "3"
+  }
 };
 
 export default function OtherProjects(props) {

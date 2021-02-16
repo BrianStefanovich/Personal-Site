@@ -1,3 +1,30 @@
+.navBarFadeup-enter {
+  transform: translateY(-150px);
+}
+.navBarFadeup-enter-active {
+  transform: translateY(0px);
+  transition: transform 400ms ease-in;
+  transition-delay: 100ms;
+}
+
+.navBarFadeup-enter-done {
+  transform: translateY(0px);
+}
+
+.navBarFadeup-exit {
+  transform: translateY(0px);
+}
+
+.navBarFadeup-exit-active {
+  transform: translateY(-150px);
+  transition: transform 400ms ease-out;
+  transition-delay: 300ms;
+}
+
+.navBarFadeup-exit-done {
+  transform: translateY(-150px);
+}
+
 .navBar {
   padding: 0;
   @include spacer(margin-left, 1);
@@ -24,7 +51,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba($color: $grey-100, $alpha: 0.7);
+    background-color: rgba($color: $grey-100, $alpha: 0.8);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -33,6 +60,77 @@
       list-style: none;
       li {
         padding: 0.2rem 1rem;
+        cursor: pointer;
+
+        &:hover {
+		  border-bottom: 4px solid $blue-60;
+        }
+      }
+
+      .navBarAboutFadeup-enter {
+        border-bottom: 4px solid transparent;
+      }
+
+      .navBarAboutFadeup-enter-active {
+        border-bottom: 4px solid $blue-60;
+        transition: border 200ms ease-in;
+      }
+
+      .navBarAboutFadeup-enter-done {
+        border-bottom: 4px solid $blue-60;
+      }
+
+      .navBarAboutFadeup-exit {
+        border-bottom: 4px solid $blue-60;
+      }
+
+      .navBarAboutFadeup-exit-active {
+        border-bottom: 4px solid transparent;
+        transition: border 200ms ease-out;
+      }
+
+      .navBarExperienceFadeup-enter {
+        border-bottom: 4px solid transparent;
+      }
+
+      .navBarExperienceFadeup-enter-active {
+        border-bottom: 4px solid $blue-60;
+        transition: border 200ms ease-in;
+      }
+
+      .navBarExperienceFadeup-enter-done {
+        border-bottom: 4px solid $blue-60;
+      }
+
+      .navBarExperienceFadeup-exit {
+        border-bottom: 4px solid $blue-60;
+      }
+
+      .navBarExperienceFadeup-exit-active {
+        border-bottom: 4px solid transparent;
+        transition: border 200ms ease-out;
+      }
+
+      .navBarBlogFadeup-enter {
+        border-bottom: 4px solid transparent;
+      }
+
+      .navBarBlogFadeup-enter-active {
+        border-bottom: 4px solid $blue-60;
+        transition: border 200ms ease-in;
+      }
+
+      .navBarBlogFadeup-enter-done {
+        border-bottom: 4px solid $blue-60;
+      }
+
+      .navBarBlogFadeup-exit {
+        border-bottom: 4px solid $blue-60;
+      }
+
+      .navBarBlogFadeup-exit-active {
+        border-bottom: 4px solid transparent;
+        transition: border 200ms ease-out;
       }
     }
     .navBarLogo {

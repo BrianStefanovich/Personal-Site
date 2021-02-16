@@ -3,7 +3,7 @@ import { gridPlacement, useIsInViewportOnce } from "./utilities";
 import { CSSTransition } from "react-transition-group";
 
 export default function AboutMe(props) {
-  const [isInViewport, targetRef] = useIsInViewportOnce({ threshold: 50 });
+  const [isInViewport, targetRef] = useIsInViewportOnce({ threshold: 20 });
 
   const textGrid = {
     max: {
@@ -48,7 +48,9 @@ export default function AboutMe(props) {
         timeout={400}
       >
         <div className={gridPlacement(textGrid)} ref={props.navRef}>
-          <p className="aboutMeTitle">About me</p>
+          <p className="aboutMeTitle" ref={props.scrollRef}>
+            About me
+          </p>
           <p className="aboutMeBody">{props.data.body}</p>
         </div>
       </CSSTransition>

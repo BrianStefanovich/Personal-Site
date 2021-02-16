@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   HeroBanner,
   NavBar,
@@ -18,26 +18,59 @@ export default function Index(props) {
   const [navItemActive, setNavItemActive] = useState("none");
 
   const [isAboutInViewport, aboutTargetRef] = useIsInViewport({
-    threshold: 10,
+    threshold: 20,
   });
 
   const [isExperienceInViewport, experienceTargetRef] = useIsInViewport({
-    threshold: 10,
+    threshold: 30,
   });
 
   const [isBlogInViewport, blogTargetRef] = useIsInViewport({
+    threshold: 30,
+  });
+
+  const [isHeroInViewport, heroTargetRef] = useIsInViewport({
     threshold: 10,
   });
 
+  const aboutRef = useRef(null);
+  const experienceRef = useRef(null);
+  const blogRef = useRef(null);
+
+  const scrollToAbout = () => {
+    if (aboutRef.current) {
+      aboutRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToExperience = () => {
+    if (experienceRef.current) {
+      experienceRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToBlog = () => {
+    if (blogRef.current) {
+      blogRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   useEffect(() => {
-    if (isAboutInViewport) {
+    if (isHeroInViewport) {
+      setNavItemActive("hero");
+    } else if (isAboutInViewport) {
       setNavItemActive("about");
     } else if (isExperienceInViewport) {
       setNavItemActive("experience");
     } else if (isBlogInViewport) {
       setNavItemActive("blog");
     }
-  }, [isAboutInViewport, isBlogInViewport, isExperienceInViewport]);
+  }, [
+    isAboutInViewport,
+    isBlogInViewport,
+    isExperienceInViewport,
+    isHeroInViewport,
+  ]);
 
   useEffect(() => {
     console.log("Item active on nav is: ", navItemActive);
@@ -49,15 +82,32 @@ export default function Index(props) {
       <SideGadgetLeft />
       <SideGadgetRigth />
       <div className="bx--grid">
-        <NavBar />
-        <HeroBanner data={content.heroBanner.data} />
-        <AboutMe data={content.aboutMe.data} navRef={aboutTargetRef} />
+        <NavBar
+          scrollToAbout={scrollToAbout}
+          scrollToExperience={scrollToExperience}
+          scrollToBlog={scrollToBlog}
+          aboutNav={navItemActive === "about"}
+          experienceNav={navItemActive === "experience"}
+          blogNav={navItemActive === "blog"}
+          heroNav={navItemActive === "hero"}
+        />
+        <HeroBanner data={content.heroBanner.data} navRef={heroTargetRef} />
+        <AboutMe
+          data={content.aboutMe.data}
+          navRef={aboutTargetRef}
+          scrollRef={aboutRef}
+        />
         <ThingsIBuild
           data={content.thingsIBuild.data}
           navRef={experienceTargetRef}
+          scrollRef={experienceRef}
         />
         <OtherProjects data={content.otherProjects.data} />
-        <CheckMyBlog data={content.checkMyBlog.data} navRef={blogTargetRef} />
+        <CheckMyBlog
+          data={content.checkMyBlog.data}
+          navRef={blogTargetRef}
+          scrollRef={blogRef}
+        />
         <Footer />
       </div>
     </div>

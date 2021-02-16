@@ -126,7 +126,10 @@ export default function ThingsIBuild(props) {
         timeout={400}
       >
         <div className="bx--row bx--row--condensed" ref={props.navRef}>
-          <p className={gridPlacement(titleGrid, "thingsIBuildTitle")}>
+          <p
+            ref={props.scrollRef}
+            className={gridPlacement(titleGrid, "thingsIBuildTitle")}
+          >
             Things I Build
           </p>
         </div>
