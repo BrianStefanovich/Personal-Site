@@ -1,7 +1,6 @@
 import React from "react";
-import { gridPlacement } from "./utilities";
+import { gridPlacement, useIsInViewportOnce } from "./utilities";
 import { GitHubIcon, OpenDemoIcon } from "./Icons";
-import useIsInViewport from "use-is-in-viewport";
 import { CSSTransition } from "react-transition-group";
 
 const otherProjectsTitleGrid = {
@@ -54,7 +53,7 @@ const otherProjectsCardGrid = {
 };
 
 export default function OtherProjects(props) {
-  const [isInViewport, targetRef] = useIsInViewport({ threshold: 5 });
+  const [isInViewport, targetRef] = useIsInViewportOnce({ threshold: 40 });
 
   return (
     <div className="otherProjects" ref={targetRef}>

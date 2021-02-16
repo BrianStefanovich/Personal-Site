@@ -1,10 +1,9 @@
 import React from "react";
-import { gridPlacement } from "./utilities";
+import { gridPlacement, useIsInViewportOnce } from "./utilities";
 import { CSSTransition } from "react-transition-group";
-import useIsInViewport from "use-is-in-viewport";
 
 export default function AboutMe(props) {
-  const [isInViewport, targetRef] = useIsInViewport({ threshold: 5 });
+  const [isInViewport, targetRef] = useIsInViewportOnce({ threshold: 50 });
 
   const textGrid = {
     max: {
@@ -25,7 +24,7 @@ export default function AboutMe(props) {
     },
     sm: {
       offset: "0",
-      col: "4",
+      col: "col",
     },
   };
 
@@ -48,7 +47,7 @@ export default function AboutMe(props) {
         classNames="aboutMeTextFadeup"
         timeout={400}
       >
-        <div className={gridPlacement(textGrid)}>
+        <div className={gridPlacement(textGrid)} ref={props.navRef}>
           <p className="aboutMeTitle">About me</p>
           <p className="aboutMeBody">{props.data.body}</p>
         </div>

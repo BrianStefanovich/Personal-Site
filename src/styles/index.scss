@@ -5,6 +5,10 @@
 @include type-reset;
 @include default-type;
 
+body {
+  background-color: $grey-100;
+}
+
 @import "./aboutMe";
 @import "./blog";
 @import "./checkMyBlog";
@@ -14,4 +18,3 @@
 @import "./otherProjects";
 @import "./sideGadget";
 @import "./thingsIBuild";
-

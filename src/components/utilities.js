@@ -1,3 +1,27 @@
+import { useEffect, useState } from "react";
+import useIsInViewport from "use-is-in-viewport";
+
+export function useIsInViewportOnce(options) {
+  const [isInViewport, targetRef] = useIsInViewport(options);
+  const [wasInViewportAtleastOnce, setWasInViewportAtleastOnce] = useState(
+    isInViewport
+  );
+
+  useEffect(() => {
+    setWasInViewportAtleastOnce((prev) => {
+      // this will clamp it to the first true
+      // received from useIsInViewport
+      if (!prev) {
+        return isInViewport;
+      } else {
+        return prev;
+      }
+    });
+  }, [isInViewport]);
+
+  return [wasInViewportAtleastOnce, targetRef];
+}
+
 export function gridPlacement({ max, xlg, lg, md, sm }, optClassName = "") {
   let tmp = "";
 

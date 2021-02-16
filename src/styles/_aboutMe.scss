@@ -1,5 +1,5 @@
 .aboutMe {
-  margin-top: 100vh;
+  @include spacer(margin-top, 2);
 
   .aboutMeTextFadeup-enter {
     opacity: 0;

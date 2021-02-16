@@ -1,7 +1,6 @@
 import React from "react";
-import { gridPlacement } from "./utilities";
+import { gridPlacement, useIsInViewportOnce } from "./utilities";
 import { Arrow } from "./Icons";
-import useIsInViewport from "use-is-in-viewport";
 import { CSSTransition } from "react-transition-group";
 
 const titleGrid = {
@@ -46,7 +45,7 @@ const cardImageGrid = {
 
 const cardBodyGrid = {
   sm: {
-    col: "4",
+    col: "col",
   },
   md: {
     col: "3",
@@ -63,7 +62,7 @@ const cardBodyGrid = {
 };
 
 export default function CheckMyBlog(props) {
-  const [isInViewport, targetRef] = useIsInViewport({ threshold: 5 });
+  const [isInViewport, targetRef] = useIsInViewportOnce({ threshold: 40 });
   return (
     <div className="checkMyBlog" ref={targetRef}>
       <CSSTransition
@@ -72,7 +71,7 @@ export default function CheckMyBlog(props) {
         classNames="checkMyBlogTitleFadeup"
         timeout={400}
       >
-        <div className="bx--row">
+        <div className="bx--row" ref={props.navRef}>
           <p className={gridPlacement(titleGrid, "checkMyBlogTitle")}>
             Checkout my blog
           </p>

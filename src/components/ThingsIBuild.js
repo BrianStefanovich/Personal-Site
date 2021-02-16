@@ -1,12 +1,15 @@
 import React from "react";
-import { gridPlacement } from "./utilities";
+import { gridPlacement, useIsInViewportOnce } from "./utilities";
 import { OpenDemoIcon, GitHubIcon } from "./Icons";
-import useIsInViewport from "use-is-in-viewport";
 import { CSSTransition } from "react-transition-group";
 
 export default function ThingsIBuild(props) {
-  const [isTitleInViewport, titleTargetRef] = useIsInViewport({ threshold: 5 });
-  const [isCardInViewport, cardTargetRef] = useIsInViewport({ threshold: 5 });
+  const [isTitleInViewport, titleTargetRef] = useIsInViewportOnce({
+    threshold: 40,
+  });
+  const [isCardInViewport, cardTargetRef] = useIsInViewportOnce({
+    threshold: 40,
+  });
 
   const titleGrid = {
     max: {
@@ -122,7 +125,7 @@ export default function ThingsIBuild(props) {
         classNames="thingsIBuildTitleFadeup"
         timeout={400}
       >
-        <div className="bx--row bx--row--condensed">
+        <div className="bx--row bx--row--condensed" ref={props.navRef}>
           <p className={gridPlacement(titleGrid, "thingsIBuildTitle")}>
             Things I Build
           </p>

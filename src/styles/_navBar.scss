@@ -3,13 +3,13 @@
   @include spacer(margin-left, 1);
   @include spacer(margin-right, 1);
   z-index: 10;
-  @include spacer(margin-top, 0.5);
+  @include spacer(padding-top, 0.5);
   @media (max-width: $breakpoint-lg) {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    .nav {
+    .navBarList {
       display: none;
     }
 
@@ -20,17 +20,21 @@
   }
 
   @media (min-width: $breakpoint-lg) {
+    width: 85vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: $grey-100, $alpha: 0.7);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    .nav {
+    .navBarList {
       display: flex;
       list-style: none;
       li {
-        margin: 0 1em;
+        padding: 0.2rem 1rem;
       }
     }
-
     .navBarLogo {
       height: 54px;
       color: $blue-60;
