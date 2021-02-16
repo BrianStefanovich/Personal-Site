@@ -1,4 +1,7 @@
 .navBar {
+  padding: 0;
+  @include spacer(margin-left, 1);
+  @include spacer(margin-right, 1);
   z-index: 10;
   @include spacer(margin-top, 0.5);
   @media (max-width: $breakpoint-lg) {
@@ -20,7 +23,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     .nav {
       display: flex;
       list-style: none;

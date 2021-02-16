@@ -1,6 +1,51 @@
 .checkMyBlog {
   @include spacer(margin-top, 2);
-  .checkMyBlog-title {
+
+  .checkMyBlogTitleFadeup-enter {
+    opacity: 0;
+    transform: scale(0.9);
+    transform: translateX(-100px);
+  }
+
+  .checkMyBlogTitleFadeup-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+    transition-delay: 100ms;
+  }
+
+  .checkMyBlogTitleFadeup-exit {
+    opacity: 1;
+  }
+
+  .checkMyBlogTitleFadeup-exit-active {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 300ms, transform 300ms;
+  }
+
+  .checkMyBlogCardFadeup-enter {
+    opacity: 0;
+  }
+
+  .checkMyBlogCardFadeup-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+  }
+
+  .checkMyBlogCardFadeup-exit {
+    opacity: 1;
+  }
+
+  .checkMyBlogCardFadeup-exit-active {
+    opacity: 0;
+    transition: opacity 500ms;
+  }
+
+
+
+
+  .checkMyBlogTitle {
     @include type-style(display-01, true);
   }
   .blogCard {

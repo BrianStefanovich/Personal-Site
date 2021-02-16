@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { gridPlacement } from "./utilities";
+import { CSSTransition } from "react-transition-group";
 
 export default function HeroBanner(props) {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setIsMounted(true), 200);
+    return () => clearTimeout(timeout);
+  }, []);
+
   const grid = {
     max: {
       offset: "3",
@@ -20,8 +28,7 @@ export default function HeroBanner(props) {
       col: "6",
     },
     sm: {
-      offset: "0",
-      col: "4",
+      col: "col",
     },
   };
 
@@ -29,10 +36,47 @@ export default function HeroBanner(props) {
     <div className="hero">
       <div className="bx--row" style={{ margin: "0px" }}>
         <div className={gridPlacement(grid, "heroBanner")}>
-          <p className="heroBannerPreTitle">{props.data.preTitle}</p>
-          <p className="heroBannerTitle">{props.data.title}</p>
-          <p className="heroBannerSubTitle">{props.data.subTitle}</p>
-          <p className="heroBannerBody">{props.data.body}</p>
+          <CSSTransition
+            mountOnEnter
+            in={isMounted}
+            classNames="heroBannerFadeup"
+            timeout={400}
+          >
+            <p
+              className="heroBannerPreTitle"
+              style={{ transitionDelay: "100ms" }}
+            >
+              {props.data.preTitle}
+            </p>
+          </CSSTransition>
+          <CSSTransition
+            mountOnEnter
+            in={isMounted}
+            classNames="heroBannerFadeup"
+            timeout={400}
+          >
+            <p className="heroBannerTitle" style={{ transitionDelay: "200ms" }}>
+              {props.data.title}
+            </p>
+          </CSSTransition>
+          <CSSTransition
+            mountOnEnter
+            in={isMounted}
+            classNames="heroBannerFadeup"
+            timeout={400}
+            style={{ transitionDelay: "300ms" }}
+          >
+            <p className="heroBannerSubTitle">{props.data.subTitle}</p>
+          </CSSTransition>
+          <CSSTransition
+            mountOnEnter
+            in={isMounted}
+            classNames="heroBannerFadeup"
+            timeout={400}
+            style={{ transitionDelay: "400ms" }}
+          >
+            <p className="heroBannerBody">{props.data.body}</p>
+          </CSSTransition>
         </div>
       </div>
     </div>

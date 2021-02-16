@@ -1,8 +1,13 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { gridPlacement } from "./utilities";
 import { OpenDemoIcon, GitHubIcon } from "./Icons";
+import useIsInViewport from "use-is-in-viewport";
+import { CSSTransition } from "react-transition-group";
 
 export default function ThingsIBuild(props) {
+  const [isTitleInViewport, titleTargetRef] = useIsInViewport({ threshold: 5 });
+  const [isCardInViewport, cardTargetRef] = useIsInViewport({ threshold: 5 });
+
   const titleGrid = {
     max: {
       offset: "3",
@@ -110,69 +115,94 @@ export default function ThingsIBuild(props) {
   };
 
   return (
-    <div className="thingsIBuild">
-      <div className="bx--row bx--row--condensed">
-        <p className={gridPlacement(titleGrid, "thingsIBuildTitle")}>
-          Things I Build
-        </p>
+    <div className="thingsIBuild" ref={titleTargetRef}>
+      <CSSTransition
+        mountOnEnter
+        in={isTitleInViewport}
+        classNames="thingsIBuildTitleFadeup"
+        timeout={400}
+      >
+        <div className="bx--row bx--row--condensed">
+          <p className={gridPlacement(titleGrid, "thingsIBuildTitle")}>
+            Things I Build
+          </p>
+        </div>
+      </CSSTransition>
+
+      <div ref={cardTargetRef}>
+        {props.data.map((elm, i) => {
+          if (i % 2 === 0) {
+            return (
+              <CSSTransition
+                mountOnEnter
+                in={isCardInViewport}
+                classNames="thingsIBuildCardFadeup"
+                timeout={600}
+              >
+                <div className="thingsIBuildCard bx--row bx--row--condensed">
+                  <img
+                    src={elm.image}
+                    className={gridPlacement(leftImageGrid, "thigsIBuildImage")}
+                    alt="project thumbnail"
+                  />
+                  <div
+                    className={gridPlacement(leftTextGrid, "thingsIBuildText")}
+                  >
+                    <div>
+                      <p className="thingsIBuildTextTitle">{elm.title}</p>
+                      <p className="thingsIBuildTextBody">{elm.body}</p>
+                    </div>
+
+                    <p className="thingsIBuildTextFooter">{elm.footer}</p>
+                    <div className="thingsIBuildTextButtons">
+                      <GitHubIcon className="thingsIBuildIcon" />
+                      <OpenDemoIcon className="thingsIBuildIcon" />
+                    </div>
+                  </div>
+                </div>
+              </CSSTransition>
+            );
+          }
+
+          if (i % 2 === 1) {
+            return (
+              <CSSTransition
+                mountOnEnter
+                in={isCardInViewport}
+                classNames="thingsIBuildCardFadeup"
+                timeout={600}
+              >
+                <div className="thingsIBuildCard bx--row bx--row--condensed">
+                  <div
+                    className={gridPlacement(rightTextGrid, "thingsIBuildText")}
+                  >
+                    <div>
+                      <p className="thingsIBuildTextTitle">{elm.title}</p>
+                      <p className="thingsIBuildTextBody">{elm.body}</p>
+                    </div>
+
+                    <p className="thingsIBuildTextFooter">{elm.footer}</p>
+                    <div className="thingsIBuildTextButtons">
+                      <GitHubIcon className="thingsIBuildIcon" />
+                      <OpenDemoIcon className="thingsIBuildIcon" />
+                    </div>
+                  </div>
+
+                  <img
+                    src={elm.image}
+                    className={gridPlacement(
+                      rightImageGrid,
+                      "thigsIBuildImage"
+                    )}
+                    alt="project thumbnail"
+                  />
+                </div>
+              </CSSTransition>
+            );
+          }
+          return null;
+        })}
       </div>
-      {props.data.map((elm, i) => {
-        if (i % 2 === 0) {
-          return (
-            <Fragment>
-              <div className="thingsIBuildCard bx--row bx--row--condensed">
-                <img
-                  src={elm.image}
-                  className={gridPlacement(leftImageGrid, "thigsIBuildImage")}
-                />
-                <div
-                  className={gridPlacement(leftTextGrid, "thingsIBuildText")}
-                >
-                  <div>
-                    <p className="thingsIBuildTextTitle">{elm.title}</p>
-                    <p className="thingsIBuildTextBody">{elm.body}</p>
-                  </div>
-
-                  <p className="thingsIBuildTextFooter">{elm.footer}</p>
-                  <div className="thingsIBuildTextButtons">
-                    <GitHubIcon className="thingsIBuildIcon" />
-                    <OpenDemoIcon className="thingsIBuildIcon" />
-                  </div>
-                </div>
-              </div>
-            </Fragment>
-          );
-        }
-
-        if (i % 2 === 1) {
-          return (
-            <Fragment>
-              <div className="thingsIBuildCard bx--row bx--row--condensed">
-                <div
-                  className={gridPlacement(rightTextGrid, "thingsIBuildText")}
-                >
-                  <div>
-                    <p className="thingsIBuildTextTitle">{elm.title}</p>
-                    <p className="thingsIBuildTextBody">{elm.body}</p>
-                  </div>
-
-                  <p className="thingsIBuildTextFooter">{elm.footer}</p>
-                  <div className="thingsIBuildTextButtons">
-                    <GitHubIcon className="thingsIBuildIcon" />
-                    <OpenDemoIcon className="thingsIBuildIcon" />
-                  </div>
-                </div>
-
-                <img
-                  src={elm.image}
-                  className={gridPlacement(rightImageGrid, "thigsIBuildImage")}
-                />
-              </div>
-            </Fragment>
-          );
-        }
-        return null;
-      })}
     </div>
   );
 }

@@ -3,25 +3,20 @@ import testImage from "./../testImg.jpg";
 
 const aboutMe = {
   data: {
-    body: `Hello! I'm Brittany, a software engineer based in Boston, MA.
-          <br />
-          <br />
+    body: `Hello! I'm Brittany, a software engineer based in Boston, MA. \n\n
           I enjoy creating things that live on the internet, whether that be
           websites, applications, or anything in between. My goal is to always
           build products that provide pixel-perfect, performant experiences.
-          <br />
-          <br />
+	  \b\n
           Shortly after graduating from Northeastern University, I joined the
           engineering team at Upstatement where I work on a wide variety of
           interesting and meaningful projects on a daily basis.
-          <br />
-          <br />
+	  \n\n
           Here are a few technologies I've been working with :
-          <br />
-          <br />
+	  \n\n
           JavaScript HTML & (S)CSS React Vue Node.js WordPress
 `,
-    image: aboutMeImage,
+    image: testImage,
   },
 };
 
@@ -55,7 +50,7 @@ const heroBanner = {
   data: {
     preTitle: "Hi, my name is",
     title: "Brian Stefanovich",
-    subTitle: "I build things for the web",
+    subTitle: "I eat pussy",
     body: `I'm a software engineer based in Boston, MA specializing in building (and occasionally designing) exceptional websites, applications, and everything in between.`,
   },
 };

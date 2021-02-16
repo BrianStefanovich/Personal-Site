@@ -1,6 +1,8 @@
 import React from "react";
 import { gridPlacement } from "./utilities";
 import { GitHubIcon, OpenDemoIcon } from "./Icons";
+import useIsInViewport from "use-is-in-viewport";
+import { CSSTransition } from "react-transition-group";
 
 const otherProjectsTitleGrid = {
   sm: {
@@ -52,39 +54,56 @@ const otherProjectsCardGrid = {
 };
 
 export default function OtherProjects(props) {
+  const [isInViewport, targetRef] = useIsInViewport({ threshold: 5 });
+
   return (
-    <div className="otherProjects">
-      <div className="bx--row">
-        <p
-          className={gridPlacement(
-            otherProjectsTitleGrid,
-            "otherProjectsTitle"
-          )}
-        >
-          Other projects
-        </p>
-      </div>
+    <div className="otherProjects" ref={targetRef}>
+      <CSSTransition
+        mountOnEnter
+        in={isInViewport}
+        classNames="otherProjectsTitleFadeup"
+        timeout={400}
+      >
+        <div className="bx--row">
+          <p
+            className={gridPlacement(
+              otherProjectsTitleGrid,
+              "otherProjectsTitle"
+            )}
+          >
+            Other projects
+          </p>
+        </div>
+      </CSSTransition>
 
       <div className="bx--row">
         <div className={gridPlacement(otherProjectsLayoutGrid)}>
           <div className="bx--row">
             {props.data.map((elm, i) => {
               return (
-                <div
-                  key={i}
-                  className={gridPlacement(
-                    otherProjectsCardGrid,
-                    "otherProjectsCard"
-                  )}
+                <CSSTransition
+                  mountOnEnter
+                  in={isInViewport}
+                  classNames="otherProjectsCardFadeup"
+                  timeout={400}
                 >
-                  <p className="otherProjectsCardTitle">{elm.title}</p>
-                  <p className="otherProjectsCardBody">{elm.body}</p>
-                  <p className="otherProjectsCardFooter">{elm.footer}</p>
-                  <div className="otherProjectsCardButtons">
-                    <GitHubIcon className="otherProjectsCardIcon" />
-                    <OpenDemoIcon className="otherProjectsCardIcon" />
+                  <div
+                    key={i}
+                    className={gridPlacement(
+                      otherProjectsCardGrid,
+                      "otherProjectsCard"
+                    )}
+                    style={{ transitionDelay: `${(i + 1) * 3}00ms` }}
+                  >
+                    <p className="otherProjectsCardTitle">{elm.title}</p>
+                    <p className="otherProjectsCardBody">{elm.body}</p>
+                    <p className="otherProjectsCardFooter">{elm.footer}</p>
+                    <div className="otherProjectsCardButtons">
+                      <GitHubIcon className="otherProjectsCardIcon" />
+                      <OpenDemoIcon className="otherProjectsCardIcon" />
+                    </div>
                   </div>
-                </div>
+                </CSSTransition>
               );
             })}
           </div>

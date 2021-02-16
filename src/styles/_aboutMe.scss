@@ -1,19 +1,67 @@
 .aboutMe {
   margin-top: 100vh;
 
-  .aboutMeTitle {
-    @include type-style(display-01, true);
-    margin-top: 0;
-  }
-  .aboutMeBody {
-    @include type-style(body-long-02, true);
+  .aboutMeTextFadeup-enter {
+    opacity: 0;
+    transform: scale(0.9);
+    transform: translateX(-100px);
   }
 
-  .aboutMeImage {
-    height: min-content;
+  .aboutMeTextFadeup-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+    transition-delay: 100ms;
+  }
 
-    img {
-      width: 100%;
-    }
+  .aboutMeTextFadeup-exit {
+    opacity: 1;
+  }
+
+  .aboutMeTextFadeup-exit-active {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 300ms, transform 300ms;
+  }
+
+  .aboutMeImageFadeup-enter {
+    opacity: 0;
+    transform: scale(0.9);
+    transform: translateX(100px);
+  }
+
+  .aboutMeImageFadeup-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+    transition-delay: 300ms;
+  }
+
+  .aboutMeImageFadeup-exit {
+    opacity: 1;
+  }
+
+  .aboutMeImageFadeup-exit-active {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 300ms, transform 300ms;
+  }
+}
+
+.aboutMeTitle {
+  @include type-style(display-01, true);
+  margin-top: 0;
+}
+.aboutMeBody {
+  @include type-style(body-long-02, true);
+}
+
+.aboutMeImage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  img {
+    width: 100%;
   }
 }

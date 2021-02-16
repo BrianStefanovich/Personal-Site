@@ -2,6 +2,46 @@
   @include spacer(margin-top, 2);
   padding: 1rem;
 
+  .thingsIBuildTitleFadeup-enter {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  .thingsIBuildTitleFadeup-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+    transition-delay: 100ms;
+  }
+
+  .thingsIBuildTitleFadeup-exit {
+    opacity: 1;
+  }
+
+  .thingsIBuildTitleFadeup-exit-active {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 300ms, transform 300ms;
+  }
+
+  .thingsIBuildCardFadeup-enter {
+    opacity: 0;
+  }
+
+  .thingsIBuildCardFadeup-enter-active {
+    opacity: 1;
+    transition: opacity 500ms;
+  }
+
+  .thingsIBuildCardFadeup-exit {
+    opacity: 1;
+  }
+
+  .thingsIBuildCardFadeup-exit-active {
+    opacity: 0;
+    transition: opacity 500ms;
+  }
+
   .thingsIBuildTitle {
     @include type-style(display-01, true);
   }

@@ -1,7 +1,11 @@
 import React from "react";
 import { gridPlacement } from "./utilities";
+import { CSSTransition } from "react-transition-group";
+import useIsInViewport from "use-is-in-viewport";
 
 export default function AboutMe(props) {
+  const [isInViewport, targetRef] = useIsInViewport({ threshold: 5 });
+
   const textGrid = {
     max: {
       offset: "3",
@@ -37,15 +41,28 @@ export default function AboutMe(props) {
   };
 
   return (
-    <div className="bx--row aboutMe">
-      <div className={gridPlacement(textGrid)}>
-        <p className="aboutMeTitle">About me</p>
-        <p className="aboutMeBody">{props.data.body}</p>
-      </div>
-
-      <div className={gridPlacement(imageGrid, "aboutMeImage")}>
-        <img src={props.data.image} alt="me" />
-      </div>
+    <div className="bx--row aboutMe" ref={targetRef}>
+      <CSSTransition
+        mountOnEnter
+        in={isInViewport}
+        classNames="aboutMeTextFadeup"
+        timeout={400}
+      >
+        <div className={gridPlacement(textGrid)}>
+          <p className="aboutMeTitle">About me</p>
+          <p className="aboutMeBody">{props.data.body}</p>
+        </div>
+      </CSSTransition>
+      <CSSTransition
+        mountOnEnter
+        in={isInViewport}
+        classNames="aboutMeImageFadeup"
+        timeout={400}
+      >
+        <div className={gridPlacement(imageGrid, "aboutMeImage")}>
+          <img src={props.data.image} alt="me" />
+        </div>
+      </CSSTransition>
     </div>
   );
 }

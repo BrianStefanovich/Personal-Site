@@ -1,6 +1,47 @@
 .otherProjects {
   @include spacer(margin-top, 2);
 
+  .otherProjectsTitleFadeup-enter {
+    opacity: 0;
+    transform: scale(0.9);
+    transform: translateX(-100px);
+  }
+
+  .otherProjectsTitleFadeup-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+    transition-delay: 100ms;
+  }
+
+  .otherProjectsTitleFadeup-exit {
+    opacity: 1;
+  }
+
+  .otherProjectsTitleFadeup-exit-active {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 300ms, transform 300ms;
+  }
+
+  .otherProjectsCardFadeup-enter {
+    opacity: 0;
+  }
+
+  .otherProjectsCardFadeup-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+  }
+
+  .otherProjectsCardFadeup-exit {
+    opacity: 1;
+  }
+
+  .otherProjectsCardFadeup-exit-active {
+    opacity: 0;
+    transition: opacity 500ms;
+  }
+
   .otherProjectsTitle {
     @include type-style(display-01, true);
   }

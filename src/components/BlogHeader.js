@@ -1,5 +1,5 @@
 import React from "react";
-import { gridPlacement } from "./utilities";
+//import { gridPlacement } from "./utilities";
 import { Logo } from "./Icons";
 
 export default function BlogHeader() {
