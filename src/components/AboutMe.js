@@ -51,7 +51,7 @@ export default function AboutMe(props) {
           <p className="aboutMeTitle" ref={props.scrollRef}>
             About me
           </p>
-          <p className="aboutMeBody">{props.data.body}</p>
+          <p className="aboutMeBody">{props.contentData.body}</p>
         </div>
       </CSSTransition>
       <CSSTransition
@@ -61,7 +61,7 @@ export default function AboutMe(props) {
         timeout={400}
       >
         <div className={gridPlacement(imageGrid, "aboutMeImage")}>
-          <img src={props.data.image} alt="me" />
+          <img src={props.contentData.image} alt="me" />
         </div>
       </CSSTransition>
     </div>

@@ -32,6 +32,14 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: "gatsby-remark-code-buttons",
+            options: {
+              tooltipText: `Copy to clipboard`,
+              toasterText: "Copied to clipboard",
+              toasterDuration: 5000,
+            },
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 630,
@@ -71,9 +79,9 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

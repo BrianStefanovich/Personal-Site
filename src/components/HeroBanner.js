@@ -46,7 +46,7 @@ export default function HeroBanner(props) {
               className="heroBannerPreTitle"
               style={{ transitionDelay: "100ms" }}
             >
-              {props.data.preTitle}
+              {props.contentData.preTitle}
             </p>
           </CSSTransition>
           <CSSTransition
@@ -56,7 +56,7 @@ export default function HeroBanner(props) {
             timeout={400}
           >
             <p className="heroBannerTitle" style={{ transitionDelay: "200ms" }}>
-              {props.data.title}
+              {props.contentData.title}
             </p>
           </CSSTransition>
           <CSSTransition
@@ -66,7 +66,7 @@ export default function HeroBanner(props) {
             timeout={400}
             style={{ transitionDelay: "300ms" }}
           >
-            <p className="heroBannerSubTitle">{props.data.subTitle}</p>
+            <p className="heroBannerSubTitle">{props.contentData.subTitle}</p>
           </CSSTransition>
           <CSSTransition
             mountOnEnter
@@ -75,7 +75,7 @@ export default function HeroBanner(props) {
             timeout={400}
             style={{ transitionDelay: "400ms" }}
           >
-            <p className="heroBannerBody">{props.data.body}</p>
+            <p className="heroBannerBody">{props.contentData.body}</p>
           </CSSTransition>
         </div>
       </div>

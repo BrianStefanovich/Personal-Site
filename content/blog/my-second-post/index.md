@@ -1,7 +1,11 @@
 ---
+path: "blog/my-second-post/"
 title: My Second Post!
 date: "2015-05-06T23:46:37.121Z"
+slug: "my-second-post"
 ---
+
+# Me encanta el md
 
 Wow! I love blogging so much already.
 

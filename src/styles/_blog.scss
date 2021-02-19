@@ -5,11 +5,42 @@
 @include type-reset;
 @include default-type;
 
-
 .blogHeader {
   background-color: $grey-100;
 
   .blogHeaderIcon {
     color: $blue-60;
+  }
+}
+
+.blogPost {
+  .blogPostTitle {
+    @include type-style(display-01, true);
+  }
+
+  .blogPostDate {
+    @include type-style(code-02, true);
+    @include spacer(margin-bottom, 2);
+  }
+
+  .blogPostBody {
+    p {
+      @include type-style(body-long-02, true);
+    }
+
+    h1 {
+      @include type-style(productive-heading-07, true);
+    }
+
+    h2 {
+      @include type-style(productive-heading-06, true);
+    }
+
+    h3 {
+      @include type-style(productive-heading-05, true);
+    }
+    h4 {
+      @include type-style(productive-heading-04, true);
+    }
   }
 }

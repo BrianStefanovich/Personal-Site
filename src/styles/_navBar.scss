@@ -63,7 +63,8 @@
         cursor: pointer;
 
         &:hover {
-		  border-bottom: 4px solid $blue-60;
+          color: $tile-20;
+	  transition: color 200ms ease-in;
         }
       }
 

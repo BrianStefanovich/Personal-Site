@@ -85,7 +85,7 @@ export default function OtherProjects(props) {
       <div className="bx--row">
         <div className={gridPlacement(otherProjectsLayoutGrid)}>
           <div className="bx--row">
-            {props.data.map((elm, i) => {
+            {props.contentData.map((elm, i) => {
               return (
                 <CSSTransition
                   mountOnEnter

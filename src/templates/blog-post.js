@@ -1,31 +1,92 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from "react";
+import { Link, graphql } from "gatsby";
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Bio from "../components/bio";
+import SEO from "../components/seo";
+import { gridPlacement } from "./../components/utilities";
+
+const postLayoutGrid = {
+  max: {
+    offset: "4",
+    col: "8",
+  },
+  xlg: {
+    offset: "3",
+    col: "10",
+  },
+  lg: {
+    offset: "3",
+    col: "10",
+  },
+  md: {
+    offset: "1",
+    col: "6",
+  },
+  sm: {
+    offset: "0",
+    col: "4",
+  },
+};
 
 const BlogPostTemplate = ({ data, location }) => {
-  const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const { previous, next } = data
+  const post = data.markdownRemark;
+  const siteTitle = data.site.siteMetadata?.title || `Title`;
+  const { previous, next } = data;
+  console.log(data);
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <div>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
+
       <article
-        className="blog-post"
+        className={gridPlacement(postLayoutGrid, "blogPost")}
         itemScope
         itemType="http://schema.org/Article"
       >
         <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          <h1 className="blogPostTitle" itemProp="headline">
+            {post.frontmatter.title}
+          </h1>
+          <p className="blogPostDate">{post.frontmatter.date}</p>
         </header>
+        <nav className="blogPostNav">
+          <ul
+            style={{
+              display: `flex`,
+              flexWrap: `wrap`,
+              justifyContent: `space-between`,
+              listStyle: `none`,
+              padding: 0,
+            }}
+          >
+            <li>
+              {previous && (
+                <a
+			href={"http://localhost:8000/" + previous.frontmatter.path}
+                  rel="prev"
+                >
+                  ← {previous.frontmatter.title}
+                </a>
+              )}
+            </li>
+            <li>
+              {next && (
+                <a
+                  href={"http://localhost:8000/" + next.frontmatter.path}
+                  rel="next"
+                >
+                  {next.frontmatter.title} →
+                </a>
+              )}
+            </li>
+          </ul>
+        </nav>
+
         <section
+          className="blogPostBody"
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
@@ -34,37 +95,11 @@ const BlogPostTemplate = ({ data, location }) => {
           <Bio />
         </footer>
       </article>
-      <nav className="blog-post-nav">
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </nav>
-    </Layout>
-  )
-}
+    </div>
+  );
+};
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug(
@@ -93,6 +128,8 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        slug
+        path
       }
     }
     next: markdownRemark(id: { eq: $nextPostId }) {
@@ -101,7 +138,23 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        slug
+        path
       }
     }
   }
-`
+`;
+
+/*
+query MyQuery {
+allFile(filter: {sourceInstanceName: {eq: "blog"}, relativeDirectory: {eq: "hello-world"}}) {
+    edges {
+      node {
+        name
+        relativeDirectory
+        publicURL
+      }
+    }
+  }
+}
+*/

@@ -5,8 +5,26 @@
 @include type-reset;
 @include default-type;
 
-body {
+.blackBackground {
   background-color: $grey-100;
+}
+
+.gatsby-code-button-container {
+  touch-action: none;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  top: 28px;
+  right: 3px;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.gatsby-code-button-icon {
+  display: block;
+  width: 14px;
+  height: 14px;
+  fill: gray;
 }
 
 @import "./aboutMe";

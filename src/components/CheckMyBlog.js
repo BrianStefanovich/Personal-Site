@@ -62,7 +62,7 @@ const cardBodyGrid = {
 };
 
 export default function CheckMyBlog(props) {
-  const [isInViewport, targetRef] = useIsInViewportOnce({ threshold: 20 });
+  const [isInViewport, targetRef] = useIsInViewportOnce({ threshold: 10 });
   return (
     <div className="checkMyBlog" ref={targetRef}>
       <CSSTransition
@@ -72,13 +72,16 @@ export default function CheckMyBlog(props) {
         timeout={400}
       >
         <div className="bx--row" ref={props.navRef}>
-          <p className={gridPlacement(titleGrid, "checkMyBlogTitle")}>
+          <p
+            ref={props.scrollRef}
+            className={gridPlacement(titleGrid, "checkMyBlogTitle")}
+          >
             Checkout my blog
           </p>
         </div>
       </CSSTransition>
 
-      {props.data.map((elm, i) => {
+      {props.contentData.map((elm, i) => {
         return (
           <CSSTransition
             mountOnEnter
@@ -90,20 +93,26 @@ export default function CheckMyBlog(props) {
               style={{ transitionDelay: `${(i + 1) * 3}00ms` }}
               className="bx--row blogCard bx--no-gutter"
               key={i}
-              ref={props.scrollRef}
             >
               <img
-                src={elm.image}
+                src={
+                  window.location.href +
+                  elm.node.frontmatter.thumbnail.publicURL
+                }
                 class={gridPlacement(cardImageGrid, "checkMyBlogImage")}
                 alt="blog thumbnail"
               />
               <div className={gridPlacement(cardBodyGrid, "blogCardBody")}>
                 <div>
-                  <p className="blogCardTitle">{elm.title}</p>
-                  <p className="blogCardDate">{elm.date}</p>
+                  <p className="blogCardTitle">{elm.node.frontmatter.title}</p>
+                  <p className="blogCardDate">{elm.node.frontmatter.date}</p>
                 </div>
-                <p className="blogCardText">{elm.text}</p>
-                <Arrow className="blogIcon" />
+                <p className="blogCardText">
+                  {elm.node.frontmatter.description}
+                </p>
+                <a href={window.location.href + elm.node.frontmatter.path}>
+                  <Arrow className="blogIcon" />
+                </a>
               </div>
             </div>
           </CSSTransition>

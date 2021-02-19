@@ -120,7 +120,6 @@ export default function ThingsIBuild(props) {
   return (
     <div className="thingsIBuild" ref={titleTargetRef}>
       <CSSTransition
-        mountOnEnter
         in={isTitleInViewport}
         classNames="thingsIBuildTitleFadeup"
         timeout={400}
@@ -136,7 +135,7 @@ export default function ThingsIBuild(props) {
       </CSSTransition>
 
       <div ref={cardTargetRef}>
-        {props.data.map((elm, i) => {
+        {props.contentData.map((elm, i) => {
           if (i % 2 === 0) {
             return (
               <CSSTransition
@@ -145,7 +144,7 @@ export default function ThingsIBuild(props) {
                 classNames="thingsIBuildCardFadeup"
                 timeout={600}
               >
-                <div className="thingsIBuildCard bx--row bx--row--condensed">
+                <div className="thingsIBuildCardFadeup thingsIBuildCard bx--row bx--row--condensed">
                   <img
                     src={elm.image}
                     className={gridPlacement(leftImageGrid, "thigsIBuildImage")}
@@ -178,7 +177,7 @@ export default function ThingsIBuild(props) {
                 classNames="thingsIBuildCardFadeup"
                 timeout={600}
               >
-                <div className="thingsIBuildCard bx--row bx--row--condensed">
+                <div className="thingsIBuildCard thingsIBuildCardFadeup bx--row bx--row--condensed">
                   <div
                     className={gridPlacement(rightTextGrid, "thingsIBuildText")}
                   >

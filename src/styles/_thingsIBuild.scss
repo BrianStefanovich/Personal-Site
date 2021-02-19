@@ -14,6 +14,10 @@
     transition-delay: 100ms;
   }
 
+  .thingsIBuildTitleFadeup-enter-done {
+    opacity: 1;
+  }
+
   .thingsIBuildTitleFadeup-exit {
     opacity: 1;
   }
@@ -25,20 +29,20 @@
   }
 
   .thingsIBuildCardFadeup-enter {
-    opacity: 0;
+    opacity: 0 !important;
   }
 
   .thingsIBuildCardFadeup-enter-active {
-    opacity: 1;
+    opacity: 1 !important;
     transition: opacity 500ms;
   }
 
   .thingsIBuildCardFadeup-exit {
-    opacity: 1;
+    opacity: 1 !important;
   }
 
   .thingsIBuildCardFadeup-exit-active {
-    opacity: 0;
+    opacity: 0 !important;
     transition: opacity 500ms;
   }
 
