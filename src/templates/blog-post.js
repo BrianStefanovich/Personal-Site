@@ -43,7 +43,7 @@ const BlogPostTemplate = ({ data, location }) => {
 
       <div className="bx--grid">
         <article
-          className={gridPlacement(postLayoutGrid, "blogPost")}
+          className={gridPlacement(postLayoutGrid, "bx--no-gutter blogPost")}
           itemScope
           itemType="http://schema.org/Article"
         >
@@ -66,7 +66,9 @@ const BlogPostTemplate = ({ data, location }) => {
               <li>
                 {previous && (
                   <a
-                    href={"http://localhost:8000/" + previous.frontmatter.path}
+                    href={
+                      "http://localhost:8000/blog/" + previous.frontmatter.slug
+                    }
                     rel="prev"
                   >
                     ← {previous.frontmatter.title}
@@ -76,7 +78,7 @@ const BlogPostTemplate = ({ data, location }) => {
               <li>
                 {next && (
                   <a
-                    href={"http://localhost:8000/" + next.frontmatter.path}
+                    href={"http://localhost:8000/blog/" + next.frontmatter.slug}
                     rel="next"
                   >
                     {next.frontmatter.title} →
@@ -91,7 +93,6 @@ const BlogPostTemplate = ({ data, location }) => {
             dangerouslySetInnerHTML={{ __html: post.html }}
             itemProp="articleBody"
           />
-          <hr />
           <footer>
             <BlogFooter />
           </footer>

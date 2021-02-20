@@ -1,11 +1,50 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql, navigate } from "gatsby";
+import { gridPlacement } from "../components/utilities";
 
 import Bio from "../components/bio";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import BlogHeader from "../components/BlogHeader";
 import BlogFooter from "../components/BlogFooter";
+
+const blogIndexLayoutGrid = {
+  sm: {
+    col: "col",
+  },
+  md: {
+    offset: "1",
+    col: "6",
+  },
+  lg: {
+    offset: "2",
+  },
+  xlg: {
+    offset: "2",
+  },
+  max: {
+    offset: "3",
+    col: "11",
+  },
+};
+
+const blogIndexCardGrid = {
+  sm: {
+    col: "4",
+  },
+  md: {
+    col: "4",
+  },
+  lg: {
+    col: "4",
+  },
+  xlg: {
+    col: "4",
+  },
+  max: {
+    col: "3",
+  },
+};
 
 const BlogIndex = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes;
@@ -28,39 +67,47 @@ const BlogIndex = ({ data, location }) => {
     <div className="blog">
       <BlogHeader />
       <SEO title="All posts" />
-      <ol style={{ listStyle: `none` }}>
-        {posts.map((post) => {
-          const title = post.frontmatter.title;
+      <div className="bx--grid bx--grid--condensed">
+        <div className="box-row">
+          <div className={gridPlacement(blogIndexLayoutGrid, "bx--no-gutter")}>
+            <div className="bx--row bx--no-gutter">
+              {posts.map((post, i) => {
+                if (i !== 0) {
+                  const title = post.frontmatter.title;
+                  console.log(post);
 
-          return (
-            <li key={post.frontmatter.title}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={"/blog/" + post.frontmatter.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
-            </li>
-          );
-        })}
-      </ol>
-      <BlogFooter />
+                  return (
+                    <div
+                      className={gridPlacement(
+                        blogIndexCardGrid,
+                        "blogIndexCard bx--no-gutter"
+                      )}
+                      onClick={() => {
+                        navigate(post.frontmatter.slug);
+                      }}
+                    >
+                      <div className="">
+                        <img
+                          className="blogIndexCardImage"
+                          src={post.frontmatter.thumbnail.publicURL}
+                        />
+                      </div>
+                      <h2 className="blogIndexCardTitle">{title}</h2>
+                      <small className="blogIndexCardDate">
+                        {post.frontmatter.date}
+                      </small>
+                      <p className="blogIndexCardBody">
+                        {post.frontmatter.description}
+                      </p>
+                    </div>
+                  );
+                }
+              })}
+            </div>
+          </div>
+        </div>
+        <BlogFooter />
+      </div>
     </div>
   );
 };

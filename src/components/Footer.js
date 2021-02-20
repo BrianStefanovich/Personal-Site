@@ -4,7 +4,7 @@ import { GitHubIcon, InstagramIcon, TwitterIcon, LinkedInIcon } from "./Icons";
 export default function Footer() {
   const date = new Date();
   return (
-    <div className="blogFooter">
+    <div className="footer">
       <div className="footerIcons">
         <a href="https://github.com/BrianStefanovich/" target="_blank">
           <GitHubIcon className="footerIcon" />

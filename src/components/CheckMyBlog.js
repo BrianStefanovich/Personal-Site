@@ -118,7 +118,11 @@ export default function CheckMyBlog(props) {
                 <p className="blogCardText">
                   {elm.node.frontmatter.description}
                 </p>
-                <a href={window.location.href + elm.node.frontmatter.path}>
+                <a
+                  href={
+                    window.location.href + "blog/" + elm.node.frontmatter.slug
+                  }
+                >
                   <Arrow className="blogIcon" />
                 </a>
               </div>

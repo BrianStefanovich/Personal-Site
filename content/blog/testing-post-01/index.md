@@ -1,8 +1,8 @@
 ---
-path: "blog/testing-post-01"
+path: "testing-post-01"
 title: Testing post 1
 date: "2020-05-01T22:12:03.284Z"
-description: "Hello World"
+description: "Hello World adlkaj sdkajslkd awsdkjskdjskajlsjdlkajs dkajsk djska jlk djkas djkajld ksdak sdlakjsdkajs dlaskj dasHello World"
 slug: "testing-post-01"
 ---
 

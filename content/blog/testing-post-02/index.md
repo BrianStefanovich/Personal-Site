@@ -1,8 +1,8 @@
 ---
-path: "blog/testing-post-02"
-title: Titulo de prueba testing post 2
-date: "2019-05-01T22:12:03.284Z"
-description: "Hello World"
+path: "testing-post-02"
+title: Testing post 1
+date: "2020-05-01T22:12:03.284Z"
+description: "Hello World adlkaj sdkajslkd awsdkjskdjskajlsjdlkajs dkajsk djska jlk djkas djkajld ksdak sdlakjsdkajs dlaskj dasHello World"
 slug: "testing-post-02"
 ---
 

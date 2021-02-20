@@ -133,6 +133,7 @@ export const pageQuery = graphql`
             description
             title
             date
+	    slug
             thumbnail {
               publicURL
             }

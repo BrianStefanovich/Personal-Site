@@ -1,9 +1,9 @@
 ---
-path: "blog/hello-world"
+path: "hello-world"
+slug: "hello-world"
 title: Titulo de prueba prueba de titulo largo
 date: "2015-05-01T22:12:03.284Z"
-description: "Hello World"
-slug: "hello-world"
+description: "Hello World adlkaj sdkajslkd awsdkjskdjskajlsjdlkajs dkajsk djska jlk djkas djkajld ksdak sdlakjsdkajs dlaskj das"
 ---
 
 This is my first post on my new fake blog! How exciting!

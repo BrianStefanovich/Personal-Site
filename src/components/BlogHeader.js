@@ -1,6 +1,7 @@
 import React from "react";
 //import { gridPlacement } from "./utilities";
 import { Logo } from "./Icons";
+import { navigate } from "gatsby";
 import { gridPlacement } from "./../components/utilities";
 import { Link } from "gatsby";
 
@@ -22,16 +23,28 @@ export default function BlogHeader() {
       </div>
 
       <div className="blogHeader">
-        <p className="headerName">Brian Stefanovich</p>
+        <p
+          onClick={() => {
+            navigate("/");
+          }}
+          className="headerName"
+        >
+          Brian Stefanovich
+        </p>
         <ul className="headerNavItems">
-          <li>
+          <li
+            onClick={() => {
+              navigate("/blog");
+            }}
+          >
             <p>Home</p>
           </li>
-          <li>
-            <p>About</p>
-          </li>
-          <li>
-            <p>Contact</p>
+          <li
+            onClick={() => {
+              navigate("/about");
+            }}
+          >
+            <p>About this blog</p>
           </li>
         </ul>
       </div>
