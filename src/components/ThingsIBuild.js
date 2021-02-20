@@ -5,10 +5,10 @@ import { CSSTransition } from "react-transition-group";
 
 export default function ThingsIBuild(props) {
   const [isTitleInViewport, titleTargetRef] = useIsInViewportOnce({
-    threshold: 40,
+    threshold: 90,
   });
   const [isCardInViewport, cardTargetRef] = useIsInViewportOnce({
-    threshold: 40,
+    threshold: 80,
   });
 
   const titleGrid = {
@@ -120,6 +120,7 @@ export default function ThingsIBuild(props) {
   return (
     <div className="thingsIBuild" ref={titleTargetRef}>
       <CSSTransition
+        mountOnEnter
         in={isTitleInViewport}
         classNames="thingsIBuildTitleFadeup"
         timeout={400}
@@ -142,7 +143,7 @@ export default function ThingsIBuild(props) {
                 mountOnEnter
                 in={isCardInViewport}
                 classNames="thingsIBuildCardFadeup"
-                timeout={600}
+                timeout={400}
               >
                 <div className="thingsIBuildCardFadeup thingsIBuildCard bx--row bx--row--condensed">
                   <img

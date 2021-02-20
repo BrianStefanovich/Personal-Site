@@ -107,6 +107,7 @@
     }
 
     .sideGadgetRigthMail {
+      text-decoration: none;
       @include type-style(body-short-02, true);
       writing-mode: vertical-rl;
       text-orientation: sideways;
@@ -135,9 +136,9 @@
     width: 100vw;
     height: 100vh;
     z-index: 11;
-    backdrop-filter: blur(5px);
+    -filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    background-color: rgba(256, 256, 256, 0.2);
+    background-color: rgba($grey-10, 0.6);
   }
 
   @media (min-width: $breakpoint-lg) {
@@ -147,21 +148,82 @@
 
 .mobileGadget {
   @media (max-width: $breakpoint-lg) {
+    z-index: 50;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     position: fixed;
     bottom: 0;
-    @include spacer(right, 1);
-    @include spacer(bottom, 1);
+    right: 0;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+
+    .mobileGadgetIconFadeup-enter {
+      opacity: 0;
+      transform: translateY(5px);
+      transition: opacity 100ms ease-in-out, transform 100ms ease-in-out;
+    }
+
+    .mobileGadgetIconFadeup-enter-active {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+
+    .mobileGadgetIconFadeup-enter-done {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+
+    .mobileGadgetIconFadeup-exit {
+      opacity: 1;
+      transform: translateY(-5px);
+      transition: opacity 100ms ease-in-out, transform 100ms ease-in-out;
+    }
+
+    .mobileGadgetIconFadeup-exit-active {
+      opacity: 0;
+    }
 
     .mobileGadgetIcon {
-      width: 2.5rem;
       margin-bottom: 1rem;
-      padding: 0.5rem;
       border-radius: 4px;
       color: $grey-10;
-      background-color: $blue-60;
+      align-items: center;
+      filter: drop-shadow(1px 1px 4px $grey-60);
+      display: flex;
+      text-decoration: none;
+
+      p {
+        background-color: $grey-80;
+        color: $grey-10;
+        margin-right: 0.5rem;
+        padding: 0.1rem;
+        @include type-style(code-01, true);
+      }
+
+      .icon {
+        background-color: $blue-60;
+        padding: 0.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+
+    .mobileGadgetButtonIcon {
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+      border-radius: 4px;
+      color: $grey-10;
+      display: flex;
+      justify-content: space-between;
+      filter: drop-shadow(1px 1px 4px $grey-60);
+
+      .icon {
+        background-color: $tile-40;
+        padding: 0.5rem;
+        width: 2rem;
+        height: 2rem;
+      }
     }
   }
 

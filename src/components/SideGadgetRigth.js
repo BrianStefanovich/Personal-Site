@@ -25,7 +25,12 @@ export default function SideGadgetRigth() {
         <a target="_blank" href="https://t.me/BrianStefanovich">
           <TelegramIcon className="sideGadgetRigthIcon" />
         </a>
-        <p className="sideGadgetRigthMail">email@brianstefanovich.com</p>
+        <a
+          href="mailto:email@brianstefanovich.com"
+          className="sideGadgetRigthMail"
+        >
+          email@brianstefanovich.com
+        </a>
         <div className="sideGadgetRigthLine"></div>
       </div>
     </CSSTransition>

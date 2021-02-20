@@ -5,6 +5,10 @@
 @include type-reset;
 @include default-type;
 
+body {
+	background-color: $grey-10;
+}
+
 .blackBackground {
   background-color: $grey-100;
 }
@@ -36,3 +40,4 @@
 @import "./otherProjects";
 @import "./sideGadget";
 @import "./thingsIBuild";
+@import "./blogFooter";

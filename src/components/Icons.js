@@ -3,7 +3,7 @@ import React from "react";
 export function Logo(props) {
   return (
     <svg
-      className={"navBarLogo"}
+      className={props.className}
       viewBox="0 0 54 54"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

@@ -65,13 +65,14 @@ export default function CheckMyBlog(props) {
   const [isInViewport, targetRef] = useIsInViewportOnce({ threshold: 10 });
   return (
     <div className="checkMyBlog" ref={targetRef}>
+      <div ref={props.navRef}></div>
       <CSSTransition
         mountOnEnter
         in={isInViewport}
         classNames="checkMyBlogTitleFadeup"
         timeout={400}
       >
-        <div className="bx--row" ref={props.navRef}>
+        <div className="bx--row">
           <p
             ref={props.scrollRef}
             className={gridPlacement(titleGrid, "checkMyBlogTitle")}
@@ -82,6 +83,13 @@ export default function CheckMyBlog(props) {
       </CSSTransition>
 
       {props.contentData.map((elm, i) => {
+        const timestamp = Date.parse(elm.node.frontmatter.date);
+        const date = new Date(timestamp).toLocaleDateString("en-us", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+          timeZone: "utc",
+        });
         return (
           <CSSTransition
             mountOnEnter
@@ -105,7 +113,7 @@ export default function CheckMyBlog(props) {
               <div className={gridPlacement(cardBodyGrid, "blogCardBody")}>
                 <div>
                   <p className="blogCardTitle">{elm.node.frontmatter.title}</p>
-                  <p className="blogCardDate">{elm.node.frontmatter.date}</p>
+                  <p className="blogCardDate">{`${date}`}</p>
                 </div>
                 <p className="blogCardText">
                   {elm.node.frontmatter.description}

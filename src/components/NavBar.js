@@ -38,7 +38,7 @@ export default function NavBar(props) {
             timeout={400}
           >
             <li onClick={props.scrollToAbout} className="navBarAbout">
-              {props.showAbout ? "About" : ""}
+              {props.showAbout ? "About" : null}
             </li>
           </CSSTransition>
           <CSSTransition
@@ -47,7 +47,7 @@ export default function NavBar(props) {
             timeout={400}
           >
             <li onClick={props.scrollToExperience} className="navBarExperience">
-              {props.showExperience ? "Experience" : ""}
+              {props.showExperience ? "Experience" : null}
             </li>
           </CSSTransition>
 
@@ -57,7 +57,7 @@ export default function NavBar(props) {
             timeout={400}
           >
             <li onClick={props.scrollToBlog} className="navBarBlog">
-              {props.showBlog ? "Blog" : ""}
+              {props.showBlog ? "Blog" : null}
             </li>
           </CSSTransition>
         </ul>

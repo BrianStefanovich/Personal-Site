@@ -5,13 +5,13 @@
   .thingsIBuildTitleFadeup-enter {
     opacity: 0;
     transform: translateX(-100px);
+    transition-delay: 300ms;
   }
 
   .thingsIBuildTitleFadeup-enter-active {
     opacity: 1;
     transform: translateX(0);
     transition: opacity 300ms, transform 300ms;
-    transition-delay: 100ms;
   }
 
   .thingsIBuildTitleFadeup-enter-done {
@@ -29,16 +29,17 @@
   }
 
   .thingsIBuildCardFadeup-enter {
-    opacity: 0 !important;
+    opacity: 0; 
+    transition-delay: 1000ms;
   }
 
   .thingsIBuildCardFadeup-enter-active {
-    opacity: 1 !important;
+    opacity: 1;
     transition: opacity 500ms;
   }
 
   .thingsIBuildCardFadeup-exit {
-    opacity: 1 !important;
+    opacity: 1
   }
 
   .thingsIBuildCardFadeup-exit-active {

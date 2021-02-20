@@ -122,7 +122,10 @@ export default function Index(props) {
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark(
+      limit: 3
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
       edges {
         node {
           frontmatter {

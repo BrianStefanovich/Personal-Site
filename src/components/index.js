@@ -9,6 +9,9 @@ import MobileGadget from "./MobileGadget";
 import CheckMyBlog from "./CheckMyBlog";
 import Footer from "./Footer";
 import content from "./content";
+import BlogFooter from "./BlogFooter";
+
+import BlogHeader from "./BlogHeader";
 
 export {
   HeroBanner,
@@ -22,4 +25,6 @@ export {
   CheckMyBlog,
   Footer,
   content,
+  BlogFooter,
+  BlogHeader,
 };

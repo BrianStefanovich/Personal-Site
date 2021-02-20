@@ -1,0 +1,40 @@
+@import "./type/reset";
+@import "./color";
+@import "./layout/spacer";
+
+@include type-reset;
+@include default-type;
+
+.blogFooter {
+  .footerIcons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @include spacer(margin-top, 3);
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .footerIcon {
+    height: 1.5rem;
+    color: $grey-60;
+    margin: 0 0.5rem;
+
+    &:hover {
+      color: $blue-60;
+      transform: translateY(-5px);
+      transition: color 300ms ease-in-out, transform 200ms ease-in-out;
+    }
+  }
+
+  .footerSeparator {
+    width: 100%;
+  }
+
+  .footerText {
+    text-align: center;
+    @include type-style(code-02, true);
+  }
+}

@@ -5,42 +5,127 @@
 @include type-reset;
 @include default-type;
 
-.blogHeader {
-  background-color: $grey-100;
+.blog {
+  color: $grey-100;
 
-  .blogHeaderIcon {
-    color: $blue-60;
+  .header {
+    color: $grey-10;
+    background-color: $grey-90;
+    .headerText {
+      .headerTitle {
+        @include type-style(display-01, true);
+        text-align: center;
+        @media (max-width: $breakpoint-lg) {
+          padding: 0 2rem;
+        }
+
+        @media (min-width: $breakpoint-lg) {
+          padding: 0 6rem;
+        }
+      }
+      .headerSubTitle {
+        text-align: center;
+
+        @media (max-width: $breakpoint-lg) {
+          @include type-style(productive-heading-03, true);
+          padding: 0 4rem;
+        }
+
+        @media (min-width: $breakpoint-lg) {
+          @include type-style(productive-heading-06, true);
+          padding: 0 16rem;
+        }
+      }
+      @include spacer(padding-bottom, 0.5);
+      border-bottom: 2px solid $tile-40;
+
+      .line {
+        @media (max-width: $breakpoint-lg) {
+          margin: 0 2rem;
+        }
+
+        @media (min-width: $breakpoint-lg) {
+          margin: 0 8rem;
+        }
+      }
+    }
+
+    .headerLogo {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 6rem;
+      padding: 1rem 0;
+
+      .headerIcon {
+        height: 100%;
+      }
+    }
+
+    .blogHeader {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+
+      @media (max-width: $breakpoint-lg) {
+        margin: 0 2rem;
+        color: $grey-90;
+      }
+
+      @media (min-width: $breakpoint-lg) {
+        margin: 0 8rem;
+      }
+
+      .headerName {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+      }
+
+      .headerNavItems {
+        li {
+          padding: 1rem;
+        }
+        display: flex;
+        list-style: none;
+        align-items: center;
+      }
+    }
   }
-}
 
-.blogPost {
-  .blogPostTitle {
-    @include type-style(display-01, true);
-  }
-
-  .blogPostDate {
-    @include type-style(code-02, true);
-    @include spacer(margin-bottom, 2);
-  }
-
-  .blogPostBody {
-    p {
-      @include type-style(body-long-02, true);
+  .blogPost {
+    .blogPostTitle {
+      @include type-style(display-01, true);
     }
 
-    h1 {
-      @include type-style(productive-heading-07, true);
+    .blogPostDate {
+      @include type-style(code-02, true);
+      @include spacer(margin-bottom, 2);
     }
 
-    h2 {
-      @include type-style(productive-heading-06, true);
-    }
+    .blogPostBody {
+      @include spacer(margin-top, 1);
+      p {
+        @include type-style(body-long-02, true);
+      }
 
-    h3 {
-      @include type-style(productive-heading-05, true);
-    }
-    h4 {
-      @include type-style(productive-heading-04, true);
+      h1 {
+        @include type-style(productive-heading-07, true);
+      }
+
+      h2 {
+        @include type-style(productive-heading-06, true);
+      }
+
+      h3 {
+        @include type-style(productive-heading-05, true);
+      }
+      h4 {
+        @include type-style(productive-heading-04, true);
+      }
     }
   }
 }

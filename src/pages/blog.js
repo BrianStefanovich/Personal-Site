@@ -5,15 +5,14 @@ import Bio from "../components/bio";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import BlogHeader from "../components/BlogHeader";
+import BlogFooter from "../components/BlogFooter";
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`;
   const posts = data.allMarkdownRemark.nodes;
 
   if (posts.length === 0) {
     return (
-      <Layout location={location} title={siteTitle}>
-        <BlogHeader />
+      <div className="blog">
         <SEO title="All posts" />
         <Bio />
         <p>
@@ -21,21 +20,20 @@ const BlogIndex = ({ data, location }) => {
           directory you specified for the "gatsby-source-filesystem" plugin in
           gatsby-config.js).
         </p>
-      </Layout>
+      </div>
     );
   }
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <div className="blog">
       <BlogHeader />
       <SEO title="All posts" />
-      <Bio />
       <ol style={{ listStyle: `none` }}>
         {posts.map((post) => {
-          const title = post.frontmatter.title || post.fields.slug;
+          const title = post.frontmatter.title;
 
           return (
-            <li key={post.fields.slug}>
+            <li key={post.frontmatter.title}>
               <article
                 className="post-list-item"
                 itemScope
@@ -43,7 +41,7 @@ const BlogIndex = ({ data, location }) => {
               >
                 <header>
                   <h2>
-                    <Link to={"/blog" + post.fields.slug} itemProp="url">
+                    <Link to={"/blog/" + post.frontmatter.slug} itemProp="url">
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
@@ -62,7 +60,8 @@ const BlogIndex = ({ data, location }) => {
           );
         })}
       </ol>
-    </Layout>
+      <BlogFooter />
+    </div>
   );
 };
 
@@ -70,21 +69,17 @@ export default BlogIndex;
 
 export const pageQuery = graphql`
   query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
       nodes {
-        excerpt
-        fields {
-          slug
-        }
         frontmatter {
-          date(formatString: "MMMM DD, YYYY")
           title
+          date(formatString: "MMMM DD, YYYY")
           description
+          path
+          thumbnail {
+            publicURL
+          }
+          slug
         }
       }
     }
