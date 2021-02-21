@@ -122,19 +122,19 @@ var plugins = [{
   plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-manifest/gatsby-ssr */ "./node_modules/gatsby-plugin-manifest/gatsby-ssr.js"),
   options: {
     "plugins": [],
-    "name": "Gatsby Starter Blog",
-    "short_name": "GatsbyJS",
+    "name": "Brian Stefanovich",
+    "short_name": "Brian Stefanovich",
     "start_url": "/",
-    "background_color": "#ffffff",
-    "theme_color": "#663399",
+    "background_color": "#262626",
+    "theme_color": "#0F62FE",
     "display": "minimal-ui",
-    "icon": "content/assets/gatsby-icon.png",
+    "icon": "content/assets/brian-icon.png",
     "legacy": true,
     "theme_color_in_head": true,
     "cache_busting_mode": "query",
     "crossOrigin": "anonymous",
     "include_favicon": true,
-    "cacheDigest": "4a9773549091c227cd2eb82ccd9c5e3a"
+    "cacheDigest": "571e53f1c865ec7014a8ca52338f4f72"
   }
 }, {
   plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-react-helmet/gatsby-ssr */ "./node_modules/gatsby-plugin-react-helmet/gatsby-ssr.js"),

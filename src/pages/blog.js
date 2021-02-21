@@ -10,7 +10,7 @@ import BlogFooter from "../components/BlogFooter";
 
 const blogIndexLayoutGrid = {
   sm: {
-    col: "col",
+    col: "4",
   },
   md: {
     offset: "1",
@@ -18,13 +18,15 @@ const blogIndexLayoutGrid = {
   },
   lg: {
     offset: "2",
+    col: "12",
   },
   xlg: {
     offset: "2",
+    col: "12",
   },
   max: {
     offset: "3",
-    col: "11",
+    col: "10",
   },
 };
 
@@ -36,13 +38,13 @@ const blogIndexCardGrid = {
     col: "4",
   },
   lg: {
-    col: "4",
+    col: "8",
   },
   xlg: {
     col: "4",
   },
   max: {
-    col: "3",
+    col: "4",
   },
 };
 
@@ -52,7 +54,7 @@ const BlogIndex = ({ data, location }) => {
   if (posts.length === 0) {
     return (
       <div className="blog">
-        <SEO title="All posts" />
+        <SEO title="Blog" />
         <Bio />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
@@ -66,42 +68,40 @@ const BlogIndex = ({ data, location }) => {
   return (
     <div className="blog">
       <BlogHeader />
-      <SEO title="All posts" />
+      <SEO title="Blog" />
       <div className="bx--grid bx--grid--condensed">
         <div className="box-row">
           <div className={gridPlacement(blogIndexLayoutGrid, "bx--no-gutter")}>
             <div className="bx--row bx--no-gutter">
               {posts.map((post, i) => {
-                if (i !== 0) {
-                  const title = post.frontmatter.title;
-                  console.log(post);
+                const title = post.frontmatter.title;
+                console.log(post);
 
-                  return (
-                    <div
-                      className={gridPlacement(
-                        blogIndexCardGrid,
-                        "blogIndexCard bx--no-gutter"
-                      )}
-                      onClick={() => {
-                        navigate(post.frontmatter.slug);
-                      }}
-                    >
-                      <div className="">
-                        <img
-                          className="blogIndexCardImage"
-                          src={post.frontmatter.thumbnail.publicURL}
-                        />
-                      </div>
-                      <h2 className="blogIndexCardTitle">{title}</h2>
-                      <small className="blogIndexCardDate">
-                        {post.frontmatter.date}
-                      </small>
-                      <p className="blogIndexCardBody">
-                        {post.frontmatter.description}
-                      </p>
+                return (
+                  <div
+                    className={gridPlacement(
+                      blogIndexCardGrid,
+                      "blogIndexCard bx--no-gutter"
+                    )}
+                    onClick={() => {
+                      navigate(post.frontmatter.slug);
+                    }}
+                  >
+                    <div className="">
+                      <img
+                        className="blogIndexCardImage"
+                        src={post.frontmatter.thumbnail.publicURL}
+                      />
                     </div>
-                  );
-                }
+                    <h2 className="blogIndexCardTitle">{title}</h2>
+                    <small className="blogIndexCardDate">
+                      {post.frontmatter.date}
+                    </small>
+                    <p className="blogIndexCardBody">
+                      {post.frontmatter.description}
+                    </p>
+                  </div>
+                );
               })}
             </div>
           </div>

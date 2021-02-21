@@ -69,13 +69,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Brian Stefanovich`,
+        short_name: `Brian Stefanovich`,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
+        background_color: `#262626`,
+        theme_color: `#0F62FE`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/brian-icon.png`,
       },
     },
     `gatsby-plugin-react-helmet`,

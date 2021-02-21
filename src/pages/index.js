@@ -13,6 +13,7 @@ import {
   content,
 } from "./../components";
 import useIsInViewport from "use-is-in-viewport";
+import SEO from "../components/seo";
 
 export default function Index(props) {
   const [navItemActive, setNavItemActive] = useState("none");
@@ -22,11 +23,11 @@ export default function Index(props) {
   });
 
   const [isExperienceInViewport, experienceTargetRef] = useIsInViewport({
-    threshold: 30,
+    threshold: 10,
   });
 
   const [isBlogInViewport, blogTargetRef] = useIsInViewport({
-    threshold: 30,
+    threshold: 10,
   });
 
   const [isHeroInViewport, heroTargetRef] = useIsInViewport({
@@ -78,6 +79,7 @@ export default function Index(props) {
 
   return (
     <div className="blackBackground">
+      <SEO title="Home" />
       <MobileGadget />
       <SideGadgetLeft />
       <SideGadgetRigth />
@@ -133,7 +135,7 @@ export const pageQuery = graphql`
             description
             title
             date
-	    slug
+            slug
             thumbnail {
               publicURL
             }

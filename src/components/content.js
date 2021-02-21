@@ -50,8 +50,8 @@ const heroBanner = {
   data: {
     preTitle: "Hi, my name is",
     title: "Brian Stefanovich",
-    subTitle: "I eat pussy",
-    body: `I'm a software engineer based in Boston, MA specializing in building (and occasionally designing) exceptional websites, applications, and everything in between.`,
+    subTitle: "I love to...",
+    body: `I'm a full stack developer, based on Montevideo, Uruguay`,
   },
 };
 
