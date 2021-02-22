@@ -19,16 +19,32 @@ export default function SideGadgetLeft() {
       timeout={200}
     >
       <div className="sideGadgetLeft">
-        <a target="_blank" href="https://github.com/BrianStefanovich/">
+        <a
+          title="Find me on Github"
+          target="_blank"
+          href="https://github.com/BrianStefanovich/"
+        >
           <GitHubIcon className="sideGadgetLeftIcon" />
         </a>
-        <a target="_blank" href="https://twitter.com/bstefanovich">
+        <a
+          title="Find me on Twitter"
+          target="_blank"
+          href="https://twitter.com/bstefanovich"
+        >
           <TwitterIcon className="sideGadgetLeftIcon" />
         </a>
-        <a target="_blank" href="https://www.linkedin.com/in/brian-stefanovich">
+        <a
+          title="Find me on Linked In"
+          target="_blank"
+          href="https://www.linkedin.com/in/brian-stefanovich"
+        >
           <LinkedInIcon className="sideGadgetLeftIcon" />
         </a>
-        <a target="_blank" href="https://www.instagram.com/b_stefanovich/">
+        <a
+          title="Find me on Instagram"
+          target="_blank"
+          href="https://www.instagram.com/b_stefanovich/"
+        >
           <InstagramIcon className="sideGadgetLeftIcon" />
         </a>
         <div className="sideGadgetLeftLine"></div>

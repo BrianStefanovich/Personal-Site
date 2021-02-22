@@ -19,13 +19,22 @@ export default function SideGadgetRigth() {
       timeout={200}
     >
       <div className="sideGadgetRigth">
-        <a target="_blank" href="https://wa.me/59894419518">
+        <a
+          title="Write me on WhatsApp"
+          target="_blank"
+          href="https://wa.me/59894419518"
+        >
           <WhatsAppIcon className="sideGadgetRigthIcon" />
         </a>
-        <a target="_blank" href="https://t.me/BrianStefanovich">
+        <a
+          title="Write me on Telegram"
+          target="_blank"
+          href="https://t.me/BrianStefanovich"
+        >
           <TelegramIcon className="sideGadgetRigthIcon" />
         </a>
         <a
+          title="Send me an eMail"
           href="mailto:email@brianstefanovich.com"
           className="sideGadgetRigthMail"
         >

@@ -1,6 +1,6 @@
 module.exports = [{
       plugin: require('../node_modules/gatsby-remark-code-buttons/gatsby-browser.js'),
-      options: {"plugins":[],"tooltipText":"Copy to clipboard","toasterText":"Copied to clipboard","toasterDuration":5000},
+      options: {"plugins":[],"buttonText":"Copy","tooltipText":"Copy to clipboard","toasterText":"Copied to clipboard","toasterDuration":5000},
     },{
       plugin: require('../node_modules/gatsby-remark-images/gatsby-browser.js'),
       options: {"plugins":[],"maxWidth":630,"linkImagesToOriginal":true,"showCaptions":false,"markdownCaptions":false,"sizeByPixelDensity":false,"backgroundColor":"white","quality":50,"withWebp":false,"tracedSVG":false,"loading":"lazy","disableBgImageOnAlpha":false,"disableBgImage":false},

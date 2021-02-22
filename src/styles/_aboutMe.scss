@@ -60,12 +60,35 @@
   @include type-style(body-long-02, true);
 }
 
+.aboutMeTechs {
+  display: flex;
+  flex-wrap: wrap;
+  .aboutMeTechIcon {
+    height: 4rem;
+    margin: 2rem;
+
+    filter: grayscale(1);
+    transition: filter 200ms ease-in-out;
+
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+}
+
 .aboutMeImage {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 
-  img {
-    width: 100%;
+  .gatsby-image-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 100%;
+    }
   }
 }

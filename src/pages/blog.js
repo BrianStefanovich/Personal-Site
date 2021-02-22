@@ -7,6 +7,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import BlogHeader from "../components/BlogHeader";
 import BlogFooter from "../components/BlogFooter";
+import Img from "gatsby-image";
 
 const blogIndexLayoutGrid = {
   sm: {
@@ -87,12 +88,10 @@ const BlogIndex = ({ data, location }) => {
                       navigate(post.frontmatter.slug);
                     }}
                   >
-                    <div className="">
-                      <img
-                        className="blogIndexCardImage"
-                        src={post.frontmatter.thumbnail.publicURL}
-                      />
-                    </div>
+                    <Img
+                      className="blogIndexCardImage"
+                      fluid={post.frontmatter.thumbnail.childImageSharp.fluid}
+                    />
                     <h2 className="blogIndexCardTitle">{title}</h2>
                     <small className="blogIndexCardDate">
                       {post.frontmatter.date}
@@ -124,7 +123,11 @@ export const pageQuery = graphql`
           description
           path
           thumbnail {
-            publicURL
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
           }
           slug
         }

@@ -26,16 +26,30 @@
           padding: 0 6rem;
         }
       }
+
       .headerSubTitle {
         text-align: center;
-
         @media (max-width: $breakpoint-lg) {
-          @include type-style(productive-heading-03, true);
+          @include type-style(productive-heading-01, true);
           padding: 0 4rem;
         }
 
         @media (min-width: $breakpoint-lg) {
-          @include type-style(productive-heading-06, true);
+          @include type-style(productive-heading-03, true);
+          padding: 0 16rem;
+        }
+      }
+
+      .headerSlogan {
+        text-align: center;
+
+        @media (max-width: $breakpoint-lg) {
+          @include type-style(productive-heading-04, true);
+          padding: 0 4rem;
+        }
+
+        @media (min-width: $breakpoint-lg) {
+          @include type-style(productive-heading-07, true);
           padding: 0 16rem;
         }
       }

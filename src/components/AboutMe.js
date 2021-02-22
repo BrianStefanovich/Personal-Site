@@ -1,8 +1,32 @@
 import React from "react";
 import { gridPlacement, useIsInViewportOnce } from "./utilities";
 import { CSSTransition } from "react-transition-group";
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
+import {
+  JavascriptLogo,
+  NodeLogo,
+  GatsbyLogo,
+  PythonLogo,
+  GoogleCloudLogo,
+  FirebaseLogo,
+  PhpLogo,
+  ReactLogo
+} from "./Icons";
 
 export default function AboutMe(props) {
+  const data = useStaticQuery(graphql`
+    query MyQuery {
+      file(sourceInstanceName: { eq: "assets" }, name: { eq: "foto-cv" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `);
+
   const [isInViewport, targetRef] = useIsInViewportOnce({ threshold: 20 });
 
   const textGrid = {
@@ -51,7 +75,23 @@ export default function AboutMe(props) {
           <p className="aboutMeTitle" ref={props.scrollRef}>
             About me
           </p>
-          <p className="aboutMeBody">{props.contentData.body}</p>
+          {props.contentData.body.map((elm, i) => {
+            return (
+              <p key={i} className="aboutMeBody">
+                {elm}
+              </p>
+            );
+          })}
+          <div className="aboutMeTechs">
+            <JavascriptLogo className="aboutMeTechIcon" />
+            <ReactLogo className="aboutMeTechIcon" />
+            <PythonLogo className="aboutMeTechIcon" />
+            <NodeLogo className="aboutMeTechIcon" />
+            <GatsbyLogo className="aboutMeTechIcon" />
+            <PhpLogo className="aboutMeTechIcon" />
+            <GoogleCloudLogo className="aboutMeTechIcon" />
+            <FirebaseLogo className="aboutMeTechIcon" />
+          </div>
         </div>
       </CSSTransition>
       <CSSTransition
@@ -61,7 +101,7 @@ export default function AboutMe(props) {
         timeout={400}
       >
         <div className={gridPlacement(imageGrid, "aboutMeImage")}>
-          <img src={props.contentData.image} alt="me" />
+          <Img fluid={data.file.childImageSharp.fluid} alt="me" />
         </div>
       </CSSTransition>
     </div>

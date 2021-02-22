@@ -6,7 +6,7 @@
 @include default-type;
 
 body {
-	background-color: $grey-10;
+  background-color: $grey-10;
 }
 
 .blackBackground {
@@ -41,3 +41,4 @@ body {
 @import "./sideGadget";
 @import "./thingsIBuild";
 @import "./blogFooter";
+@import "./primsjsTheme";

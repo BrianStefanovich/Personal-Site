@@ -2,6 +2,7 @@ import React from "react";
 import { gridPlacement, useIsInViewportOnce } from "./utilities";
 import { Arrow } from "./Icons";
 import { CSSTransition } from "react-transition-group";
+import Img from "gatsby-image";
 
 const titleGrid = {
   sm: {
@@ -77,7 +78,7 @@ export default function CheckMyBlog(props) {
             ref={props.scrollRef}
             className={gridPlacement(titleGrid, "checkMyBlogTitle")}
           >
-            Checkout my blog
+            Check out my blog
           </p>
         </div>
       </CSSTransition>
@@ -102,12 +103,9 @@ export default function CheckMyBlog(props) {
               className="bx--row blogCard bx--no-gutter"
               key={i}
             >
-              <img
-                src={
-                  window.location.href +
-                  elm.node.frontmatter.thumbnail.publicURL
-                }
-                class={gridPlacement(cardImageGrid, "checkMyBlogImage")}
+              <Img
+                fluid={elm.node.frontmatter.thumbnail.childImageSharp.fluid}
+                className={gridPlacement(cardImageGrid, "checkMyBlogImage")}
                 alt="blog thumbnail"
               />
               <div className={gridPlacement(cardBodyGrid, "blogCardBody")}>

@@ -137,7 +137,11 @@ export const pageQuery = graphql`
             date
             slug
             thumbnail {
-              publicURL
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
           }
         }

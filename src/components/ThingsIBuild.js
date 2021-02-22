@@ -118,16 +118,16 @@ export default function ThingsIBuild(props) {
   };
 
   return (
-    <div className="thingsIBuild" ref={props.scrollRef}>
+    <div className="thingsIBuild" ref={titleTargetRef}>
       <CSSTransition
         mountOnEnter
         in={isTitleInViewport}
         classNames="thingsIBuildTitleFadeup"
         timeout={400}
       >
-        <div className="bx--row bx--row--condensed" ref={titleTargetRef}>
+        <div className="bx--row bx--row--condensed" ref={props.navRef}>
           <p
-            ref={props.navRef}
+            ref={props.scrollRef}
             className={gridPlacement(titleGrid, "thingsIBuildTitle")}
           >
             Things I Build

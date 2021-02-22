@@ -52,9 +52,9 @@ export default function BlogHeader() {
       <div className={"headerText"}>
         <hr className="line" />
         <p className={"headerTitle"}>The beauty of problem solving</p>
-        <p className="headerSubTitle">Just (enough) abstract simplicity</p>
+        <p className="headerSlogan">Just (enough) abstraction</p>
         <p className={"headerSubTitle"}>
-          Thoughts and ideas facing business, computer science and mathematic
+          Thoughts and ideas facing business, web development and mathematical
           challenges
         </p>
         <hr className="line" />

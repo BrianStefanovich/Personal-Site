@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Brian Stefanovich personal site`,
+    title: `Brian Stefanovich`,
     author: {
       name: `Brian Stefanovich`,
       summary: `I'm a full stack developer, here you can find some of my work`,
@@ -10,6 +10,9 @@ module.exports = {
       twitter: `bstefanovich`,
       github: `BrianStefanovich`,
       instagram: `BrianStefanovich`,
+      linkedin: `BrianSefanovich`,
+      telegram: `@BrianStefanovich`,
+      email: `email@brianstefanovich.com`,
     },
   },
   plugins: [
@@ -32,8 +35,16 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-katex`,
+            options: {
+              // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
+              strict: `ignore`,
+            },
+          },
+          {
             resolve: "gatsby-remark-code-buttons",
             options: {
+              buttonText: "Copy",
               tooltipText: `Copy to clipboard`,
               toasterText: "Copied to clipboard",
               toasterDuration: 5000,
@@ -51,7 +62,9 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-prismjs`,
+          {
+            resolve: `gatsby-remark-prismjs`,
+          },
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
         ],
