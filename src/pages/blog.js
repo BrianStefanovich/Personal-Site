@@ -55,7 +55,10 @@ const BlogIndex = ({ data, location }) => {
   if (posts.length === 0) {
     return (
       <div className="blog">
-        <SEO title="Blog" />
+        <SEO
+          title="Blog"
+          description="Thoughts and ideas facing business, web development and mathematical challenges"
+        />
         <Bio />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the

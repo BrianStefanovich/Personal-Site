@@ -190,8 +190,12 @@ export default function ThingsIBuild(props) {
 
                     <p className="thingsIBuildTextFooter">{elm.footer}</p>
                     <div className="thingsIBuildTextButtons">
-                      <GitHubIcon className="thingsIBuildIcon" />
-                      <OpenDemoIcon className="thingsIBuildIcon" />
+                      {elm.gitHub ? (
+                        <GitHubIcon className="thingsIBuildIcon" />
+                      ) : null}
+                      {elm.demo ? (
+                        <OpenDemoIcon className="thingsIBuildIcon" />
+                      ) : null}
                     </div>
                   </div>
                 </div>
@@ -218,8 +222,12 @@ export default function ThingsIBuild(props) {
 
                     <p className="thingsIBuildTextFooter">{elm.footer}</p>
                     <div className="thingsIBuildTextButtons">
-                      <GitHubIcon className="thingsIBuildIcon" />
-                      <OpenDemoIcon className="thingsIBuildIcon" />
+                      {elm.gitHub ? (
+                        <GitHubIcon className="thingsIBuildIcon" />
+                      ) : null}
+                      {elm.demo ? (
+                        <OpenDemoIcon className="thingsIBuildIcon" />
+                      ) : null}
                     </div>
                   </div>
 

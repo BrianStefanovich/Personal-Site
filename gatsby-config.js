@@ -5,7 +5,7 @@ module.exports = {
       name: `Brian Stefanovich`,
       summary: `I'm a full stack developer, here you can find some of my work`,
     },
-    description: `Brian Stefanovich profesional portfolio as full stack developer`,
+    description: `Brian Stefanovich is a full stack developer that design and develop web based business solutions`,
     social: {
       twitter: `bstefanovich`,
       github: `BrianStefanovich`,

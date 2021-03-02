@@ -65,7 +65,6 @@
 
     .otherProjectsCardFooter {
       @include type-style(code-02, true);
-      margin: 0 1rem;
     }
 
     .otherProjectsCardButtons {
@@ -75,6 +74,15 @@
       .otherProjectsCardIcon {
         height: 1.5rem;
         margin: 0 0.5rem;
+        color: $grey-20;
+        transition: transform 100ms ease-in;
+        transition: color 100ms ease-in;
+
+        &:hover {
+          color: $tile-30;
+          transform: translateY(-2px);
+          cursor: pointer;
+        }
       }
     }
   }

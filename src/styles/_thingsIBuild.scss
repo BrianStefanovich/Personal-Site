@@ -29,7 +29,7 @@
   }
 
   .thingsIBuildCardFadeup-enter {
-    opacity: 0; 
+    opacity: 0;
     transition-delay: 1000ms;
   }
 
@@ -39,7 +39,7 @@
   }
 
   .thingsIBuildCardFadeup-exit {
-    opacity: 1
+    opacity: 1;
   }
 
   .thingsIBuildCardFadeup-exit-active {
@@ -83,6 +83,15 @@
       .thingsIBuildIcon {
         height: 1.5rem;
         margin: 0 0.5rem;
+
+        transition: transform 100ms ease-in;
+        transition: color 100ms ease-in;
+
+        &:hover {
+          color: $tile-30;
+          transform: translateY(-2px);
+          cursor: pointer;
+        }
       }
     }
   }

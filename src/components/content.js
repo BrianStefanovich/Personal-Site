@@ -68,34 +68,16 @@ const thingsIBuild = {
 const otherProjects = {
   data: [
     {
-      title: "Time to Have More Fun",
-      body: `A single page web app for helping me choose where to travel, built with Next.js, Firebase, and Tailwind CSS`,
-      footer: "Next.js Tailwind CSS Firebase",
+      title: "react-whatsapp-editor",
+      body: `An easy to use rtf editor, that emulates WhatsApp editor and output rft text, on WhatsApp rtf format.`,
+      footer: "React SlateJs Emoji Mart",
+      gitHub: "https://github.com/BrianStefanovich/react-whatsapp-editor",
     },
     {
-      title: "Time to Have More Fun",
-      body: `A single page web app for helping me choose where to travel, built with Next.js, Firebase, and Tailwind CSS`,
-      footer: "Next.js Tailwind CSS Firebase",
-    },
-    {
-      title: "Time to Have More Fun",
-      body: `A single page web app for helping me choose where to travel, built with Next.js, Firebase, and Tailwind CSS`,
-      footer: "Next.js Tailwind CSS Firebase",
-    },
-    {
-      title: "Time to Have More Fun",
-      body: `A single page web app for helping me choose where to travel, built with Next.js, Firebase, and Tailwind CSS`,
-      footer: "Next.js Tailwind CSS Firebase",
-    },
-    {
-      title: "Time to Have More Fun",
-      body: `A single page web app for helping me choose where to travel, built with Next.js, Firebase, and Tailwind CSS`,
-      footer: "Next.js Tailwind CSS Firebase",
-    },
-    {
-      title: "Time to Have More Fun",
-      body: `A single page web app for helping me choose where to travel, built with Next.js, Firebase, and Tailwind CSS`,
-      footer: "Next.js Tailwind CSS Firebase",
+      title: "carbonized-typography",
+      body: `This is of my own interpretation of grid layout and font styles proposed by carbon design system. The main difference is that is based on Montserrat and Open Sans rather than Plex font face.`,
+      footer: "SASS",
+      gitHub: "https://github.com/BrianStefanovich/carbonized-typography",
     },
   ],
 };
