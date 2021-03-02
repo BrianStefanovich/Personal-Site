@@ -53,7 +53,7 @@ const thingsIBuild = {
     {
       title: "WA Connection",
       body:
-        "A web app that allows you to manage your WhatsApp account based on csv files. It super usefull for business carrying forward marketing campaigns or notification systems.",
+        "A web app that allows you to manage your WhatsApp account based on csv files. It super usefull for business carrying over marketing campaigns or notification systems on WhatsApp.",
       footer: `React Redux Node Firebase`,
       gitHub:
         "https://github.com/BrianStefanovich/non-functional-wa-connection-demo",
