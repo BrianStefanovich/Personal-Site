@@ -101,20 +101,24 @@ export default function OtherProjects(props) {
                     )}
                     style={{ transitionDelay: `${i + 2}00ms` }}
                   >
-                    <p className="otherProjectsCardTitle">{elm.title}</p>
-                    <p className="otherProjectsCardBody">{elm.body}</p>
-                    <p className="otherProjectsCardFooter">{elm.footer}</p>
-                    <div className="otherProjectsCardButtons">
-                      {elm.gitHub ? (
-                        <a target="_blank" href={elm.gitHub}>
-                          <GitHubIcon className="otherProjectsCardIcon" />
-                        </a>
-                      ) : null}
-                      {elm.demo ? (
-                        <a href={elm.demo} target="_blank">
-                          <OpenDemoIcon className="otherProjectsCardIcon" />
-                        </a>
-                      ) : null}
+                    <div>
+                      <p className="otherProjectsCardTitle">{elm.title}</p>
+                      <p className="otherProjectsCardBody">{elm.body}</p>
+                    </div>
+                    <div>
+                      <p className="otherProjectsCardFooter">{elm.footer}</p>
+                      <div className="otherProjectsCardButtons">
+                        {elm.gitHub ? (
+                          <a target="_blank" href={elm.gitHub}>
+                            <GitHubIcon className="otherProjectsCardIcon" />
+                          </a>
+                        ) : null}
+                        {elm.demo ? (
+                          <a href={elm.demo} target="_blank">
+                            <OpenDemoIcon className="otherProjectsCardIcon" />
+                          </a>
+                        ) : null}
+                      </div>
                     </div>
                   </div>
                 </CSSTransition>

@@ -65,6 +65,8 @@
 
     .otherProjectsCardFooter {
       @include type-style(code-02, true);
+      margin-bottom: 2rem;
+      font-weight: bold;
     }
 
     .otherProjectsCardButtons {

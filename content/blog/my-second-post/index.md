@@ -1,9 +1,9 @@
 ---
 path: "my-second-post"
-slug: "my-second-post"
 title: My Second Post!
 date: "2015-05-06T23:46:37.121Z"
 description: "Hello World adlkaj sdkajslkd awsdkjskdjskajlsjdlkajs dkajsk djska jlk djkas djkajld ksdak sdlakjsdkajs dlaskj das"
+slug: "my-second-post"
 ---
 
 # Me encanta el md

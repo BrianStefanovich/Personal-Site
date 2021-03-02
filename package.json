@@ -6,6 +6,7 @@
   "author": "Brian Stefanovich <email@brianstefanovich.com>",
   "dependencies": {
     "@n8tb1t/use-scroll-position": "^2.0.3",
+    "dotenv": "^8.2.0",
     "gatsby": "^2.32.3",
     "gatsby-image": "^2.11.0",
     "gatsby-plugin-feed": "^2.13.0",
@@ -22,6 +23,7 @@
     "gatsby-remark-prismjs": "^3.13.0",
     "gatsby-remark-responsive-iframe": "^2.11.0",
     "gatsby-remark-smartypants": "^2.10.0",
+    "gatsby-source-contentful": "^5.0.0",
     "gatsby-source-filesystem": "^2.11.0",
     "gatsby-transformer-remark": "^2.16.0",
     "gatsby-transformer-sharp": "^2.12.0",

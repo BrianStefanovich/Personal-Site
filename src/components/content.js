@@ -52,15 +52,18 @@ const thingsIBuild = {
   data: [
     {
       title: "WA Connection",
-      body: `A nicer look at your starsrepos by number of stars, forks, and size. A nicer look at your GitHub profile and repository stats with data visualizations of your top languages and stars. Sort through your top repos by number of stars, forks, and size.
-`,
-      footer: `Next.js Tailwind CSS Firebase`,
+      body:
+        "A web app that allows you to manage your WhatsApp account based on csv files. It super usefull for business carrying forward marketing campaigns or notification systems.",
+      footer: `React Redux Node Firebase`,
+      gitHub:
+        "https://github.com/BrianStefanovich/non-functional-wa-connection-demo",
     },
     {
-      title: "Octo Profile",
-      body: `A nicer look at your GitHub profile and repository stats with data top repos by number of stars, forks, and size. A nicer look at your GitHub profile and repository stats with data visualizations of your top languages and stars. Sort through your top repos by number of stars, forks, and size. A nicer look at your GitHub profile and repository stats with data visualizations of your top languages and stars. Sort through your top repos by number of stars, forks, and size.
-`,
-      footer: `Next.js Tailwind CSS Firebase`,
+      title: "Connectivity's Website",
+      body:
+        "Connectivity's is a company based on Uruguay that design and build connectivity solutions.",
+      footer: `React Anime Js SVG Animation`,
+      demo: "https://connectivitys.com",
     },
   ],
 };
@@ -70,7 +73,7 @@ const otherProjects = {
     {
       title: "react-whatsapp-editor",
       body: `An easy to use rtf editor, that emulates WhatsApp editor and output rft text, on WhatsApp rtf format.`,
-      footer: "React SlateJs Emoji Mart",
+      footer: "React SlateJs Emoji-Mart",
       gitHub: "https://github.com/BrianStefanovich/react-whatsapp-editor",
     },
     {
@@ -78,6 +81,13 @@ const otherProjects = {
       body: `This is of my own interpretation of grid layout and font styles proposed by carbon design system. The main difference is that is based on Montserrat and Open Sans rather than Plex font face.`,
       footer: "SASS",
       gitHub: "https://github.com/BrianStefanovich/carbonized-typography",
+    },
+    {
+      title: "personal-website",
+      body: `This is my personal website build with Gatsby`,
+      footer: "React Gatsby SASS Node",
+      gitHub: "https://github.com/BrianStefanovich/Personal-Site",
+      demo: "https://brianstefanovich.com",
     },
   ],
 };

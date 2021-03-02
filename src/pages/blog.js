@@ -1,9 +1,7 @@
 import React from "react";
 import { graphql, navigate } from "gatsby";
 import { gridPlacement } from "../components/utilities";
-
 import Bio from "../components/bio";
-import Layout from "../components/layout";
 import SEO from "../components/seo";
 import BlogHeader from "../components/BlogHeader";
 import BlogFooter from "../components/BlogFooter";
