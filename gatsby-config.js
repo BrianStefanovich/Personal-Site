@@ -37,7 +37,6 @@ module.exports = {
           {
             resolve: `gatsby-remark-katex`,
             options: {
-              // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
               strict: `ignore`,
             },
           },
@@ -47,7 +46,7 @@ module.exports = {
               buttonText: "Copy",
               tooltipText: `Copy to clipboard`,
               toasterText: "Copied to clipboard",
-              toasterDuration: 5000,
+              toasterDuration: 3000,
             },
           },
           {

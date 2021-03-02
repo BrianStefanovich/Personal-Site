@@ -11,13 +11,14 @@ import {
   GoogleCloudLogo,
   FirebaseLogo,
   PhpLogo,
-  ReactLogo
+  ReactLogo,
+  SassLogo,
 } from "./Icons";
 
 export default function AboutMe(props) {
   const data = useStaticQuery(graphql`
     query MyQuery {
-      file(sourceInstanceName: { eq: "assets" }, name: { eq: "foto-cv" }) {
+      file(sourceInstanceName: { eq: "assets" }, name: { eq: "aboutMePhoto" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -91,6 +92,7 @@ export default function AboutMe(props) {
             <PhpLogo className="aboutMeTechIcon" />
             <GoogleCloudLogo className="aboutMeTechIcon" />
             <FirebaseLogo className="aboutMeTechIcon" />
+            <SassLogo className="aboutMeTechIcon" />
           </div>
         </div>
       </CSSTransition>

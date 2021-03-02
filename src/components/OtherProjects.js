@@ -99,7 +99,7 @@ export default function OtherProjects(props) {
                       otherProjectsCardGrid,
                       "otherProjectsCard"
                     )}
-                    style={{ transitionDelay: `${(i + 1) * 3}00ms` }}
+                    style={{ transitionDelay: `${(i + 2) }00ms` }}
                   >
                     <p className="otherProjectsCardTitle">{elm.title}</p>
                     <p className="otherProjectsCardBody">{elm.body}</p>

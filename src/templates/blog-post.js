@@ -67,7 +67,8 @@ const BlogPostTemplate = ({ data, location }) => {
                 {previous && (
                   <a
                     href={
-                      "http://localhost:8000/blog/" + previous.frontmatter.slug
+                      "https://brianstefanovich.com/blog/" +
+                      previous.frontmatter.slug
                     }
                     rel="prev"
                   >
@@ -78,7 +79,10 @@ const BlogPostTemplate = ({ data, location }) => {
               <li>
                 {next && (
                   <a
-                    href={"http://localhost:8000/blog/" + next.frontmatter.slug}
+                    href={
+                      "https://brianstefanovich.com/blog/" +
+                      next.frontmatter.slug
+                    }
                     rel="next"
                   >
                     {next.frontmatter.title} →

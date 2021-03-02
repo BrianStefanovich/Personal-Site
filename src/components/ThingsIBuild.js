@@ -2,8 +2,37 @@ import React from "react";
 import { gridPlacement, useIsInViewportOnce } from "./utilities";
 import { OpenDemoIcon, GitHubIcon } from "./Icons";
 import { CSSTransition } from "react-transition-group";
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 
 export default function ThingsIBuild(props) {
+  const data = useStaticQuery(graphql`
+    query ThingsIBuild {
+      img1: file(
+        sourceInstanceName: { eq: "assets" }
+        name: { eq: "wa-connection" }
+      ) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      img2: file(
+        sourceInstanceName: { eq: "assets" }
+        name: { eq: "connectivitys-web" }
+      ) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `);
+
+  console.log("DATA: ", data);
+
   const [isTitleInViewport, titleTargetRef] = useIsInViewportOnce({
     threshold: 90,
   });
@@ -146,8 +175,8 @@ export default function ThingsIBuild(props) {
                 timeout={400}
               >
                 <div className="thingsIBuildCardFadeup thingsIBuildCard bx--row bx--row--condensed">
-                  <img
-                    src={elm.image}
+                  <Img
+                    fluid={data.img1.childImageSharp.fluid}
                     className={gridPlacement(leftImageGrid, "thigsIBuildImage")}
                     alt="project thumbnail"
                   />
@@ -194,8 +223,9 @@ export default function ThingsIBuild(props) {
                     </div>
                   </div>
 
-                  <img
+                  <Img
                     src={elm.image}
+                    fluid={data.img2.childImageSharp.fluid}
                     className={gridPlacement(
                       rightImageGrid,
                       "thigsIBuildImage"

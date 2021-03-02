@@ -118,7 +118,8 @@ export default function CheckMyBlog(props) {
                 </p>
                 <a
                   href={
-                    window.location.href + "blog/" + elm.node.frontmatter.slug
+		    "https://brianstefanovich.com/blog/" +
+                    elm.node.frontmatter.slug
                   }
                 >
                   <Arrow className="blogIcon" />

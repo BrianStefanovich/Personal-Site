@@ -73,7 +73,7 @@ const BlogIndex = ({ data, location }) => {
       <div className="bx--grid bx--grid--condensed">
         <div className="box-row">
           <div className={gridPlacement(blogIndexLayoutGrid, "bx--no-gutter")}>
-            <div className="bx--row bx--no-gutter">
+            <div className="blogIndex bx--row bx--no-gutter">
               {posts.map((post, i) => {
                 const title = post.frontmatter.title;
                 console.log(post);

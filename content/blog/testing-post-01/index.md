@@ -8,6 +8,10 @@ slug: "testing-post-01"
 
 ## Headers
 
+$$
+a^2 + b^2
+$$
+
 ```md:clipboard=false
 # H1
 

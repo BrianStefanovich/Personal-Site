@@ -63,32 +63,16 @@
 .aboutMeTechs {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 3rem;
   .aboutMeTechIcon {
-    height: 4rem;
-    margin: 2rem;
+    @include spacer(height, 0.5);
+    @include spacer(margin, 0.2);
 
     filter: grayscale(1);
     transition: filter 200ms ease-in-out;
 
     &:hover {
       filter: grayscale(0);
-    }
-  }
-}
-
-.aboutMeImage {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  .gatsby-image-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    img {
-      width: 100%;
     }
   }
 }
