@@ -35,10 +35,10 @@ export default function SideGadgetRigth() {
         </a>
         <a
           title="Send me an eMail"
-          href="mailto:email@brianstefanovich.com"
+          href="mailto:stefanovich.brian@gmail.com"
           className="sideGadgetRigthMail"
         >
-          email@brianstefanovich.com
+          stefanovich.brian@gmail.com
         </a>
         <div className="sideGadgetRigthLine"></div>
       </div>
