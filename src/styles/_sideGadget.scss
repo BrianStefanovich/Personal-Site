@@ -135,7 +135,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 11;
+    z-index: 400;
     -filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     background-color: rgba($grey-10, 0.6);
@@ -148,7 +148,7 @@
 
 .mobileGadget {
   @media (max-width: $breakpoint-lg) {
-    z-index: 50;
+    z-index: 500;
     display: flex;
     flex-direction: column;
     align-items: flex-end;

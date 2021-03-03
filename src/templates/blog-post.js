@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import SEO from "../components/seo";
 import { gridPlacement } from "./../components/utilities";
 import { BlogFooter, BlogHeader } from "./../components";
+import MobileBlogGadget from "./../components/MobileBlogGadget";
 
 const postLayoutGrid = {
   max: {
@@ -100,6 +101,7 @@ const BlogPostTemplate = ({ data, location }) => {
           </footer>
         </article>
       </div>
+      <MobileBlogGadget />
     </div>
   );
 };

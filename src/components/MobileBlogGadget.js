@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { TelegramIcon, WhatsAppIcon, LinkedInIcon, EmailIcon } from "./Icons";
+import { Home, AboutBlog, Web, EmailIcon } from "./Icons";
 import { CSSTransition, Transition } from "react-transition-group";
+import { Link } from "gatsby";
 
-export default function MobileGadget() {
+export default function MobileBlogGadget() {
   const [gadgetOpen, setGadgetOpen] = useState(false);
 
   const defaultStyle = {
@@ -36,15 +37,14 @@ export default function MobileGadget() {
           classNames="mobileGadgetIconFadeup"
           timeout={400}
         >
-          <a
-            target="_blank"
-            href="https://t.me/BrianStefanovich"
+          <Link
+            to="/blog"
             style={{ transitionDelay: "200ms" }}
             className="mobileGadgetIcon"
           >
-            <p>Write me on Telegram</p>
-            <TelegramIcon className="icon" />
-          </a>
+            <p>Home</p>
+            <Home className="icon" />
+          </Link>
         </CSSTransition>
 
         <CSSTransition
@@ -54,15 +54,14 @@ export default function MobileGadget() {
           classNames="mobileGadgetIconFadeup"
           timeout={400}
         >
-          <a
+          <Link
             style={{ transitionDelay: "150ms" }}
             className="mobileGadgetIcon"
-            target="_blank"
-            href="https://wa.me/59894419518"
+            to="/about"
           >
-            <p>Write me on Whats App</p>
-            <WhatsAppIcon className="icon" />
-          </a>
+            <p>About this blog</p>
+            <AboutBlog className="icon" />
+          </Link>
         </CSSTransition>
         <CSSTransition
           mountOnEnter
@@ -71,15 +70,14 @@ export default function MobileGadget() {
           classNames="mobileGadgetIconFadeup"
           timeout={400}
         >
-          <a
-            href="https://www.linkedin.com/in/brian-stefanovich"
-            target="_blank"
+          <Link
             style={{ transitionDelay: "100ms" }}
             className="mobileGadgetIcon"
+            to="/"
           >
-            <p>Find me on Linkedin</p>
-            <LinkedInIcon className="icon" />
-          </a>
+            <p>brianstefanovich.com</p>
+            <Web className="icon" />
+          </Link>
         </CSSTransition>
         <CSSTransition
           mountOnEnter

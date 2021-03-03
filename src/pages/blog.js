@@ -6,6 +6,29 @@ import SEO from "../components/seo";
 import BlogHeader from "../components/BlogHeader";
 import BlogFooter from "../components/BlogFooter";
 import Img from "gatsby-image";
+import MobileBlogGadget from "./../components/MobileBlogGadget";
+
+const postLayoutGrid = {
+  max: {
+    offset: "4",
+    col: "8",
+  },
+  xlg: {
+    offset: "3",
+    col: "10",
+  },
+  lg: {
+    offset: "3",
+    col: "10",
+  },
+  md: {
+    offset: "1",
+    col: "6",
+  },
+  sm: {
+    col: "col",
+  },
+};
 
 const blogIndexLayoutGrid = {
   sm: {
@@ -78,7 +101,6 @@ const BlogIndex = ({ data, location }) => {
               {posts.map((post, i) => {
                 const title = post.frontmatter.title;
                 console.log(post);
-
                 return (
                   <div
                     className={gridPlacement(
@@ -108,6 +130,7 @@ const BlogIndex = ({ data, location }) => {
         </div>
         <BlogFooter />
       </div>
+      <MobileBlogGadget />
     </div>
   );
 };

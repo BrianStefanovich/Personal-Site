@@ -191,10 +191,14 @@ export default function ThingsIBuild(props) {
                     <p className="thingsIBuildTextFooter">{elm.footer}</p>
                     <div className="thingsIBuildTextButtons">
                       {elm.gitHub ? (
-                        <GitHubIcon className="thingsIBuildIcon" />
+                        <a href={elm.gitHub} target="_blank">
+                          <GitHubIcon className="thingsIBuildIcon" />
+                        </a>
                       ) : null}
                       {elm.demo ? (
-                        <OpenDemoIcon className="thingsIBuildIcon" />
+                        <a href={elm.demo} target="_blank">
+                          <OpenDemoIcon className="thingsIBuildIcon" />
+                        </a>
                       ) : null}
                     </div>
                   </div>
@@ -223,10 +227,14 @@ export default function ThingsIBuild(props) {
                     <p className="thingsIBuildTextFooter">{elm.footer}</p>
                     <div className="thingsIBuildTextButtons">
                       {elm.gitHub ? (
-                        <GitHubIcon className="thingsIBuildIcon" />
+                        <a href={elm.gitHub} target="_blank">
+                          <GitHubIcon className="thingsIBuildIcon" />
+                        </a>
                       ) : null}
                       {elm.demo ? (
-                        <OpenDemoIcon className="thingsIBuildIcon" />
+                        <a href={elm.demo} target="_blank">
+                          <OpenDemoIcon className="thingsIBuildIcon" />
+                        </a>
                       ) : null}
                     </div>
                   </div>
