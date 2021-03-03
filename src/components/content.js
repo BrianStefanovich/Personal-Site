@@ -85,7 +85,7 @@ const otherProjects = {
     },
     {
       title: "personal-website",
-      body: `This is my personal website build with Gatsby`,
+      body: `My personal website is build with React and Gatsby. The blog section transform markdown files to html with code highlighting and LaTex support`,
       footer: "React Gatsby SASS Node",
       gitHub: "https://github.com/BrianStefanovich/Personal-Site",
       demo: "https://brianstefanovich.com",
