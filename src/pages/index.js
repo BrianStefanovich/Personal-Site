@@ -111,11 +111,13 @@ export default function Index(props) {
           scrollRef={experienceRef}
         />
         <OtherProjects contentData={content.otherProjects.data} />
-        <CheckMyBlog
-          contentData={props.data.allMarkdownRemark.edges}
-          navRef={blogTargetRef}
-          scrollRef={blogRef}
-        />
+        {props.data.allMarkdownRemark.edges.length > 0 ? (
+          <CheckMyBlog
+            contentData={props.data.allMarkdownRemark.edges}
+            navRef={blogTargetRef}
+            scrollRef={blogRef}
+          />
+        ) : null}
         <Footer />
       </div>
     </div>
