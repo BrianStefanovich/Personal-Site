@@ -2,7 +2,7 @@
 
 Siempre recordaré un simpatico ejercicio que soliamos hacer en clase de Diseño Grafico. Nuestro profesor nos insistía sobre la mala calidad general de los diseños de los pequeños y medianos emprendimientos en nuestra region. Tanto asi que solíamos elegir un lugar al azar en Google Maps y nunca recorríamos mas de tres calles para toparnos con pesimos diseños de logotipos y cartelería. 
 
-El ejercicio consistía en realizar un rediseño de los logotipos y la cartelería, adoptando el tono y la identidad de lo que se podñia apreciar desde street view.
+El ejercicio consistía en explicar cuales eran los motivos que hacia que se vieran masl, adoptando el tono y la identidad de lo que se podñia apreciar desde street view.
 
 Hace unos días termine de leer [Design for Hackers](https://www.oreilly.com/library/view/design-for-hackers/9781119998952/) de David Kadavy, un libro que expone marcos conceptuales muy claros para entender y resolver problemas de diseño, en especial enfocado al diseño web. Y mientras lo leía no podía parar de pensar en repetir el ejercicio que haciamos en clase, pero aplicado a websites.
 
@@ -68,9 +68,9 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQxODY1OTczLDE0MjY1NDM4OTgsLTEyNj
-QwNDUwODgsMTk1NjY1NzEzMSwtMzQzMDM1NjAwLC0xMjUxMDk3
-MDkwLDIwMDI0ODAxOTQsMTMzOTAwOTM2NywxMzM4NjUxMTAxLD
-IzMTAxMDk3NywyMDQwMjk3NjIyLC0yMDA2ODQyMTg4LDc5NjIy
-MzQ4MSwtMzMyNDU1MzYzXX0=
+eyJoaXN0b3J5IjpbMzExOTM2MDM3LDk0MTg2NTk3MywxNDI2NT
+QzODk4LC0xMjY0MDQ1MDg4LDE5NTY2NTcxMzEsLTM0MzAzNTYw
+MCwtMTI1MTA5NzA5MCwyMDAyNDgwMTk0LDEzMzkwMDkzNjcsMT
+MzODY1MTEwMSwyMzEwMTA5NzcsMjA0MDI5NzYyMiwtMjAwNjg0
+MjE4OCw3OTYyMjM0ODEsLTMzMjQ1NTM2M119
 -->
