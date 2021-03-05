@@ -5,12 +5,18 @@ Estudiando Diesño Gráfico, nuestro profesor repetidas veces nos
 ## Principios de diseño
 
 > ### Dominance
-> The principle of dominance creates visual interest in a composition by drawing the viewer's eye to an important element in the composition. When an element is dominant in a composition, its one of the first things your eye is drown to.
+> Th e principle of dominance creates visual interest in a composition by drawing
+the viewer’s eye to an important element in the composition. When an element
+is dominant in a composition, it is one of the fi rst things your eye is drawn to.
+It acts almost like a magnet when you fi rst lay eyes on the composition. It also
+acts as an anchor – you keep returning to it as you explore other parts of the
+composition.
 
 > ### 
   
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzODY1MTEwMSwyMzEwMTA5NzcsMjA0MD
-I5NzYyMiwtMjAwNjg0MjE4OCw3OTYyMjM0ODEsLTMzMjQ1NTM2
-M119
+eyJoaXN0b3J5IjpbLTY0NjM2NTc1MSwxMzM4NjUxMTAxLDIzMT
+AxMDk3NywyMDQwMjk3NjIyLC0yMDA2ODQyMTg4LDc5NjIyMzQ4
+MSwtMzMyNDU1MzYzXX0=
 -->
