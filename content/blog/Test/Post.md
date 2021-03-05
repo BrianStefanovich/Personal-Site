@@ -1,14 +1,10 @@
-# Un poco de historia
+## Un poco de historia
 
-Siempre recordaré un simpatico ejercicio que soliamos hacer en clase de Diseño Grafico. Nuestro profesor nos insistía sobre la mala calidad general de los diseños de los pequeños y medianos emprendimientos en nuestra region. Tanto asi que solíamos elegir un lugar al azar en Google Maps y nunca recorríamos mas de tres calles para toparnos con pesimos diseños de logotipos y cartelería. 
+Siempre recordaré un simpatico ejercicio que soliamos hacer en clase de Diseño Grafico. Nuestro profesor nos insistía sobre la mala calidad general de los diseños de los pequeños y medianos emprendimientos en nuestra region. Tanto asi que solíamos elegir un lugar al azar en Google Maps y nunca recorríamos mas de tres calles en street view para toparnos con pesimos diseños de logotipos y cartelería. 
 
-El ejercicio consistía en explicar cuales eran los motivos que hacia que se vieran masl, adoptando el tono y la identidad de lo que se podñia apreciar desde street view.
+El ejercicio consistía en explicar cuales eran los motivos que hacia que se vieran, adoptando el tono y la identidad de lo que se podñia apreciar desde street view.
 
 Hace unos días termine de leer [Design for Hackers](https://www.oreilly.com/library/view/design-for-hackers/9781119998952/) de David Kadavy, un libro que expone marcos conceptuales muy claros para entender y resolver problemas de diseño, en especial enfocado al diseño web. Y mientras lo leía no podía parar de pensar en repetir el ejercicio que haciamos en clase, pero aplicado a websites.
-
- 
-
-Asi que aquí van
 
 ## Principios de diseño
 
@@ -68,9 +64,9 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzExOTM2MDM3LDk0MTg2NTk3MywxNDI2NT
-QzODk4LC0xMjY0MDQ1MDg4LDE5NTY2NTcxMzEsLTM0MzAzNTYw
-MCwtMTI1MTA5NzA5MCwyMDAyNDgwMTk0LDEzMzkwMDkzNjcsMT
-MzODY1MTEwMSwyMzEwMTA5NzcsMjA0MDI5NzYyMiwtMjAwNjg0
-MjE4OCw3OTYyMjM0ODEsLTMzMjQ1NTM2M119
+eyJoaXN0b3J5IjpbLTExMjQzNzI4NzcsOTQxODY1OTczLDE0Mj
+Y1NDM4OTgsLTEyNjQwNDUwODgsMTk1NjY1NzEzMSwtMzQzMDM1
+NjAwLC0xMjUxMDk3MDkwLDIwMDI0ODAxOTQsMTMzOTAwOTM2Ny
+wxMzM4NjUxMTAxLDIzMTAxMDk3NywyMDQwMjk3NjIyLC0yMDA2
+ODQyMTg4LDc5NjIyMzQ4MSwtMzMyNDU1MzYzXX0=
 -->
