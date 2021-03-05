@@ -13,7 +13,11 @@ El primer paso en el proceso de diseño de un sitio web, comienza resolviendo la
  1. ¿Que esta buscando el usuario en el sitio web, cuales son sus necesidades?
  2. ¿Cuales son los objetivos del dueño del sitio?
 
-Muchos proyectos se llevan a cabo sin tener respuestas claras a ninguna de estas dos preguntas, y conllevan a experiencias de usuario confusas  desagradables. ¿Cual es el objetivo de SDPE con su website? Lo primero que se me viene a la mente cuando entro al sitio, es desorden. No hay una direcciòn clara en la que el espectador deba recorrer, no hay una ponderaciòn clara
+Muchos proyectos se llevan a cabo sin tener respuestas claras a ninguna de estas dos preguntas, y conllevan a experiencias de usuario confusas  desagradables. ¿Cual es el objetivo de SDPE con su website?
+
+No se trata de un blog, ni una cartelera de promociones 
+
+Lo primero que se me viene a la mente cuando entro al sitio, es desorden. No hay una direcciòn clara en la que el espectador deba recorrer, no hay una ponderaciòn clara
 
 > ### Dominance
 > The principle of dominance creates visual interest in a composition by drawing
@@ -71,7 +75,7 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyNjAwNTY2NCwyMDA2Nzg1NjI0LDE0NT
+eyJoaXN0b3J5IjpbMTQ4NzMyMzU4MCwyMDA2Nzg1NjI0LDE0NT
 QwMDc3MDUsMTQ5NTYyNTY4OSwtMjA1NDA3NjQ4Nyw3MDE2NDg4
 MCwxMDk5MTY2NzAwLC0xNzY4NjY2MDgxLDk0MTg2NTk3MywxND
 I2NTQzODk4LC0xMjY0MDQ1MDg4LDE5NTY2NTcxMzEsLTM0MzAz
