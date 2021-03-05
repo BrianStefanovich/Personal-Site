@@ -8,8 +8,10 @@ Hace unos días termine de leer [Design for Hackers](https://www.oreilly.com/lib
 Empecemos con [sdpeuro.com](https://sdpeuro.com/), la web de un taller mecánico.
 
 ![ASDasd](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/sdpeuro.png)
-El primer paso en el proceso de diseño, siempre de
+El primer paso en el proceso de diseño de un sitio web, comienza resolviendo las siguientes preguntas:
 
+ 1. ¿Que busca el cliente en el sitio web?
+ 2. ¿Que busca?
 
 Lo primero que se me viene a la mente cuando entro al sitio, es desorden. No hay una direcciòn clara en la que el espectador deba recorrer, no hay una ponderaciòn clara
 
@@ -69,7 +71,7 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjYyMzA0MTEyLDIwMDY3ODU2MjQsMTQ1ND
+eyJoaXN0b3J5IjpbODA4ODEzODEzLDIwMDY3ODU2MjQsMTQ1ND
 AwNzcwNSwxNDk1NjI1Njg5LC0yMDU0MDc2NDg3LDcwMTY0ODgw
 LDEwOTkxNjY3MDAsLTE3Njg2NjYwODEsOTQxODY1OTczLDE0Mj
 Y1NDM4OTgsLTEyNjQwNDUwODgsMTk1NjY1NzEzMSwtMzQzMDM1
