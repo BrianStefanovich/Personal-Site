@@ -6,7 +6,7 @@ El ejercicio consistía en explicar cuales eran los motivos que hacia que se vie
 
 Hace unos días termine de leer [Design for Hackers](https://www.oreilly.com/library/view/design-for-hackers/9781119998952/) de David Kadavy, un excelente libro que expone marcos conceptuales muy claros para entender y resolver problemas de diseño web. Y mientras lo leía no podía parar de pensar en repetir el ejercicio que haciamos en clase, pero esta vez aplicado a websites, asi que alla vamos!
 
-##
+## 
 
 ## Principios de diseño
 
@@ -66,7 +66,7 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQwNTAxNDgwLDcwMTY0ODgwLDEwOTkxNj
+eyJoaXN0b3J5IjpbNzc0MzYxMTk2LDcwMTY0ODgwLDEwOTkxNj
 Y3MDAsLTE3Njg2NjYwODEsOTQxODY1OTczLDE0MjY1NDM4OTgs
 LTEyNjQwNDUwODgsMTk1NjY1NzEzMSwtMzQzMDM1NjAwLC0xMj
 UxMDk3MDkwLDIwMDI0ODAxOTQsMTMzOTAwOTM2NywxMzM4NjUx
