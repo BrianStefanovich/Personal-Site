@@ -4,7 +4,7 @@ Siempre recordaré un simpatico ejercicio que soliamos hacer en clase de Diseño
 
 El ejercicio consistía en realizar un rediseño de los logotipos y la cartelería, adoptando el tono y la identidad de lo que se podñia apreciar desde street view.
 
-Hace unos días termine de leer [Design for Hackers](https://www.oreilly.com/library/view/design-for-hackers/9781119998952/) de David Kadavy
+Hace unos días termine de leer [Design for Hackers](https://www.oreilly.com/library/view/design-for-hackers/9781119998952/) de David Kadavy, un libro muy interesando que trae luz 
 
 ## Principios de diseño
 
@@ -64,7 +64,7 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjU3MzM3OTMsLTEyNTEwOTcwOTAsMj
+eyJoaXN0b3J5IjpbLTE0ODUwNTU4ODksLTEyNTEwOTcwOTAsMj
 AwMjQ4MDE5NCwxMzM5MDA5MzY3LDEzMzg2NTExMDEsMjMxMDEw
 OTc3LDIwNDAyOTc2MjIsLTIwMDY4NDIxODgsNzk2MjIzNDgxLC
 0zMzI0NTUzNjNdfQ==
