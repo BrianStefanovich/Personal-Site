@@ -15,6 +15,7 @@ El primer paso en el proceso de diseño de un sitio web, comienza resolviendo la
 
 Muchos proyectos se llevan a cabo sin tener respuestas claras a ninguna de estas dos preguntas, y conllevan a experiencias de usuario confusas y desagradables. ¿Cual es el objetivo de SDPE con su website?
 
+
 No se trata de un blog, ni una cartelera de promociones, ni una tienda virtual. Al parecer se trata de una pagina de identidad corporativa, en la que cuentan de que se trata su companía, y dejan algunos metodos de contacto. Por lo tanto, podriamos decir que los objetivos de esta web son:
 
  1. Que su empresa exista en internet y aparecer en los buscadores
@@ -81,7 +82,7 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg5ODI3ODQwLDIwMDY3ODU2MjQsMTQ1ND
+eyJoaXN0b3J5IjpbMzU5MTc3OTY2LDIwMDY3ODU2MjQsMTQ1ND
 AwNzcwNSwxNDk1NjI1Njg5LC0yMDU0MDc2NDg3LDcwMTY0ODgw
 LDEwOTkxNjY3MDAsLTE3Njg2NjYwODEsOTQxODY1OTczLDE0Mj
 Y1NDM4OTgsLTEyNjQwNDUwODgsMTk1NjY1NzEzMSwtMzQzMDM1
