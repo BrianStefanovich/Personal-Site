@@ -37,13 +37,30 @@ interesting because it provides an opportunity for the principle of contrast (wh
 I’ll talk about soon) and can create a sense of depth in foreground/background
 relationships.
 
+> ### Direction
+> The principle of direction helps guide the viewer’s eye throughout the
+composition and helps keep the viewer looking at the design piece. Direction
+can be established pretty explicitly through lines (and sometimes even arrows!),
+but sometimes more implicitly through shapes, shading, or even invisible
+alignment within the composition.
+
+>### Contrast
+>The principle of contrast causes certain parts of a composition to stand out
+more than others because of differences – or contrast – between elements.
+Things in a composition can contrast with one another in terms of size, color,
+value (lightness or darkness), texture, shape, line quality . . . just about any way
+imaginable. By using contrast you can create dominance, or create foreground/
+background relationships. Contrast can be used as a guiding principle
+throughout an entire design (like if something is entirely black and white), or it
+can be used sparingly in a design that is mostly homogeneous, for more impact.
+
 
 
 
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzExMTE4NTM1LDEzMzg2NTExMDEsMjMxMD
-EwOTc3LDIwNDAyOTc2MjIsLTIwMDY4NDIxODgsNzk2MjIzNDgx
-LC0zMzI0NTUzNjNdfQ==
+eyJoaXN0b3J5IjpbMTQ4MzA0MTc4OCwxMzM4NjUxMTAxLDIzMT
+AxMDk3NywyMDQwMjk3NjIyLC0yMDA2ODQyMTg4LDc5NjIyMzQ4
+MSwtMzMyNDU1MzYzXX0=
 -->
