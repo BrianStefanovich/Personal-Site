@@ -6,9 +6,9 @@ El ejercicio consistía en explicar cuales eran los motivos que hacia que se vie
 
 Hace unos días termine de leer [Design for Hackers](https://www.oreilly.com/library/view/design-for-hackers/9781119998952/) de David Kadavy, un excelente libro que expone marcos conceptuales muy claros para entender y resolver problemas de diseño web. Y mientras lo leía no podía parar de pensar en repetir el ejercicio que haciamos en clase, pero esta vez aplicado a websites, asi que alla vamos!
 
+##
+
 ## Principios de diseño
-
-
 
 > ### Dominance
 > The principle of dominance creates visual interest in a composition by drawing
@@ -66,10 +66,10 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzAxNjQ4ODAsMTA5OTE2NjcwMCwtMTc2OD
-Y2NjA4MSw5NDE4NjU5NzMsMTQyNjU0Mzg5OCwtMTI2NDA0NTA4
-OCwxOTU2NjU3MTMxLC0zNDMwMzU2MDAsLTEyNTEwOTcwOTAsMj
-AwMjQ4MDE5NCwxMzM5MDA5MzY3LDEzMzg2NTExMDEsMjMxMDEw
-OTc3LDIwNDAyOTc2MjIsLTIwMDY4NDIxODgsNzk2MjIzNDgxLC
-0zMzI0NTUzNjNdfQ==
+eyJoaXN0b3J5IjpbNDQwNTAxNDgwLDcwMTY0ODgwLDEwOTkxNj
+Y3MDAsLTE3Njg2NjYwODEsOTQxODY1OTczLDE0MjY1NDM4OTgs
+LTEyNjQwNDUwODgsMTk1NjY1NzEzMSwtMzQzMDM1NjAwLC0xMj
+UxMDk3MDkwLDIwMDI0ODAxOTQsMTMzOTAwOTM2NywxMzM4NjUx
+MTAxLDIzMTAxMDk3NywyMDQwMjk3NjIyLC0yMDA2ODQyMTg4LD
+c5NjIyMzQ4MSwtMzMyNDU1MzYzXX0=
 -->
