@@ -1,6 +1,8 @@
 # Un poco de historia
 
-Siempre recordaré un simpatico ejercicio que soliamos hacer en clase de Diseño Grafico. Nuestro profesor nos insistía sobre la mala calidad general de los diseños de los pequeños y medianos emprendimientos en nuestra region. Tanto asi que solíamos elegir un lugar al azar en Google Maps y nunca recorríamos mas de tres calles para toparnos con pesimos logotipos, errores  
+Siempre recordaré un simpatico ejercicio que soliamos hacer en clase de Diseño Grafico. Nuestro profesor nos insistía sobre la mala calidad general de los diseños de los pequeños y medianos emprendimientos en nuestra region. Tanto asi que solíamos elegir un lugar al azar en Google Maps y nunca recorríamos mas de tres calles para toparnos con pesimos diseños de logotipos y cartelería. 
+
+El ejercicio consistía en realizar un rediseño de
 
 
 ## Principios de diseño
@@ -61,7 +63,7 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3NjkwNTA4MSwyMDAyNDgwMTk0LDEzMz
+eyJoaXN0b3J5IjpbMTAxNTY2NDE3MywyMDAyNDgwMTk0LDEzMz
 kwMDkzNjcsMTMzODY1MTEwMSwyMzEwMTA5NzcsMjA0MDI5NzYy
 MiwtMjAwNjg0MjE4OCw3OTYyMjM0ODEsLTMzMjQ1NTM2M119
 -->
