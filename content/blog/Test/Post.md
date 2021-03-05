@@ -1,18 +1,8 @@
-## KaTeX
 
-You can render LaTeX mathematical expressions using [KaTeX](https://khan.github.io/KaTeX/):
-
-The *Gamma function* satisfying $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$ is via the Euler integral
-
-$$
-\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
-$$
-
-> You can find more information about **LaTeX** mathematical expressions [here](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDY4NDIxODgsNzk2MjIzNDgxLC0zMz
-I0NTUzNjNdfQ==
+eyJoaXN0b3J5IjpbMjA0MDI5NzYyMiwtMjAwNjg0MjE4OCw3OT
+YyMjM0ODEsLTMzMjQ1NTM2M119
 -->
