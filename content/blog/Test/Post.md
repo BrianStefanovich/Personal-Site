@@ -1,4 +1,4 @@
-## Un poco de historia
+# Esa web se ve mal pero... ¿Por que?
 
 Siempre recordaré un simpatico ejercicio que soliamos hacer en clase de Diseño Grafico. Nuestro profesor nos insistía sobre la mala calidad general de los diseños de los pequeños y medianos emprendimientos en nuestra region. Tanto asi que solíamos elegir un lugar al azar en Google Maps y nunca recorríamos mas de tres calles en street view para encontrar pesimos diseños de logotipos y cartelería. 
 
@@ -64,7 +64,7 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDEyMTM5MSwtMTc2ODY2NjA4MSw5ND
+eyJoaXN0b3J5IjpbMTA5OTE2NjcwMCwtMTc2ODY2NjA4MSw5ND
 E4NjU5NzMsMTQyNjU0Mzg5OCwtMTI2NDA0NTA4OCwxOTU2NjU3
 MTMxLC0zNDMwMzU2MDAsLTEyNTEwOTcwOTAsMjAwMjQ4MDE5NC
 wxMzM5MDA5MzY3LDEzMzg2NTExMDEsMjMxMDEwOTc3LDIwNDAy
