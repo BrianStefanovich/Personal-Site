@@ -8,7 +8,7 @@ Hace unos días termine de leer [Design for Hackers](https://www.oreilly.com/lib
 Empecemos con [sdpeuro.com](https://sdpeuro.com/). Esto es lo que vemos cuando entramos a su website:
 
 ![ASDasd](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/sdpeuro.png)
-A primera vista se puede 
+La primera impresion, da la sensaciòn de desorden. No hay una direcciòn clara 
 
 > ### Dominance
 > The principle of dominance creates visual interest in a composition by drawing
@@ -66,11 +66,11 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzMzMxNzUyOSwxNDk1NjI1Njg5LC0yMD
-U0MDc2NDg3LDcwMTY0ODgwLDEwOTkxNjY3MDAsLTE3Njg2NjYw
-ODEsOTQxODY1OTczLDE0MjY1NDM4OTgsLTEyNjQwNDUwODgsMT
-k1NjY1NzEzMSwtMzQzMDM1NjAwLC0xMjUxMDk3MDkwLDIwMDI0
-ODAxOTQsMTMzOTAwOTM2NywxMzM4NjUxMTAxLDIzMTAxMDk3Ny
-wyMDQwMjk3NjIyLC0yMDA2ODQyMTg4LDc5NjIyMzQ4MSwtMzMy
-NDU1MzYzXX0=
+eyJoaXN0b3J5IjpbMjIwMDY4ODM3LDE0OTU2MjU2ODksLTIwNT
+QwNzY0ODcsNzAxNjQ4ODAsMTA5OTE2NjcwMCwtMTc2ODY2NjA4
+MSw5NDE4NjU5NzMsMTQyNjU0Mzg5OCwtMTI2NDA0NTA4OCwxOT
+U2NjU3MTMxLC0zNDMwMzU2MDAsLTEyNTEwOTcwOTAsMjAwMjQ4
+MDE5NCwxMzM5MDA5MzY3LDEzMzg2NTExMDEsMjMxMDEwOTc3LD
+IwNDAyOTc2MjIsLTIwMDY4NDIxODgsNzk2MjIzNDgxLC0zMzI0
+NTUzNjNdfQ==
 -->
