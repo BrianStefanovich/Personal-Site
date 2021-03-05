@@ -19,13 +19,31 @@ Similarity makes a composition compelling because, as your eye travels
 throughout that composition, it is constantly reminded of things that it has seen
 before within that same composition.
 
-    enter code here
+> ### Rhythm
+>With similarity often comes rhythm. Rhythm is a bit more abstract than
+similarity is. Probably the fi rst thing that you think about when you think
+about rhythm is music. Just as the repetition of a snare or kick drum at a
+consistent point in a measure of music, over and over again, creates a sense of
+rhythm in music, the repetition of a particular design element or characteristic
+throughout a composition create a sense of rhythm in design.
+
+> ### Texture
+>Texture is the visual indication that something has characteristics that would be
+palpable if you were able to touch them. For example, if something looks like
+sandstone – or actually is made of sandstone – then that is texture. Texture is
+related to similarity and rhythm in that if a shape is repeated enough times, and
+at a fi ne enough scale, it generally creates a texture. Texture keeps a composition
+interesting because it provides an opportunity for the principle of contrast (which
+I’ll talk about soon) and can create a sense of depth in foreground/background
+relationships.
+
+
 
 
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTk0MjIwOTgsMTMzODY1MTEwMSwyMz
-EwMTA5NzcsMjA0MDI5NzYyMiwtMjAwNjg0MjE4OCw3OTYyMjM0
-ODEsLTMzMjQ1NTM2M119
+eyJoaXN0b3J5IjpbMzExMTE4NTM1LDEzMzg2NTExMDEsMjMxMD
+EwOTc3LDIwNDAyOTc2MjIsLTIwMDY4NDIxODgsNzk2MjIzNDgx
+LC0zMzI0NTUzNjNdfQ==
 -->
