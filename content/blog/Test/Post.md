@@ -15,14 +15,17 @@ El primer paso en el proceso de diseño de un sitio web, comienza resolviendo la
 
 Muchos proyectos se llevan a cabo sin tener respuestas claras a ninguna de estas dos preguntas, y conllevan a experiencias de usuario confusas y desagradables. ¿Cual es el objetivo de SDPE con su website?
 
-
 No se trata de un blog, ni una cartelera de promociones, ni una tienda virtual. Al parecer se trata de una pagina de identidad corporativa, en la que cuentan de que se trata su companía, y dejan algunos metodos de contacto. Por lo tanto, podriamos decir que los objetivos de esta web son:
 
  1. Que su empresa exista en internet y aparecer en los buscadores
  2. Comunicar su identidad corporativa
  3. Facilitar metodos de contacto a potenciales clientes
 
-Ahora bien, ¿que busca un usuario que visita esta web?. 
+Ahora bien, ¿que busca un usuario que visita esta web?
+
+ 1. Conocer el taller
+ 2. Buscar ofertas
+ 3. 
 
 Lo primero que se me viene a la mente cuando entro al sitio, es desorden. No hay una direcciòn clara en la que el espectador deba recorrer, no hay una ponderaciòn clara
 
@@ -82,11 +85,11 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU5MTc3OTY2LDIwMDY3ODU2MjQsMTQ1ND
-AwNzcwNSwxNDk1NjI1Njg5LC0yMDU0MDc2NDg3LDcwMTY0ODgw
-LDEwOTkxNjY3MDAsLTE3Njg2NjYwODEsOTQxODY1OTczLDE0Mj
-Y1NDM4OTgsLTEyNjQwNDUwODgsMTk1NjY1NzEzMSwtMzQzMDM1
-NjAwLC0xMjUxMDk3MDkwLDIwMDI0ODAxOTQsMTMzOTAwOTM2Ny
-wxMzM4NjUxMTAxLDIzMTAxMDk3NywyMDQwMjk3NjIyLC0yMDA2
-ODQyMTg4XX0=
+eyJoaXN0b3J5IjpbLTM1Mzk1MTc0MiwyMDA2Nzg1NjI0LDE0NT
+QwMDc3MDUsMTQ5NTYyNTY4OSwtMjA1NDA3NjQ4Nyw3MDE2NDg4
+MCwxMDk5MTY2NzAwLC0xNzY4NjY2MDgxLDk0MTg2NTk3MywxND
+I2NTQzODk4LC0xMjY0MDQ1MDg4LDE5NTY2NTcxMzEsLTM0MzAz
+NTYwMCwtMTI1MTA5NzA5MCwyMDAyNDgwMTk0LDEzMzkwMDkzNj
+csMTMzODY1MTEwMSwyMzEwMTA5NzcsMjA0MDI5NzYyMiwtMjAw
+Njg0MjE4OF19
 -->
