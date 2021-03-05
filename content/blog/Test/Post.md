@@ -20,6 +20,7 @@ No se trata de un blog, ni una cartelera de promociones, ni una tienda virtual. 
  1. Que su empresa exista en internet y aparecer en los buscadores
  2. Comunicar su identidad corporativa
  3. Facilitar metodos de contacto a potenciales clientes
+ 4. Captar clientes y aumentar sus ventas
 
 Ahora bien, ¿que busca un usuario que visita esta web? Entre muchas, podriamos decir que lo principal es:
 
@@ -28,7 +29,7 @@ Ahora bien, ¿que busca un usuario que visita esta web? Entre muchas, podriamos 
  3. Contactar facilmente con el taller
  4. Comparar servicios con otros talleres
  
- Lo primero que podemos decir
+ Lo primero que podemos decir es que el sitio desatiende todas las necesidades. Las pocas imagenes 
 
 Lo primero que se me viene a la mente cuando entro al sitio, es desorden. No hay una direcciòn clara en la que el espectador deba recorrer, no hay una ponderaciòn clara
 
@@ -88,11 +89,11 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTYxMTU3MjE5LDIwMDY3ODU2MjQsMTQ1ND
-AwNzcwNSwxNDk1NjI1Njg5LC0yMDU0MDc2NDg3LDcwMTY0ODgw
-LDEwOTkxNjY3MDAsLTE3Njg2NjYwODEsOTQxODY1OTczLDE0Mj
-Y1NDM4OTgsLTEyNjQwNDUwODgsMTk1NjY1NzEzMSwtMzQzMDM1
-NjAwLC0xMjUxMDk3MDkwLDIwMDI0ODAxOTQsMTMzOTAwOTM2Ny
-wxMzM4NjUxMTAxLDIzMTAxMDk3NywyMDQwMjk3NjIyLC0yMDA2
-ODQyMTg4XX0=
+eyJoaXN0b3J5IjpbMTIxNzE5NDc1NywyMDA2Nzg1NjI0LDE0NT
+QwMDc3MDUsMTQ5NTYyNTY4OSwtMjA1NDA3NjQ4Nyw3MDE2NDg4
+MCwxMDk5MTY2NzAwLC0xNzY4NjY2MDgxLDk0MTg2NTk3MywxND
+I2NTQzODk4LC0xMjY0MDQ1MDg4LDE5NTY2NTcxMzEsLTM0MzAz
+NTYwMCwtMTI1MTA5NzA5MCwyMDAyNDgwMTk0LDEzMzkwMDkzNj
+csMTMzODY1MTEwMSwyMzEwMTA5NzcsMjA0MDI5NzYyMiwtMjAw
+Njg0MjE4OF19
 -->
