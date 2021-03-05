@@ -8,7 +8,7 @@ Hace unos días termine de leer [Design for Hackers](https://www.oreilly.com/lib
 Empecemos con [sdpeuro.com](https://sdpeuro.com/)
 
 ![ASDasd](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/sdpeuro.png)
-Se trata de una web de un taller de autos. La mision de un diseñador web, en última instancia es desplegar la information de un modo adecuado, 
+Se trata de la web de un taller de autos.  
 
 Lo primero que se me viene a la mente cuando entro al sitio, es desorden. No hay una direcciòn clara en la que el espectador deba recorrer, no hay una ponderaciòn clara
 
@@ -68,11 +68,11 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0MjIxNzc0NSwyMDA2Nzg1NjI0LDE0NT
-QwMDc3MDUsMTQ5NTYyNTY4OSwtMjA1NDA3NjQ4Nyw3MDE2NDg4
-MCwxMDk5MTY2NzAwLC0xNzY4NjY2MDgxLDk0MTg2NTk3MywxND
-I2NTQzODk4LC0xMjY0MDQ1MDg4LDE5NTY2NTcxMzEsLTM0MzAz
-NTYwMCwtMTI1MTA5NzA5MCwyMDAyNDgwMTk0LDEzMzkwMDkzNj
-csMTMzODY1MTEwMSwyMzEwMTA5NzcsMjA0MDI5NzYyMiwtMjAw
-Njg0MjE4OF19
+eyJoaXN0b3J5IjpbMTY2MjA4NDIzLDIwMDY3ODU2MjQsMTQ1ND
+AwNzcwNSwxNDk1NjI1Njg5LC0yMDU0MDc2NDg3LDcwMTY0ODgw
+LDEwOTkxNjY3MDAsLTE3Njg2NjYwODEsOTQxODY1OTczLDE0Mj
+Y1NDM4OTgsLTEyNjQwNDUwODgsMTk1NjY1NzEzMSwtMzQzMDM1
+NjAwLC0xMjUxMDk3MDkwLDIwMDI0ODAxOTQsMTMzOTAwOTM2Ny
+wxMzM4NjUxMTAxLDIzMTAxMDk3NywyMDQwMjk3NjIyLC0yMDA2
+ODQyMTg4XX0=
 -->
