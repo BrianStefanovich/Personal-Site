@@ -4,8 +4,7 @@ Siempre recordaré un simpatico ejercicio que soliamos hacer en clase de Diseño
 
 El ejercicio consistía en realizar un rediseño de los logotipos y la cartelería, adoptando el tono y la identidad de lo que se podñia apreciar desde street view.
 
-Hace unos días termine de leer [Design for Hackers](https://www.oreilly.com/library/view/design-for-hackers/9781119998952/) de David Kadavy, un libro que expone marcos conceptuales muy claros que permiten tomar decisiones 
-
+Hace unos días termine de leer [Design for Hackers](https://www.oreilly.com/library/view/design-for-hackers/9781119998952/) de David Kadavy, un libro que expone marcos conceptuales muy claros para entender y resolver problemas de diseño, en especial enfocado al diseño web. Mientras leía
 ## Principios de diseño
 
 > ### Dominance
@@ -64,8 +63,8 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0MzAzNTYwMCwtMTI1MTA5NzA5MCwyMD
-AyNDgwMTk0LDEzMzkwMDkzNjcsMTMzODY1MTEwMSwyMzEwMTA5
-NzcsMjA0MDI5NzYyMiwtMjAwNjg0MjE4OCw3OTYyMjM0ODEsLT
-MzMjQ1NTM2M119
+eyJoaXN0b3J5IjpbMTk1NjY1NzEzMSwtMzQzMDM1NjAwLC0xMj
+UxMDk3MDkwLDIwMDI0ODAxOTQsMTMzOTAwOTM2NywxMzM4NjUx
+MTAxLDIzMTAxMDk3NywyMDQwMjk3NjIyLC0yMDA2ODQyMTg4LD
+c5NjIyMzQ4MSwtMzMyNDU1MzYzXX0=
 -->
