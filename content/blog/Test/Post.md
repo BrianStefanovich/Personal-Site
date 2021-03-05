@@ -4,7 +4,7 @@ Siempre recordaré un simpatico ejercicio que soliamos hacer en clase de Diseño
 
 El ejercicio consistía en explicar cuales eran los motivos que hacia que se vieran, adoptando el tono y la identidad de lo que se podñia apreciar desde street view.
 
-Hace unos días termine de leer [Design for Hackers](https://www.oreilly.com/library/view/design-for-hackers/9781119998952/) de David Kadavy, un libro que expone marcos conceptuales muy claros para entender y resolver problemas de diseño, en especial enfocado al diseño web. Y mientras lo leía no podía parar de pensar en repetir el ejercicio que haciamos en clase, pero aplicado a websites.
+Hace unos días termine de leer [Design for Hackers](https://www.oreilly.com/library/view/design-for-hackers/9781119998952/) de David Kadavy, un excelente libro que expone marcos conceptuales muy claros para entender y resolver problemas de diseño web. Y mientras lo leía no podía parar de pensar en repetir el ejercicio que haciamos en clase, pero aplicado a websites. Asi que alla vamos!
 
 ## Principios de diseño
 
@@ -64,7 +64,7 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjQzNzI4NzcsOTQxODY1OTczLDE0Mj
+eyJoaXN0b3J5IjpbLTE3Njg2NjYwODEsOTQxODY1OTczLDE0Mj
 Y1NDM4OTgsLTEyNjQwNDUwODgsMTk1NjY1NzEzMSwtMzQzMDM1
 NjAwLC0xMjUxMDk3MDkwLDIwMDI0ODAxOTQsMTMzOTAwOTM2Ny
 wxMzM4NjUxMTAxLDIzMTAxMDk3NywyMDQwMjk3NjIyLC0yMDA2
