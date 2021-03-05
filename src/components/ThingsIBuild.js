@@ -159,7 +159,7 @@ export default function ThingsIBuild(props) {
             ref={props.scrollRef}
             className={gridPlacement(titleGrid, "thingsIBuildTitle")}
           >
-            Things I Build
+            Things I've built
           </p>
         </div>
       </CSSTransition>
