@@ -17,7 +17,11 @@ Muchos proyectos se llevan a cabo sin tener respuestas claras a ninguna de estas
 
 No se trata de un blog, ni una cartelera de promociones, ni una tienda virtual. Al parecer se trata de una pagina de identidad corporativa, en la que cuentan de que se trata su companía, y dejan algunos metodos de contacto. Por lo tanto, podriamos decir que los objetivos de esta web son:
 
- 1. List item
+ 1. Que su empresa exista en internet y aparecer en los buscadores
+ 2. Comunicar su identidad corporativa
+ 3. Facilitar metodos de contacto a potenciales clientes
+
+Ahora b
 
 Lo primero que se me viene a la mente cuando entro al sitio, es desorden. No hay una direcciòn clara en la que el espectador deba recorrer, no hay una ponderaciòn clara
 
@@ -77,7 +81,7 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODI5OTM4NjEsMjAwNjc4NTYyNCwxND
+eyJoaXN0b3J5IjpbLTE2NDM2Nzc4NzIsMjAwNjc4NTYyNCwxND
 U0MDA3NzA1LDE0OTU2MjU2ODksLTIwNTQwNzY0ODcsNzAxNjQ4
 ODAsMTA5OTE2NjcwMCwtMTc2ODY2NjA4MSw5NDE4NjU5NzMsMT
 QyNjU0Mzg5OCwtMTI2NDA0NTA4OCwxOTU2NjU3MTMxLC0zNDMw
