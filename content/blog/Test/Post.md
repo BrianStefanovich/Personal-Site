@@ -2,7 +2,7 @@
 
 Siempre recordaré un simpatico ejercicio que soliamos hacer en clase de Diseño Grafico. Nuestro profesor nos insistía sobre la mala calidad general de los diseños de los pequeños y medianos emprendimientos en nuestra region. Tanto asi que solíamos elegir un lugar al azar en Google Maps y nunca recorríamos mas de tres calles para toparnos con pesimos diseños de logotipos y cartelería. 
 
-El ejercicio consistía en realizar un rediseño de
+El ejercicio consistía en realizar un rediseño de los logotipos y la cartelería. Algunas veces incluso creabamos 
 
 
 ## Principios de diseño
@@ -63,7 +63,8 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxNTY2NDE3MywyMDAyNDgwMTk0LDEzMz
-kwMDkzNjcsMTMzODY1MTEwMSwyMzEwMTA5NzcsMjA0MDI5NzYy
-MiwtMjAwNjg0MjE4OCw3OTYyMjM0ODEsLTMzMjQ1NTM2M119
+eyJoaXN0b3J5IjpbLTEyNTEwOTcwOTAsMjAwMjQ4MDE5NCwxMz
+M5MDA5MzY3LDEzMzg2NTExMDEsMjMxMDEwOTc3LDIwNDAyOTc2
+MjIsLTIwMDY4NDIxODgsNzk2MjIzNDgxLC0zMzI0NTUzNjNdfQ
+==
 -->
