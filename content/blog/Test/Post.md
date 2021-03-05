@@ -1,6 +1,6 @@
 # Un poco de historia
 
-Siempre recoraré un simpatico ejercicio que soliamos hacer en clase de Diseño Grafico. Nuestro profesor repetia muchas veces ¡en general estamos rodeados por muy malos diseños, tenemos mucho trabajo ahi fuera!
+Siempre recoraré un simpatico ejercicio que soliamos hacer en clase de Diseño Grafico. Nuestro profesor nos insistía sobre la mala calidad de los diseños de los pequeños y medianos emprendimientos en nuestra region. Tan asi 
 
 
 ## Principios de diseño
@@ -61,7 +61,8 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0NDA1MTMwMSwyMDAyNDgwMTk0LDEzMz
-kwMDkzNjcsMTMzODY1MTEwMSwyMzEwMTA5NzcsMjA0MDI5NzYy
-MiwtMjAwNjg0MjE4OCw3OTYyMjM0ODEsLTMzMjQ1NTM2M119
+eyJoaXN0b3J5IjpbLTE2NzM3MzIyNjIsMjAwMjQ4MDE5NCwxMz
+M5MDA5MzY3LDEzMzg2NTExMDEsMjMxMDEwOTc3LDIwNDAyOTc2
+MjIsLTIwMDY4NDIxODgsNzk2MjIzNDgxLC0zMzI0NTUzNjNdfQ
+==
 -->
