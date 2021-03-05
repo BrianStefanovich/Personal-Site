@@ -6,7 +6,6 @@ Hace unos días termine de leer [Design for Hackers](https://www.oreilly.com/lib
 
 ## Principios de diseño
 
-
 > ### Dominance
 > The principle of dominance creates visual interest in a composition by drawing
 the viewer’s eye to an important element in the composition. When an element
@@ -57,17 +56,16 @@ background relationships. Contrast can be used as a guiding principle
 throughout an entire design (like if something is entirely black and white), or it
 can be used sparingly in a design that is mostly homogeneous, for more impact.
 
-
+## ![ASDasd](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/sdpeuro.png)
 
 
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTgzNDIzNjQsLTIwNTQwNzY0ODcsNz
-AxNjQ4ODAsMTA5OTE2NjcwMCwtMTc2ODY2NjA4MSw5NDE4NjU5
-NzMsMTQyNjU0Mzg5OCwtMTI2NDA0NTA4OCwxOTU2NjU3MTMxLC
-0zNDMwMzU2MDAsLTEyNTEwOTcwOTAsMjAwMjQ4MDE5NCwxMzM5
-MDA5MzY3LDEzMzg2NTExMDEsMjMxMDEwOTc3LDIwNDAyOTc2Mj
-IsLTIwMDY4NDIxODgsNzk2MjIzNDgxLC0zMzI0NTUzNjNdfQ==
-
+eyJoaXN0b3J5IjpbMTQ5NTYyNTY4OSwtMjA1NDA3NjQ4Nyw3MD
+E2NDg4MCwxMDk5MTY2NzAwLC0xNzY4NjY2MDgxLDk0MTg2NTk3
+MywxNDI2NTQzODk4LC0xMjY0MDQ1MDg4LDE5NTY2NTcxMzEsLT
+M0MzAzNTYwMCwtMTI1MTA5NzA5MCwyMDAyNDgwMTk0LDEzMzkw
+MDkzNjcsMTMzODY1MTEwMSwyMzEwMTA5NzcsMjA0MDI5NzYyMi
+wtMjAwNjg0MjE4OCw3OTYyMjM0ODEsLTMzMjQ1NTM2M119
 -->
