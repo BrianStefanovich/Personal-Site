@@ -5,10 +5,11 @@ Siempre recordaré un simpatico ejercicio que soliamos hacer en clase de Diseño
 Hace unos días termine de leer [Design for Hackers](https://www.oreilly.com/library/view/design-for-hackers/9781119998952/) de David Kadavy, un excelente libro que expone marcos conceptuales muy claros para entender y resolver problemas de diseño web. Y mientras lo leía no podía parar de pensar en repetir el ejercicio que haciamos en clase, pero esta vez aplicado a websites utilizando los conceptos del libro, asi que alla vamos!
 
 ## Principios de diseño y como usarlos en tu contra
-Empecemos con [sdpeuro.com](https://sdpeuro.com/)
+Empecemos con [sdpeuro.com](https://sdpeuro.com/), la web de un taller mecánico.
 
 ![ASDasd](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/sdpeuro.png)
-Se trata de la web de un taller de autos.  
+El primer paso en el proceso de diseño, siempre de
+
 
 Lo primero que se me viene a la mente cuando entro al sitio, es desorden. No hay una direcciòn clara en la que el espectador deba recorrer, no hay una ponderaciòn clara
 
@@ -68,7 +69,7 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2MjA4NDIzLDIwMDY3ODU2MjQsMTQ1ND
+eyJoaXN0b3J5IjpbNjYyMzA0MTEyLDIwMDY3ODU2MjQsMTQ1ND
 AwNzcwNSwxNDk1NjI1Njg5LC0yMDU0MDc2NDg3LDcwMTY0ODgw
 LDEwOTkxNjY3MDAsLTE3Njg2NjYwODEsOTQxODY1OTczLDE0Mj
 Y1NDM4OTgsLTEyNjQwNDUwODgsMTk1NjY1NzEzMSwtMzQzMDM1
