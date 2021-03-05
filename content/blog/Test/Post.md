@@ -1,10 +1,10 @@
 ## Un poco de historia
 
-Siempre recordaré un simpatico ejercicio que soliamos hacer en clase de Diseño Grafico. Nuestro profesor nos insistía sobre la mala calidad general de los diseños de los pequeños y medianos emprendimientos en nuestra region. Tanto asi que solíamos elegir un lugar al azar en Google Maps y nunca recorríamos mas de tres calles en street view para toparnos con pesimos diseños de logotipos y cartelería. 
+Siempre recordaré un simpatico ejercicio que soliamos hacer en clase de Diseño Grafico. Nuestro profesor nos insistía sobre la mala calidad general de los diseños de los pequeños y medianos emprendimientos en nuestra region. Tanto asi que solíamos elegir un lugar al azar en Google Maps y nunca recorríamos mas de tres calles en street view para encontrar pesimos diseños de logotipos y cartelería. 
 
-El ejercicio consistía en explicar cuales eran los motivos que hacia que se vieran, adoptando el tono y la identidad de lo que se podñia apreciar desde street view.
+El ejercicio consistía en explicar cuales eran los motivos que hacia que se vieran mal,
 
-Hace unos días termine de leer [Design for Hackers](https://www.oreilly.com/library/view/design-for-hackers/9781119998952/) de David Kadavy, un excelente libro que expone marcos conceptuales muy claros para entender y resolver problemas de diseño web. Y mientras lo leía no podía parar de pensar en repetir el ejercicio que haciamos en clase, pero aplicado a websites. Asi que alla vamos!
+Hace unos días termine de leer [Design for Hackers](https://www.oreilly.com/library/view/design-for-hackers/9781119998952/) de David Kadavy, un excelente libro que expone marcos conceptuales muy claros para entender y resolver problemas de diseño web. Y mientras lo leía no podía parar de pensar en repetir el ejercicio que haciamos en clase, pero esta vez aplicado a websites, asi que alla vamos!
 
 ## Principios de diseño
 
@@ -64,9 +64,10 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Njg2NjYwODEsOTQxODY1OTczLDE0Mj
-Y1NDM4OTgsLTEyNjQwNDUwODgsMTk1NjY1NzEzMSwtMzQzMDM1
-NjAwLC0xMjUxMDk3MDkwLDIwMDI0ODAxOTQsMTMzOTAwOTM2Ny
-wxMzM4NjUxMTAxLDIzMTAxMDk3NywyMDQwMjk3NjIyLC0yMDA2
-ODQyMTg4LDc5NjIyMzQ4MSwtMzMyNDU1MzYzXX0=
+eyJoaXN0b3J5IjpbLTE4NDEyMTM5MSwtMTc2ODY2NjA4MSw5ND
+E4NjU5NzMsMTQyNjU0Mzg5OCwtMTI2NDA0NTA4OCwxOTU2NjU3
+MTMxLC0zNDMwMzU2MDAsLTEyNTEwOTcwOTAsMjAwMjQ4MDE5NC
+wxMzM5MDA5MzY3LDEzMzg2NTExMDEsMjMxMDEwOTc3LDIwNDAy
+OTc2MjIsLTIwMDY4NDIxODgsNzk2MjIzNDgxLC0zMzI0NTUzNj
+NdfQ==
 -->
