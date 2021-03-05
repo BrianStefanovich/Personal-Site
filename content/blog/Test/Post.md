@@ -8,7 +8,9 @@ Hace unos días termine de leer [Design for Hackers](https://www.oreilly.com/lib
 Empecemos con [sdpeuro.com](https://sdpeuro.com/)
 
 ![ASDasd](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/sdpeuro.png)
-Lo primero que se me viene a la mente cuando entro al sitio, es desorden. No hay una direcciòn clara en la que el espectador deba recorrer, 
+Se trata de una web de un taller de autos, 
+
+Lo primero que se me viene a la mente cuando entro al sitio, es desorden. No hay una direcciòn clara en la que el espectador deba recorrer, no hay una ponderaciòn clara
 
 > ### Dominance
 > The principle of dominance creates visual interest in a composition by drawing
@@ -66,11 +68,11 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA0MDg0MzEzLDE0NTQwMDc3MDUsMTQ5NT
-YyNTY4OSwtMjA1NDA3NjQ4Nyw3MDE2NDg4MCwxMDk5MTY2NzAw
-LC0xNzY4NjY2MDgxLDk0MTg2NTk3MywxNDI2NTQzODk4LC0xMj
-Y0MDQ1MDg4LDE5NTY2NTcxMzEsLTM0MzAzNTYwMCwtMTI1MTA5
-NzA5MCwyMDAyNDgwMTk0LDEzMzkwMDkzNjcsMTMzODY1MTEwMS
-wyMzEwMTA5NzcsMjA0MDI5NzYyMiwtMjAwNjg0MjE4OCw3OTYy
-MjM0ODFdfQ==
+eyJoaXN0b3J5IjpbMTYzMDE0MzEyMCwxNDU0MDA3NzA1LDE0OT
+U2MjU2ODksLTIwNTQwNzY0ODcsNzAxNjQ4ODAsMTA5OTE2Njcw
+MCwtMTc2ODY2NjA4MSw5NDE4NjU5NzMsMTQyNjU0Mzg5OCwtMT
+I2NDA0NTA4OCwxOTU2NjU3MTMxLC0zNDMwMzU2MDAsLTEyNTEw
+OTcwOTAsMjAwMjQ4MDE5NCwxMzM5MDA5MzY3LDEzMzg2NTExMD
+EsMjMxMDEwOTc3LDIwNDAyOTc2MjIsLTIwMDY4NDIxODgsNzk2
+MjIzNDgxXX0=
 -->
