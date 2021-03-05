@@ -7,15 +7,17 @@ Hace unos días termine de leer [Design for Hackers](https://www.oreilly.com/lib
 ## Principios de diseño y como usarlos en tu contra
 Empecemos con [sdpeuro.com](https://sdpeuro.com/), la web de un taller mecánico.
 
-![](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/sdpeuro.png)
+![San Diego Performance European](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/sdpeuro.png)
 El primer paso en el proceso de diseño de un sitio web, comienza resolviendo las siguientes preguntas:
 
  1. ¿Que esta buscando el usuario en el sitio web, cuales son sus necesidades?
  2. ¿Cuales son los objetivos del dueño del sitio?
 
-Muchos proyectos se llevan a cabo sin tener respuestas claras a ninguna de estas dos preguntas, y conllevan a experiencias de usuario confusas  desagradables. ¿Cual es el objetivo de SDPE con su website?
+Muchos proyectos se llevan a cabo sin tener respuestas claras a ninguna de estas dos preguntas, y conllevan a experiencias de usuario confusas y desagradables. ¿Cual es el objetivo de SDPE con su website?
 
-No se trata de un blog, ni una cartelera de promociones, ni una tienda virtual. Al parecer se trata de una pagina de identidad corporativa, en la que cuentan de que se trata su companía, y dejan algunos metodos de contacto. Por lo tanto, podriamos decir que el objetivo de esta web es 
+No se trata de un blog, ni una cartelera de promociones, ni una tienda virtual. Al parecer se trata de una pagina de identidad corporativa, en la que cuentan de que se trata su companía, y dejan algunos metodos de contacto. Por lo tanto, podriamos decir que los objetivos de esta web son:
+
+ 1. List item
 
 Lo primero que se me viene a la mente cuando entro al sitio, es desorden. No hay una direcciòn clara en la que el espectador deba recorrer, no hay una ponderaciòn clara
 
@@ -75,11 +77,11 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5MDQ4ODQ1OSwyMDA2Nzg1NjI0LDE0NT
-QwMDc3MDUsMTQ5NTYyNTY4OSwtMjA1NDA3NjQ4Nyw3MDE2NDg4
-MCwxMDk5MTY2NzAwLC0xNzY4NjY2MDgxLDk0MTg2NTk3MywxND
-I2NTQzODk4LC0xMjY0MDQ1MDg4LDE5NTY2NTcxMzEsLTM0MzAz
-NTYwMCwtMTI1MTA5NzA5MCwyMDAyNDgwMTk0LDEzMzkwMDkzNj
-csMTMzODY1MTEwMSwyMzEwMTA5NzcsMjA0MDI5NzYyMiwtMjAw
-Njg0MjE4OF19
+eyJoaXN0b3J5IjpbLTE3ODI5OTM4NjEsMjAwNjc4NTYyNCwxND
+U0MDA3NzA1LDE0OTU2MjU2ODksLTIwNTQwNzY0ODcsNzAxNjQ4
+ODAsMTA5OTE2NjcwMCwtMTc2ODY2NjA4MSw5NDE4NjU5NzMsMT
+QyNjU0Mzg5OCwtMTI2NDA0NTA4OCwxOTU2NjU3MTMxLC0zNDMw
+MzU2MDAsLTEyNTEwOTcwOTAsMjAwMjQ4MDE5NCwxMzM5MDA5Mz
+Y3LDEzMzg2NTExMDEsMjMxMDEwOTc3LDIwNDAyOTc2MjIsLTIw
+MDY4NDIxODhdfQ==
 -->
