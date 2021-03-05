@@ -1,6 +1,6 @@
 # Un poco de historia
 
-Estudiando Diesño Gráfico, nuestro profesor repetidas veces nos 
+Cuando estudiaba diseño gráfico, recuerdo cuen repetitivo era nustro profosor 
 
 ## Principios de diseño
 
@@ -60,7 +60,7 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4MzA0MTc4OCwxMzM4NjUxMTAxLDIzMT
+eyJoaXN0b3J5IjpbMTMzOTAwOTM2NywxMzM4NjUxMTAxLDIzMT
 AxMDk3NywyMDQwMjk3NjIyLC0yMDA2ODQyMTg4LDc5NjIyMzQ4
 MSwtMzMyNDU1MzYzXX0=
 -->
