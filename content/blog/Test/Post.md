@@ -6,7 +6,6 @@ Hace unos días termine de leer [Design for Hackers](https://www.oreilly.com/lib
 
 ## Principios de diseño
 
-El objetivo del libro, en lugar de tratar
 
 > ### Dominance
 > The principle of dominance creates visual interest in a composition by drawing
@@ -64,10 +63,11 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTQwNzY0ODcsNzAxNjQ4ODAsMTA5OT
-E2NjcwMCwtMTc2ODY2NjA4MSw5NDE4NjU5NzMsMTQyNjU0Mzg5
-OCwtMTI2NDA0NTA4OCwxOTU2NjU3MTMxLC0zNDMwMzU2MDAsLT
-EyNTEwOTcwOTAsMjAwMjQ4MDE5NCwxMzM5MDA5MzY3LDEzMzg2
-NTExMDEsMjMxMDEwOTc3LDIwNDAyOTc2MjIsLTIwMDY4NDIxOD
-gsNzk2MjIzNDgxLC0zMzI0NTUzNjNdfQ==
+eyJoaXN0b3J5IjpbLTEyMTgzNDIzNjQsLTIwNTQwNzY0ODcsNz
+AxNjQ4ODAsMTA5OTE2NjcwMCwtMTc2ODY2NjA4MSw5NDE4NjU5
+NzMsMTQyNjU0Mzg5OCwtMTI2NDA0NTA4OCwxOTU2NjU3MTMxLC
+0zNDMwMzU2MDAsLTEyNTEwOTcwOTAsMjAwMjQ4MDE5NCwxMzM5
+MDA5MzY3LDEzMzg2NTExMDEsMjMxMDEwOTc3LDIwNDAyOTc2Mj
+IsLTIwMDY4NDIxODgsNzk2MjIzNDgxLC0zMzI0NTUzNjNdfQ==
+
 -->
