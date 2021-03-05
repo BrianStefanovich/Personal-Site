@@ -1,6 +1,6 @@
 # Un poco de historia
 
-Siempre recoraré un simpatico ejercicio que soliamos hacer en clase de Diseño G
+Siempre recoraré un simpatico ejercicio que soliamos hacer en clase de Diseño Grafico. Nuestro profesor repetia muchas veces ¡en general estamos rodeados por muy malos diseños, tenemos mucho trabajo ahi fuera!
 
 
 ## Principios de diseño
@@ -61,7 +61,7 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ5NzIyNTU3LDIwMDI0ODAxOTQsMTMzOT
-AwOTM2NywxMzM4NjUxMTAxLDIzMTAxMDk3NywyMDQwMjk3NjIy
-LC0yMDA2ODQyMTg4LDc5NjIyMzQ4MSwtMzMyNDU1MzYzXX0=
+eyJoaXN0b3J5IjpbMTA0NDA1MTMwMSwyMDAyNDgwMTk0LDEzMz
+kwMDkzNjcsMTMzODY1MTEwMSwyMzEwMTA5NzcsMjA0MDI5NzYy
+MiwtMjAwNjg0MjE4OCw3OTYyMjM0ODEsLTMzMjQ1NTM2M119
 -->
