@@ -2,13 +2,13 @@
 
 Siempre recordaré un simpatico ejercicio que soliamos hacer en clase de Diseño Grafico. Nuestro profesor nos insistía sobre la mala calidad general de los diseños de los pequeños y medianos emprendimientos en nuestra region. Tanto asi que solíamos elegir un lugar al azar en Google Maps y nunca recorríamos mas de tres calles en street view para encontrar pesimos diseños de logotipos y cartelería. El ejercicio consistía en explicar cuales eran los motivos que hacia que se vieran mal.
 
-Hace unos días termine de leer [Design for Hackers](https://www.oreilly.com/library/view/design-for-hackers/9781119998952/) de David Kadavy, un excelente libro que expone marcos conceptuales muy claros para entender y resolver problemas de diseño web. Y mientras lo leía no podía parar de pensar en repetir el ejercicio que haciamos en clase, pero esta vez aplicado a websites, asi que alla vamos!
+Hace unos días termine de leer [Design for Hackers](https://www.oreilly.com/library/view/design-for-hackers/9781119998952/) de David Kadavy, un excelente libro que expone marcos conceptuales muy claros para entender y resolver problemas de diseño web. Y mientras lo leía no podía parar de pensar en repetir el ejercicio que haciamos en clase, pero esta vez aplicado a websites utilizando los conceptos del libro, asi que alla vamos!
 
 ## Principios de diseño y como usarlos en tu contra
 Empecemos con [sdpeuro.com](https://sdpeuro.com/)
 
 ![ASDasd](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/sdpeuro.png)
-Se trata de una web de un taller de autos, 
+Se trata de una web de un taller de autos. La mision de un diseñador web, en última instancia es desplegar la informaciñon de
 
 Lo primero que se me viene a la mente cuando entro al sitio, es desorden. No hay una direcciòn clara en la que el espectador deba recorrer, no hay una ponderaciòn clara
 
@@ -68,7 +68,7 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzMDE0MzEyMCwxNDU0MDA3NzA1LDE0OT
+eyJoaXN0b3J5IjpbLTQxMjMxMzY5MSwxNDU0MDA3NzA1LDE0OT
 U2MjU2ODksLTIwNTQwNzY0ODcsNzAxNjQ4ODAsMTA5OTE2Njcw
 MCwtMTc2ODY2NjA4MSw5NDE4NjU5NzMsMTQyNjU0Mzg5OCwtMT
 I2NDA0NTA4OCwxOTU2NjU3MTMxLC0zNDMwMzU2MDAsLTEyNTEw
