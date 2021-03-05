@@ -1,10 +1,9 @@
-# A little of history
+# Un poco de historia
 
-When I was studying Graphic Design we used to follow a pretty interesting exercise. 
-
+Estudiando Diesño Gráfico, nuestro profesor repetidas veces nos 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTYwODM4MDEyLDIzMTAxMDk3NywyMDQwMj
-k3NjIyLC0yMDA2ODQyMTg4LDc5NjIyMzQ4MSwtMzMyNDU1MzYz
-XX0=
+eyJoaXN0b3J5IjpbMTYyNDUyMDczMCwyMzEwMTA5NzcsMjA0MD
+I5NzYyMiwtMjAwNjg0MjE4OCw3OTYyMjM0ODEsLTMzMjQ1NTM2
+M119
 -->
