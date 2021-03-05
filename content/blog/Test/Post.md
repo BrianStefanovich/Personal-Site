@@ -8,7 +8,7 @@ Hace unos días termine de leer [Design for Hackers](https://www.oreilly.com/lib
 Empecemos con [sdpeuro.com](https://sdpeuro.com/)
 
 ![ASDasd](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/sdpeuro.png)
-Se trata de una web de un taller de autos. La mision de un diseñador web, en última instancia es desplegar la informaciñon de
+Se trata de una web de un taller de autos. La mision de un diseñador web, en última instancia es desplegar la informaciñon de un modo adecuado, intentando transmitir
 
 Lo primero que se me viene a la mente cuando entro al sitio, es desorden. No hay una direcciòn clara en la que el espectador deba recorrer, no hay una ponderaciòn clara
 
@@ -68,7 +68,7 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxMjMxMzY5MSwxNDU0MDA3NzA1LDE0OT
+eyJoaXN0b3J5IjpbMjAwNjc4NTYyNCwxNDU0MDA3NzA1LDE0OT
 U2MjU2ODksLTIwNTQwNzY0ODcsNzAxNjQ4ODAsMTA5OTE2Njcw
 MCwtMTc2ODY2NjA4MSw5NDE4NjU5NzMsMTQyNjU0Mzg5OCwtMT
 I2NDA0NTA4OCwxOTU2NjU3MTMxLC0zNDMwMzU2MDAsLTEyNTEw
