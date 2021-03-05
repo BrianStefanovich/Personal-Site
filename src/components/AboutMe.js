@@ -76,6 +76,7 @@ export default function AboutMe(props) {
           <p className="aboutMeTitle" ref={props.scrollRef}>
             About me
           </p>
+          <p className="aboutMeButton">Resume</p>
           {props.contentData.body.map((elm, i) => {
             return (
               <p key={i} className="aboutMeBody">
