@@ -1,6 +1,6 @@
 # Un poco de historia
 
-Cuando estudiaba diseño gráfico, nuestro profesor era muy insistente en la mala calidad en general de los diseños de las marquesinas y logotipos en general. Tan as
+Siempre recoraré un simpatico ejercicio que soliamos hacer en clase de Diseño G
 
 
 ## Principios de diseño
@@ -61,7 +61,7 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwMjQ4MDE5NCwxMzM5MDA5MzY3LDEzMz
-g2NTExMDEsMjMxMDEwOTc3LDIwNDAyOTc2MjIsLTIwMDY4NDIx
-ODgsNzk2MjIzNDgxLC0zMzI0NTUzNjNdfQ==
+eyJoaXN0b3J5IjpbNTQ5NzIyNTU3LDIwMDI0ODAxOTQsMTMzOT
+AwOTM2NywxMzM4NjUxMTAxLDIzMTAxMDk3NywyMDQwMjk3NjIy
+LC0yMDA2ODQyMTg4LDc5NjIyMzQ4MSwtMzMyNDU1MzYzXX0=
 -->
