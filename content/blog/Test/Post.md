@@ -1,6 +1,6 @@
 # Un poco de historia
 
-Siempre recoraré un simpatico ejercicio que soliamos hacer en clase de Diseño Grafico. Nuestro profesor nos insistía sobre la mala calidad general de los diseños de los pequeños y medianos emprendimientos en nuestra region. Tan asi que solíamos elegir un lugar al azar en Google Maps en street view, y nunca recorríamos mas de dos 
+Siempre recordaré un simpatico ejercicio que soliamos hacer en clase de Diseño Grafico. Nuestro profesor nos insistía sobre la mala calidad general de los diseños de los pequeños y medianos emprendimientos en nuestra region. Tanto asi que solíamos elegir un lugar al azar en Google Maps y nunca recorríamos mas de tres calles para toparnos con pesimos logotipos, errores  
 
 
 ## Principios de diseño
@@ -61,7 +61,7 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3MjY1MzU3MywyMDAyNDgwMTk0LDEzMz
+eyJoaXN0b3J5IjpbLTI3NjkwNTA4MSwyMDAyNDgwMTk0LDEzMz
 kwMDkzNjcsMTMzODY1MTEwMSwyMzEwMTA5NzcsMjA0MDI5NzYy
 MiwtMjAwNjg0MjE4OCw3OTYyMjM0ODEsLTMzMjQ1NTM2M119
 -->
