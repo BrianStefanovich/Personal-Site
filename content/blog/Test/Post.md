@@ -5,6 +5,9 @@ Siempre recordaré un simpatico ejercicio que soliamos hacer en clase de Diseño
 Hace unos días termine de leer [Design for Hackers](https://www.oreilly.com/library/view/design-for-hackers/9781119998952/) de David Kadavy, un excelente libro que expone marcos conceptuales muy claros para entender y resolver problemas de diseño web. Y mientras lo leía no podía parar de pensar en repetir el ejercicio que haciamos en clase, pero esta vez aplicado a websites, asi que alla vamos!
 
 ## Principios de diseño
+Empecemos con [sdpeuro.com](https://sdpeuro.com/). Esto es lo que vemos cuando entramos a su website:
+
+![ASDasd](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/sdpeuro.png)
 
 > ### Dominance
 > The principle of dominance creates visual interest in a composition by drawing
@@ -56,16 +59,17 @@ background relationships. Contrast can be used as a guiding principle
 throughout an entire design (like if something is entirely black and white), or it
 can be used sparingly in a design that is mostly homogeneous, for more impact.
 
-## ![ASDasd](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/sdpeuro.png)
+## 
 
 
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5NTYyNTY4OSwtMjA1NDA3NjQ4Nyw3MD
-E2NDg4MCwxMDk5MTY2NzAwLC0xNzY4NjY2MDgxLDk0MTg2NTk3
-MywxNDI2NTQzODk4LC0xMjY0MDQ1MDg4LDE5NTY2NTcxMzEsLT
-M0MzAzNTYwMCwtMTI1MTA5NzA5MCwyMDAyNDgwMTk0LDEzMzkw
-MDkzNjcsMTMzODY1MTEwMSwyMzEwMTA5NzcsMjA0MDI5NzYyMi
-wtMjAwNjg0MjE4OCw3OTYyMjM0ODEsLTMzMjQ1NTM2M119
+eyJoaXN0b3J5IjpbLTE3MjMzNjg0NTYsMTQ5NTYyNTY4OSwtMj
+A1NDA3NjQ4Nyw3MDE2NDg4MCwxMDk5MTY2NzAwLC0xNzY4NjY2
+MDgxLDk0MTg2NTk3MywxNDI2NTQzODk4LC0xMjY0MDQ1MDg4LD
+E5NTY2NTcxMzEsLTM0MzAzNTYwMCwtMTI1MTA5NzA5MCwyMDAy
+NDgwMTk0LDEzMzkwMDkzNjcsMTMzODY1MTEwMSwyMzEwMTA5Nz
+csMjA0MDI5NzYyMiwtMjAwNjg0MjE4OCw3OTYyMjM0ODEsLTMz
+MjQ1NTM2M119
 -->
