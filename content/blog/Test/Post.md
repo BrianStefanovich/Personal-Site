@@ -8,6 +8,8 @@ Hace unos días termine de leer [Design for Hackers](https://www.oreilly.com/lib
 
 ## Principios de diseño
 
+
+
 > ### Dominance
 > The principle of dominance creates visual interest in a composition by drawing
 the viewer’s eye to an important element in the composition. When an element
@@ -64,10 +66,10 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5OTE2NjcwMCwtMTc2ODY2NjA4MSw5ND
-E4NjU5NzMsMTQyNjU0Mzg5OCwtMTI2NDA0NTA4OCwxOTU2NjU3
-MTMxLC0zNDMwMzU2MDAsLTEyNTEwOTcwOTAsMjAwMjQ4MDE5NC
-wxMzM5MDA5MzY3LDEzMzg2NTExMDEsMjMxMDEwOTc3LDIwNDAy
-OTc2MjIsLTIwMDY4NDIxODgsNzk2MjIzNDgxLC0zMzI0NTUzNj
-NdfQ==
+eyJoaXN0b3J5IjpbNzAxNjQ4ODAsMTA5OTE2NjcwMCwtMTc2OD
+Y2NjA4MSw5NDE4NjU5NzMsMTQyNjU0Mzg5OCwtMTI2NDA0NTA4
+OCwxOTU2NjU3MTMxLC0zNDMwMzU2MDAsLTEyNTEwOTcwOTAsMj
+AwMjQ4MDE5NCwxMzM5MDA5MzY3LDEzMzg2NTExMDEsMjMxMDEw
+OTc3LDIwNDAyOTc2MjIsLTIwMDY4NDIxODgsNzk2MjIzNDgxLC
+0zMzI0NTUzNjNdfQ==
 -->
