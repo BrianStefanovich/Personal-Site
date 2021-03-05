@@ -1,14 +1,12 @@
 # Esa web se ve mal pero... ¿Por que?
 
-Siempre recordaré un simpatico ejercicio que soliamos hacer en clase de Diseño Grafico. Nuestro profesor nos insistía sobre la mala calidad general de los diseños de los pequeños y medianos emprendimientos en nuestra region. Tanto asi que solíamos elegir un lugar al azar en Google Maps y nunca recorríamos mas de tres calles en street view para encontrar pesimos diseños de logotipos y cartelería. 
-
-El ejercicio consistía en explicar cuales eran los motivos que hacia que se vieran mal,
+Siempre recordaré un simpatico ejercicio que soliamos hacer en clase de Diseño Grafico. Nuestro profesor nos insistía sobre la mala calidad general de los diseños de los pequeños y medianos emprendimientos en nuestra region. Tanto asi que solíamos elegir un lugar al azar en Google Maps y nunca recorríamos mas de tres calles en street view para encontrar pesimos diseños de logotipos y cartelería. El ejercicio consistía en explicar cuales eran los motivos que hacia que se vieran mal.
 
 Hace unos días termine de leer [Design for Hackers](https://www.oreilly.com/library/view/design-for-hackers/9781119998952/) de David Kadavy, un excelente libro que expone marcos conceptuales muy claros para entender y resolver problemas de diseño web. Y mientras lo leía no podía parar de pensar en repetir el ejercicio que haciamos en clase, pero esta vez aplicado a websites, asi que alla vamos!
 
-## 
-
 ## Principios de diseño
+
+El objetivo del libro, en lugar de tratar
 
 > ### Dominance
 > The principle of dominance creates visual interest in a composition by drawing
@@ -66,10 +64,10 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzc0MzYxMTk2LDcwMTY0ODgwLDEwOTkxNj
-Y3MDAsLTE3Njg2NjYwODEsOTQxODY1OTczLDE0MjY1NDM4OTgs
-LTEyNjQwNDUwODgsMTk1NjY1NzEzMSwtMzQzMDM1NjAwLC0xMj
-UxMDk3MDkwLDIwMDI0ODAxOTQsMTMzOTAwOTM2NywxMzM4NjUx
-MTAxLDIzMTAxMDk3NywyMDQwMjk3NjIyLC0yMDA2ODQyMTg4LD
-c5NjIyMzQ4MSwtMzMyNDU1MzYzXX0=
+eyJoaXN0b3J5IjpbLTIwNTQwNzY0ODcsNzAxNjQ4ODAsMTA5OT
+E2NjcwMCwtMTc2ODY2NjA4MSw5NDE4NjU5NzMsMTQyNjU0Mzg5
+OCwtMTI2NDA0NTA4OCwxOTU2NjU3MTMxLC0zNDMwMzU2MDAsLT
+EyNTEwOTcwOTAsMjAwMjQ4MDE5NCwxMzM5MDA5MzY3LDEzMzg2
+NTExMDEsMjMxMDEwOTc3LDIwNDAyOTc2MjIsLTIwMDY4NDIxOD
+gsNzk2MjIzNDgxLC0zMzI0NTUzNjNdfQ==
 -->
