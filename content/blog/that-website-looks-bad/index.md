@@ -34,7 +34,11 @@ The first thing we can say is that the site neglects both owner and user needs a
 
 It doesn't communicate its corporate identity and it gives flat and ambiguous message. Nor does it attract customers or increase its sales, there are no calls to action, integration with social networks or offers section. From user's perspective, we cannot get to know the workshop, its values, or its identity. We also do not have access to offers or discounts. We are given traditional contact information (address and phone) so we do not have any modern way of contacting the workshop and we do not have relevant information to compare their services with others.
 
+From content perspective, they have neglected practically all the objectives for which this site is meant to exist, but there is still more, because there are serious design errors. 
 
+### Why does it look messy? 
+
+One of the first things I think of when entering the website is clutter. The principle of direction and dominance give us tools to understand what is happening:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODg2MTgzNzZdfQ==
+eyJoaXN0b3J5IjpbNDM2MTMyNjQ4XX0=
 -->
