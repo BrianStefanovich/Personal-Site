@@ -55,7 +55,10 @@ can be established pretty explicitly through lines (and sometimes even arrows!),
 but sometimes more implicitly through shapes, shading, or even invisible
 alignment 
 
-Lack of proper structure and order make the eye to not understand where to start, or to find comfortable places to rest. If we look at the header we will see that it is built by three rows. The real menu is on the bottom row, which has the same height and the same font as the top one, but due to the choice of colors, it is in second order. I am sure that many users confused the blue row with the navigation menu more than once.
+Lack of proper structure and order make the eye to not understand where to start, or to find comfortable places to rest. If we look at the header we will see that it is built by three rows. The real menu is on the bottom row, which has the same height and the same font as the top one, but due to the choice of colors, it's in second order. I am sure that many users confused the blue row with the navigation menu more than once.
+
+![enter image description here](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/that-website-looks-bad/header.png)
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2MDU1NTM4MF19
+eyJoaXN0b3J5IjpbNDIyNzcxOTZdfQ==
 -->
