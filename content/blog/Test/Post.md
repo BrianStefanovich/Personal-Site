@@ -53,9 +53,8 @@ composition.
 
  Si bien hay una estructura y un orden, por alguna razón el ojo no entiende por donde empezar, ni encuentra lugares comodos donde posarsrse. Si miramos el header veremos que esta construido por tres filas. La superior, enlista las marcas con las que trabajan, pero no es clickeable. El verdadero menú, es la fila inferior, que tiene la misma altura y la misma fuente que la superior, pero por la elección de colores, se encuentra en segundo órden. Estoy seguro de que muchos usuarios confundieron mas de una vez, la fila azul con el menu de navegación.
 
-
- 
- ![enter image description here](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/Test/header.png)
+![enter image description here](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/Test/header.png)
+La otra pregunta que podemos hacer es, por que el logo tiene ese tamaño y esta alineado de esa manera. Un tama
 
 > ### Similarity
 > Similarity means that various elements of a composition – their shape, color,
@@ -105,7 +104,7 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODY3MjUyNzM3LC03NDcwODU2MTcsMTkwMD
+eyJoaXN0b3J5IjpbOTg5ODg4MjM1LC03NDcwODU2MTcsMTkwMD
 EzMDAwNywxODk4MTcwOTYwLDcxNDU5MDkxNywyMDA2Nzg1NjI0
 LDE0NTQwMDc3MDUsMTQ5NTYyNTY4OSwtMjA1NDA3NjQ4Nyw3MD
 E2NDg4MCwxMDk5MTY2NzAwLC0xNzY4NjY2MDgxLDk0MTg2NTk3
