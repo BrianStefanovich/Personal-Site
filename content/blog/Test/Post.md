@@ -34,7 +34,7 @@ Ahora bien, ¿que busca un usuario que visita esta web? Entre muchas, podriamos 
  
  Lo primero que podemos decir es que el sitio desatiende las necesidades de ambas partes. Las pocas imagenes que aparecen, muestran autos fuera de encuadre. Si vieramos las imagenes aisladamente, serñia dificil asociarlas con un taller mecanico. No se ven herramientas, trabajadores, ni nada que nos indique que se trata de un taller dan mas bien la idea de una colección privada de automoviles. 
  
- No comunica su identidad corporativa, da un mensaje soso, plano, 
+ No comunica adecuadamente su identidad corporativa, da un mensaje soso, plano y ambiguo. Tampoco capta clientes ni aumenta sus ventas, no hay llamadas a la acción, integración con redes sociales ni ofertas
 
 Lo primero que se me viene a la mente cuando entro al sitio, es desorden. No hay una direcciòn clara en la que el espectador deba recorrer, no hay una ponderaciòn clara
 
@@ -94,11 +94,11 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzE0Njc0LDE4OTgxNzA5NjAsNzE0NT
-kwOTE3LDIwMDY3ODU2MjQsMTQ1NDAwNzcwNSwxNDk1NjI1Njg5
-LC0yMDU0MDc2NDg3LDcwMTY0ODgwLDEwOTkxNjY3MDAsLTE3Nj
-g2NjYwODEsOTQxODY1OTczLDE0MjY1NDM4OTgsLTEyNjQwNDUw
-ODgsMTk1NjY1NzEzMSwtMzQzMDM1NjAwLC0xMjUxMDk3MDkwLD
-IwMDI0ODAxOTQsMTMzOTAwOTM2NywxMzM4NjUxMTAxLDIzMTAx
-MDk3N119
+eyJoaXN0b3J5IjpbNTk2OTQ1ODgsMTg5ODE3MDk2MCw3MTQ1OT
+A5MTcsMjAwNjc4NTYyNCwxNDU0MDA3NzA1LDE0OTU2MjU2ODks
+LTIwNTQwNzY0ODcsNzAxNjQ4ODAsMTA5OTE2NjcwMCwtMTc2OD
+Y2NjA4MSw5NDE4NjU5NzMsMTQyNjU0Mzg5OCwtMTI2NDA0NTA4
+OCwxOTU2NjU3MTMxLC0zNDMwMzU2MDAsLTEyNTEwOTcwOTAsMj
+AwMjQ4MDE5NCwxMzM5MDA5MzY3LDEzMzg2NTExMDEsMjMxMDEw
+OTc3XX0=
 -->
