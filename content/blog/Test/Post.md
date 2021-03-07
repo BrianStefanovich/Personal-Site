@@ -29,7 +29,7 @@ Ahora bien, ¿que busca un usuario que visita esta web? Entre muchas, podriamos 
  
 ![San Diego Performance European](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/sdpeuro.png)
  
- Lo primero que podemos decir es que el sitio desatiende todas las necesidades. Las pocas imagenes 
+ Lo primero que podemos decir es que el sitio desatiende las necesidades de ambas pàr. Las pocas imagenes 
 
 Lo primero que se me viene a la mente cuando entro al sitio, es desorden. No hay una direcciòn clara en la que el espectador deba recorrer, no hay una ponderaciòn clara
 
@@ -89,11 +89,11 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzE0NTkwOTE3LDIwMDY3ODU2MjQsMTQ1ND
-AwNzcwNSwxNDk1NjI1Njg5LC0yMDU0MDc2NDg3LDcwMTY0ODgw
-LDEwOTkxNjY3MDAsLTE3Njg2NjYwODEsOTQxODY1OTczLDE0Mj
-Y1NDM4OTgsLTEyNjQwNDUwODgsMTk1NjY1NzEzMSwtMzQzMDM1
-NjAwLC0xMjUxMDk3MDkwLDIwMDI0ODAxOTQsMTMzOTAwOTM2Ny
-wxMzM4NjUxMTAxLDIzMTAxMDk3NywyMDQwMjk3NjIyLC0yMDA2
-ODQyMTg4XX0=
+eyJoaXN0b3J5IjpbMTI4ODYyNDY0NSw3MTQ1OTA5MTcsMjAwNj
+c4NTYyNCwxNDU0MDA3NzA1LDE0OTU2MjU2ODksLTIwNTQwNzY0
+ODcsNzAxNjQ4ODAsMTA5OTE2NjcwMCwtMTc2ODY2NjA4MSw5ND
+E4NjU5NzMsMTQyNjU0Mzg5OCwtMTI2NDA0NTA4OCwxOTU2NjU3
+MTMxLC0zNDMwMzU2MDAsLTEyNTEwOTcwOTAsMjAwMjQ4MDE5NC
+wxMzM5MDA5MzY3LDEzMzg2NTExMDEsMjMxMDEwOTc3LDIwNDAy
+OTc2MjJdfQ==
 -->
