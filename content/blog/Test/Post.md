@@ -52,6 +52,7 @@ acts as an anchor – you keep returning to it as you explore other parts of the
 composition.
 
  Si bien hay una estructura y un orden, por alguna razón el ojo no entiende por donde empezar, ni encuentra lugares comodos donde posarsrse. Si miramos el header veremos que 
+ ![enter image description here](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/Test/header.png)
 
 > ### Similarity
 > Similarity means that various elements of a composition – their shape, color,
@@ -101,11 +102,11 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0NzA4NTYxNywxOTAwMTMwMDA3LDE4OT
-gxNzA5NjAsNzE0NTkwOTE3LDIwMDY3ODU2MjQsMTQ1NDAwNzcw
-NSwxNDk1NjI1Njg5LC0yMDU0MDc2NDg3LDcwMTY0ODgwLDEwOT
-kxNjY3MDAsLTE3Njg2NjYwODEsOTQxODY1OTczLDE0MjY1NDM4
-OTgsLTEyNjQwNDUwODgsMTk1NjY1NzEzMSwtMzQzMDM1NjAwLC
-0xMjUxMDk3MDkwLDIwMDI0ODAxOTQsMTMzOTAwOTM2NywxMzM4
-NjUxMTAxXX0=
+eyJoaXN0b3J5IjpbLTEzOTM1MTY5NTcsLTc0NzA4NTYxNywxOT
+AwMTMwMDA3LDE4OTgxNzA5NjAsNzE0NTkwOTE3LDIwMDY3ODU2
+MjQsMTQ1NDAwNzcwNSwxNDk1NjI1Njg5LC0yMDU0MDc2NDg3LD
+cwMTY0ODgwLDEwOTkxNjY3MDAsLTE3Njg2NjYwODEsOTQxODY1
+OTczLDE0MjY1NDM4OTgsLTEyNjQwNDUwODgsMTk1NjY1NzEzMS
+wtMzQzMDM1NjAwLC0xMjUxMDk3MDkwLDIwMDI0ODAxOTQsMTMz
+OTAwOTM2N119
 -->
