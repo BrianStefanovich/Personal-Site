@@ -6,7 +6,7 @@ description: "We use design principles from the book Design for Hackers, to expl
 slug: "that-website-looks-bad"
 ---
 
-I'll always remember a nice exercise that we used to do in class. Our teacher always insisted with the low quality of the designs that surround us on street. So much that we used to pick a random place Google Maps and never traveled more than three streets in find ugly logos and signages designs. The exercise consisted of explaining what were the reasons that made them look bad and proposing a redesign to solve it.
+I'll always remember a nice exercise that we used to do in class. Our teacher always insisted with the lower quality of designs that surround us on street. So much that we used to pick a random place at Google Maps and never traveled more than three streets to find ugly logos and signages designs. The exercise consisted of explaining what were the reasons that made them look bad and proposing a redesign to solve it.
 
 A few days ago I finished reading [Design for Hackers](https://www.oreilly.com/library/view/design-for-hackers/9781119998952/) by David Kadavy, an excellent book that exposes very clear conceptual frameworks for understanding and solving web design problems and while I was reading it, I couldn't stop thinking about repeating the exercise we used to do, but applied to websites and using some concepts from the book, so here we go!
 
@@ -37,7 +37,7 @@ Now, what does a user who visits this website look for? Among many other thing, 
 
 ![San Diego Performance European Home](./sdpeuro.png)
 
-The first thing we can say is that the site neglects both owner and user needs and goals. The few images that appear show only cars out of frame. If we saw the images in isolation, it would be difficult to associate them with a workshop. There are no tools, workers, or anything to indicate that it is a workshop, rather they give the idea of ​​a private collection of cars.
+The first thing we can say is that the site neglects both owner and user needs and goals. The few images that appear show only cars out of frame. If we saw the images in isolation, it would be difficult to associate them with a workshop. There are no tools, workers, or anything to indicate that it is a workshop, rather they give the idea of being a private collection.
 
 It doesn't communicate its corporate identity and it gives flat and ambiguous message. Nor does it attract customers or increase its sales, there are no calls to action, integration with social networks or offers section. From user's perspective, we cannot get to know the workshop, its values, or its identity. We also do not have access to offers or discounts. We are given traditional contact information (address and phone) so we do not have any modern way of contacting the workshop and we do not have relevant information to compare their services with others.
 
