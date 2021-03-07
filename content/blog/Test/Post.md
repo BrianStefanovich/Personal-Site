@@ -5,6 +5,7 @@ Siempre recordaré un simpatico ejercicio que soliamos hacer en clase de Diseño
 Hace unos días termine de leer [Design for Hackers](https://www.oreilly.com/library/view/design-for-hackers/9781119998952/) de David Kadavy, un excelente libro que expone marcos conceptuales muy claros para entender y resolver problemas de diseño web. Y mientras lo leía no podía parar de pensar en repetir el ejercicio que haciamos en clase, pero esta vez aplicado a websites utilizando los conceptos del libro, asi que alla vamos!
 
 ## Los principios del diseño y como usarlos en tu contra. Dos historias verídicas
+
 Empecemos con [sdpeuro.com](https://sdpeuro.com/), la web de un taller mecánico.
 
 ![San Diego Performance European](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/sdpeuro.png)
@@ -89,11 +90,11 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxNzE5NDc1NywyMDA2Nzg1NjI0LDE0NT
-QwMDc3MDUsMTQ5NTYyNTY4OSwtMjA1NDA3NjQ4Nyw3MDE2NDg4
-MCwxMDk5MTY2NzAwLC0xNzY4NjY2MDgxLDk0MTg2NTk3MywxND
-I2NTQzODk4LC0xMjY0MDQ1MDg4LDE5NTY2NTcxMzEsLTM0MzAz
-NTYwMCwtMTI1MTA5NzA5MCwyMDAyNDgwMTk0LDEzMzkwMDkzNj
-csMTMzODY1MTEwMSwyMzEwMTA5NzcsMjA0MDI5NzYyMiwtMjAw
-Njg0MjE4OF19
+eyJoaXN0b3J5IjpbLTE3OTYyNTM3MzcsMjAwNjc4NTYyNCwxND
+U0MDA3NzA1LDE0OTU2MjU2ODksLTIwNTQwNzY0ODcsNzAxNjQ4
+ODAsMTA5OTE2NjcwMCwtMTc2ODY2NjA4MSw5NDE4NjU5NzMsMT
+QyNjU0Mzg5OCwtMTI2NDA0NTA4OCwxOTU2NjU3MTMxLC0zNDMw
+MzU2MDAsLTEyNTEwOTcwOTAsMjAwMjQ4MDE5NCwxMzM5MDA5Mz
+Y3LDEzMzg2NTExMDEsMjMxMDEwOTc3LDIwNDAyOTc2MjIsLTIw
+MDY4NDIxODhdfQ==
 -->
