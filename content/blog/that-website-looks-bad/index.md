@@ -62,7 +62,9 @@ Another question we can ask is, why is the logo that size and is aligned that wa
 
 ### Why does it feel hard to read?
 
+Going through the pages I find tremendous monotony and ut get difficult it is for me to read the blocks of text. At first glance, I don't want to read them, and they are difficult to scan because like the rest of the web, they lack a clear hierarchy and structure that allows me to understand the most relevant information at a glance.  However, the problem with the blocks of the text blocks also have to do with the texture that is generated between the margins, spacing and line height. The principles of similarity, rithm and texture do not help to understand this:
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTg1MjE3OTZdfQ==
+eyJoaXN0b3J5IjpbLTEwOTk5MDY1OTJdfQ==
 -->
