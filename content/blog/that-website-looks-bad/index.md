@@ -109,7 +109,8 @@ background relationships. Contrast can be used as a guiding principle
 throughout an entire design (like if something is entirely black and white), or it
 can be used sparingly in a design that is mostly homogeneous, for more impact.
 
-On top off to the feeling of clutter is monotony due to the lack of contrasting elements to each other that produces a boring design. In fact, we could say to explain all the previous problems, as a total lack of contrast between the different visual elements of the website.  The only contrasting part is the footer. In which the elements of the nav are reptiten, and the contact methods and social networks are provided. However, instead of collaborating, he adds more problems. What is the point of bringing the user's attention to the footer?
+On top off to the feeling of clutter is monotony due to the lack of contrasting elements what produces a this boredom feeling. In fact, we could explain all the previous problems, as a total lack of contrast between the different visual elements of the website.  The only contrasting part is the footer. In which the elements of the nav are repeated, and the contact methods and social networks are provided. However, instead of collaborating, he adds more problems. What is the point of bringing the user's attention to the footer?
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2OTkxMTE1NywtMjA5NjY1Mjk1OV19
+eyJoaXN0b3J5IjpbLTE3MzM0ODc1OTYsLTIwOTY2NTI5NTldfQ
+==
 -->
