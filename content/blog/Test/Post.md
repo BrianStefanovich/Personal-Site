@@ -66,7 +66,7 @@ La otra pregunta que podemos hacer es, por que el logo tiene ese tamaño y esta 
 
 ### ¿Por que se siente dificil de leer?
 
-Al navegar por las paginas del website, otra de l
+Al navegar por las paginas del website, otra de los problemas que encuentro es lo monótono y dificil que se me hace leer los bloques de texto. A simple vista no me dan ganas de leerlos, y son dificiles de scanear porque 
 > ### Similarity
 > Similarity means that various elements of a composition – their shape, color,
 line characteristics (smooth or jagged), or texture – are similar to one another.
@@ -108,7 +108,7 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzgyMTg3NzMyLDc1ODc1NjA0Myw0MTM2OD
+eyJoaXN0b3J5IjpbMzE1NDM3NzEyLDc1ODc1NjA0Myw0MTM2OD
 EzMDksLTc0NzA4NTYxNywxOTAwMTMwMDA3LDE4OTgxNzA5NjAs
 NzE0NTkwOTE3LDIwMDY3ODU2MjQsMTQ1NDAwNzcwNSwxNDk1Nj
 I1Njg5LC0yMDU0MDc2NDg3LDcwMTY0ODgwLDEwOTkxNjY3MDAs
