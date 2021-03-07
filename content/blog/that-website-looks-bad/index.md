@@ -58,7 +58,7 @@ alignment
 Lack of proper structure and order make the eye to not understand where to start, or to find comfortable places to rest. If we look at the header we will see that it is built by three rows. The real menu is on the bottom row, which has the same height and the same font as the top one, but due to the choice of colors, it's in second order. I am sure that many users confused the blue row with the navigation menu more than once.
 
 ![enter image description here](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/that-website-looks-bad/header.png)
-
+Another question we can ask is, why is the logo that size and is aligned that way? It's small sized and carried so far to the left edge that places it in a place of little relevance. What is the most important thing in the header based on design ? Judging from the design, the phrase "Serving San Diego Since 1996". The rest is a cluster of elements that are relegated to the background.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDIyNzcxOTZdfQ==
+eyJoaXN0b3J5IjpbLTExMjEyMDM5NzhdfQ==
 -->
