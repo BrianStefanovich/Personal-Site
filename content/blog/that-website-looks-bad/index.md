@@ -13,9 +13,12 @@ The first step in the website design process begins with solving the following q
 1. What is the user looking for on the website?
 3. What is this website meant to do?
 
-Many projects are carried out without having clear answers to either of these two questions, and they lead to confusing and unpleasant user experiences. What is SDPE's goal with its website?
+Many projects are carried out without having clear answers to these questions, and they lead to confusing and unpleasant user experiences. So... What is SDPE's goal with its website?
 
+It is not a blog, or a billboard for promotions, or a virtual store. Apparently it is a corporate identity page, in which they tell what their company is about, and leave some contact methods. Therefore, we could say that the objectives of this website are:
+
+1. 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyMjg2MDE1NF19
+eyJoaXN0b3J5IjpbMTE5MzIyMDk4NV19
 -->
