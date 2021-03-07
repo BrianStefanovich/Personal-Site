@@ -116,13 +116,15 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 A la sensacion de desorden, se le suma un diseño monotono debido a la falta de elementos contrastantes entre sí y esto produce un diseño aburrido. De hecho, podríamos decir explicar todos los problemas anteriores, como una falta total de contraste entre los diferentes elementos visuales del website.
 
-La única parte que contrasta, es el footer. En el que se reptiten los elementos del nav, y se facilitan los metodos de contacto y las redes sociales. Sin embargo, en lugar de colaborar, suma mas problemas. ¿Que caso tiene llevar la atención del usuario al footer?.
+La única parte que contrasta, es el footer. En el que se reptiten los elementos del nav, y se facilitan los metodos de contacto y las redes sociales. Sin embargo, en lugar de colaborar, suma mas problemas. ¿Que caso tiene llevar la atención del usuario al footer?
 
+![enter image description here](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/Test/footer.png)
 
+## Resumiendo
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDY0MjgxODIsMTY1Njg1MTA5MywtMj
+eyJoaXN0b3J5IjpbLTEyMzIyMTEwNDksMTY1Njg1MTA5MywtMj
 IwMDU1NjY1LDc1ODc1NjA0Myw0MTM2ODEzMDksLTc0NzA4NTYx
 NywxOTAwMTMwMDA3LDE4OTgxNzA5NjAsNzE0NTkwOTE3LDIwMD
 Y3ODU2MjQsMTQ1NDAwNzcwNSwxNDk1NjI1Njg5LC0yMDU0MDc2
