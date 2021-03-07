@@ -51,7 +51,7 @@ It acts almost like a magnet when you first lay eyes on the composition. It also
 acts as an anchor – you keep returning to it as you explore other parts of the
 composition.
 
- Si bien hay una estructura y un orden, por alguna razón el ojo no entiende por donde empezar, ni encuentra lugares comodos donde posarsrse. Si miramos el header veremos que esta construido por tres filas. La superior, enlista 
+ Si bien hay una estructura y un orden, por alguna razón el ojo no entiende por donde empezar, ni encuentra lugares comodos donde posarsrse. Si miramos el header veremos que esta construido por tres filas. La superior, enlista las marcas con las que trabajan, pero no es clickeable. El verdadero menú, es la fila inferior, que tiene la misma altura y la 
  ![enter image description here](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/Test/header.png)
 
 > ### Similarity
@@ -102,7 +102,7 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDAzMjE3MCwtNzQ3MDg1NjE3LDE5MD
+eyJoaXN0b3J5IjpbLTU3Njg0OTk3NiwtNzQ3MDg1NjE3LDE5MD
 AxMzAwMDcsMTg5ODE3MDk2MCw3MTQ1OTA5MTcsMjAwNjc4NTYy
 NCwxNDU0MDA3NzA1LDE0OTU2MjU2ODksLTIwNTQwNzY0ODcsNz
 AxNjQ4ODAsMTA5OTE2NjcwMCwtMTc2ODY2NjA4MSw5NDE4NjU5
