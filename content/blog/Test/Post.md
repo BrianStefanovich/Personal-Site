@@ -41,15 +41,23 @@ Desde el contenido, han desatendido prácticamente todos los objetivos por las q
 
 ### ¿Por que se ve desordenado?
 
-Una de las primeras cosas en las que pienso al entrar al sitio web, es en desorden. El principio de dominancia nos da herramientas para entender que es lo que sucede: 
+Una de las primeras cosas en las que pienso al entrar al sitio web, es en desorden. El principio de dirección y dominancia nos dan herramientas para entender que es lo que sucede: 
 
-> ### Dominance
+> #### Dominance
 > The principle of dominance creates visual interest in a composition by drawing
 the viewer’s eye to an important element in the composition. When an element
 is dominant in a composition, it is one of the first things your eye is drawn to.
 It acts almost like a magnet when you first lay eyes on the composition. It also
 acts as an anchor – you keep returning to it as you explore other parts of the
 composition.
+
+> #### Direction
+> The principle of direction helps guide the viewer’s eye throughout the
+composition and helps keep the viewer looking at the design piece. Direction
+can be established pretty explicitly through lines (and sometimes even arrows!),
+but sometimes more implicitly through shapes, shading, or even invisible
+alignment within the composition.
+
 
  Si bien hay una estructura y un orden, por alguna razón el ojo no entiende por donde empezar, ni encuentra lugares comodos donde posarsrse. Si miramos el header veremos que esta construido por tres filas. La superior, enlista las marcas con las que trabajan, pero no es clickeable. El verdadero menú, es la fila inferior, que tiene la misma altura y la misma fuente que la superior, pero por la elección de colores, se encuentra en segundo órden. Estoy seguro de que muchos usuarios confundieron mas de una vez, la fila azul con el menu de navegación.
 
@@ -58,6 +66,7 @@ La otra pregunta que podemos hacer es, por que el logo tiene ese tamaño y esta 
 
 ### ¿Por que se siente dificil de leer?
 
+Al navegar por las paginas del website, otra de l
 > ### Similarity
 > Similarity means that various elements of a composition – their shape, color,
 line characteristics (smooth or jagged), or texture – are similar to one another.
@@ -83,13 +92,6 @@ interesting because it provides an opportunity for the principle of contrast (wh
 I’ll talk about soon) and can create a sense of depth in foreground/background
 relationships.
 
-> ### Direction
-> The principle of direction helps guide the viewer’s eye throughout the
-composition and helps keep the viewer looking at the design piece. Direction
-can be established pretty explicitly through lines (and sometimes even arrows!),
-but sometimes more implicitly through shapes, shading, or even invisible
-alignment within the composition.
-
 >### Contrast
 >The principle of contrast causes certain parts of a composition to stand out
 more than others because of differences – or contrast – between elements.
@@ -106,11 +108,11 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDE5MDI5MzcsNzU4NzU2MDQzLDQxMz
-Y4MTMwOSwtNzQ3MDg1NjE3LDE5MDAxMzAwMDcsMTg5ODE3MDk2
-MCw3MTQ1OTA5MTcsMjAwNjc4NTYyNCwxNDU0MDA3NzA1LDE0OT
-U2MjU2ODksLTIwNTQwNzY0ODcsNzAxNjQ4ODAsMTA5OTE2Njcw
-MCwtMTc2ODY2NjA4MSw5NDE4NjU5NzMsMTQyNjU0Mzg5OCwtMT
-I2NDA0NTA4OCwxOTU2NjU3MTMxLC0zNDMwMzU2MDAsLTEyNTEw
-OTcwOTBdfQ==
+eyJoaXN0b3J5IjpbMzgyMTg3NzMyLDc1ODc1NjA0Myw0MTM2OD
+EzMDksLTc0NzA4NTYxNywxOTAwMTMwMDA3LDE4OTgxNzA5NjAs
+NzE0NTkwOTE3LDIwMDY3ODU2MjQsMTQ1NDAwNzcwNSwxNDk1Nj
+I1Njg5LC0yMDU0MDc2NDg3LDcwMTY0ODgwLDEwOTkxNjY3MDAs
+LTE3Njg2NjYwODEsOTQxODY1OTczLDE0MjY1NDM4OTgsLTEyNj
+QwNDUwODgsMTk1NjY1NzEzMSwtMzQzMDM1NjAwLC0xMjUxMDk3
+MDkwXX0=
 -->
