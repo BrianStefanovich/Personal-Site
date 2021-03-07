@@ -56,6 +56,8 @@ composition.
 ![enter image description here](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/Test/header.png)
 La otra pregunta que podemos hacer es, por que el logo tiene ese tamaño y esta alineado de esa manera. Un tamaño pequeño y llevado tanto hacia el borde izquierdo, lo coloca en un lugar de poca relevancia. ¿Que es lo mas importante del header? A juzgar por el diseño, la frase "Serving San Diego Since 1996". El resto, es un cluster de elementos que  quedan relegados al fondo. 
 
+### ¿Por que se siente dificil de leer?
+
 > ### Similarity
 > Similarity means that various elements of a composition – their shape, color,
 line characteristics (smooth or jagged), or texture – are similar to one another.
@@ -65,7 +67,7 @@ before within that same composition.
 
 > ### Rhythm
 >With similarity often comes rhythm. Rhythm is a bit more abstract than
-similarity is. Probably the fi rst thing that you think about when you think
+similarity is. Probably the first thing that you think about when you think
 about rhythm is music. Just as the repetition of a snare or kick drum at a
 consistent point in a measure of music, over and over again, creates a sense of
 rhythm in music, the repetition of a particular design element or characteristic
@@ -104,11 +106,11 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4MTMxNDQwMywtNzQ3MDg1NjE3LDE5MD
-AxMzAwMDcsMTg5ODE3MDk2MCw3MTQ1OTA5MTcsMjAwNjc4NTYy
-NCwxNDU0MDA3NzA1LDE0OTU2MjU2ODksLTIwNTQwNzY0ODcsNz
-AxNjQ4ODAsMTA5OTE2NjcwMCwtMTc2ODY2NjA4MSw5NDE4NjU5
-NzMsMTQyNjU0Mzg5OCwtMTI2NDA0NTA4OCwxOTU2NjU3MTMxLC
-0zNDMwMzU2MDAsLTEyNTEwOTcwOTAsMjAwMjQ4MDE5NCwxMzM5
-MDA5MzY3XX0=
+eyJoaXN0b3J5IjpbLTE3MDE5MDI5MzcsLTc0NzA4NTYxNywxOT
+AwMTMwMDA3LDE4OTgxNzA5NjAsNzE0NTkwOTE3LDIwMDY3ODU2
+MjQsMTQ1NDAwNzcwNSwxNDk1NjI1Njg5LC0yMDU0MDc2NDg3LD
+cwMTY0ODgwLDEwOTkxNjY3MDAsLTE3Njg2NjYwODEsOTQxODY1
+OTczLDE0MjY1NDM4OTgsLTEyNjQwNDUwODgsMTk1NjY1NzEzMS
+wtMzQzMDM1NjAwLC0xMjUxMDk3MDkwLDIwMDI0ODAxOTQsMTMz
+OTAwOTM2N119
 -->
