@@ -97,7 +97,10 @@ relationships.
 
 A lo largo de toda la web, los espaciados entre objetos son practicamente los mismosm y en especial con el texto, las alturas de linea y espaciados practicamente no cambian entre titulos y ccuerpos de texto. Esto genera una textura homogenea en todo el texto. Esto sumada a la repeticiòn de elementos poco diferenciados entre si, genera un ritmo muy repetitivo y monótono que como consecuencia produce cansancio y desanima al usuario a leer. 
 
+![enter image description here](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/Test/text3.png)
 
+![enter image description here](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/Test/text1.png)
+### ¿Por que se siente dificil de leer?
 
 
 >### Contrast
@@ -112,11 +115,11 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDY4NDY0MzAsLTIyMDA1NTY2NSw3NT
-g3NTYwNDMsNDEzNjgxMzA5LC03NDcwODU2MTcsMTkwMDEzMDAw
-NywxODk4MTcwOTYwLDcxNDU5MDkxNywyMDA2Nzg1NjI0LDE0NT
-QwMDc3MDUsMTQ5NTYyNTY4OSwtMjA1NDA3NjQ4Nyw3MDE2NDg4
-MCwxMDk5MTY2NzAwLC0xNzY4NjY2MDgxLDk0MTg2NTk3MywxND
-I2NTQzODk4LC0xMjY0MDQ1MDg4LDE5NTY2NTcxMzEsLTM0MzAz
-NTYwMF19
+eyJoaXN0b3J5IjpbLTcwMDc1ODAxMiwtMjIwMDU1NjY1LDc1OD
+c1NjA0Myw0MTM2ODEzMDksLTc0NzA4NTYxNywxOTAwMTMwMDA3
+LDE4OTgxNzA5NjAsNzE0NTkwOTE3LDIwMDY3ODU2MjQsMTQ1ND
+AwNzcwNSwxNDk1NjI1Njg5LC0yMDU0MDc2NDg3LDcwMTY0ODgw
+LDEwOTkxNjY3MDAsLTE3Njg2NjYwODEsOTQxODY1OTczLDE0Mj
+Y1NDM4OTgsLTEyNjQwNDUwODgsMTk1NjY1NzEzMSwtMzQzMDM1
+NjAwXX0=
 -->
