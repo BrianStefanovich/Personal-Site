@@ -114,15 +114,15 @@ background relationships. Contrast can be used as a guiding principle
 throughout an entire design (like if something is entirely black and white), or it
 can be used sparingly in a design that is mostly homogeneous, for more impact.
   
-A la sensacion de desorden, se le suma un diseño monotono debido a la falta de elementos contrastantes entre sí y esto produce un diseño aburrido.
+A la sensacion de desorden, se le suma un diseño monotono debido a la falta de elementos contrastantes entre sí y esto produce un diseño aburrido. 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTM1MjU4MzQsMTY1Njg1MTA5MywtMj
-IwMDU1NjY1LDc1ODc1NjA0Myw0MTM2ODEzMDksLTc0NzA4NTYx
-NywxOTAwMTMwMDA3LDE4OTgxNzA5NjAsNzE0NTkwOTE3LDIwMD
-Y3ODU2MjQsMTQ1NDAwNzcwNSwxNDk1NjI1Njg5LC0yMDU0MDc2
-NDg3LDcwMTY0ODgwLDEwOTkxNjY3MDAsLTE3Njg2NjYwODEsOT
-QxODY1OTczLDE0MjY1NDM4OTgsLTEyNjQwNDUwODgsMTk1NjY1
-NzEzMV19
+eyJoaXN0b3J5IjpbLTI2MzYyMDc0NiwxNjU2ODUxMDkzLC0yMj
+AwNTU2NjUsNzU4NzU2MDQzLDQxMzY4MTMwOSwtNzQ3MDg1NjE3
+LDE5MDAxMzAwMDcsMTg5ODE3MDk2MCw3MTQ1OTA5MTcsMjAwNj
+c4NTYyNCwxNDU0MDA3NzA1LDE0OTU2MjU2ODksLTIwNTQwNzY0
+ODcsNzAxNjQ4ODAsMTA5OTE2NjcwMCwtMTc2ODY2NjA4MSw5ND
+E4NjU5NzMsMTQyNjU0Mzg5OCwtMTI2NDA0NTA4OCwxOTU2NjU3
+MTMxXX0=
 -->
