@@ -122,13 +122,18 @@ La única parte que contrasta, es el footer. En el que se reptiten los elementos
 
 ## Resumiendo
 
-Ahora si podemos comenzar a explicar por que es que se ve mal esta web y más importante aún, tenemos un marco conceptual con el que basarnos al momento de tomar decisiones de diseño o de discutir si algo es mas o menos conveniente. Los principios de diseño, son una guía abstracta, que comprime muchos años de experiencia sobre como funciona l
+Ahora si podemos comenzar a explicar por que es que se ve mal esta web y más importante aún, tenemos un marco conceptual con el que basarnos al momento de tomar decisiones de diseño o de discutir si algo es mas o menos conveniente. Los principios de diseño, son una guía abstracta, que comprime muchos años de experiencia sobre lo que funciona bien y lo que no y son una excelente herramienta para entender el por que detras del diseño.
+
+## Para la próxima...
+
+Estarán pensando, y no vas a plantear un rediseño?. SI!
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDIwMDg5ODg0LC0xMjMyMjExMDQ5LDE2NT
-Y4NTEwOTMsLTIyMDA1NTY2NSw3NTg3NTYwNDMsNDEzNjgxMzA5
-LC03NDcwODU2MTcsMTkwMDEzMDAwNywxODk4MTcwOTYwLDcxND
-U5MDkxNywyMDA2Nzg1NjI0LDE0NTQwMDc3MDUsMTQ5NTYyNTY4
-OSwtMjA1NDA3NjQ4Nyw3MDE2NDg4MCwxMDk5MTY2NzAwLC0xNz
-Y4NjY2MDgxLDk0MTg2NTk3MywxNDI2NTQzODk4LC0xMjY0MDQ1
-MDg4XX0=
+eyJoaXN0b3J5IjpbLTY2NDA4NjEyOSwtMTIzMjIxMTA0OSwxNj
+U2ODUxMDkzLC0yMjAwNTU2NjUsNzU4NzU2MDQzLDQxMzY4MTMw
+OSwtNzQ3MDg1NjE3LDE5MDAxMzAwMDcsMTg5ODE3MDk2MCw3MT
+Q1OTA5MTcsMjAwNjc4NTYyNCwxNDU0MDA3NzA1LDE0OTU2MjU2
+ODksLTIwNTQwNzY0ODcsNzAxNjQ4ODAsMTA5OTE2NjcwMCwtMT
+c2ODY2NjA4MSw5NDE4NjU5NzMsMTQyNjU0Mzg5OCwtMTI2NDA0
+NTA4OF19
 -->
