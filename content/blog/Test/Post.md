@@ -114,15 +114,17 @@ background relationships. Contrast can be used as a guiding principle
 throughout an entire design (like if something is entirely black and white), or it
 can be used sparingly in a design that is mostly homogeneous, for more impact.
   
-A la sensacion de desorden, se le suma un diseño monotono debido a la falta de elementos contrastantes entre sí y esto produce un diseño aburrido. De hecho
+A la sensacion de desorden, se le suma un diseño monotono debido a la falta de elementos contrastantes entre sí y esto produce un diseño aburrido. De hecho, podríamos decir explicar todos los problemas anteriores, como una falta total de contraste entre los diferentes elementos visuales del website.
+
+La única parte que contrasta, es el footer. En el que se reptiten los elementos del nav, y se facilitan los metodos de contacto y las redes sociales.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTgyMjQ0MDgsMTY1Njg1MTA5MywtMj
-IwMDU1NjY1LDc1ODc1NjA0Myw0MTM2ODEzMDksLTc0NzA4NTYx
-NywxOTAwMTMwMDA3LDE4OTgxNzA5NjAsNzE0NTkwOTE3LDIwMD
-Y3ODU2MjQsMTQ1NDAwNzcwNSwxNDk1NjI1Njg5LC0yMDU0MDc2
-NDg3LDcwMTY0ODgwLDEwOTkxNjY3MDAsLTE3Njg2NjYwODEsOT
-QxODY1OTczLDE0MjY1NDM4OTgsLTEyNjQwNDUwODgsMTk1NjY1
-NzEzMV19
+eyJoaXN0b3J5IjpbNTc5NzE3MzI4LDE2NTY4NTEwOTMsLTIyMD
+A1NTY2NSw3NTg3NTYwNDMsNDEzNjgxMzA5LC03NDcwODU2MTcs
+MTkwMDEzMDAwNywxODk4MTcwOTYwLDcxNDU5MDkxNywyMDA2Nz
+g1NjI0LDE0NTQwMDc3MDUsMTQ5NTYyNTY4OSwtMjA1NDA3NjQ4
+Nyw3MDE2NDg4MCwxMDk5MTY2NzAwLC0xNzY4NjY2MDgxLDk0MT
+g2NTk3MywxNDI2NTQzODk4LC0xMjY0MDQ1MDg4LDE5NTY2NTcx
+MzFdfQ==
 -->
