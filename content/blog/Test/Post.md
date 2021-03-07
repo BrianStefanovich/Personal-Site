@@ -30,8 +30,7 @@ Ahora bien, ¿que busca un usuario que visita esta web? Entre muchas, podriamos 
  3. Contactar facilmente con el taller
  4. Comparar servicios con otros talleres
  
-![San Diego Performance European](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/sdpeuro.png)
- 
+![San Diego Performance European](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/that-website-looks-bad/sdpeuro.png)
  Lo primero que podemos decir es que el sitio desatiende las necesidades de ambas partes. Las pocas imagenes que aparecen, muestran autos fuera de encuadre. Si vieramos las imagenes aisladamente, serñia dificil asociarlas con un taller mecanico. No se ven herramientas, trabajadores, ni nada que nos indique que se trata de un taller dan mas bien la idea de una colección privada de automoviles. 
  
  No comunica adecuadamente su identidad corporativa, da un mensaje soso, plano y ambiguo. Tampoco capta clientes ni aumenta sus ventas, no hay llamadas a la acción, integración con redes sociales ni sección de ofertas.
@@ -128,11 +127,11 @@ Ahora si podemos comenzar a explicar por que es que se ve mal esta web y más im
 
 Estarán pensando, y no vas a plantear un rediseño?. Si!, pero eso quedará para el próximo post. Espero que alguna idea te halla resultado interesante. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczOTU1MDMwNiwtMTIzMjIxMTA0OSwxNj
-U2ODUxMDkzLC0yMjAwNTU2NjUsNzU4NzU2MDQzLDQxMzY4MTMw
-OSwtNzQ3MDg1NjE3LDE5MDAxMzAwMDcsMTg5ODE3MDk2MCw3MT
-Q1OTA5MTcsMjAwNjc4NTYyNCwxNDU0MDA3NzA1LDE0OTU2MjU2
-ODksLTIwNTQwNzY0ODcsNzAxNjQ4ODAsMTA5OTE2NjcwMCwtMT
-c2ODY2NjA4MSw5NDE4NjU5NzMsMTQyNjU0Mzg5OCwtMTI2NDA0
-NTA4OF19
+eyJoaXN0b3J5IjpbMTI3Mjc0MzIxNSwtNzM5NTUwMzA2LC0xMj
+MyMjExMDQ5LDE2NTY4NTEwOTMsLTIyMDA1NTY2NSw3NTg3NTYw
+NDMsNDEzNjgxMzA5LC03NDcwODU2MTcsMTkwMDEzMDAwNywxOD
+k4MTcwOTYwLDcxNDU5MDkxNywyMDA2Nzg1NjI0LDE0NTQwMDc3
+MDUsMTQ5NTYyNTY4OSwtMjA1NDA3NjQ4Nyw3MDE2NDg4MCwxMD
+k5MTY2NzAwLC0xNzY4NjY2MDgxLDk0MTg2NTk3MywxNDI2NTQz
+ODk4XX0=
 -->
