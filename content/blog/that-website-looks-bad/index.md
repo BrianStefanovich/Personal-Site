@@ -112,7 +112,9 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
 On top off to the feeling of clutter is monotony due to the lack of contrasting elements what produces a this boredom feeling. In fact, we could explain all the previous problems, as a total lack of contrast between the different visual elements of the website.  The only contrasting part is the footer. In which the elements of the nav are repeated, and the contact methods and social networks are provided. However, instead of collaborating, it adds more problems. What is the point of bringing the user's attention to the footer? Its a clear example of design decisions going against content.
 
 ![enter image description here](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/Test/footer.png)
+## In summary
+
+Now we can start to explain why this website looks bad and more importantly, we have a conceptual framework to base our design decisions. The principles of design are an abstract guide, which compresses many years of experience on what works well and what does not and are an excellent tool to understand the why behind design.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODE2NzMyNTQsLTIwOTY2NTI5NTldfQ
-==
+eyJoaXN0b3J5IjpbLTY5Mjg5MDYxMywtMjA5NjY1Mjk1OV19
 -->
