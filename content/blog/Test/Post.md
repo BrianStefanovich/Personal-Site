@@ -37,9 +37,9 @@ Ahora bien, ¿que busca un usuario que visita esta web? Entre muchas, podriamos 
  No comunica adecuadamente su identidad corporativa, da un mensaje soso, plano y ambiguo. Tampoco capta clientes ni aumenta sus ventas, no hay llamadas a la acción, integración con redes sociales ni sección de ofertas.
  Desde la perspectiva del usuario, no podemos llegar a conocer el taller, ni sus valores, ni su identidad. Tampoco tenemos acceso a ofertas o descuentos. Se nos dan datos de contacto tradicionales (direccion y telefono) por lo que no tenemos ninguna manera moderna de contactarnos con el taller y tampoco tenemos información relevante como para comparar sus servicios con otros talleres.
 
-Desde el contenido, han desatendido prácticamente todos los objetivos por las que este sitio podria existir en internet,, 
+Desde el contenido, han desatendido prácticamente todos los objetivos por las que este sitio podria existir en internet, pero es que aún hay mas, porque hay errores de diseño muy graves.
 
-Lo primero que se me viene a la mente cuando entro al sitio, es desorden. No hay una direcciòn clara en la que el espectador deba recorrer, no hay una ponderaciòn clara
+
 
 > ### Dominance
 > The principle of dominance creates visual interest in a composition by drawing
@@ -97,11 +97,11 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5MDIxNzU4LDE4OTgxNzA5NjAsNzE0NT
-kwOTE3LDIwMDY3ODU2MjQsMTQ1NDAwNzcwNSwxNDk1NjI1Njg5
-LC0yMDU0MDc2NDg3LDcwMTY0ODgwLDEwOTkxNjY3MDAsLTE3Nj
-g2NjYwODEsOTQxODY1OTczLDE0MjY1NDM4OTgsLTEyNjQwNDUw
-ODgsMTk1NjY1NzEzMSwtMzQzMDM1NjAwLC0xMjUxMDk3MDkwLD
-IwMDI0ODAxOTQsMTMzOTAwOTM2NywxMzM4NjUxMTAxLDIzMTAx
-MDk3N119
+eyJoaXN0b3J5IjpbLTYzNDc4MTk2NywxODk4MTcwOTYwLDcxND
+U5MDkxNywyMDA2Nzg1NjI0LDE0NTQwMDc3MDUsMTQ5NTYyNTY4
+OSwtMjA1NDA3NjQ4Nyw3MDE2NDg4MCwxMDk5MTY2NzAwLC0xNz
+Y4NjY2MDgxLDk0MTg2NTk3MywxNDI2NTQzODk4LC0xMjY0MDQ1
+MDg4LDE5NTY2NTcxMzEsLTM0MzAzNTYwMCwtMTI1MTA5NzA5MC
+wyMDAyNDgwMTk0LDEzMzkwMDkzNjcsMTMzODY1MTEwMSwyMzEw
+MTA5NzddfQ==
 -->
