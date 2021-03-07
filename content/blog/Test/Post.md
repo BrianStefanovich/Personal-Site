@@ -6,7 +6,7 @@ Hace unos días termine de leer [Design for Hackers](https://www.oreilly.com/lib
 
 ## Los principios del diseño y como usarlos en tu contra. Una historia verídica
 
-Empecemos con [sdpeuro.com](https://sdpeuro.com/), la web de un taller mecánico. El primer paso en el proceso de diseño de un sitio web, comienza resolviendo las siguientes preguntas:
+SDPE es un taller mecanico ubicado en  [sdpeuro.com](https://sdpeuro.com/), la web de un taller mecánico. El primer paso en el proceso de diseño de un sitio web, comienza resolviendo las siguientes preguntas:
 
  1. ¿Que esta buscando el usuario en el sitio web, cuales son sus necesidades?
  2. ¿Cuales son los objetivos del dueño del sitio?
@@ -89,7 +89,7 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxOTk2MzI4OCwxODk4MTcwOTYwLDcxND
+eyJoaXN0b3J5IjpbLTgzNTE0MTIzOCwxODk4MTcwOTYwLDcxND
 U5MDkxNywyMDA2Nzg1NjI0LDE0NTQwMDc3MDUsMTQ5NTYyNTY4
 OSwtMjA1NDA3NjQ4Nyw3MDE2NDg4MCwxMDk5MTY2NzAwLC0xNz
 Y4NjY2MDgxLDk0MTg2NTk3MywxNDI2NTQzODk4LC0xMjY0MDQ1
