@@ -97,8 +97,19 @@ Throughout the entire web, the spacing the same and specially with text, where l
 ![enter image description here](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/that-website-looks-bad/text1.png)
 ### Why does it look so boring?
 
-Finally, another problem that design presents throughout the entire web, is the feeling of boredom and monotony. The principle of contrast allows us to explain why this happens:
+Finally, another problem that design presents throughout the entire web, is feeling of boredom and monotony. The principle of contrast allows us to explain why this happens:
+
+>### Contrast
+>The principle of contrast causes certain parts of a composition to stand out
+more than others because of differences – or contrast – between elements.
+Things in a composition can contrast with one another in terms of size, color,
+value (lightness or darkness), texture, shape, line quality . . . just about any way
+imaginable. By using contrast you can create dominance, or create foreground/
+background relationships. Contrast can be used as a guiding principle
+throughout an entire design (like if something is entirely black and white), or it
+can be used sparingly in a design that is mostly homogeneous, for more impact.
+
+On top off to the feeling of clutter is monotony due to the lack of contrasting elements to each other that produces a boring design. In fact, we could say to explain all the previous problems, as a total lack of contrast between the different visual elements of the website.  The only contrasting part is the footer. In which the elements of the nav are reptiten, and the contact methods and social networks are provided. However, instead of collaborating, he adds more problems. What is the point of bringing the user's attention to the footer?
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjU5NTA0MzYsLTIwOTY2NTI5NTldfQ
-==
+eyJoaXN0b3J5IjpbMTY2OTkxMTE1NywtMjA5NjY1Mjk1OV19
 -->
