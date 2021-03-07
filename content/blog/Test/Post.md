@@ -95,7 +95,7 @@ interesting because it provides an opportunity for the principle of contrast (wh
 I’ll talk about soon) and can create a sense of depth in foreground/background
 relationships.
 
-A lo largo de toda la web, los espaciados entre objetos son practicamente los mismosm y en especial con el texto, las alturas de linea y espaciados practicamente no cambian entre titulos y ccuerpos de texto. Esto gene 
+A lo largo de toda la web, los espaciados entre objetos son practicamente los mismosm y en especial con el texto, las alturas de linea y espaciados practicamente no cambian entre titulos y ccuerpos de texto. Esto genera una textura homogenea en todo el texto. Esto sumada a lo repetitivo  
 
 >### Contrast
 >The principle of contrast causes certain parts of a composition to stand out
@@ -109,7 +109,7 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5NjAzMTA1NywtMjIwMDU1NjY1LDc1OD
+eyJoaXN0b3J5IjpbMTUwNTM2NTUzOSwtMjIwMDU1NjY1LDc1OD
 c1NjA0Myw0MTM2ODEzMDksLTc0NzA4NTYxNywxOTAwMTMwMDA3
 LDE4OTgxNzA5NjAsNzE0NTkwOTE3LDIwMDY3ODU2MjQsMTQ1ND
 AwNzcwNSwxNDk1NjI1Njg5LC0yMDU0MDc2NDg3LDcwMTY0ODgw
