@@ -6,10 +6,7 @@ Hace unos días termine de leer [Design for Hackers](https://www.oreilly.com/lib
 
 ## Los principios del diseño y como usarlos en tu contra. Dos historias verídicas
 
-Empecemos con [sdpeuro.com](https://sdpeuro.com/), la web de un taller mecánico.
-
-![San Diego Performance European](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/sdpeuro.png)
-El primer paso en el proceso de diseño de un sitio web, comienza resolviendo las siguientes preguntas:
+Empecemos con [sdpeuro.com](https://sdpeuro.com/), la web de un taller mecánico. El primer paso en el proceso de diseño de un sitio web, comienza resolviendo las siguientes preguntas:
 
  1. ¿Que esta buscando el usuario en el sitio web, cuales son sus necesidades?
  2. ¿Cuales son los objetivos del dueño del sitio?
@@ -29,6 +26,8 @@ Ahora bien, ¿que busca un usuario que visita esta web? Entre muchas, podriamos 
  2. Buscar ofertas
  3. Contactar facilmente con el taller
  4. Comparar servicios con otros talleres
+ 
+![San Diego Performance European](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/sdpeuro.png)
  
  Lo primero que podemos decir es que el sitio desatiende todas las necesidades. Las pocas imagenes 
 
@@ -90,11 +89,11 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTYyNTM3MzcsMjAwNjc4NTYyNCwxND
-U0MDA3NzA1LDE0OTU2MjU2ODksLTIwNTQwNzY0ODcsNzAxNjQ4
-ODAsMTA5OTE2NjcwMCwtMTc2ODY2NjA4MSw5NDE4NjU5NzMsMT
-QyNjU0Mzg5OCwtMTI2NDA0NTA4OCwxOTU2NjU3MTMxLC0zNDMw
-MzU2MDAsLTEyNTEwOTcwOTAsMjAwMjQ4MDE5NCwxMzM5MDA5Mz
-Y3LDEzMzg2NTExMDEsMjMxMDEwOTc3LDIwNDAyOTc2MjIsLTIw
-MDY4NDIxODhdfQ==
+eyJoaXN0b3J5IjpbNzE0NTkwOTE3LDIwMDY3ODU2MjQsMTQ1ND
+AwNzcwNSwxNDk1NjI1Njg5LC0yMDU0MDc2NDg3LDcwMTY0ODgw
+LDEwOTkxNjY3MDAsLTE3Njg2NjYwODEsOTQxODY1OTczLDE0Mj
+Y1NDM4OTgsLTEyNjQwNDUwODgsMTk1NjY1NzEzMSwtMzQzMDM1
+NjAwLC0xMjUxMDk3MDkwLDIwMDI0ODAxOTQsMTMzOTAwOTM2Ny
+wxMzM4NjUxMTAxLDIzMTAxMDk3NywyMDQwMjk3NjIyLC0yMDA2
+ODQyMTg4XX0=
 -->
