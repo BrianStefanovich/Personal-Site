@@ -62,9 +62,36 @@ Another question we can ask is, why is the logo that size and is aligned that wa
 
 ### Why does it feel hard to read?
 
-Going through the pages I find tremendous monotony, specialy the text area where it gets difficult to read. They are difficult to scan because like the rest of the web, they lack a clear hierarchy and structure that allows me to understand the most relevant information at a glance.  However, the problem with text blocks also have to do with the texture that is generated between the margins, spacing and line height. The principles of similarity, rithm and texture do not help to understand this:
+Going through the pages I find tremendous monotony, specialy the text area where it gets difficult to read. They are difficult to scan because like the rest of the web, they lack a clear hierarchy and structure that allows me to understand the most relevant information at a glance.  However, the problem with text blocks also have to do with the texture that is generated between the margins, spacing and line height. The principles of similarity, rithm and texture will help us to understand this:
+
+> ### Similarity
+> Similarity means that various elements of a composition – their shape, color,
+line characteristics (smooth or jagged), or texture – are similar to one another.
+Similarity makes a composition compelling because, as your eye travels
+throughout that composition, it is constantly reminded of things that it has seen
+before within that same composition.
+
+> ### Rhythm
+>With similarity often comes rhythm. Rhythm is a bit more abstract than
+similarity is. Probably the first thing that you think about when you think
+about rhythm is music. Just as the repetition of a snare or kick drum at a
+consistent point in a measure of music, over and over again, creates a sense of
+rhythm in music, the repetition of a particular design element or characteristic
+throughout a composition create a sense of rhythm in design.
+
+> ### Texture
+>Texture is the visual indication that something has characteristics that would be
+palpable if you were able to touch them. For example, if something looks like
+sandstone – or actually is made of sandstone – then that is texture. Texture is
+related to similarity and rhythm in that if a shape is repeated enough times, and
+at a fi ne enough scale, it generally creates a texture. Texture keeps a composition
+interesting because it provides an opportunity for the principle of contrast (which
+I’ll talk about soon) and can create a sense of depth in foreground/background
+relationships.
+
+
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjA1Njk4OTBdfQ==
+eyJoaXN0b3J5IjpbLTIwOTY2NTI5NTldfQ==
 -->
