@@ -17,8 +17,12 @@ Many projects are carried out without having clear answers to these questions, a
 
 It is not a blog, or a billboard for promotions, or a virtual store. Apparently it is a corporate identity page, in which they tell what their company is about, and leave some contact methods. Therefore, we could say that the objectives of this website are:
 
-1. 
+1. That the company exists on the internet and, search engines
+2. Communicate corporation's identity
+3. Facilitate contact methods to potential clients
+4. Capture customers and increase your sales
 
+Now, what does a user who visits this website look for? Among many, we could say that the main thing is:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5MzIyMDk4NV19
+eyJoaXN0b3J5IjpbLTE2ODIyNTc1NDhdfQ==
 -->
