@@ -114,14 +114,13 @@ background relationships. Contrast can be used as a guiding principle
 throughout an entire design (like if something is entirely black and white), or it
 can be used sparingly in a design that is mostly homogeneous, for more impact.
   
-  
-
+A la sensacion de desorden, se le suma una sen
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1Njg1MTA5MywtMjIwMDU1NjY1LDc1OD
-c1NjA0Myw0MTM2ODEzMDksLTc0NzA4NTYxNywxOTAwMTMwMDA3
-LDE4OTgxNzA5NjAsNzE0NTkwOTE3LDIwMDY3ODU2MjQsMTQ1ND
-AwNzcwNSwxNDk1NjI1Njg5LC0yMDU0MDc2NDg3LDcwMTY0ODgw
-LDEwOTkxNjY3MDAsLTE3Njg2NjYwODEsOTQxODY1OTczLDE0Mj
-Y1NDM4OTgsLTEyNjQwNDUwODgsMTk1NjY1NzEzMSwtMzQzMDM1
-NjAwXX0=
+eyJoaXN0b3J5IjpbOTM4Nzg3NjU0LDE2NTY4NTEwOTMsLTIyMD
+A1NTY2NSw3NTg3NTYwNDMsNDEzNjgxMzA5LC03NDcwODU2MTcs
+MTkwMDEzMDAwNywxODk4MTcwOTYwLDcxNDU5MDkxNywyMDA2Nz
+g1NjI0LDE0NTQwMDc3MDUsMTQ5NTYyNTY4OSwtMjA1NDA3NjQ4
+Nyw3MDE2NDg4MCwxMDk5MTY2NzAwLC0xNzY4NjY2MDgxLDk0MT
+g2NTk3MywxNDI2NTQzODk4LC0xMjY0MDQ1MDg4LDE5NTY2NTcx
+MzFdfQ==
 -->
