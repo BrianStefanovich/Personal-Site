@@ -28,6 +28,9 @@ Now, what does a user who visits this website look for? Among many other thing, 
 2. Search for offers
 3. Easily contact with the workshop
 4. Compare services with other workshops
+
+![San Diego Performance European](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/sdpeuro.png)
+The first thing we can say is that the site neglects both owner and us .
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTUyMzg3MDBdfQ==
+eyJoaXN0b3J5IjpbLTUxMTM4MDk3MV19
 -->
