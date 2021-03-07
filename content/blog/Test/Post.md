@@ -60,7 +60,6 @@ La otra pregunta que podemos hacer es, por que el logo tiene ese tamaño y esta 
 
 
 
-
 > ### Similarity
 > Similarity means that various elements of a composition – their shape, color,
 line characteristics (smooth or jagged), or texture – are similar to one another.
@@ -109,11 +108,11 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDEzNjgxMzA5LC03NDcwODU2MTcsMTkwMD
-EzMDAwNywxODk4MTcwOTYwLDcxNDU5MDkxNywyMDA2Nzg1NjI0
-LDE0NTQwMDc3MDUsMTQ5NTYyNTY4OSwtMjA1NDA3NjQ4Nyw3MD
-E2NDg4MCwxMDk5MTY2NzAwLC0xNzY4NjY2MDgxLDk0MTg2NTk3
-MywxNDI2NTQzODk4LC0xMjY0MDQ1MDg4LDE5NTY2NTcxMzEsLT
-M0MzAzNTYwMCwtMTI1MTA5NzA5MCwyMDAyNDgwMTk0LDEzMzkw
-MDkzNjddfQ==
+eyJoaXN0b3J5IjpbNzU4NzU2MDQzLDQxMzY4MTMwOSwtNzQ3MD
+g1NjE3LDE5MDAxMzAwMDcsMTg5ODE3MDk2MCw3MTQ1OTA5MTcs
+MjAwNjc4NTYyNCwxNDU0MDA3NzA1LDE0OTU2MjU2ODksLTIwNT
+QwNzY0ODcsNzAxNjQ4ODAsMTA5OTE2NjcwMCwtMTc2ODY2NjA4
+MSw5NDE4NjU5NzMsMTQyNjU0Mzg5OCwtMTI2NDA0NTA4OCwxOT
+U2NjU3MTMxLC0zNDMwMzU2MDAsLTEyNTEwOTcwOTAsMjAwMjQ4
+MDE5NF19
 -->
