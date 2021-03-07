@@ -66,7 +66,9 @@ La otra pregunta que podemos hacer es, por que el logo tiene ese tamaño y esta 
 
 ### ¿Por que se siente dificil de leer?
 
-Al navegar por las paginas del website, otra de los problemas que encuentro es lo monótono y dificil que se me hace leer los bloques de texto. A simple vista no me dan ganas de leerlos, y son dificiles de scanear porque 
+Al navegar por las paginas del website, otra de los problemas que encuentro es lo monótono y dificil que se me hace leer los bloques de texto. A simple vista no me dan ganas de leerlos, y son dificiles de scanear porque al igual que el resto de la web, carecen de una jerarquía y estructura clara que me permita entender la información mas relevante con un simple vistazo.
+
+Sin embargo, el problema con los bloques de los bloques de texto tienen que ver tambien 
 > ### Similarity
 > Similarity means that various elements of a composition – their shape, color,
 line characteristics (smooth or jagged), or texture – are similar to one another.
@@ -108,11 +110,11 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzE1NDM3NzEyLDc1ODc1NjA0Myw0MTM2OD
-EzMDksLTc0NzA4NTYxNywxOTAwMTMwMDA3LDE4OTgxNzA5NjAs
-NzE0NTkwOTE3LDIwMDY3ODU2MjQsMTQ1NDAwNzcwNSwxNDk1Nj
-I1Njg5LC0yMDU0MDc2NDg3LDcwMTY0ODgwLDEwOTkxNjY3MDAs
-LTE3Njg2NjYwODEsOTQxODY1OTczLDE0MjY1NDM4OTgsLTEyNj
-QwNDUwODgsMTk1NjY1NzEzMSwtMzQzMDM1NjAwLC0xMjUxMDk3
-MDkwXX0=
+eyJoaXN0b3J5IjpbLTIyMDA1NTY2NSw3NTg3NTYwNDMsNDEzNj
+gxMzA5LC03NDcwODU2MTcsMTkwMDEzMDAwNywxODk4MTcwOTYw
+LDcxNDU5MDkxNywyMDA2Nzg1NjI0LDE0NTQwMDc3MDUsMTQ5NT
+YyNTY4OSwtMjA1NDA3NjQ4Nyw3MDE2NDg4MCwxMDk5MTY2NzAw
+LC0xNzY4NjY2MDgxLDk0MTg2NTk3MywxNDI2NTQzODk4LC0xMj
+Y0MDQ1MDg4LDE5NTY2NTcxMzEsLTM0MzAzNTYwMCwtMTI1MTA5
+NzA5MF19
 -->
