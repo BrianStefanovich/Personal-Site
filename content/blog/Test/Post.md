@@ -54,7 +54,7 @@ composition.
  Si bien hay una estructura y un orden, por alguna razón el ojo no entiende por donde empezar, ni encuentra lugares comodos donde posarsrse. Si miramos el header veremos que esta construido por tres filas. La superior, enlista las marcas con las que trabajan, pero no es clickeable. El verdadero menú, es la fila inferior, que tiene la misma altura y la misma fuente que la superior, pero por la elección de colores, se encuentra en segundo órden. Estoy seguro de que muchos usuarios confundieron mas de una vez, la fila azul con el menu de navegación.
 
 ![enter image description here](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/Test/header.png)
-La otra pregunta que podemos hacer es, por que el logo tiene ese tamaño y esta alineado de esa manera. Un tama
+La otra pregunta que podemos hacer es, por que el logo tiene ese tamaño y esta alineado de esa manera. Un tamaño pequeño y llevado tanto hacia el borde izquierdo, lo coloca en un lugar de poca relevancia. ¿Que es lo mas importante del header? A juzgar por el diseño, la frase "Serving San Diego Since 1996". El resto, es un cluster 
 
 > ### Similarity
 > Similarity means that various elements of a composition – their shape, color,
@@ -104,11 +104,11 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg5ODg4MjM1LC03NDcwODU2MTcsMTkwMD
-EzMDAwNywxODk4MTcwOTYwLDcxNDU5MDkxNywyMDA2Nzg1NjI0
-LDE0NTQwMDc3MDUsMTQ5NTYyNTY4OSwtMjA1NDA3NjQ4Nyw3MD
-E2NDg4MCwxMDk5MTY2NzAwLC0xNzY4NjY2MDgxLDk0MTg2NTk3
-MywxNDI2NTQzODk4LC0xMjY0MDQ1MDg4LDE5NTY2NTcxMzEsLT
-M0MzAzNTYwMCwtMTI1MTA5NzA5MCwyMDAyNDgwMTk0LDEzMzkw
-MDkzNjddfQ==
+eyJoaXN0b3J5IjpbLTEzNzM2MzE4ODAsLTc0NzA4NTYxNywxOT
+AwMTMwMDA3LDE4OTgxNzA5NjAsNzE0NTkwOTE3LDIwMDY3ODU2
+MjQsMTQ1NDAwNzcwNSwxNDk1NjI1Njg5LC0yMDU0MDc2NDg3LD
+cwMTY0ODgwLDEwOTkxNjY3MDAsLTE3Njg2NjYwODEsOTQxODY1
+OTczLDE0MjY1NDM4OTgsLTEyNjQwNDUwODgsMTk1NjY1NzEzMS
+wtMzQzMDM1NjAwLC0xMjUxMDk3MDkwLDIwMDI0ODAxOTQsMTMz
+OTAwOTM2N119
 -->
