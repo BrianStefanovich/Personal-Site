@@ -33,6 +33,8 @@ Ahora bien, ¿que busca un usuario que visita esta web? Entre muchas, podriamos 
 ![San Diego Performance European](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/sdpeuro.png)
  
  Lo primero que podemos decir es que el sitio desatiende las necesidades de ambas partes. Las pocas imagenes que aparecen, muestran autos fuera de encuadre. Si vieramos las imagenes aisladamente, serñia dificil asociarlas con un taller mecanico. No se ven herramientas, trabajadores, ni nada que nos indique que se trata de un taller dan mas bien la idea de una colección privada de automoviles. 
+ 
+ No comunica su identidad corporativa, da un mensaje soso, plano, 
 
 Lo primero que se me viene a la mente cuando entro al sitio, es desorden. No hay una direcciòn clara en la que el espectador deba recorrer, no hay una ponderaciòn clara
 
@@ -92,11 +94,11 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwNzcwMzgwMywxODk4MTcwOTYwLDcxND
-U5MDkxNywyMDA2Nzg1NjI0LDE0NTQwMDc3MDUsMTQ5NTYyNTY4
-OSwtMjA1NDA3NjQ4Nyw3MDE2NDg4MCwxMDk5MTY2NzAwLC0xNz
-Y4NjY2MDgxLDk0MTg2NTk3MywxNDI2NTQzODk4LC0xMjY0MDQ1
-MDg4LDE5NTY2NTcxMzEsLTM0MzAzNTYwMCwtMTI1MTA5NzA5MC
-wyMDAyNDgwMTk0LDEzMzkwMDkzNjcsMTMzODY1MTEwMSwyMzEw
-MTA5NzddfQ==
+eyJoaXN0b3J5IjpbLTIxMzE0Njc0LDE4OTgxNzA5NjAsNzE0NT
+kwOTE3LDIwMDY3ODU2MjQsMTQ1NDAwNzcwNSwxNDk1NjI1Njg5
+LC0yMDU0MDc2NDg3LDcwMTY0ODgwLDEwOTkxNjY3MDAsLTE3Nj
+g2NjYwODEsOTQxODY1OTczLDE0MjY1NDM4OTgsLTEyNjQwNDUw
+ODgsMTk1NjY1NzEzMSwtMzQzMDM1NjAwLC0xMjUxMDk3MDkwLD
+IwMDI0ODAxOTQsMTMzOTAwOTM2NywxMzM4NjUxMTAxLDIzMTAx
+MDk3N119
 -->
