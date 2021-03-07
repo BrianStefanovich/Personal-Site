@@ -51,7 +51,7 @@ It acts almost like a magnet when you first lay eyes on the composition. It also
 acts as an anchor – you keep returning to it as you explore other parts of the
 composition.
 
- Si bien hay una estructura y un orden, por alguna razón el ojo no entiende por donde empezar, ni encuentra lugares comodos donde posarsrse. Si miramos el header veremos que 
+ Si bien hay una estructura y un orden, por alguna razón el ojo no entiende por donde empezar, ni encuentra lugares comodos donde posarsrse. Si miramos el header veremos que esta construido por tres filas. La superior, enlista 
  ![enter image description here](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/Test/header.png)
 
 > ### Similarity
@@ -102,11 +102,11 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTM1MTY5NTcsLTc0NzA4NTYxNywxOT
-AwMTMwMDA3LDE4OTgxNzA5NjAsNzE0NTkwOTE3LDIwMDY3ODU2
-MjQsMTQ1NDAwNzcwNSwxNDk1NjI1Njg5LC0yMDU0MDc2NDg3LD
-cwMTY0ODgwLDEwOTkxNjY3MDAsLTE3Njg2NjYwODEsOTQxODY1
-OTczLDE0MjY1NDM4OTgsLTEyNjQwNDUwODgsMTk1NjY1NzEzMS
-wtMzQzMDM1NjAwLC0xMjUxMDk3MDkwLDIwMDI0ODAxOTQsMTMz
-OTAwOTM2N119
+eyJoaXN0b3J5IjpbLTEzNDAzMjE3MCwtNzQ3MDg1NjE3LDE5MD
+AxMzAwMDcsMTg5ODE3MDk2MCw3MTQ1OTA5MTcsMjAwNjc4NTYy
+NCwxNDU0MDA3NzA1LDE0OTU2MjU2ODksLTIwNTQwNzY0ODcsNz
+AxNjQ4ODAsMTA5OTE2NjcwMCwtMTc2ODY2NjA4MSw5NDE4NjU5
+NzMsMTQyNjU0Mzg5OCwtMTI2NDA0NTA4OCwxOTU2NjU3MTMxLC
+0zNDMwMzU2MDAsLTEyNTEwOTcwOTAsMjAwMjQ4MDE5NCwxMzM5
+MDA5MzY3XX0=
 -->
