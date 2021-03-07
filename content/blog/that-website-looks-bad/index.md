@@ -22,7 +22,12 @@ It is not a blog, or a billboard for promotions, or a virtual store. Apparently 
 3. Facilitate contact methods to potential clients
 4. Capture customers and increase your sales
 
-Now, what does a user who visits this website look for? Among many, we could say that the main thing is:
+Now, what does a user who visits this website look for? Among many other thing, it could be: 
+
+1. Get to know the workshop
+2. Search for offers
+3. Easily contact with the workshop
+4. Compare services with other workshops
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODIyNTc1NDhdfQ==
+eyJoaXN0b3J5IjpbLTEyMTUyMzg3MDBdfQ==
 -->
