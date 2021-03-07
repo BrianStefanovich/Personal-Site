@@ -4,7 +4,7 @@ Siempre recordaré un simpatico ejercicio que soliamos hacer en clase de Diseño
 
 Hace unos días termine de leer [Design for Hackers](https://www.oreilly.com/library/view/design-for-hackers/9781119998952/) de David Kadavy, un excelente libro que expone marcos conceptuales muy claros para entender y resolver problemas de diseño web. Y mientras lo leía no podía parar de pensar en repetir el ejercicio que haciamos en clase, pero esta vez aplicado a websites utilizando los conceptos del libro, asi que alla vamos!
 
-## Los principios del diseño y como usarlos en tu contra. Dos historias verídicas
+## Los principios del diseño y como usarlos en tu contra. Una historia verídica
 
 Empecemos con [sdpeuro.com](https://sdpeuro.com/), la web de un taller mecánico. El primer paso en el proceso de diseño de un sitio web, comienza resolviendo las siguientes preguntas:
 
@@ -26,10 +26,10 @@ Ahora bien, ¿que busca un usuario que visita esta web? Entre muchas, podriamos 
  2. Buscar ofertas
  3. Contactar facilmente con el taller
  4. Comparar servicios con otros talleres
-
+ 
 ![San Diego Performance European](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/sdpeuro.png)
  
- Lo primero que podemos decir es que el sitio desatiende las necesidades de ambas partes. Las pocas imagenes que apareceb
+ Lo primero que podemos decir es que el sitio desatiende las necesidades de ambas partes. Las pocas imagenes que aparecen, muestran autos fuera de encuadre. Es dificil pensar en las
 
 Lo primero que se me viene a la mente cuando entro al sitio, es desorden. No hay una direcciòn clara en la que el espectador deba recorrer, no hay una ponderaciòn clara
 
@@ -89,11 +89,11 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc3MTU4MzQ4LDE4OTgxNzA5NjAsNzE0NT
-kwOTE3LDIwMDY3ODU2MjQsMTQ1NDAwNzcwNSwxNDk1NjI1Njg5
-LC0yMDU0MDc2NDg3LDcwMTY0ODgwLDEwOTkxNjY3MDAsLTE3Nj
-g2NjYwODEsOTQxODY1OTczLDE0MjY1NDM4OTgsLTEyNjQwNDUw
-ODgsMTk1NjY1NzEzMSwtMzQzMDM1NjAwLC0xMjUxMDk3MDkwLD
-IwMDI0ODAxOTQsMTMzOTAwOTM2NywxMzM4NjUxMTAxLDIzMTAx
-MDk3N119
+eyJoaXN0b3J5IjpbLTIxOTk2MzI4OCwxODk4MTcwOTYwLDcxND
+U5MDkxNywyMDA2Nzg1NjI0LDE0NTQwMDc3MDUsMTQ5NTYyNTY4
+OSwtMjA1NDA3NjQ4Nyw3MDE2NDg4MCwxMDk5MTY2NzAwLC0xNz
+Y4NjY2MDgxLDk0MTg2NTk3MywxNDI2NTQzODk4LC0xMjY0MDQ1
+MDg4LDE5NTY2NTcxMzEsLTM0MzAzNTYwMCwtMTI1MTA5NzA5MC
+wyMDAyNDgwMTk0LDEzMzkwMDkzNjcsMTMzODY1MTEwMSwyMzEw
+MTA5NzddfQ==
 -->
