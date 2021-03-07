@@ -102,7 +102,7 @@ A lo largo de toda la web, los espaciados entre objetos son practicamente los mi
 ![enter image description here](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/Test/text1.png)
 ### ¿Por que se ve tan aburrido?
 
-
+Ya por último, otro de los problemas que presenta el diseño a lo largo de toda la web, es la sensacion de aburrimiento y monotonía. El principio de contraste en Diseño es probablemente de los mas intuitivos pero tambien de los mas abstractos.
 
 >### Contrast
 >The principle of contrast causes certain parts of a composition to stand out
@@ -116,11 +116,11 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2NDU1ODg2OSwtMjIwMDU1NjY1LDc1OD
-c1NjA0Myw0MTM2ODEzMDksLTc0NzA4NTYxNywxOTAwMTMwMDA3
-LDE4OTgxNzA5NjAsNzE0NTkwOTE3LDIwMDY3ODU2MjQsMTQ1ND
-AwNzcwNSwxNDk1NjI1Njg5LC0yMDU0MDc2NDg3LDcwMTY0ODgw
-LDEwOTkxNjY3MDAsLTE3Njg2NjYwODEsOTQxODY1OTczLDE0Mj
-Y1NDM4OTgsLTEyNjQwNDUwODgsMTk1NjY1NzEzMSwtMzQzMDM1
-NjAwXX0=
+eyJoaXN0b3J5IjpbMzg4ODQzNTYwLC0yMjAwNTU2NjUsNzU4Nz
+U2MDQzLDQxMzY4MTMwOSwtNzQ3MDg1NjE3LDE5MDAxMzAwMDcs
+MTg5ODE3MDk2MCw3MTQ1OTA5MTcsMjAwNjc4NTYyNCwxNDU0MD
+A3NzA1LDE0OTU2MjU2ODksLTIwNTQwNzY0ODcsNzAxNjQ4ODAs
+MTA5OTE2NjcwMCwtMTc2ODY2NjA4MSw5NDE4NjU5NzMsMTQyNj
+U0Mzg5OCwtMTI2NDA0NTA4OCwxOTU2NjU3MTMxLC0zNDMwMzU2
+MDBdfQ==
 -->
