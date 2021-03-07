@@ -32,7 +32,9 @@ Now, what does a user who visits this website look for? Among many other thing, 
 ![San Diego Performance European](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/sdpeuro.png)
 The first thing we can say is that the site neglects both owner and user needs and goals. The few images that appear show only cars out of frame. If we saw the images in isolation, it would be difficult to associate them with a workshop. There are no tools, workers, or anything to indicate that it is a workshop, rather they give the idea of ​​a private collection of cars.
 
-It does not adequately communicate its corporate identity, it gives a bland, flat and ambiguous message. Nor does it attract customers or increase its sales, there are no calls to action, integration with social networks or offers section. From the user's perspective, we cannot get to know the workshop, its values, or its identity. We also do not have access to offers or discounts. We are given traditional contact information (address and phone) so we do not have any modern way of contacting the workshop and we do not have relevant information to compare their services with other workshops.
+It doesn't communicate its corporate identity and it gives flat and ambiguous message. Nor does it attract customers or increase its sales, there are no calls to action, integration with social networks or offers section. From user's perspective, we cannot get to know the workshop, its values, or its identity. We also do not have access to offers or discounts. We are given traditional contact information (address and phone) so we do not have any modern way of contacting the workshop and we do not have relevant information to compare their services with others.
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjE1NjYwNDE0XX0=
+eyJoaXN0b3J5IjpbLTEyODg2MTgzNzZdfQ==
 -->
