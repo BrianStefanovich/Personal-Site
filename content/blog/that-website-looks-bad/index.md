@@ -115,6 +115,11 @@ On top off to the feeling of clutter is monotony due to the lack of contrasting 
 ## In summary
 
 Now we can start to explain why this website looks bad and more importantly, we have a conceptual framework to base our design decisions. The principles of design are an abstract guide, which compresses many years of experience on what works well and what does not and are an excellent tool to understand the why behind design.
+
+ But ... won't you propose a redesign?
+ 
+ Yes! but that will remain for the next post. I hope you find some idea interesting.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5Mjg5MDYxMywtMjA5NjY1Mjk1OV19
+eyJoaXN0b3J5IjpbLTE5NTkzMzcyODAsLTIwOTY2NTI5NTldfQ
+==
 -->
