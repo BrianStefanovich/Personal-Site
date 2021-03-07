@@ -10,8 +10,12 @@ It took me some work to find a good example of bad design, but after a few hours
 
 The first step in the website design process begins with solving the following questions:
 
-1. 
+1. What is the user looking for on the website?
+3. What is this website meant to do?
+
+Many projects are carried out without having clear answers to either of these two questions, and they lead to confusing and unpleasant user experiences. What is SDPE's goal with its website?
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQwODg3OTE4XX0=
+eyJoaXN0b3J5IjpbMTQyMjg2MDE1NF19
 -->
