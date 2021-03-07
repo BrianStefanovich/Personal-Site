@@ -126,10 +126,9 @@ Ahora si podemos comenzar a explicar por que es que se ve mal esta web y más im
 
 ## Para la próxima...
 
-Estarán pensando, y no vas a plantear un rediseño?. SI!
-
+Estarán pensando, y no vas a plantear un rediseño?. Si!, pero eso quedará para el próximo post. Espero que alguna idea te halla resultado interesante. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2NDA4NjEyOSwtMTIzMjIxMTA0OSwxNj
+eyJoaXN0b3J5IjpbLTczOTU1MDMwNiwtMTIzMjIxMTA0OSwxNj
 U2ODUxMDkzLC0yMjAwNTU2NjUsNzU4NzU2MDQzLDQxMzY4MTMw
 OSwtNzQ3MDg1NjE3LDE5MDAxMzAwMDcsMTg5ODE3MDk2MCw3MT
 Q1OTA5MTcsMjAwNjc4NTYyNCwxNDU0MDA3NzA1LDE0OTU2MjU2
