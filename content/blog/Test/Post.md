@@ -1,6 +1,6 @@
 # Esa web se ve mal pero... ¿Por que?
 
-Siempre recordaré un simpatico ejercicio que soliamos hacer en clase de Diseño Grafico. Nuestro profesor nos insistía sobre la mala calidad general de los diseños de los pequeños y medianos emprendimientos en nuestra region. Tanto asi que solíamos elegir un lugar al azar en Google Maps y nunca recorríamos mas de tres calles en street view para encontrar pesimos diseños de logotipos y cartelería. El ejercicio consistía en explicar cuales eran los motivos que hacia que se vieran mal.
+Siempre recordaré un simpatico ejercicio que soliamos hacer en clase de Diseño Grafico. Nuestro profesor nos insistía sobre la mala calidad general de los diseños de los pequeños y medianos emprendimientos en nuestra region. Tanto asi que solíamos elegir un lugar al azar en Google Maps y nunca recorríamos mas de tres calles en street view para encontrar pesimos diseños de logotipos y cartelería. El ejercicio consistía en explicar cuales eran los motivos que hacia que se vieran mal y proponer un rediseño que solucionara los problemas que encontraramos.
 
 Hace unos días termine de leer [Design for Hackers](https://www.oreilly.com/library/view/design-for-hackers/9781119998952/) de David Kadavy, un excelente libro que expone marcos conceptuales muy claros para entender y resolver problemas de diseño web. Y mientras lo leía no podía parar de pensar en repetir el ejercicio que haciamos en clase, pero esta vez aplicado a websites utilizando los conceptos del libro, asi que alla vamos!
 
@@ -100,7 +100,8 @@ A lo largo de toda la web, los espaciados entre objetos son practicamente los mi
 ![enter image description here](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/Test/text3.png)
 
 ![enter image description here](https://raw.githubusercontent.com/BrianStefanovich/Personal-Site/BlogPost/content/blog/Test/text1.png)
-### ¿Por que se siente dificil de leer?
+### ¿Por que se ve tan aburrido?
+
 
 
 >### Contrast
@@ -115,7 +116,7 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwMDc1ODAxMiwtMjIwMDU1NjY1LDc1OD
+eyJoaXN0b3J5IjpbMTc2NDU1ODg2OSwtMjIwMDU1NjY1LDc1OD
 c1NjA0Myw0MTM2ODEzMDksLTc0NzA4NTYxNywxOTAwMTMwMDA3
 LDE4OTgxNzA5NjAsNzE0NTkwOTE3LDIwMDY3ODU2MjQsMTQ1ND
 AwNzcwNSwxNDk1NjI1Njg5LC0yMDU0MDc2NDg3LDcwMTY0ODgw
