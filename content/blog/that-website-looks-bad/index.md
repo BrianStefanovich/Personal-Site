@@ -134,3 +134,6 @@ Now we can start to explain why this website looks bad and more importantly, we 
 But ... won't you propose a redesign?
 
 Yes! but that will remain for the next post. I hope you find some idea interesting.
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE1NDQ3MTM3MjddfQ==
+-->
