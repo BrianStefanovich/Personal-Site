@@ -55,7 +55,7 @@ can be established pretty explicitly through lines (and sometimes even arrows!),
 but sometimes more implicitly through shapes, shading, or even invisible
 alignment 
 
-
+Lack of proper structure and order make the eye to not understand where to start, or to find comfortable places to rest. If we look at the header we will see that it is built by three rows. The top one lists the brands they work with, but it is not clickable. The real menu is the bottom row, which has the same height and the same font.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0NTIyMDE5MV19
+eyJoaXN0b3J5IjpbLTc3NDIzNzAwM119
 -->
