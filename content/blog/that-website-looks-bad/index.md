@@ -89,9 +89,11 @@ interesting because it provides an opportunity for the principle of contrast (wh
 I’ll talk about soon) and can create a sense of depth in foreground/background
 relationships.
 
+Throughout the entire web, the spacing the same and specially with text, where line heights and margins practically don't change between titles and  bodies. This creates a homogeneous texture throughout the text. This, added to the repetition of little differentiated elements, generates a very repetitive and monotonous rhythm that as a consequence produces fatigue and discourages the user from reading.
+
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTY2NTI5NTldfQ==
+eyJoaXN0b3J5IjpbMTI3NDQ1NzQ3LC0yMDk2NjUyOTU5XX0=
 -->
