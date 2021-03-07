@@ -39,8 +39,9 @@ Ahora bien, ¿que busca un usuario que visita esta web? Entre muchas, podriamos 
 
 Desde el contenido, han desatendido prácticamente todos los objetivos por las que este sitio podria existir en internet, pero es que aún hay mas, porque hay errores de diseño muy graves.
 
+### El principio de dominancia, y la sensación de desorden
 
-
+Una de las primeras cosas en las que pienso al entrar al sitio web, es 
 > ### Dominance
 > The principle of dominance creates visual interest in a composition by drawing
 the viewer’s eye to an important element in the composition. When an element
@@ -97,7 +98,7 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzNDc4MTk2NywxODk4MTcwOTYwLDcxND
+eyJoaXN0b3J5IjpbMTM5MDg4MjAyOSwxODk4MTcwOTYwLDcxND
 U5MDkxNywyMDA2Nzg1NjI0LDE0NTQwMDc3MDUsMTQ5NTYyNTY4
 OSwtMjA1NDA3NjQ4Nyw3MDE2NDg4MCwxMDk5MTY2NzAwLC0xNz
 Y4NjY2MDgxLDk0MTg2NTk3MywxNDI2NTQzODk4LC0xMjY0MDQ1
