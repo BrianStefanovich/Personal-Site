@@ -55,7 +55,7 @@ can be established pretty explicitly through lines (and sometimes even arrows!),
 but sometimes more implicitly through shapes, shading, or even invisible
 alignment 
 
-Lack of proper structure and order make the eye to not understand where to start, or to find comfortable places to rest. If we look at the header we will see that it is built by three rows. The top one lists the brands they work with, but it is not clickable. The real menu is the bottom row, which has the same height and the same font.
+Lack of proper structure and order make the eye to not understand where to start, or to find comfortable places to rest. If we look at the header we will see that it is built by three rows. The real menu is on the bottom row, which has the same height and the same font as the top one, but due to the choice of colors, it is in second order. I am sure that many users confused the blue row with the navigation menu more than once.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3NDIzNzAwM119
+eyJoaXN0b3J5IjpbMTc2MDU1NTM4MF19
 -->
