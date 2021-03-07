@@ -41,7 +41,8 @@ Desde el contenido, han desatendido prácticamente todos los objetivos por las q
 
 ### ¿Por que se ve desordenado?
 
-Una de las primeras cosas en las que pienso al entrar al sitio web, es en desorden. Si bien hay una estructura y un orden, por alguna razón el ojo no entiende por donde empezar, ni encuentra lugares comodos donde posarsrse. 
+Una de las primeras cosas en las que pienso al entrar al sitio web, es en desorden. El principio de dominancia nos da herramientas para entender que es lo que sucede: 
+
 > ### Dominance
 > The principle of dominance creates visual interest in a composition by drawing
 the viewer’s eye to an important element in the composition. When an element
@@ -49,6 +50,8 @@ is dominant in a composition, it is one of the first things your eye is drawn to
 It acts almost like a magnet when you first lay eyes on the composition. It also
 acts as an anchor – you keep returning to it as you explore other parts of the
 composition.
+
+ Si bien hay una estructura y un orden, por alguna razón el ojo no entiende por donde empezar, ni encuentra lugares comodos donde posarsrse. 
 
 > ### Similarity
 > Similarity means that various elements of a composition – their shape, color,
@@ -98,7 +101,7 @@ can be used sparingly in a design that is mostly homogeneous, for more impact.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4MTE4MjE1NCwxODk4MTcwOTYwLDcxND
+eyJoaXN0b3J5IjpbMTkwMDEzMDAwNywxODk4MTcwOTYwLDcxND
 U5MDkxNywyMDA2Nzg1NjI0LDE0NTQwMDc3MDUsMTQ5NTYyNTY4
 OSwtMjA1NDA3NjQ4Nyw3MDE2NDg4MCwxMDk5MTY2NzAwLC0xNz
 Y4NjY2MDgxLDk0MTg2NTk3MywxNDI2NTQzODk4LC0xMjY0MDQ1
