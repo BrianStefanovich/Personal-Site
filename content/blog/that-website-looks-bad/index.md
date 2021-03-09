@@ -6,15 +6,19 @@ description: "We use design principles from the book Design for Hackers, to expl
 slug: "that-website-looks-bad"
 ---
 
-I'll always remember a nice exercise that we used to do in class. Our teacher always insisted with the lower quality of designs that surround us on street. So much that we used to pick a random place at Google Maps and never had to traveled more than three streets to find ugly logos and signages designs. The exercise consisted of explaining what were the reasons that made them look bad and proposing a redesign to solve it.
+I'll always remember a nice exercise that we used to do in class. Our teacher always insisted with the lower quality of designs that surround us on street. So much that we pick a random place at Google Maps and never had to travel more than three streets to find ugly logos and signages designs. The exercise consisted of explaining what were the reasons that made them look bad and proposing a redesign to solve it.
 
-A few days ago I've finished [Design for Hackers](https://www.oreilly.com/library/view/design-for-hackers/9781119998952/) by David Kadavy, an excellent book that exposes very clear conceptual frameworks for understanding and solving web design problems and while I was reading it, I couldn't stop thinking about repeating the exercise we used to do, but applied to websites and using some concepts from the book, so here we go!
+A few days ago I've finished reading [Design for Hackers](https://www.oreilly.com/library/view/design-for-hackers/9781119998952/) by David Kadavy, an excellent book that exposes clear conceptual frameworks for understanding and solving web design problems and while I was reading it, I couldn't stop thinking about repeating the exercise but applied to websites and using some concepts from the book, so here we go!
 
 ## Design principles and how to use them against you
 
-It took me some work to find a good example of bad design, but after a few hours searching I end up with a website to show you: [San Diego Performance European](https://sdpeuro.com). Please, take a look at it for a moment before we continue.
+It took me some work to find a good example of bad design, but after a few hours searching I end up with a website to start: [San Diego Performance European](https://sdpeuro.com). Please, take a look at it for a moment before we continue.
 
-The first step in the website design process begins with solving the following questions:
+
+
+### A little about content
+
+The design process begins the following questions:
 
 1. What is the user looking for on the website?
 2. What is this website meant to do?
@@ -24,9 +28,9 @@ Many projects are carried out without having clear answers to these questions, a
 It is not a blog, or a billboard for promotions, or a virtual store. Apparently it is a corporate identity page, in which they tell what their company is about, and leave some contact methods. Therefore, we could say that the objectives of this website are:
 
 1. That the company exists on the internet and, search engines
-2. Communicate corporation's identity
+2. Communicate their corporative identity
 3. Facilitate contact methods to potential clients
-4. Capture customers and increase your sales
+4. Capture customers and increase their sales
 
 Now, what does a user who visits this website look for? Among many other thing, it could be:
 
@@ -37,15 +41,15 @@ Now, what does a user who visits this website look for? Among many other thing, 
 
 ![San Diego Performance European Home](./sdpeuro.png)
 
-The first thing we can say is that the site neglects both owner and user needs and goals. The few images that appear show only cars out of frame. If we saw the images in isolation, it would be difficult to associate them with a workshop. There are no tools, workers, or anything to indicate that it is a workshop, rather they give the idea of being a private collection.
+The first thing we can say is that the site neglects both owner and user needs and goals. The fewer images that appear shows only cars out of frame. If we saw the images in isolation, it would be difficult to associate them with a workshop. There are no tools, workers, or anything to indicate that it is a workshop, rather they give the idea of being a private collection.
 
-It doesn't communicate its corporate identity and it gives flat and ambiguous message. Nor does it attract customers or increase its sales, there are no calls to action, integration with social networks or offers section. From user's perspective, we cannot get to know the workshop, its values, or its identity. We also do not have access to offers or discounts. We are given traditional contact information (address and phone) so we do not have any modern way of contacting the workshop and we do not have relevant information to compare their services with others.
+It gives flat and ambiguous message. Nor does it attract customers or increase its sales, there are no calls to action, integration with social networks or offers section. From user's perspective, we cannot get to know the workshop, its values, or its identity and we don't have access to offers or discounts. We are given traditional contact information (address and phone) so we do not have any modern way of contacting the workshop and we do not have relevant information to compare their services with others.
 
-From content perspective, they have neglected practically all the objectives for which this site is meant to exist, but there is still more, because there are serious design errors.
+From content perspective, they have neglected practically all main intentions why this site is meant to exist. But this isn't enought to explain why this website looks bad. There's a lot to discuss related to it's design.
 
 ### Why does it look messy?
 
-One of the first things I think when entering the website is disorder. The principle of direction and dominance give us tools to understand what is happening:
+One of the first things that I think when I'm at this website is disorder. The principle of direction and dominance give us tools to understand what is happening:
 
 > #### Dominance
 >
@@ -64,7 +68,7 @@ One of the first things I think when entering the website is disorder. The princ
 > but sometimes more implicitly through shapes, shading, or even invisible
 > alignment
 
-Lack of proper structure and order make the eye to not understand where to start, or to find comfortable places to rest. If we look at the header we will see that it is built by three rows. The real menu is on the bottom row, which has the same height and the same font as the top one, but due to the choice of colors, it's in second order. I am sure that many users confused the blue row with the navigation menu more than once.
+Lack of proper structure and order make the eye to not understand where to start, or to find comfortable places to rest. Lets take the header for instance, it is built with three rows. The real menu is on the bottom row, which has the same height and the same font as the top one, but due to the choice of colors, it's in second order. I am sure that many users confused the blue row with the navigation menu more than once.
 
 ![San Diego Performance European header](./header.png)
 
@@ -72,7 +76,7 @@ Another question we can ask is, why is the logo that size and is aligned that wa
 
 ### Why does it feel hard to read?
 
-Going through the pages I find tremendous monotony, specialy the text area where it gets difficult to read. They are difficult to scan because like the rest of the web, they lack a clear hierarchy and structure that allows me to understand the most relevant information at a glance. However, the problem with text blocks also have to do with the texture that is generated between the margins, spacing and line height. The principles of similarity, rithm and texture will help us to understand this:
+Going through the pages I find tremendous monotony, specialy with text areas where it gets difficult to read. They are difficult to scan because like the rest of the web, they lack a clear hierarchy and structure that allows me to understand the most relevant information at a glance. However, the problem with text blocks also have to do with the texture that is generated between the margins, spacing and line height. The principles of similarity, rithm and texture will help us to understand this:
 
 > ### Similarity
 >
@@ -102,7 +106,7 @@ Going through the pages I find tremendous monotony, specialy the text area where
 > I’ll talk about soon) and can create a sense of depth in foreground/background
 > relationships.
 
-Throughout the entire web, the spacing the same and specially with text, where line heights and margins practically don't change between titles and bodies. This creates a homogeneous texture that added to a monotonous rhythm generated by the repetition of little differentiated elements produces fatigue and discourages the user from reading.
+Throughout the entire web, spacing is almost the same and specially with text, where line heights and margins practically don't change between titles and bodies. This creates a homogeneous texture that added to a monotonous rhythm generated by the repetition of little differentiated elements produces fatigue and discourages the user from reading.
 
 ![San Diego Performance European text block1](./text3.png)
 
@@ -110,7 +114,7 @@ Throughout the entire web, the spacing the same and specially with text, where l
 
 ### Why does it look so boring?
 
-Finally, another problem that design presents throughout the entire web, is feeling of boredom and monotony. The principle of contrast allows us to explain why this happens:
+Finally, another problem that design presents throughout the entire web, is feeling of boredom. The principle of contrast allows us to explain why this happens:
 
 > ### Contrast
 >
@@ -123,7 +127,7 @@ Finally, another problem that design presents throughout the entire web, is feel
 > throughout an entire design (like if something is entirely black and white), or it
 > can be used sparingly in a design that is mostly homogeneous, for more impact.
 
-On top off to the feeling of clutter is monotony due to the lack of contrasting elements what produces a this boredom feeling. In fact, we could explain all the previous problems, as a total lack of contrast between the different visual elements of the website. The only contrasting part is the footer. In which the elements of the nav are repeated, and the contact methods and social networks are provided. However, instead of collaborating, it adds more problems. What is the point of bringing the user's attention to the footer? Its a clear example of design decisions going against content.
+On top off to the feeling of clutter is monotony due to the lack of contrasting elements what produces a this boredom feeling. In fact, we could explain all previous problems, as a total lack of contrast between the different visual elements of the website. The only contrasting part is the footer. In which the elements of the nav are repeated, and the contact methods and social networks are provided. However, instead of collaborating, it adds more problems. What is the point of bringing the user's attention to the footer? Its a clear example of design decisions going against content.
 
 ![San Diego Performance European footer](./footer.png)
 
