@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { graphql } from "gatsby";
 import SEO from "../components/seo";
 import { gridPlacement } from "./../components/utilities";
-import { BlogFooter, BlogHeader } from "./../components";
+import { BlogFooter, BlogHeader, CommentForm, Comment } from "./../components";
 import MobileBlogGadget from "./../components/MobileBlogGadget";
 
 const postLayoutGrid = {
@@ -27,10 +27,62 @@ const postLayoutGrid = {
   },
 };
 
-const BlogPostTemplate = ({ data, location }) => {
+const BlogPostTemplate = ({ data }) => {
   const post = data.markdownRemark;
+  const [comments, setComments] = useState([]);
+  const [isCommentDisabled, setIsCommentDisabled] = useState(false);
   const { previous, next } = data;
-  console.log(data);
+
+  const getComments = () => {
+    fetch(
+      `http://mktcc.com/brian/comments.php/?postName=${data.markdownRemark.frontmatter.slug}`
+    )
+      .then((response) => {
+        return response.json();
+      })
+      .then((res) => {
+        setComments(res);
+        setIsCommentDisabled(false);
+      });
+  };
+
+  const postComment = (name, email, comment) => {
+    console.log("Post comment: ", name, email, comment);
+    console.log(
+      JSON.stringify({
+        postName: `${data.markdownRemark.frontmatter.slug}`,
+        authName: name,
+        authEmail: email,
+        commentBody: comment,
+      })
+    );
+    setIsCommentDisabled(true);
+
+    fetch(
+      `http://mktcc.com/brian/comments.php/?postName=${data.markdownRemark.frontmatter.slug}`,
+      {
+        method: "POST",
+        body: JSON.stringify({
+          postName: `${data.markdownRemark.frontmatter.slug}`,
+          authName: name,
+          authEmail: email,
+          commentBody: comment,
+        }),
+        headers: { "Content-type": "application/json" },
+      }
+    )
+      .then((response) => {
+        return response.json();
+      })
+      .then((res) => {
+        console.log("Post Response: ", res);
+        getComments();
+      });
+  };
+
+  useEffect(() => {
+    getComments();
+  }, []);
 
   return (
     <div className="blog">
@@ -96,6 +148,20 @@ const BlogPostTemplate = ({ data, location }) => {
             dangerouslySetInnerHTML={{ __html: post.html }}
             itemProp="articleBody"
           />
+
+          <CommentForm postComment={postComment} />
+
+          {comments.map((elm, i) => {
+            return (
+              <Comment
+                key={i}
+                user_name={elm.user_name}
+                comment_date={elm.comment_date}
+                comment_body={elm.comment_body}
+                isCommentDisabled={isCommentDisabled}
+              />
+            );
+          })}
           <footer>
             <BlogFooter />
           </footer>
@@ -127,6 +193,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        slug
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

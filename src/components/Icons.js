@@ -52,7 +52,7 @@ export function Arrow(props) {
 export function GitHubIcon(props) {
   return (
     <svg
-      class={props.className}
+      className={props.className}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="none"
@@ -69,7 +69,7 @@ export function GitHubIcon(props) {
 export function InstagramIcon(props) {
   return (
     <svg
-      class={props.className}
+      className={props.className}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="none"
@@ -88,7 +88,7 @@ export function InstagramIcon(props) {
 export function TwitterIcon(props) {
   return (
     <svg
-      class={props.className}
+      className={props.className}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="none"
@@ -105,7 +105,7 @@ export function TwitterIcon(props) {
 export function LinkedInIcon(props) {
   return (
     <svg
-      class={props.className}
+      className={props.className}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="none"

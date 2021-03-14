@@ -10,8 +10,9 @@ import CheckMyBlog from "./CheckMyBlog";
 import Footer from "./Footer";
 import content from "./content";
 import BlogFooter from "./BlogFooter";
-
+import CommentForm from "./CommentForm";
 import BlogHeader from "./BlogHeader";
+import Comment from "./Comment";
 
 export {
   HeroBanner,
@@ -27,4 +28,6 @@ export {
   content,
   BlogFooter,
   BlogHeader,
+  CommentForm,
+  Comment,
 };
