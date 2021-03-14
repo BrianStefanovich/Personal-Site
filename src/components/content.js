@@ -90,6 +90,12 @@ const otherProjects = {
       gitHub: "https://github.com/BrianStefanovich/Personal-Site",
       demo: "https://brianstefanovich.com",
     },
+    {
+      title: "simple-blog-comments",
+      body: `Simple PHP script to manage comments (what I'm using on my blog)`,
+      footer: "MySQL PHP",
+      gitHub: "https://github.com/BrianStefanovich/simple-blog-comments",
+    },
   ],
 };
 
