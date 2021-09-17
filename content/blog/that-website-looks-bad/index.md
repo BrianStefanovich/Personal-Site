@@ -22,7 +22,6 @@ The design process begins the following questions:
 
 1. What is the user looking for on the website?
 2. What is this website meant to do?
-3. Hola?
 
 Many projects are carried out without having clear answers to these questions, and they lead to confusing and unpleasant user experiences. So... What is SDPE's goal with its website?
 
