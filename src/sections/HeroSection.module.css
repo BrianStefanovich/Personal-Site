@@ -1,0 +1,108 @@
+.section {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-10);
+  min-height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-label-sm);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-tertiary);
+}
+
+.headline {
+  font-family: var(--font-heading);
+  font-size: var(--text-h1);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--color-on-surface);
+}
+
+.sub {
+  font-size: var(--text-body-lg);
+  color: var(--color-on-surface-variant);
+  line-height: 1.6;
+  max-width: 36rem;
+}
+
+.support {
+  font-family: var(--font-mono);
+  font-size: var(--text-label-md);
+  color: var(--color-muted);
+  line-height: 1.5;
+  max-width: 34rem;
+  border-left: 2px solid var(--color-outline);
+  padding-left: var(--space-2);
+}
+
+.ctas {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-top: var(--space-2);
+}
+
+.visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.9;
+}
+
+.scroll {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-family: var(--font-mono);
+  font-size: var(--text-label-sm);
+  color: var(--color-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: var(--space-6);
+  align-self: center;
+  padding: var(--space-2);
+  text-align: center;
+  width: fit-content;
+  margin-inline: auto;
+  transition: color 0.15s;
+}
+
+.scroll:hover {
+  color: var(--color-on-surface-variant);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-top: var(--space-8);
+    min-height: auto;
+  }
+  .inner {
+    grid-template-columns: 1fr;
+  }
+  .visual {
+    order: -1;
+    max-width: 320px;
+    margin-inline: auto;
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "features": {
+    "ghcr.io/dhoeric/features/flyctl:1": {
+      "version": "1.0.0",
+      "resolved": "ghcr.io/dhoeric/features/flyctl@sha256:3bd7af73691d11cd12896721ffc136f9cd701f6606b421fcde4dad81b0baf7bb",
+      "integrity": "sha256:3bd7af73691d11cd12896721ffc136f9cd701f6606b421fcde4dad81b0baf7bb"
+    }
+  }
+}
