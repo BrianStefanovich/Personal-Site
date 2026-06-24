@@ -1,6 +1,0 @@
-.env.production
-.env.development
-public
-node_modules
-.cache
-php/env.php
