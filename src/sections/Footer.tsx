@@ -1,28 +1,49 @@
-import { nav } from '../content/siteContent'
-import styles from './Footer.module.css'
+import { useTranslation } from 'react-i18next'
+import { Separator } from '@/components/ui/separator'
 
 export function Footer() {
+  const { t } = useTranslation()
   const year = new Date().getFullYear()
+  const servicesLinks = t('footer.servicesLinks', { returnObjects: true }) as string[]
+  const companyLinks = t('footer.companyLinks', { returnObjects: true }) as string[]
 
   return (
-    <footer className={styles.footer} role="contentinfo">
-      <div className={`container ${styles.inner}`}>
-        <div className={styles.left}>
-          <span className={styles.name}>Brian Stefanovich</span>
-          <span className={styles.copy}>© {year}. Todos los derechos reservados.</span>
+    <footer className="border-t border-border py-12" role="contentinfo">
+      <div className="container">
+        <div className="grid gap-8 sm:grid-cols-3">
+          <div className="flex flex-col gap-1">
+            <span className="font-sans text-base font-semibold text-foreground">{t('common.brandName')}</span>
+            <span className="text-sm text-muted-foreground">
+              © {year} {t('footer.copyright')}
+            </span>
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <span className="font-mono text-xs font-medium tracking-wider text-muted-foreground uppercase">
+              {t('footer.servicesTitle')}
+            </span>
+            {servicesLinks.map((link) => (
+              <span key={link} className="text-sm text-muted-foreground">
+                {link}
+              </span>
+            ))}
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <span className="font-mono text-xs font-medium tracking-wider text-muted-foreground uppercase">
+              {t('footer.companyTitle')}
+            </span>
+            {companyLinks.map((link) => (
+              <span key={link} className="text-sm text-muted-foreground">
+                {link}
+              </span>
+            ))}
+          </div>
         </div>
 
-        <nav className={styles.nav} aria-label="Navegación de pie de página">
-          {nav.map((item) => (
-            <a key={item.href} href={item.href} className={styles.link}>
-              {item.label}
-            </a>
-          ))}
-        </nav>
+        <Separator className="my-8" />
 
-        <div className={styles.right}>
-          <span className={styles.tag}>Software Architect &amp; Consultant</span>
-        </div>
+        <p className="font-mono text-xs text-muted-foreground">{t('common.brandTag')}</p>
       </div>
     </footer>
   )

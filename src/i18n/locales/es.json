@@ -1,0 +1,142 @@
+{
+  "common": {
+    "brandName": "Brian Stefanovich",
+    "brandTag": "Software Architect",
+    "scheduleCta": "Agendar"
+  },
+  "nav": {
+    "items": [
+      { "label": "Diagnóstico", "href": "#diagnostico" },
+      { "label": "Servicios", "href": "#servicios" },
+      { "label": "Método", "href": "#metodo" },
+      { "label": "Contacto", "href": "#contacto" }
+    ]
+  },
+  "hero": {
+    "eyebrow": "Consultor independiente",
+    "name": "Brian Stefanovich",
+    "headline": "Claridad técnica para construir, mejorar o escalar tu software",
+    "body": "Ayudo a empresas, equipos y founders a entender problemas complejos de software, tomar mejores decisiones técnicas y construir soluciones más simples, mantenibles y escalables.",
+    "ctaPrimary": "Agendar consultoría gratuita",
+    "ctaSecondary": "Ver cómo puedo ayudarte"
+  },
+  "problem": {
+    "title": "¿Te está pasando algo de esto?",
+    "intro": "Identifica los desafíos técnicos que frenan el crecimiento de tu negocio.",
+    "existing": {
+      "tag": "Optimización y Rescate",
+      "title": "Software existente",
+      "bullets": [
+        "Sistemas lentos que no soportan nueva carga o picos de tráfico.",
+        "Deuda técnica acumulada que frena el desarrollo de nuevas funcionalidades.",
+        "Dudas críticas sobre cómo escalar la infraestructura de forma eficiente.",
+        "El eterno debate interno: ¿Refactorizar el código o reescribir desde cero?"
+      ]
+    },
+    "new": {
+      "tag": "Estrategia y Lanzamiento",
+      "title": "Software nuevo",
+      "bullets": [
+        "Necesidad de validar la viabilidad técnica de una idea antes de invertir.",
+        "Prototipado rápido y selección del stack tecnológico adecuado.",
+        "Diseño de una arquitectura sólida y escalable desde el primer día.",
+        "Definir la línea exacta entre un MVP rápido y una plataforma robusta."
+      ]
+    }
+  },
+  "approach": {
+    "title": "Te ayudo a pasar de la incertidumbre técnica a un plan claro",
+    "body": "El mayor error en el desarrollo de software es saltar a la solución sin haber diagnosticado correctamente el problema. Mi enfoque comienza siempre entendiendo el contexto de negocio y técnico para trazar una ruta pragmática y accionable."
+  },
+  "services": {
+    "title": "Servicios Técnicos",
+    "intro": "Intervenciones precisas diseñadas para aportar claridad técnica y desbloquear el crecimiento de tu producto.",
+    "items": [
+      {
+        "tag": "Análisis",
+        "title": "Diagnóstico y Auditoría",
+        "description": "Evaluación profunda de sistemas existentes para identificar cuellos de botella, riesgos y áreas de mejora crítica.",
+        "bullets": [
+          "Auditoría de arquitectura y código",
+          "Análisis de rendimiento y escalabilidad",
+          "Evaluación de deuda técnica"
+        ]
+      },
+      {
+        "tag": "Evolución",
+        "title": "Modernización y Refactoring",
+        "description": "Estrategias pragmáticas para reducir deuda técnica, actualizar stacks y escalar aplicaciones legacy de forma segura.",
+        "bullets": [
+          "Estrategia de migración cloud",
+          "Plan de refactorización incremental",
+          "Optimización de bases de datos"
+        ]
+      },
+      {
+        "tag": "Fundamentos",
+        "title": "Diseño de Arquitectura",
+        "description": "Definición de bases técnicas sólidas para nuevos proyectos, asegurando escalabilidad y mantenibilidad a largo plazo.",
+        "bullets": [
+          "Selección de stack tecnológico",
+          "Diseño de APIs y microservicios",
+          "Definición de infraestructura (IaC)"
+        ]
+      },
+      {
+        "tag": "Construcción",
+        "title": "Acompañamiento Técnico",
+        "description": "Guía experta durante el ciclo de desarrollo para equipos internos, asegurando la correcta implementación de la visión.",
+        "bullets": [
+          "Revisiones de arquitectura y código",
+          "Mentoría técnica para desarrolladores",
+          "Supervisión de calidad y despliegues"
+        ]
+      }
+    ]
+  },
+  "method": {
+    "title": "Método de Trabajo",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Consultoría gratuita",
+        "description": "Llamada inicial de 30 minutos para entender a alto nivel el problema, el contexto del negocio y evaluar si mi experiencia es el encaje adecuado."
+      },
+      {
+        "number": "02",
+        "title": "Diagnóstico Profundo",
+        "description": "Inmersión en el código, arquitectura, infraestructura y procesos del equipo para documentar la realidad actual (as-is)."
+      },
+      {
+        "number": "03",
+        "title": "Plan Técnico y Estrategia",
+        "description": "Entrega de un documento estratégico detallando el estado deseado (to-be), opciones arquitectónicas, estimaciones de esfuerzo y priorización."
+      },
+      {
+        "number": "04",
+        "title": "Ejecución y Acompañamiento",
+        "description": "Implementación hands-on de las soluciones propuestas, mentoría técnica al equipo interno o supervisión de la evolución del proyecto."
+      }
+    ]
+  },
+  "contact": {
+    "title": "¿Tienes un problema técnico o una idea de software que quieres aterrizar?",
+    "body": "Déjame un mensaje y te responderé en menos de 24 horas para coordinar una evaluación inicial sin compromiso.",
+    "email": "hello@brianstefanovich.com",
+    "form": {
+      "name": "Nombre",
+      "email": "Email",
+      "company": "Empresa",
+      "role": "Rol",
+      "message": "Mensaje (Opcional)",
+      "submit": "Enviar Solicitud"
+    }
+  },
+  "footer": {
+    "copyright": "Senior Software Architect. Consultoría técnica profesional.",
+    "servicesTitle": "Servicios",
+    "servicesLinks": ["Modernización", "Diseño de Arquitectura", "Estrategia Cloud"],
+    "companyTitle": "Empresa",
+    "companyLinks": ["Casos de estudio", "Política de Privacidad", "Términos de Servicio"]
+  }
+}

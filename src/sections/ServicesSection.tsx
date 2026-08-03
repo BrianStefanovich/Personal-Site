@@ -1,39 +1,46 @@
-import { SectionHeader } from '../components/SectionHeader/SectionHeader'
-import { services } from '../content/siteContent'
-import styles from './ServicesSection.module.css'
+import { useTranslation } from 'react-i18next'
+import { CheckCircle2 } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { SectionHeader } from '@/components/SectionHeader'
+
+type ServiceItem = {
+  tag: string
+  title: string
+  description: string
+  bullets: string[]
+}
 
 export function ServicesSection() {
-  return (
-    <section id="servicios" className={styles.section} aria-labelledby="services-heading">
-      <div className="container">
-        <SectionHeader
-          eyebrow="Servicios"
-          title="De la confusión técnica a un plan claro."
-          subtitle="Trabajo junto a empresas y equipos que necesitan entender, decidir o construir software con mayor claridad."
-        />
+  const { t } = useTranslation()
+  const items = t('services.items', { returnObjects: true }) as ServiceItem[]
 
-        <div className={styles.grid}>
-          {services.map((service, index) => (
-            <article key={service.id} className={styles.card}>
-              <header className={styles.cardHeader}>
-                <span className={styles.cardIndex} aria-hidden="true">
-                  {String(index + 1).padStart(2, '0')}
-                </span>
-                <div>
-                  <h3 className={styles.cardTitle}>{service.title}</h3>
-                  <p className={styles.cardSubtitle}>{service.subtitle}</p>
-                </div>
-              </header>
-              <p className={styles.cardDesc}>{service.description}</p>
-              <ul className={styles.cardItems} role="list">
-                {service.items.map((item) => (
-                  <li key={item} className={styles.cardItem}>
-                    <span className={styles.itemConnector} aria-hidden="true">›</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </article>
+  return (
+    <section id="servicios" className="border-b border-border py-24" aria-labelledby="services-heading">
+      <div className="container space-y-12">
+        <SectionHeader headingId="services-heading" title={t('services.title')} subtitle={t('services.intro')} />
+
+        <div className="grid gap-6 sm:grid-cols-2">
+          {items.map((service) => (
+            <Card key={service.title}>
+              <CardHeader>
+                <Badge variant="outline" className="w-fit font-mono uppercase">
+                  {service.tag}
+                </Badge>
+                <CardTitle className="text-xl">{service.title}</CardTitle>
+                <CardDescription className="text-base">{service.description}</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3">
+                  {service.bullets.map((bullet) => (
+                    <li key={bullet} className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-primary" />
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>

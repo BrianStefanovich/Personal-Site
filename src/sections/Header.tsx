@@ -1,56 +1,81 @@
 import { useState } from 'react'
-import { Menu, X } from 'lucide-react'
-import { Button } from '../components/Button/Button'
-import { nav, SCHEDULE_URL } from '../content/siteContent'
-import styles from './Header.module.css'
+import { useTranslation } from 'react-i18next'
+import { Menu } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet'
+import { LanguageSwitcher } from '@/components/LanguageSwitcher'
+import { SCHEDULE_URL } from '@/content/site.config'
+
+type NavItem = { label: string; href: string }
 
 export function Header() {
+  const { t } = useTranslation()
   const [open, setOpen] = useState(false)
+  const navItems = t('nav.items', { returnObjects: true }) as NavItem[]
 
   return (
-    <header className={styles.header} role="banner">
-      <div className={`container ${styles.inner}`}>
-        {/* Logo / wordmark */}
-        <a href="#inicio" className={styles.logo} aria-label="Brian Stefanovich — inicio">
-          <span className={styles.logoName}>Brian Stefanovich</span>
-          <span className={styles.logoTag}>Software Architect</span>
+    <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-16 items-center justify-between">
+        <a href="#inicio" className="flex flex-col leading-tight" aria-label={`${t('common.brandName')} — inicio`}>
+          <span className="font-sans text-base font-semibold text-foreground">{t('common.brandName')}</span>
+          <span className="font-mono text-[10px] tracking-wider text-muted-foreground uppercase">
+            {t('common.brandTag')}
+          </span>
         </a>
 
-        {/* Desktop nav */}
-        <nav className={styles.desktopNav} aria-label="Navegación principal">
-          {nav.map((item) => (
-            <a key={item.href} href={item.href} className={styles.navLink}>
+        <nav className="hidden items-center gap-6 md:flex" aria-label="Navegación principal">
+          {navItems.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            >
               {item.label}
             </a>
           ))}
         </nav>
 
-        <div className={styles.actions}>
-          <Button href={SCHEDULE_URL} variant="primary">Agendar</Button>
-          <button
-            className={styles.menuBtn}
-            onClick={() => setOpen(!open)}
-            aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
-            aria-expanded={open}
-          >
-            {open ? <X size={20} /> : <Menu size={20} />}
-          </button>
+        <div className="flex items-center gap-2">
+          <LanguageSwitcher />
+          <Button asChild size="sm" className="hidden md:inline-flex">
+            <a href={SCHEDULE_URL}>{t('common.scheduleCta')}</a>
+          </Button>
+
+          <Sheet open={open} onOpenChange={setOpen}>
+            <SheetTrigger asChild>
+              <Button variant="outline" size="icon" className="md:hidden" aria-label="Abrir menú">
+                <Menu className="size-4" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right">
+              <SheetHeader>
+                <SheetTitle>{t('common.brandName')}</SheetTitle>
+              </SheetHeader>
+              <nav className="flex flex-col gap-4 px-4" aria-label="Navegación móvil">
+                {navItems.map((item) => (
+                  <SheetClose asChild key={item.href}>
+                    <a href={item.href} className="text-base font-medium text-foreground">
+                      {item.label}
+                    </a>
+                  </SheetClose>
+                ))}
+                <SheetClose asChild>
+                  <Button asChild>
+                    <a href={SCHEDULE_URL}>{t('common.scheduleCta')}</a>
+                  </Button>
+                </SheetClose>
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
-
-      {/* Mobile nav */}
-      {open && (
-        <nav className={styles.mobileNav} aria-label="Navegación móvil">
-          {nav.map((item) => (
-            <a key={item.href} href={item.href} className={styles.mobileLink} onClick={() => setOpen(false)}>
-              {item.label}
-            </a>
-          ))}
-          <Button href={SCHEDULE_URL} variant="primary" className={styles.mobileCta}>
-            Agendar una conversación
-          </Button>
-        </nav>
-      )}
     </header>
   )
 }

@@ -1,41 +1,42 @@
 import { useState } from 'react'
-import { SectionHeader } from '../components/SectionHeader/SectionHeader'
-import { MethodDiagram } from '../assets/visuals/MethodDiagram'
-import { method } from '../content/siteContent'
-import styles from './MethodSection.module.css'
+import { useTranslation } from 'react-i18next'
+import { SectionHeader } from '@/components/SectionHeader'
+import { MethodDiagram } from '@/assets/visuals/MethodDiagram'
+import { cn } from '@/lib/utils'
+
+type MethodStep = { number: string; title: string; description: string }
 
 export function MethodSection() {
+  const { t } = useTranslation()
+  const steps = t('method.steps', { returnObjects: true }) as MethodStep[]
   const [active, setActive] = useState(0)
 
   return (
-    <section id="metodo" className={styles.section} aria-labelledby="method-heading">
-      <div className="container">
-        <SectionHeader
-          eyebrow="Método"
-          title="Primero entender. Luego decidir. Después construir."
-          subtitle="No parto desde la tecnología de moda. Parto desde el problema, el contexto y las restricciones reales de la empresa."
-        />
+    <section id="metodo" className="border-b border-border py-24" aria-labelledby="method-heading">
+      <div className="container space-y-12">
+        <SectionHeader headingId="method-heading" title={t('method.title')} />
 
         {/* Diagram */}
-        <div className={styles.diagramWrap}>
+        <div className="hidden md:block">
           <MethodDiagram activeStep={active} />
         </div>
 
         {/* Steps */}
-        <ol className={styles.steps} role="list">
-          {method.map((step, i) => (
+        <ol className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {steps.map((step, i) => (
             <li
               key={step.number}
-              className={`${styles.step} ${i === active ? styles.stepActive : ''}`}
+              className={cn(
+                'flex flex-col gap-3 rounded-lg border border-border p-6 transition-colors',
+                i === active && 'border-primary bg-secondary/40',
+              )}
               onMouseEnter={() => setActive(i)}
               onFocus={() => setActive(i)}
               tabIndex={0}
             >
-              <span className={styles.stepNumber}>{step.number}</span>
-              <div className={styles.stepContent}>
-                <h3 className={styles.stepTitle}>{step.title}</h3>
-                <p className={styles.stepDesc}>{step.description}</p>
-              </div>
+              <span className="font-mono text-sm font-medium text-primary">{step.number}</span>
+              <h3 className="font-sans text-lg font-semibold text-foreground">{step.title}</h3>
+              <p className="text-sm text-muted-foreground">{step.description}</p>
             </li>
           ))}
         </ol>
