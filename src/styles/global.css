@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+	--font-display: "Montserrat", sans-serif;
+	--font-body: "Open Sans", sans-serif;
+	--font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+	--color-background: #fdf9f1;
+	--color-foreground: #1c1c17;
+	--color-body: #444654;
+	--color-muted: #757685;
+	--color-nav: #5a605c;
+	--color-line: #e6e2da;
+	--color-surface: #ffffff;
+	--color-accent: #2a42bb;
+	--color-accent-soft: #465cd4;
+	--color-accent-fg: #e4e6ff;
+}
+
+/* These must stay layered: unlayered CSS outranks every Tailwind utility. */
+@layer base {
+	* {
+		box-sizing: border-box;
+	}
+
+	html {
+		scroll-behavior: smooth;
+		scroll-padding-top: 5rem;
+	}
+
+	body {
+		margin: 0;
+		background: var(--color-background);
+		color: var(--color-foreground);
+		font-family: var(--font-body);
+		font-variation-settings: "wdth" 100;
+		line-height: 1.6;
+	}
+
+	a {
+		color: inherit;
+	}
+
+	:focus-visible {
+		outline: 3px solid var(--color-accent);
+		outline-offset: 3px;
+	}
+}
+
+/* Overrides Tailwind's built-in `container` utility, which would otherwise win. */
+@utility container {
+	width: min(100% - 2.5rem, 75rem);
+	max-width: none;
+	margin-inline: auto;
+	padding-inline: 0;
+}
+
+@layer components {
+	/* Uppercase mono label that prefixes every section heading in the design. */
+	.eyebrow {
+		font-family: var(--font-mono);
+		font-size: 0.75rem;
+		line-height: 1rem;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: var(--color-muted);
+	}
+}

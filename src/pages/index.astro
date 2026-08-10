@@ -1,0 +1,31 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ContactForm from '@/components/sections/ContactForm';
+import Continuidad from '@/components/sections/Continuidad';
+import Diagnostico from '@/components/sections/Diagnostico';
+import Diferenciales from '@/components/sections/Diferenciales';
+import DosRutas from '@/components/sections/DosRutas';
+import Encaje from '@/components/sections/Encaje';
+import Faq from '@/components/sections/Faq';
+import Hero from '@/components/sections/Hero';
+import Problemas from '@/components/sections/Problemas';
+import SobreBrian from '@/components/sections/SobreBrian';
+import Sprint from '@/components/sections/Sprint';
+import { getTranslations } from '@/i18n';
+
+const t = getTranslations();
+---
+
+<BaseLayout title={t.meta.title} description={t.meta.description} canonicalPath="/">
+	<Hero client:load />
+	<Problemas client:visible />
+	<DosRutas client:visible />
+	<Diagnostico client:visible />
+	<Sprint client:visible />
+	<Continuidad client:visible />
+	<Diferenciales client:visible />
+	<SobreBrian client:visible />
+	<Encaje client:visible />
+	<Faq client:visible />
+	<ContactForm client:visible />
+</BaseLayout>

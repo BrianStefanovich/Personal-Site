@@ -1,0 +1,47 @@
+import { getTranslations } from '@/i18n';
+
+export default function Encaje() {
+	const { encaje } = getTranslations();
+
+	return (
+		<section className="container flex flex-col gap-6 py-12 md:grid md:grid-cols-2 md:gap-8 md:py-[64px]">
+			<div className="rounded-[2px] border-t-2 border-accent bg-[#f1ede5] p-6 md:p-8">
+				<h2 className="font-display text-2xl leading-8 font-semibold text-foreground">{encaje.fit.title}</h2>
+				<ul className="flex flex-col gap-4 pt-5">
+					{encaje.fit.items.map((item) => (
+						<li key={item} className="flex items-start gap-3">
+							<img
+								src="/images/icon-plus.svg"
+								alt=""
+								width={14}
+								height={14}
+								className="mt-1.5 shrink-0"
+								style={{ width: 14, height: 14 }}
+							/>
+							<span className="text-[15px] leading-6 text-body">{item}</span>
+						</li>
+					))}
+				</ul>
+			</div>
+
+			<div className="rounded-[2px] border border-line bg-surface p-6 md:p-8">
+				<h2 className="font-display text-2xl leading-8 font-semibold text-foreground">{encaje.noFit.title}</h2>
+				<ul className="flex flex-col gap-4 pt-5">
+					{encaje.noFit.items.map((item) => (
+						<li key={item} className="flex items-start gap-3">
+							<img
+								src="/images/icon-dash.svg"
+								alt=""
+								width={14}
+								height={2}
+								className="mt-3 shrink-0"
+								style={{ width: 14, height: 2 }}
+							/>
+							<span className="text-[15px] leading-6 text-muted">{item}</span>
+						</li>
+					))}
+				</ul>
+			</div>
+		</section>
+	);
+}

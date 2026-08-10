@@ -1,0 +1,39 @@
+---
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import Seo from '@/components/Seo.astro';
+import '@/styles/global.css';
+
+interface Props {
+	title?: string;
+	description: string;
+	canonicalPath?: string;
+	type?: 'website' | 'article';
+}
+
+const { title, description, canonicalPath, type } = Astro.props;
+const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
+---
+
+<!doctype html>
+<html lang={Astro.currentLocale ?? 'es'}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<Seo title={title} description={description} canonicalPath={canonicalPath} type={type} />
+		{import.meta.env.PROD && gaMeasurementId && <>
+			<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}></script>
+			<script is:inline define:vars={{ gaMeasurementId }}>window.dataLayer = window.dataLayer || []; function gtag(){window.dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', gaMeasurementId);</script>
+		</>}
+	</head>
+	<body>
+		<Header client:load />
+		<main><slot /></main>
+		<Footer />
+	</body>
+</html>
