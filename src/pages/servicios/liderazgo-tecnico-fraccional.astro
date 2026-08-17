@@ -20,5 +20,17 @@ const { liderazgoFraccionalPage: page } = getTranslations();
 		))}
 	</section>
 
+	<section class="container flex flex-col gap-4 py-12 md:py-[64px]">
+		<h2 class="font-display text-2xl leading-8 font-semibold text-foreground">{page.ayuda.heading}</h2>
+		<ul class="flex flex-col gap-2 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-2">
+			{page.ayuda.items.map((item) => (
+				<li class="flex items-start gap-3">
+					<img src="/images/icon-check.svg" alt="" width="14" height="10" class="mt-[7px] shrink-0" />
+					<span class="text-[15px] leading-6 text-body md:text-base">{item}</span>
+				</li>
+			))}
+		</ul>
+	</section>
+
 	<CtaFinal content={page.cta} />
 </BaseLayout>

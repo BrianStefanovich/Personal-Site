@@ -1,4 +1,5 @@
 import { SectionEyebrow } from '@/components/sections/SectionEyebrow';
+import { cn } from '@/lib/utils';
 import type { Translations } from '@/i18n';
 
 interface DiferencialesProps {
@@ -16,22 +17,25 @@ export default function Diferenciales({ content: diferenciales }: DiferencialesP
 			</div>
 
 			<ul className="flex flex-col gap-6 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-				{diferenciales.items.map((item) => (
-					<li key={item.title} className="flex items-start gap-3">
-						<img
-							src="/images/icon-check-circle.svg"
-							alt=""
-							width={20}
-							height={20}
-							className="mt-1 shrink-0"
-							style={{ width: 20, height: 20 }}
-						/>
-						<div className="flex flex-col gap-1">
-							<h3 className="font-display text-base leading-6 font-semibold text-foreground">{item.title}</h3>
-							<p className="text-[15px] leading-6 text-body md:text-sm">{item.description}</p>
-						</div>
-					</li>
-				))}
+				{diferenciales.items.map((item, index) => {
+					const isOrphan = index === diferenciales.items.length - 1 && diferenciales.items.length % 2 === 1;
+					return (
+						<li key={item.title} className={cn('flex items-start gap-3', isOrphan && 'md:col-span-2 md:max-w-[520px]')}>
+							<img
+								src="/images/icon-check-circle.svg"
+								alt=""
+								width={20}
+								height={20}
+								className="mt-1 shrink-0"
+								style={{ width: 20, height: 20 }}
+							/>
+							<div className="flex flex-col gap-1">
+								<h3 className="font-display text-base leading-6 font-semibold text-foreground">{item.title}</h3>
+								<p className="text-[15px] leading-6 text-body md:text-sm">{item.description}</p>
+							</div>
+						</li>
+					);
+				})}
 			</ul>
 		</section>
 	);

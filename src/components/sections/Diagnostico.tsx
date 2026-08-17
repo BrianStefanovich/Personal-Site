@@ -81,7 +81,6 @@ export default function Diagnostico({ content: diagnostico }: DiagnosticoProps) 
 									width={9}
 									height={9}
 									className="mt-2 shrink-0"
-									style={{ width: 9.1, height: 9.42 }}
 								/>
 								<span className="text-sm leading-5 text-body">{item}</span>
 							</li>

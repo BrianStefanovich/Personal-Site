@@ -1,4 +1,5 @@
 import { SectionEyebrow } from '@/components/sections/SectionEyebrow';
+import { cn } from '@/lib/utils';
 
 interface ContinuidadContent {
 	number: string;
@@ -28,18 +29,25 @@ export default function Continuidad({ content: continuidad }: ContinuidadProps) 
 			</div>
 
 			<div className="flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-8">
-				{continuidad.options.map((option) => (
-					<article
-						key={option.title}
-						className="flex flex-col gap-2 rounded-[2px] border border-line bg-[#f1ede5] p-6 md:bg-surface"
-					>
-						<h3 className="font-display text-xl leading-7 font-semibold text-foreground">{option.title}</h3>
-						<p className="text-[15px] leading-6 text-body md:text-sm md:leading-6">{option.description}</p>
-					</article>
-				))}
+				{continuidad.options.map((option, index) => {
+					const isOrphan = index === continuidad.options.length - 1 && continuidad.options.length % 2 === 1;
+					return (
+						<article
+							key={option.title}
+							className={cn(
+								'flex flex-col gap-2 rounded-[2px] border border-line bg-[#f1ede5] p-6 md:bg-surface',
+								isOrphan && 'md:col-span-2 md:max-w-[520px]',
+							)}
+						>
+							<h3 className="font-display text-xl leading-7 font-semibold text-foreground">{option.title}</h3>
+							<p className="text-[15px] leading-6 text-body md:text-sm md:leading-6">{option.description}</p>
+						</article>
+					);
+				})}
 			</div>
 
 			<p className="border-t border-line pt-6 text-center text-sm leading-6 text-body">{continuidad.note}</p>
 		</section>
 	);
 }
+

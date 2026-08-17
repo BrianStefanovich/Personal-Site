@@ -4,6 +4,13 @@ import type { Translations } from '@/i18n';
 const columnAccent = {
 	existentes: 'bg-[#a2502d]',
 	nuevos: 'bg-accent-soft',
+	fraccional: 'bg-accent',
+} as const;
+
+const columnMobileIcon = {
+	existentes: { src: '/images/icon-sintoma-alerta.svg', width: 22, height: 23 },
+	nuevos: { src: '/images/icon-sintoma-info.svg', width: 20, height: 24 },
+	fraccional: { src: '/images/icon-sintoma-info.svg', width: 20, height: 24 },
 } as const;
 
 interface ProblemasProps {
@@ -12,7 +19,7 @@ interface ProblemasProps {
 
 export default function Problemas({ content: problemas }: ProblemasProps) {
 	return (
-		<section id="problemas" className="container flex flex-col gap-8 py-12 md:gap-12 md:py-[70px]">
+		<section id="problemas" className="container flex flex-col gap-8 py-12 md:gap-12 md:py-[64px]">
 			<div className="flex flex-col gap-2">
 				<SectionEyebrow number={problemas.number} short={problemas.short} long={problemas.long} />
 				<h2 className="pt-2 font-display text-[36px] leading-[43px] font-semibold text-foreground text-balance md:pt-4 md:text-[44px] md:leading-[53px]">
@@ -27,58 +34,95 @@ export default function Problemas({ content: problemas }: ProblemasProps) {
 				</div>
 			</div>
 
-			<div className="flex flex-col gap-6 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-0">
+			<div className="flex flex-col gap-8 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:gap-y-0">
 				{problemas.columns.map((column) => (
-					<div
-						key={column.id}
-						className="relative flex flex-col gap-6 rounded-[2px] border border-line bg-[#f1ede5] p-[25px] md:gap-0 md:rounded-none md:border-0 md:bg-transparent md:p-0"
-					>
-						<span
-							aria-hidden
-							className={`absolute inset-y-0 left-0 w-1 rounded-l-[2px] md:hidden ${columnAccent[column.id]}`}
-						/>
+					<div key={column.id} className="flex flex-col gap-6">
+						<div
+							className="relative flex flex-col gap-6 rounded-[2px] border border-line bg-[#f1ede5] p-[25px] md:gap-0 md:rounded-none md:border-0 md:bg-transparent md:p-0"
+						>
+							<span
+								aria-hidden
+								className={`absolute inset-y-0 left-0 w-1 rounded-l-[2px] md:hidden ${columnAccent[column.id]}`}
+							/>
 
-						<h3 className="font-display text-2xl leading-[31px] font-semibold text-foreground md:hidden">
-							{column.title}
-						</h3>
-						<p className="hidden border-b border-line pb-4 font-mono text-xs leading-4 tracking-[0.06em] text-accent-soft uppercase md:block">
-							{column.label}
-						</p>
+							<h3 className="font-display text-2xl leading-[31px] font-semibold text-foreground md:hidden">
+								{column.title}
+							</h3>
+							<p className="hidden border-b border-line pb-4 font-mono text-xs leading-4 tracking-[0.06em] text-accent-soft uppercase md:block">
+								{column.label}
+							</p>
+							<div className="flex flex-col gap-1 md:pt-4">
+								<p className="font-display text-xl leading-[27px] font-semibold text-foreground">{column.tagline}</p>
+								<p className="text-[15px] leading-6 text-body">{column.taglineSub}</p>
+							</div>
 
-						<ul className="flex flex-col gap-6 md:gap-4 md:pt-4">
-							{column.items.map((item) => (
-								<li
-									key={item.title}
-									className="flex items-start gap-4 md:rounded-[2px] md:border md:border-line md:bg-surface md:p-5"
-								>
-									<img
-										src={`/images/icon-sintoma-${column.id === 'existentes' ? 'alerta' : 'info'}.svg`}
-										alt=""
-										width={column.id === 'existentes' ? 22 : 20}
-										height={column.id === 'existentes' ? 23 : 24}
-										className="mt-0.5 shrink-0 md:hidden"
-										style={{
-											width: column.id === 'existentes' ? 22 : 20,
-											height: column.id === 'existentes' ? 23 : 24,
-										}}
-									/>
-									<img
-										src={item.icon.src}
-										alt=""
-										width={item.icon.width}
-										height={item.icon.height}
-										className="mt-1 hidden shrink-0 md:block"
-										style={{ width: item.icon.width, height: item.icon.height }}
-									/>
-									<div className="flex flex-col gap-1">
-										<p className="font-display text-base leading-6 font-semibold text-foreground">
-											{item.title}
-										</p>
-										<p className="hidden text-[13px] leading-5 text-body md:block">{item.description}</p>
-									</div>
-								</li>
-							))}
-						</ul>
+							<ul className="flex flex-col gap-6 md:gap-4 md:pt-4">
+								{column.items.map((item) => (
+									<li
+										key={item.title}
+										className="flex items-start gap-4 md:rounded-[2px] md:border md:border-line md:bg-surface md:p-5"
+									>
+										<img
+											src={columnMobileIcon[column.id].src}
+											alt=""
+											width={columnMobileIcon[column.id].width}
+											height={columnMobileIcon[column.id].height}
+											className="mt-0.5 shrink-0 md:hidden"
+											style={{
+												width: columnMobileIcon[column.id].width,
+												height: columnMobileIcon[column.id].height,
+											}}
+										/>
+										<img
+											src={item.icon.src}
+											alt=""
+											width={item.icon.width}
+											height={item.icon.height}
+											className="mt-1 hidden shrink-0 md:block"
+											style={{ width: item.icon.width, height: item.icon.height }}
+										/>
+										<div className="flex flex-col gap-1">
+											<p className="font-display text-base leading-6 font-semibold text-foreground">
+												{item.title}
+											</p>
+											<p className="hidden text-[13px] leading-5 text-body md:block">{item.description}</p>
+										</div>
+									</li>
+								))}
+							</ul>
+						</div>
+
+						<article className="flex flex-col gap-4 rounded-[2px] border border-line bg-surface p-[25px] md:p-8">
+							<h4 className="font-display text-xl leading-[27px] font-semibold text-foreground">
+								{column.servicio.title}
+							</h4>
+							<p className="text-base leading-6 text-body">{column.servicio.description}</p>
+
+							<p className="pt-2 font-display text-base leading-6 font-semibold text-foreground">
+								{problemas.helpLabel}
+							</p>
+							<ul className="flex flex-col gap-2">
+								{column.servicio.items.map((item) => (
+									<li key={item} className="flex items-start gap-3">
+										<img
+											src="/images/icon-check.svg"
+											alt=""
+											width={14}
+											height={10}
+											className="mt-[7px] shrink-0"
+										/>
+										<span className="text-[15px] leading-6 text-body md:text-base">{item}</span>
+									</li>
+								))}
+							</ul>
+
+							<a
+								href={column.servicio.href}
+								className="mt-auto pt-4 font-display text-base leading-6 font-semibold text-accent underline"
+							>
+								{column.servicio.linkLabel}
+							</a>
+						</article>
 					</div>
 				))}
 			</div>
@@ -89,3 +133,4 @@ export default function Problemas({ content: problemas }: ProblemasProps) {
 		</section>
 	);
 }
+

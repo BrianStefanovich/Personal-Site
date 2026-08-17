@@ -4,7 +4,6 @@ import Continuidad from '@/components/sections/Continuidad';
 import CtaFinal from '@/components/sections/CtaFinal';
 import Diagnostico from '@/components/sections/Diagnostico';
 import Diferenciales from '@/components/sections/Diferenciales';
-import DosRutas from '@/components/sections/DosRutas';
 import Encaje from '@/components/sections/Encaje';
 import Experiencia from '@/components/sections/Experiencia';
 import Faq from '@/components/sections/Faq';
@@ -21,7 +20,6 @@ const { home } = t;
 <BaseLayout title={home.meta.title} description={home.meta.description} canonicalPath="/">
 	<Hero client:load content={home.hero} />
 	<Problemas client:visible content={home.problemas} />
-	<DosRutas client:visible content={home.dosRutas} />
 	<Diagnostico client:visible content={home.diagnostico} />
 	<ProcessSteps
 		id="como-trabajo"

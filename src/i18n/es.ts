@@ -22,9 +22,16 @@ const contactFormContent = {
 		{ name: 'plazo', label: 'Plazo esperado', type: 'text', required: false, autoComplete: 'off' },
 		{ name: 'presupuesto', label: 'Presupuesto orientativo (opcional)', type: 'text', required: false, autoComplete: 'off' },
 	],
+	moreDetails: 'Más detalles (opcional)',
 	submit: 'Enviar contexto',
 	disclaimer: 'Tus datos se usan únicamente para responder esta consulta.',
 	submitted: 'Gracias. Revisaré la información y responderé con claridad sobre si puedo ayudarte y cuál sería el siguiente paso.',
+	submittedHeading: 'Contexto recibido',
+	errors: {
+		required: 'Este campo es obligatorio.',
+		email: 'Ingresa un correo de trabajo válido.',
+		summary: 'Revisa los campos marcados antes de enviar.',
+	},
 };
 
 export const es = {
@@ -44,6 +51,7 @@ export const es = {
 				children: [
 					{ label: 'Sistemas existentes', href: '/sistemas-existentes' },
 					{ label: 'Nuevos productos', href: '/nuevos-productos' },
+					{ label: 'Arquitecto de software fraccional', href: '/servicios/liderazgo-tecnico-fraccional' },
 					{ label: 'Diagnóstico ejecutivo', href: '/diagnostico' },
 				],
 			},
@@ -61,6 +69,7 @@ export const es = {
 		servicios: [
 			{ label: 'Sistemas existentes', href: '/sistemas-existentes' },
 			{ label: 'Nuevos productos', href: '/nuevos-productos' },
+			{ label: 'Arquitecto de software fraccional', href: '/servicios/liderazgo-tecnico-fraccional' },
 			{ label: 'Diagnóstico ejecutivo', href: '/diagnostico' },
 		],
 		informacion: [
@@ -109,12 +118,15 @@ export const es = {
 			long: 'Cuando el software comienza a limitar el negocio',
 			heading: 'La decisión difícil no suele ser qué tecnología usar.',
 			body: [
-				'El problema aparece cuando no está claro qué conviene cambiar, cuánto riesgo implica y cómo avanzar sin interrumpir lo que ya funciona. En productos nuevos ocurre algo parecido: construir demasiado pronto puede convertir supuestos de negocio en meses de desarrollo difícil de sostener.',
+				'El problema aparece cuando no está claro qué conviene cambiar, cuánto riesgo implica y cómo avanzar sin interrumpir lo que ya funciona. En productos nuevos ocurre algo parecido: construir demasiado pronto puede convertir supuestos de negocio en meses de desarrollo difícil de sostener. Y en ambos casos, la falta de criterio técnico senior suele ser la causa de fondo detrás de la decisión que no termina de tomarse.',
 			],
+			helpLabel: 'Incluye, según el caso',
 			columns: [
 				{
 					id: 'existentes',
 					label: 'Sistemas existentes',
+					tagline: 'Mejorar lo que ya tienes.',
+					taglineSub: 'Sistemas existentes que necesitan evolucionar.',
 					title: 'Situaciones reconocibles en sistemas existentes',
 					items: [
 						{
@@ -130,10 +142,28 @@ export const es = {
 								'Hay procesos manuales, integraciones inestables, poca observabilidad o infraestructura que genera incertidumbre. El equipo reacciona a urgencias, pero no consigue reducir el riesgo estructural.',
 						},
 					],
+					servicio: {
+						title: 'Modernizar sin poner en riesgo la operación.',
+						description:
+							'Analizo la situación actual, identifico las causas estructurales y diseño un camino de mejora que permita reducir riesgos, recuperar velocidad de desarrollo y preparar el sistema para lo que viene.',
+						items: [
+							'Diagnóstico técnico y arquitectónico.',
+							'Modernización de sistemas legacy.',
+							'Problemas de escalabilidad y rendimiento.',
+							'Reducción de deuda técnica.',
+							'Integraciones y arquitectura distribuida.',
+							'Estrategias de migración y evolución tecnológica.',
+							'Mejora de procesos de desarrollo, testing, CI/CD e infraestructura.',
+						],
+						href: '/sistemas-existentes',
+						linkLabel: 'Explorar sistemas existentes →',
+					},
 				},
 				{
 					id: 'nuevos',
 					label: 'Nuevos productos',
+					tagline: 'Construir lo que viene.',
+					taglineSub: 'Nuevos productos y negocios habilitados por software.',
 					title: 'Situaciones reconocibles en nuevos productos',
 					items: [
 						{
@@ -149,52 +179,68 @@ export const es = {
 								'El equipo, los proveedores y el negocio proponen caminos distintos. Falta una evaluación independiente que conecte alternativas técnicas con impacto, riesgo y capacidad de ejecución.',
 						},
 					],
+					servicio: {
+						title: 'Convertir una oportunidad en un producto viable.',
+						description:
+							'Trabajo desde las primeras decisiones de producto y tecnología hasta la arquitectura, construcción y puesta en marcha, buscando validar antes de sobredimensionar y construir una base que pueda evolucionar con el negocio.',
+						items: [
+							'Discovery y definición del producto.',
+							'Evaluación de factibilidad técnica.',
+							'Diseño de MVPs y prototipos.',
+							'Arquitectura de la solución.',
+							'Selección tecnológica.',
+							'Diseño de roadmap.',
+							'Desarrollo y lanzamiento.',
+							'Evolución del producto a medida que el negocio valida sus hipótesis.',
+						],
+						href: '/nuevos-productos',
+						linkLabel: 'Explorar nuevos productos →',
+					},
+				},
+				{
+					id: 'fraccional',
+					label: 'Liderazgo técnico fraccional',
+					tagline: 'Tomar mejores decisiones técnicas.',
+					taglineSub: 'Arquitectura fraccional y liderazgo tecnológico.',
+					title: 'Situaciones reconocibles cuando faltan decisiones técnicas',
+					items: [
+						{
+							icon: { src: '/images/icon-problema-existente-3.svg', width: 20, height: 20 },
+							title: 'Las decisiones técnicas importantes no tienen un dueño claro',
+							description:
+								'El equipo ejecuta, pero nadie con visión senior está evaluando trade-offs, riesgos y prioridades de arquitectura a mediano plazo. Las decisiones quedan en manos de quien tiene más urgencia, no más criterio.',
+						},
+						{
+							icon: { src: '/images/icon-problema-existente-4.svg', width: 20, height: 20 },
+							title: 'Contratar un CTO o arquitecto de tiempo completo todavía no se justifica',
+							description:
+								'La empresa está creciendo o atravesando una transformación tecnológica, pero el volumen de decisiones no alcanza para un rol ejecutivo permanente ni sobra presupuesto para uno.',
+						},
+					],
+					servicio: {
+						title: 'Aportar criterio senior sin incorporar un rol full-time.',
+						description:
+							'Me integro temporalmente al equipo para revisar arquitectura, acompañar decisiones técnicas importantes y mantener alineados tecnología, producto y negocio, con la capacidad y responsabilidades acordadas de antemano.',
+						items: [
+							'Definición y evolución de arquitectura.',
+							'Revisión de decisiones técnicas.',
+							'Technical roadmap.',
+							'Evaluación de riesgos tecnológicos.',
+							'Mentoring y acompañamiento del equipo.',
+							'Estándares y prácticas de ingeniería.',
+							'Evaluación de proveedores y soluciones.',
+							'Alineación entre negocio, producto y tecnología.',
+						],
+						href: '/servicios/liderazgo-tecnico-fraccional',
+						linkLabel: 'Explorar liderazgo fraccional →',
+					},
 				},
 			],
 			callout:
 				'Mi trabajo comienza antes de elegir una solución: hago visible el problema, ordeno las decisiones y convierto la dirección acordada en un plan ejecutable.',
 		},
-		dosRutas: {
-			number: '02',
-			short: 'Servicios',
-			long: 'Dos puntos de partida',
-			heading: '¿Qué necesitas resolver?',
-			helpLabel: 'Incluye, según el caso',
-			rutas: [
-				{
-					subtitle: '01. Sistemas existentes',
-					title: 'Modernizar sin poner en riesgo la operación.',
-					description:
-						'Para empresas con plataformas críticas, deuda técnica, problemas de escalabilidad, entregas lentas o integraciones difíciles de sostener. Evalúo el estado actual, priorizo riesgos y diseño una evolución gradual que el equipo pueda ejecutar.',
-					items: [
-						'Diagnóstico de arquitectura y riesgos.',
-						'Estrategia de modernización o migración.',
-						'Revisión de calidad, infraestructura y entrega.',
-						'Roadmap priorizado por impacto y dependencia.',
-						'Liderazgo técnico y acompañamiento de ejecución.',
-					],
-					href: '/sistemas-existentes',
-					linkLabel: 'Explorar sistemas existentes →',
-				},
-				{
-					subtitle: '02. Nuevos productos',
-					title: 'Convertir una oportunidad en un producto viable.',
-					description:
-						'Para empresas y fundadores que necesitan transformar una idea, un proceso o un prototipo en software listo para operar. Aterrizo el alcance, las decisiones técnicas y la ruta de construcción antes de comprometer una inversión mayor.',
-					items: [
-						'Discovery técnico y definición de alcance.',
-						'Arquitectura y decisiones de plataforma.',
-						'Roadmap, hitos y estimación de escenarios.',
-						'Prototipo o primera versión operativa.',
-						'Preparación para crecimiento, operación y traspaso.',
-					],
-					href: '/nuevos-productos',
-					linkLabel: 'Explorar nuevos productos →',
-				},
-			],
-		},
 		diagnostico: {
-			number: '03',
+			number: '02',
 			short: 'Diagnóstico',
 			long: 'Una forma concreta de empezar',
 			heading: 'Primero entendemos. Después decidimos qué vale la pena cambiar.',
@@ -223,7 +269,7 @@ export const es = {
 			note: 'El diagnóstico es un entregable independiente. No obliga a contratar una implementación posterior.',
 		},
 		comoTrabajo: {
-			number: '04',
+			number: '03',
 			short: 'Proceso',
 			long: 'De la incertidumbre a la ejecución',
 			heading: 'Un proceso que hace visibles las decisiones.',
@@ -261,16 +307,11 @@ export const es = {
 			],
 		},
 		continuidad: {
-			number: '05',
+			number: '04',
 			short: 'Modalidades',
 			long: 'Formas de trabajar',
 			heading: 'El modelo depende de la claridad del problema.',
 			options: [
-				{
-					title: 'Diagnóstico de alcance fijo',
-					description:
-						'Para comprender un sistema, reducir incertidumbre y priorizar antes de intervenir. Modalidad: entregables, plazo y precio acordados desde el inicio.',
-				},
 				{
 					title: 'Blueprint técnico de producto',
 					description:
@@ -290,7 +331,7 @@ export const es = {
 			note: 'No vendo una bolsa indefinida de horas. Cuando el alcance puede definirse, trabajo por resultados y entregables; cuando la naturaleza del problema exige continuidad, acordamos capacidad, responsabilidades y criterios de avance.',
 		},
 		experiencia: {
-			number: '06',
+			number: '05',
 			short: 'Experiencia',
 			long: 'Experiencia aplicada',
 			heading: 'Arquitectura con responsabilidad sobre la ejecución.',
@@ -322,7 +363,7 @@ export const es = {
 			linkHref: '/experiencia',
 		},
 		diferenciales: {
-			number: '07',
+			number: '06',
 			short: 'Diferencial',
 			long: 'Por qué Brian Stefanovich Consulting',
 			heading: 'La persona que ayuda a decidir también puede ayudar a ejecutar.',
@@ -355,7 +396,7 @@ export const es = {
 			],
 		},
 		encaje: {
-			number: '08',
+			number: '07',
 			short: 'Encaje',
 			long: 'Cuándo tiene sentido hablar',
 			heading: 'Trabajo mejor cuando hay una decisión importante detrás del software.',
@@ -381,7 +422,7 @@ export const es = {
 			closing: 'Si tu necesidad requiere otro tipo de especialista, te lo diré con claridad durante la sesión de encaje.',
 		},
 		sobreBrian: {
-			number: '09',
+			number: '08',
 			short: 'Sobre mí',
 			long: 'Quién está detrás',
 			heading: 'Profundidad técnica para decisiones que también son de negocio.',
@@ -394,9 +435,12 @@ export const es = {
 			links: [{ label: 'Conocer mi experiencia y forma de trabajo →', href: '/sobre-mi', icon: '/images/icon-external.svg' }],
 		},
 		faq: {
-			number: '10',
+			number: '09',
 			label: 'Preguntas frecuentes',
 			heading: 'Respuestas claras antes de empezar.',
+			mobileHint: 'Toca una pregunta para ver la respuesta.',
+			showMore: 'Ver más preguntas',
+			showLess: 'Ver menos preguntas',
 			items: [
 				{
 					question: '¿La sesión de encaje es una consultoría gratuita?',
@@ -886,19 +930,33 @@ export const es = {
 	// ---------------------------------------------------------------------
 	liderazgoFraccionalPage: {
 		meta: {
-			title: 'Liderazgo técnico fraccional | Brian Stefanovich Consulting',
+			title: 'Arquitecto de software fraccional | Brian Stefanovich Consulting',
 			description: 'Criterio técnico senior recurrente para empresas que aún no necesitan un rol ejecutivo a tiempo completo.',
 		},
 		hero: {
-			eyebrow: 'Liderazgo técnico fraccional',
-			headingLines: ['Criterio técnico senior, sin', 'incorporar un rol a tiempo completo.'],
-			body: 'Para empresas que necesitan dirección arquitectónica recurrente, revisión de decisiones técnicas y acompañamiento a equipos internos o proveedores, sin todavía justificar un CTO o líder de ingeniería a tiempo completo.',
+			eyebrow: 'Arquitecto de software fraccional',
+			headingLines: ['Liderazgo técnico senior cuando lo', 'necesitas, sin incorporar un rol full-time.'],
+			body: 'Me integro temporalmente al equipo para aportar criterio arquitectónico, acompañar decisiones técnicas importantes y ayudar a mantener alineados tecnología, producto y negocio. Es una modalidad especialmente útil para empresas que están creciendo, atravesando una transformación tecnológica o necesitan fortalecer técnicamente al equipo sin contratar todavía un arquitecto o CTO de dedicación completa.',
 			imageAlt: 'Brian Stefanovich con un notebook',
 		},
 		intro: [
 			'El liderazgo técnico fraccional funciona como un retainer mensual: objetivos, capacidad y responsabilidades se acuerdan por adelantado, y el trabajo se ajusta a la evolución real del negocio y del equipo.',
 			'Puede incluir revisión de arquitectura y decisiones técnicas, acompañamiento y mentoría al equipo, supervisión de proveedores, documentación de estándares y comunicación directa con la gerencia sobre riesgo, prioridades e inversión.',
 		],
+		ayuda: {
+			heading: 'Puedo ayudarte con',
+			items: [
+				'Definición y evolución de arquitectura.',
+				'Revisión de decisiones técnicas.',
+				'Technical roadmap.',
+				'Evaluación de riesgos tecnológicos.',
+				'Mentoring y acompañamiento del equipo.',
+				'Estándares y prácticas de ingeniería.',
+				'Evaluación de proveedores y soluciones.',
+				'Alineación entre negocio, producto y tecnología.',
+				'Acompañamiento en proyectos críticos.',
+			],
+		},
 		cta: {
 			heading: 'Si necesitas criterio senior recurrente, conversemos primero sobre el contexto.',
 			ctaLabel: 'Hablemos de tu software',
