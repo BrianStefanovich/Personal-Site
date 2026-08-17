@@ -20,7 +20,7 @@ export default function ContactForm({ content: contacto }: ContactFormProps) {
 					{contacto.heading}
 				</h2>
 				<p className="text-[17px] leading-7 text-body">{contacto.body}</p>
-				<p className="rounded-[2px] border-l-4 border-accent-soft bg-[#f1ede5] p-5 text-sm leading-6 text-body">
+				<p className="rounded-[2px] border border-line bg-[#f1ede5] p-5 text-sm leading-6 text-body">
 					{contacto.info}
 				</p>
 			</div>

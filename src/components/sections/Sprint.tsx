@@ -56,7 +56,7 @@ export default function Sprint({ content: sprint }: SprintProps) {
 				</div>
 
 				<div className="flex flex-col gap-4">
-					<div className="border-l-4 border-accent-soft bg-[#eae6de] p-5 md:bg-[#f1ede5]">
+					<div className="rounded-[2px] border border-line bg-[#eae6de] p-5 md:bg-[#f1ede5]">
 						<h3 className="font-display text-base leading-6 font-semibold text-foreground">
 							{sprint.modelLabel}
 						</h3>

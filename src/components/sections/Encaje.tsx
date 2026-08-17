@@ -8,7 +8,7 @@ export default function Encaje({ content: encaje }: EncajeProps) {
 	return (
 		<section className="container flex flex-col gap-8 py-12 md:py-[64px]">
 			<div className="flex flex-col gap-6 md:grid md:grid-cols-2 md:gap-8">
-				<div className="rounded-[2px] border-t-2 border-accent bg-[#f1ede5] p-6 md:p-8">
+				<div className="rounded-[2px] border border-line bg-[#f1ede5] p-6 md:p-8">
 					<h2 className="font-display text-2xl leading-8 font-semibold text-foreground">{encaje.fit.title}</h2>
 					<ul className="flex flex-col gap-4 pt-5">
 						{encaje.fit.items.map((item) => (
