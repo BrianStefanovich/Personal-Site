@@ -12,7 +12,7 @@ const { title, description, image = '/og-default.svg', canonicalPath = '/', noin
 const site = new URL(Astro.site ?? 'https://example.com');
 const canonical = new URL(canonicalPath, site).toString();
 const imageUrl = new URL(image, site).toString();
-const pageTitle = title ? `${title} | AP Portfolio` : 'AP Portfolio | Digital product work';
+const pageTitle = title ?? 'Brian Stefanovich Consulting | Decisiones claras. Software bien diseñado.';
 ---
 
 <title>{pageTitle}</title>

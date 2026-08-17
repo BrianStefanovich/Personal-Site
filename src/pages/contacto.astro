@@ -1,0 +1,27 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ContactForm from '@/components/sections/ContactForm';
+import Hero from '@/components/sections/Hero';
+import { getTranslations } from '@/i18n';
+
+const { contactoPage: page } = getTranslations();
+---
+
+<BaseLayout title={page.meta.title} description={page.meta.description} canonicalPath="/contacto">
+	<Hero client:load content={page.hero} />
+
+	<section class="container flex flex-col gap-4 py-12 md:py-[64px]">
+		<h2 class="font-display text-2xl leading-8 font-semibold text-foreground">{page.queConvieneTraer.heading}</h2>
+		<p class="text-[15px] leading-6 text-body md:text-base">{page.queConvieneTraer.intro}</p>
+		<ul class="flex flex-col gap-2">
+			{page.queConvieneTraer.items.map((item) => (
+				<li class="flex items-start gap-3">
+					<img src="/images/icon-check.svg" alt="" width="14" height="10" class="mt-[7px] shrink-0" />
+					<span class="text-[15px] leading-6 text-body md:text-base">{item}</span>
+				</li>
+			))}
+		</ul>
+	</section>
+
+	<ContactForm client:visible content={page.form} />
+</BaseLayout>

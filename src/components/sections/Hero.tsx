@@ -1,9 +1,23 @@
 import { buttonVariants } from '@/components/ui/button';
-import { getTranslations } from '@/i18n';
 import { cn } from '@/lib/utils';
 
-export default function Hero() {
-	const { hero } = getTranslations();
+interface HeroContent {
+	eyebrow: string;
+	headingLines: readonly string[];
+	body: string;
+	imageAlt: string;
+	cta?: string;
+	ctaHref?: string;
+	note?: string;
+	supports?: readonly string[];
+}
+
+interface HeroProps {
+	content: HeroContent;
+}
+
+export default function Hero({ content: hero }: HeroProps) {
+	const { supports } = hero;
 
 	return (
 		<section id="top" className="container pt-6 pb-16 md:pt-8 md:pb-24">
@@ -23,20 +37,34 @@ export default function Hero() {
 						{hero.body}
 					</p>
 
-					<div className="flex w-full flex-col items-center gap-2 pt-6 md:items-start md:pt-4">
-						<a
-							href="#contacto"
-							className={cn(
-								buttonVariants({ full: true }),
-								'shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.1)] md:w-auto md:px-8 md:py-4 md:shadow-none',
-							)}
-						>
-							{hero.cta}
-						</a>
-						<p className="max-w-[448px] pt-2 font-mono text-xs leading-[21px] text-body md:max-w-[576px] md:text-left">
-							{hero.note}
-						</p>
-					</div>
+					{hero.cta && hero.ctaHref ? (
+						<div className="flex w-full flex-col items-center gap-2 pt-6 md:items-start md:pt-4">
+							<a
+								href={hero.ctaHref}
+								className={cn(
+									buttonVariants({ full: true }),
+									'shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.1)] md:w-auto md:px-8 md:py-4 md:shadow-none',
+								)}
+							>
+								{hero.cta}
+							</a>
+							{hero.note ? (
+								<p className="max-w-[448px] pt-2 font-mono text-xs leading-[21px] text-body md:max-w-[576px] md:text-left">
+									{hero.note}
+								</p>
+							) : null}
+						</div>
+					) : null}
+
+					{supports ? (
+						<ul className="flex flex-col gap-2 pt-4 md:flex-row md:flex-wrap md:gap-6">
+							{supports.map((item) => (
+								<li key={item} className="font-mono text-xs leading-4 tracking-[0.06em] text-muted uppercase">
+									{item}
+								</li>
+							))}
+						</ul>
+					) : null}
 				</div>
 
 				<div className="order-1 w-full min-w-0 flex-1 md:order-2">

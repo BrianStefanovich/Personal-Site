@@ -1,11 +1,11 @@
 import { SectionEyebrow } from '@/components/sections/SectionEyebrow';
-import { buttonVariants } from '@/components/ui/button';
-import { getTranslations } from '@/i18n';
-import { cn } from '@/lib/utils';
+import type { Translations } from '@/i18n';
 
-export default function DosRutas() {
-	const { dosRutas } = getTranslations();
+interface DosRutasProps {
+	content: Translations['home']['dosRutas'];
+}
 
+export default function DosRutas({ content: dosRutas }: DosRutasProps) {
 	return (
 		<section id="servicios" className="container flex flex-col gap-8 py-12 md:gap-12 md:py-[64px]">
 			<div className="flex flex-col gap-2">
@@ -21,6 +21,7 @@ export default function DosRutas() {
 						key={ruta.title}
 						className="flex flex-col gap-4 rounded-[2px] border border-line bg-[#f1ede5] p-[25px] md:bg-surface md:p-8"
 					>
+						<p className="eyebrow">{ruta.subtitle}</p>
 						<h3 className="font-display text-2xl leading-[31px] font-semibold text-foreground">{ruta.title}</h3>
 						<p className="text-base leading-6 text-body">{ruta.description}</p>
 
@@ -41,26 +42,14 @@ export default function DosRutas() {
 							))}
 						</ul>
 
-						<div className="mt-auto flex flex-col gap-1 border-t border-line pt-4">
-							<p className="font-display text-base leading-6 font-semibold text-foreground">
-								{dosRutas.resultLabel}
-							</p>
-							<p className="text-[15px] leading-5 text-body md:text-base">{ruta.result}</p>
-						</div>
+						<a
+							href={ruta.href}
+							className="mt-auto pt-4 font-display text-base leading-6 font-semibold text-accent underline"
+						>
+							{ruta.linkLabel}
+						</a>
 					</article>
 				))}
-			</div>
-
-			<div className="flex md:justify-center">
-				<a
-					href="#contacto"
-					className={cn(
-						buttonVariants({ full: true }),
-						'shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.1)] md:w-auto md:px-8 md:py-4 md:shadow-none',
-					)}
-				>
-					{dosRutas.cta}
-				</a>
 			</div>
 		</section>
 	);

@@ -11,6 +11,9 @@ const site = process.env.PUBLIC_SITE_URL ?? 'https://example.com';
 export default defineConfig({
 	site,
 	output: 'static',
+	server: {
+		host: true,
+	},
 	i18n: {
 		defaultLocale: 'es',
 		locales: ['es'],

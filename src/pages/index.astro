@@ -1,31 +1,41 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import ContactForm from '@/components/sections/ContactForm';
 import Continuidad from '@/components/sections/Continuidad';
+import CtaFinal from '@/components/sections/CtaFinal';
 import Diagnostico from '@/components/sections/Diagnostico';
 import Diferenciales from '@/components/sections/Diferenciales';
 import DosRutas from '@/components/sections/DosRutas';
 import Encaje from '@/components/sections/Encaje';
+import Experiencia from '@/components/sections/Experiencia';
 import Faq from '@/components/sections/Faq';
 import Hero from '@/components/sections/Hero';
+import ProcessSteps from '@/components/sections/ProcessSteps';
 import Problemas from '@/components/sections/Problemas';
 import SobreBrian from '@/components/sections/SobreBrian';
-import Sprint from '@/components/sections/Sprint';
 import { getTranslations } from '@/i18n';
 
 const t = getTranslations();
+const { home } = t;
 ---
 
-<BaseLayout title={t.meta.title} description={t.meta.description} canonicalPath="/">
-	<Hero client:load />
-	<Problemas client:visible />
-	<DosRutas client:visible />
-	<Diagnostico client:visible />
-	<Sprint client:visible />
-	<Continuidad client:visible />
-	<Diferenciales client:visible />
-	<SobreBrian client:visible />
-	<Encaje client:visible />
-	<Faq client:visible />
-	<ContactForm client:visible />
+<BaseLayout title={home.meta.title} description={home.meta.description} canonicalPath="/">
+	<Hero client:load content={home.hero} />
+	<Problemas client:visible content={home.problemas} />
+	<DosRutas client:visible content={home.dosRutas} />
+	<Diagnostico client:visible content={home.diagnostico} />
+	<ProcessSteps
+		id="como-trabajo"
+		number={home.comoTrabajo.number}
+		short={home.comoTrabajo.short}
+		long={home.comoTrabajo.long}
+		heading={home.comoTrabajo.heading}
+		steps={home.comoTrabajo.steps}
+	/>
+	<Continuidad client:visible content={home.continuidad} />
+	<Experiencia id="experiencia" content={home.experiencia} />
+	<Diferenciales client:visible content={home.diferenciales} />
+	<Encaje client:visible content={home.encaje} />
+	<SobreBrian client:visible content={home.sobreBrian} />
+	<Faq client:visible content={home.faq} />
+	<CtaFinal content={home.ctaFinal} />
 </BaseLayout>

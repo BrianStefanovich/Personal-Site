@@ -1,17 +1,30 @@
 import { SectionEyebrow } from '@/components/sections/SectionEyebrow';
-import { getTranslations } from '@/i18n';
 
-export default function Continuidad() {
-	const { continuidad } = getTranslations();
+interface ContinuidadContent {
+	number: string;
+	short: string;
+	long: string;
+	heading: string;
+	body?: string;
+	options: readonly { title: string; description: string }[];
+	note: string;
+}
 
+interface ContinuidadProps {
+	content: ContinuidadContent;
+}
+
+export default function Continuidad({ content: continuidad }: ContinuidadProps) {
 	return (
-		<section id="como-trabajo" className="container flex flex-col gap-8 py-12 md:gap-10 md:py-[64px]">
+		<section id="modalidades" className="container flex flex-col gap-8 py-12 md:gap-10 md:py-[64px]">
 			<div className="flex flex-col gap-2">
 				<SectionEyebrow number={continuidad.number} short={continuidad.short} long={continuidad.long} />
 				<h2 className="pt-2 font-display text-[36px] leading-[43px] font-semibold text-foreground text-balance md:max-w-[768px] md:pt-4 md:text-[44px] md:leading-[54px]">
 					{continuidad.heading}
 				</h2>
-				<p className="pt-4 text-[17px] leading-7 text-body md:max-w-[720px]">{continuidad.body}</p>
+				{continuidad.body ? (
+					<p className="pt-4 text-[17px] leading-7 text-body md:max-w-[720px]">{continuidad.body}</p>
+				) : null}
 			</div>
 
 			<div className="flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-8">

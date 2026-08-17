@@ -1,9 +1,11 @@
 import { SectionEyebrow } from '@/components/sections/SectionEyebrow';
-import { getTranslations } from '@/i18n';
+import type { Translations } from '@/i18n';
 
-export default function Diferenciales() {
-	const { diferenciales } = getTranslations();
+interface DiferencialesProps {
+	content: Translations['home']['diferenciales'];
+}
 
+export default function Diferenciales({ content: diferenciales }: DiferencialesProps) {
 	return (
 		<section className="container flex flex-col gap-8 py-12 md:gap-12 md:py-32">
 			<div className="flex flex-col gap-2">

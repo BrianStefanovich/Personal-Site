@@ -1,17 +1,20 @@
 import { useState } from 'react';
 
 import { Button } from '@/components/ui/button';
-import { getTranslations } from '@/i18n';
+import type { Translations } from '@/i18n';
 
 const fieldClass =
 	'w-full rounded-[2px] border border-line bg-surface px-3 py-2 text-[15px] leading-6 text-foreground outline-none focus:border-accent';
 
-export default function ContactForm() {
-	const { contacto } = getTranslations();
+interface ContactFormProps {
+	content: Translations['contactoPage']['form'];
+}
+
+export default function ContactForm({ content: contacto }: ContactFormProps) {
 	const [submitted, setSubmitted] = useState(false);
 
 	return (
-		<section id="contacto" className="container flex flex-col gap-8 py-12 md:grid md:grid-cols-2 md:gap-16 md:py-[64px]">
+		<section id="formulario" className="container flex flex-col gap-8 py-12 md:grid md:grid-cols-2 md:gap-16 md:py-[64px]">
 			<div className="flex flex-col gap-4">
 				<h2 className="font-display text-[36px] leading-[43px] font-semibold text-foreground text-balance md:text-[44px] md:leading-[54px]">
 					{contacto.heading}
@@ -53,7 +56,7 @@ export default function ContactForm() {
 					{contacto.needsOptions.map((option) => (
 						<label key={option.value} className="flex items-start gap-3 text-[15px] leading-6 text-body">
 							<input
-								type="checkbox"
+								type="radio"
 								name="necesidad"
 								value={option.value}
 								className="mt-1 size-4 shrink-0 accent-[var(--color-accent)]"
@@ -69,6 +72,22 @@ export default function ContactForm() {
 							{field.label}
 						</label>
 						<textarea id={field.name} name={field.name} rows={4} className={fieldClass} />
+					</div>
+				))}
+
+				{contacto.trailingFields.map((field) => (
+					<div key={field.name} className="flex flex-col gap-1">
+						<label htmlFor={field.name} className="font-display text-sm leading-5 font-semibold text-foreground">
+							{field.label}
+						</label>
+						<input
+							id={field.name}
+							name={field.name}
+							type={field.type}
+							required={field.required}
+							autoComplete={field.autoComplete}
+							className={fieldClass}
+						/>
 					</div>
 				))}
 

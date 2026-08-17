@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
-import { getTranslations } from '@/i18n';
+import type { Translations } from '@/i18n';
 
-export default function Faq() {
-	const { faq } = getTranslations();
+interface FaqProps {
+	content: Translations['home']['faq'];
+}
+
+export default function Faq({ content: faq }: FaqProps) {
 	const [openIndex, setOpenIndex] = useState<number | null>(null);
 
 	return (

@@ -1,9 +1,11 @@
 import { SectionEyebrow } from '@/components/sections/SectionEyebrow';
-import { getTranslations } from '@/i18n';
+import type { Translations } from '@/i18n';
 
-export default function SobreBrian() {
-	const { sobreBrian } = getTranslations();
+interface SobreBrianProps {
+	content: Translations['home']['sobreBrian'];
+}
 
+export default function SobreBrian({ content: sobreBrian }: SobreBrianProps) {
 	return (
 		<section id="sobre-mi" className="container flex flex-col gap-8 py-12 md:grid md:grid-cols-[325px_1fr] md:items-center md:gap-16 md:py-[64px]">
 			<img

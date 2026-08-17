@@ -1,419 +1,908 @@
+const contactFormContent = {
+	textFields: [
+		{ name: 'nombre', label: 'Nombre', type: 'text', required: true, autoComplete: 'name' },
+		{ name: 'empresa', label: 'Empresa', type: 'text', required: true, autoComplete: 'organization' },
+		{ name: 'cargo', label: 'Cargo', type: 'text', required: true, autoComplete: 'organization-title' },
+		{ name: 'correo', label: 'Correo de trabajo', type: 'email', required: true, autoComplete: 'email' },
+		{ name: 'sitio', label: 'Sitio web de la empresa (opcional)', type: 'text', required: false, autoComplete: 'url' },
+	],
+	needsLabel: '¿Qué necesitas resolver?',
+	needsOptions: [
+		{ value: 'sistema-existente', label: 'Modernizar un sistema existente' },
+		{ value: 'nuevo-producto', label: 'Diseñar o construir un nuevo producto' },
+		{ value: 'arquitectura-riesgo', label: 'Evaluar arquitectura o riesgo' },
+		{ value: 'liderazgo-fraccional', label: 'Liderazgo técnico fraccional' },
+		{ value: 'otro', label: 'Otro desafío de software' },
+	],
+	textareas: [
+		{ name: 'situacion', label: 'Cuéntame brevemente qué está ocurriendo' },
+		{ name: 'urgencia', label: '¿Por qué es importante resolverlo ahora?' },
+	],
+	trailingFields: [
+		{ name: 'plazo', label: 'Plazo esperado', type: 'text', required: false, autoComplete: 'off' },
+		{ name: 'presupuesto', label: 'Presupuesto orientativo (opcional)', type: 'text', required: false, autoComplete: 'off' },
+	],
+	submit: 'Enviar contexto',
+	disclaimer: 'Tus datos se usan únicamente para responder esta consulta.',
+	submitted: 'Gracias. Revisaré la información y responderé con claridad sobre si puedo ayudarte y cuál sería el siguiente paso.',
+};
+
 export const es = {
-	meta: {
-		title: 'Brian Stefanovich Consulting | Decisiones claras. Software bien diseñado.',
-		description:
-			'Consultoría estratégica de arquitectura y productos de software. Diagnóstico de sistemas existentes, modernización progresiva y construcción de nuevos productos.',
-	},
 	brand: {
 		name: 'Brian Stefanovich',
 		fullName: 'Brian Stefanovich Consulting',
 		tagline: 'Decisiones claras. Software bien diseñado.',
 		disciplines: 'Arquitectura · Modernización · Productos de software',
-		location: 'Santiago de Chile · Atención remota en Chile y Latinoamérica',
+		location: 'Santiago de Chile · Trabajo remoto',
 		motto: 'Clarity before complexity.',
 	},
 	nav: {
 		links: [
-			{ label: 'Problemas', href: '#problemas' },
-			{ label: 'Servicios', href: '#servicios' },
-			{ label: 'Cómo trabajo', href: '#como-trabajo' },
-			{ label: 'Sobre mí', href: '#sobre-mi' },
+			{ label: 'Inicio', href: '/' },
+			{
+				label: 'Servicios',
+				children: [
+					{ label: 'Sistemas existentes', href: '/sistemas-existentes' },
+					{ label: 'Nuevos productos', href: '/nuevos-productos' },
+					{ label: 'Diagnóstico ejecutivo', href: '/diagnostico' },
+				],
+			},
+			{ label: 'Cómo trabajo', href: '/#como-trabajo' },
+			{ label: 'Experiencia', href: '/#experiencia' },
+			{ label: 'Sobre mí', href: '/sobre-mi' },
 		],
-		ctaMobile: 'Agendar consulta',
-		ctaDesktop: 'Agendar sesión',
+		cta: 'Hablemos de tu software',
 		openMenu: 'Abrir menú',
 		closeMenu: 'Cerrar menú',
-	},
-	hero: {
-		eyebrow: 'Consultoría estratégica de arquitectura y productos de software',
-		headingLines: ['Decisiones', 'claras.', 'Software bien', 'diseñado.'],
-		body: 'Ayudo a empresas a tomar mejores decisiones sobre su software: Diagnostico problemas, modernizo sistemas y convierto ideas o prototipos en productos viables.',
-		cta: 'Agenda una consulta',
-		note: 'Es una conversación de evaluación, no una auditoría gratuita ni una llamada para venderte horas. Si el problema requiere otro tipo de especialista, te lo diré con claridad.',
-		imageAlt: 'Brian Stefanovich con un notebook',
-	},
-	problemas: {
-		number: '01',
-		short: 'Problema',
-		long: 'Cuando el software empieza a decidir por el negocio',
-		heading: 'Un sistema puede seguir funcionando y, aun así, estar frenando a la empresa.',
-		body: [
-			'El problema rara vez es una tecnología aislada. Suele ser una combinación de decisiones acumuladas, dependencias invisibles, procesos frágiles y prioridades que nadie ha convertido en un mapa común.',
-			'Cuando eso ocurre, cada nueva funcionalidad cuesta más, una migración parece demasiado riesgosa y la organización continúa invirtiendo sin saber qué problema está resolviendo primero.',
-		],
-		columns: [
-			{
-				id: 'existentes',
-				label: 'Sistemas existentes',
-				title: 'Síntomas en sistemas existentes',
-				items: [
-					{
-						icon: { src: '/images/icon-problema-existente-1.svg', width: 20, height: 16 },
-						title: 'Las entregas se vuelven lentas o impredecibles',
-						description:
-							'Cambios aparentemente pequeños exigen tocar demasiadas partes del sistema, coordinar varios equipos o aceptar un nivel de riesgo difícil de explicar.',
-					},
-					{
-						icon: { src: '/images/icon-problema-existente-2.svg', width: 20, height: 20 },
-						title: 'Los incidentes se corrigen, pero vuelven con otra forma',
-						description:
-							'El equipo resuelve síntomas bajo presión mientras las causas arquitectónicas, operativas o de datos permanecen intactas.',
-					},
-					{
-						icon: { src: '/images/icon-problema-existente-3.svg', width: 18, height: 18 },
-						title: 'Existe una migración pendiente, pero no una estrategia confiable',
-						description:
-							'Reescribir todo parece imprudente; seguir igual también. Falta comparar alternativas, dependencias, costos y secuencias de transición.',
-					},
-					{
-						icon: { src: '/images/icon-problema-existente-4.svg', width: 20, height: 20 },
-						title: 'Negocio y tecnología están discutiendo problemas distintos',
-						description:
-							'La gerencia necesita decidir sobre inversión, riesgo y tiempo. El equipo técnico habla de componentes, deuda y plataformas.',
-					},
-				],
-			},
-			{
-				id: 'nuevos',
-				label: 'Nuevos productos',
-				title: 'Síntomas en nuevos productos',
-				items: [
-					{
-						icon: { src: '/images/icon-problema-nuevo-1.svg', width: 11, height: 18 },
-						title: 'Hay una idea o un prototipo, pero todavía no un producto operable',
-						description:
-							'La demostración valida interés, no necesariamente seguridad, mantenibilidad, costos, integración ni capacidad de crecimiento.',
-					},
-					{
-						icon: { src: '/images/icon-problema-nuevo-2.svg', width: 20, height: 18 },
-						title: 'Es difícil evaluar al proveedor o al equipo técnico',
-						description:
-							'Las estimaciones cambian, las decisiones no quedan documentadas y la empresa depende de quien construyó la primera versión.',
-					},
-					{
-						icon: { src: '/images/icon-problema-nuevo-3.svg', width: 22, height: 16 },
-						title: 'Se está por invertir antes de resolver las preguntas costosas',
-						description:
-							'No están claras las hipótesis críticas, el alcance de la primera versión, los límites del sistema ni los riesgos que podrían invalidar el proyecto.',
-					},
-				],
-			},
-		],
-		callout:
-			'Si reconoces una o más de estas situaciones, el siguiente paso no debería ser contratar más desarrollo. Primero necesitas claridad para decidir.',
-	},
-	dosRutas: {
-		number: '02',
-		short: 'Servicios',
-		long: 'Dos contextos. Una misma disciplina.',
-		heading: 'Desde el problema de negocio hasta una decisión técnica ejecutable.',
-		helpLabel: 'Puedo ayudarte a:',
-		resultLabel: 'Resultado esperado',
-		rutas: [
-			{
-				title: 'Tengo un sistema con dolores',
-				description: 'Para empresas con software crítico, costoso, frágil o difícil de evolucionar.',
-				items: [
-					'Identificar causas raíz y dependencias críticas',
-					'Evaluar riesgos de arquitectura, operación y entrega',
-					'Decidir qué mantener, reemplazar, aislar o modernizar',
-					'Diseñar una transición progresiva sin detener el negocio',
-					'Convertir la decisión en prioridades, arquitectura y un roadmap de 90 días',
-					'Acompañar al equipo o al proveedor durante la ejecución.',
-				],
-				result:
-					'Una visión compartida del sistema, alternativas comparables y un plan que permita invertir con criterio.',
-			},
-			{
-				title: 'Quiero construir un negocio basado en software',
-				description:
-					'Para founders, áreas de innovación y empresas con una idea, proceso o prototipo que debe convertirse en un producto real.',
-				items: [
-					'Traducir el modelo de negocio en capacidades de producto',
-					'Identificar hipótesis y riesgos técnicos antes de construir',
-					'Definir el alcance responsable de la primera versión',
-					'Diseñar la arquitectura, los límites y las integraciones',
-					'Estimar etapas, dependencias y rangos de inversión',
-					'Construir o liderar la transición desde prototipo hacia producción',
-				],
-				result:
-					'Un producto técnicamente viable, con decisiones explícitas y una base que el negocio pueda comprender y el equipo pueda mantener.',
-			},
-		],
-		cta: 'Conversemos sobre tu situación',
-	},
-	diagnostico: {
-		number: '03',
-		short: 'Diagnóstico',
-		long: 'Una forma concreta de comenzar',
-		heading: 'Diagnóstico Ejecutivo de Riesgo y Modernización',
-		body: 'Antes de aprobar una migración, aumentar el equipo o comprometer un nuevo presupuesto, obtén una evaluación independiente de qué está ocurriendo, qué alternativas existen y cuál debería ser la secuencia de decisión.',
-		detailsLabel: 'Datos del servicio',
-		details: [
-			{ term: 'Duración:', value: '7 a 10 días hábiles.' },
-			{ term: 'Alcance y precio fijos.', value: '' },
-			{ term: 'Inversión:', value: '45 UF + IVA.' },
-			{ term: 'Forma de pago:', value: '50% al iniciar y 50% en la presentación ejecutiva.' },
-			{
-				term: 'Modalidad:',
-				value: 'remota para Chile y Latinoamérica; reuniones presenciales en Santiago cuando el contexto lo justifique.',
-			},
-		],
-		includesLabel: 'Incluye',
-		includes: [
-			'entrevista de encuadre con responsables de negocio y tecnología;',
-			'revisión de arquitectura, documentación, flujos y evidencia técnica disponible;',
-			'mapa visual del sistema, dependencias y puntos críticos;',
-			'distinción entre síntomas, causas raíz y restricciones reales;',
-			'escenarios de evolución con costos, riesgos y trade-offs;',
-			'recomendación independiente y criterios que la sostienen;',
-			'prioridades y plan de acción para los próximos 90 días;',
-			'rango de inversión para las etapas siguientes;',
-			'presentación ejecutiva y sesión de preguntas.',
-		],
-		excludesLabel: 'No incluye',
-		excludes: [
-			'una reescritura completa del sistema;',
-			'implementación o capacidad de desarrollo abierta;',
-			'una certificación de seguridad o auditoría regulatoria formal;',
-			'promesas de costo o fecha sin acceso a evidencia suficiente.',
-		],
-		processLabel: 'Cómo se desarrolla',
-		process: [
-			{
-				number: '01',
-				title: 'Encuadre',
-				description:
-					'Acordamos la decisión que la empresa necesita tomar, los actores relevantes y la evidencia disponible. No revisamos tecnología sin entender primero el impacto de negocio.',
-			},
-			{
-				number: '02',
-				title: 'Observación',
-				description:
-					'Reviso arquitectura, código o artefactos pertinentes, datos, integraciones, operación y forma de entrega. Las entrevistas permiten contrastar el sistema documentado con el sistema que realmente existe.',
-			},
-			{
-				number: '03',
-				title: 'Modelado',
-				description:
-					'Convierto la complejidad en diagramas, riesgos y escenarios comparables. Cada alternativa explicita beneficios, costos, dependencias y consecuencias.',
-			},
-			{
-				number: '04',
-				title: 'Decisión',
-				description:
-					'Presento una recomendación, prioridades de 90 días y una secuencia de inversión. La empresa conserva los entregables y los criterios utilizados para tomar la decisión.',
-			},
-		],
-		cta: 'Evaluar si el diagnóstico aplica a mi caso',
-		note: 'La sesión inicial dura 25 minutos y sirve para validar encaje. No necesitas contratar una implementación posterior.',
-	},
-	sprint: {
-		number: '04',
-		short: 'Sprint',
-		long: 'Cuando todavía no existe el sistema correcto',
-		heading: 'Sprint de Viabilidad Técnica de Producto',
-		body: [
-			'Una idea atractiva o un prototipo funcional no responden por sí solos si el producto puede operar, integrarse, mantenerse y crecer con una inversión razonable.',
-			'El sprint convierte la oportunidad de negocio en decisiones verificables antes de abrir un proyecto de desarrollo.',
-		],
-		deliverablesLabel: 'Entregables posibles, según el alcance acordado',
-		deliverables: [
-			'Mapa del problema, usuarios y flujos críticos',
-			'Hipótesis que deben validarse antes de escalar',
-			'Alcance de la primera versión y decisiones de exclusión',
-			'Arquitectura inicial y límites del sistema',
-			'Estrategia de datos, integraciones, seguridad y operación',
-			'Roadmap por etapas, dependencias y rango de inversión.',
-			'Prototipo técnico cuando existe una incertidumbre que debe probarse',
-		],
-		modelLabel: 'Modelo de contratación',
-		model: 'Después de la sesión de encuadre se propone un alcance cerrado, con duración, entregables e inversión definidos. No se inicia con una bolsa de horas abierta.',
-		cta: 'Quiero evaluar una idea o prototipo',
-	},
-	continuidad: {
-		number: '05',
-		short: 'Continuidad',
-		long: 'De la recomendación a la ejecución',
-		heading: 'Puedes ejecutar con tu equipo, con tu proveedor o conmigo.',
-		body: 'Los entregables están diseñados para que la empresa pueda decidir y avanzar sin quedar cautiva de quien realizó el diagnóstico. Si necesitas continuidad, el acompañamiento puede tomar una de estas formas.',
-		options: [
-			{
-				title: 'Arquitectura y roadmap de solución',
-				description:
-					'Definición detallada de límites, componentes, integraciones, decisiones de datos, infraestructura, riesgos y secuencia de implementación.',
-			},
-			{
-				title: 'Modernización progresiva',
-				description:
-					'Diseño y ejecución de transiciones por etapas para reemplazar, aislar o reimplementar partes del sistema sin detener el flujo de negocio.',
-			},
-			{
-				title: 'Arquitecto de Software Fraccional',
-				description:
-					'Liderazgo técnico senior por un período definido: revisión de decisiones, acompañamiento al equipo, supervisión de proveedores, documentación de arquitectura y comunicación con gerencia.',
-			},
-			{
-				title: 'Construcción de producto',
-				description:
-					'Implementación directa o liderazgo de una primera versión cuando el alcance y los riesgos ya están suficientemente comprendidos.',
-			},
-		],
-		note: 'La forma de trabajo se elige por la decisión y el resultado que necesitas, no por una cantidad predeterminada de horas.',
-	},
-	diferenciales: {
-		number: '07',
-		short: 'Diferencial',
-		long: 'Una contraparte técnica independiente',
-		heading: 'La recomendación no está atada a venderte una tecnología, un equipo o una reescritura.',
-		items: [
-			{
-				title: 'Atención senior directa',
-				description:
-					'Trabajas con Brian desde el encuadre hasta la entrega. No existe un traspaso comercial hacia un equipo junior que recién entonces conoce el problema.',
-			},
-			{
-				title: 'Independencia tecnológica',
-				description:
-					'La arquitectura se elige según el negocio, las restricciones y la capacidad real del equipo. La experiencia en .NET, Node.js, Python, React y cloud permite comparar alternativas sin convertir el stack en la propuesta de valor.',
-			},
-			{
-				title: 'Traducción entre gerencia y tecnología',
-				description:
-					'Los diagramas, escenarios y roadmaps están diseñados para que responsables de negocio y equipos técnicos puedan discutir la misma decisión sin perder precisión.',
-			},
-			{
-				title: 'Cercanía con la ejecución',
-				description:
-					'La recomendación se construye con conocimiento práctico de código, infraestructura, datos y entrega. El objetivo no es producir un informe elegante que el equipo no pueda implementar.',
-			},
-			{
-				title: 'Transferencia de criterio',
-				description:
-					'Las decisiones, sus trade-offs y los artefactos quedan en la empresa. El equipo debe terminar con mayor autonomía, no con una dependencia nueva.',
-			},
-		],
-	},
-	sobreBrian: {
-		number: '08',
-		short: 'Sobre mí',
-		long: 'Sobre mí',
-		heading: 'Arquitectura con criterio técnico, lectura de negocio y responsabilidad sobre la ejecución.',
-		imageAlt: 'Retrato de Brian Stefanovich',
-		paragraphs: [
-			'Soy Brian Stefanovich, Technical Leader y consultor de arquitectura y desarrollo de software.',
-			'Desde 2020 he trabajado en fintech, plataformas empresariales, integraciones, productos intensivos en datos y aplicaciones orientadas a clientes. He liderado decisiones de arquitectura, migraciones tecnológicas, reimplementaciones de procesos críticos y la evolución de prototipos hacia plataformas preparadas para producción.',
-			'Mi formación en Matemática fortaleció una forma de trabajo basada en modelar problemas, separar causas de síntomas y hacer explícitas las suposiciones. La experiencia liderando equipos y construyendo sistemas me enseñó la otra mitad: una decisión solo es buena si puede explicarse, ejecutarse y sostenerse en el contexto real de la empresa.',
-			'Trabajo entre dos niveles que con frecuencia quedan desconectados: la conversación ejecutiva sobre inversión, riesgo y oportunidad, y la realidad técnica del código, los datos, la infraestructura y los equipos.',
-			'Atiendo empresas en Chile y Latinoamérica de forma remota, con disponibilidad para trabajo presencial en Santiago cuando agrega valor.',
-		],
-		links: [
-			{ label: 'Ver perfil de LinkedIn', href: 'https://www.linkedin.com/', icon: '/images/icon-external.svg' },
-			{ label: 'Descargar CV', href: '/cv.pdf', icon: '/images/icon-download.svg' },
-			{ label: 'Agendar una sesión', href: '#contacto', icon: '/images/icon-calendar.svg' },
-		],
-	},
-	encaje: {
-		fit: {
-			title: 'Probablemente podamos trabajar bien si…',
-			items: [
-				'tu empresa depende de un sistema que se volvió difícil de cambiar o explicar;',
-				'debes decidir una modernización, migración o inversión relevante;',
-				'necesitas una mirada senior e independiente antes de comprometer presupuesto;',
-				'tienes un equipo o proveedor, pero falta dirección arquitectónica;',
-				'cuentas con una idea o un prototipo serio y necesitas convertirlo en producto;',
-				'prefieres una evolución por etapas basada en evidencia antes que una reescritura impulsiva.',
-			],
-		},
-		noFit: {
-			title: 'Probablemente no sea el servicio adecuado si…',
-			items: [
-				'solo necesitas aumentar capacidad de desarrollo por hora;',
-				'buscas una cotización inmediata sin una etapa mínima de comprensión;',
-				'ya decidiste la tecnología y solo necesitas que alguien valide la decisión;',
-				'esperas una promesa de costo, fecha o escalabilidad sin acceso a evidencia;',
-				'el problema principal no es técnico ni existe voluntad de involucrar a los responsables de negocio.',
-			],
-		},
-	},
-	faq: {
-		number: '10',
-		label: 'Preguntas frecuentes',
-		heading: 'Preguntas frecuentes',
-		items: [
-			{
-				question: '¿Eres una software factory?',
-				answer:
-					'No. Brian Stefanovich Consulting es una consultoría senior e independiente. Puedo diseñar, liderar o participar en la implementación cuando tiene sentido, pero el punto de partida es una decisión y un resultado, no la venta de capacidad genérica de desarrollo.',
-			},
-			{
-				question: '¿Puedes trabajar con nuestro equipo o proveedor actual?',
-				answer:
-					'Sí. El diagnóstico y el acompañamiento están diseñados para complementar equipos internos y ofrecer una contraparte técnica frente a proveedores. La responsabilidad, los accesos y los límites de decisión se acuerdan al comenzar.',
-			},
-			{
-				question: '¿Trabajas solamente con .NET y Azure?',
-				answer:
-					'No. Tengo experiencia práctica en .NET, Node.js, Python, React, React Native, SQL y entornos AWS, Azure y GCP. La recomendación tecnológica depende del problema, las restricciones y la capacidad del equipo, no de una preferencia comercial.',
-			},
-			{
-				question: '¿Trabajas presencial o remoto?',
-				answer:
-					'Trabajo de forma remota con empresas de Chile y Latinoamérica. En Santiago pueden acordarse sesiones presenciales cuando aportan valor al diagnóstico, los talleres o la toma de decisiones.',
-			},
-			{
-				question: '¿La sesión inicial es un diagnóstico gratuito?',
-				answer:
-					'No. Es una conversación de 25 minutos para comprender la decisión pendiente, validar si existe encaje y definir el siguiente paso. El análisis técnico y los entregables forman parte de un servicio con alcance acordado.',
-			},
-			{
-				question: '¿Debemos contratarte para implementar las recomendaciones?',
-				answer:
-					'No. Los entregables quedan en la empresa y pueden ser ejecutados por tu equipo o proveedor. Si necesitas continuidad, podemos acordar arquitectura detallada, acompañamiento fraccional o implementación.',
-			},
-			{
-				question: '¿Por qué el diagnóstico tiene precio fijo?',
-				answer:
-					'Porque su alcance, duración y resultado están definidos. El objetivo es alinear el trabajo con una decisión concreta, no abrir una bolsa de horas cuyo costo y resultado sean difíciles de prever.',
-			},
-			{
-				question: '¿Qué necesito compartir para comenzar?',
-				answer:
-					'Depende del caso. Normalmente se requieren conversaciones con responsables de negocio y tecnología, documentación disponible y acceso controlado a los artefactos técnicos relevantes. El alcance especificará qué se revisará y cómo se manejará la información.',
-			},
-		],
-	},
-	contacto: {
-		// TODO(figma 2339:2246 / 2339:729): confirmar el copy de la columna izquierda y el aviso legal.
-		heading: 'Conversemos sobre tu situación',
-		body: 'Cuéntame qué decisión necesitas tomar y con qué evidencia cuentas hoy. Te responderé si el diagnóstico aplica a tu caso o si necesitas otro tipo de especialista.',
-		info: 'La sesión inicial dura 25 minutos y sirve para validar encaje. No necesitas contratar una implementación posterior.',
-		textFields: [
-			{ name: 'nombre', label: 'Nombre y apellido.', type: 'text', required: true, autoComplete: 'name' },
-			{ name: 'correo', label: 'Correo corporativo.', type: 'email', required: true, autoComplete: 'email' },
-			{ name: 'empresa', label: 'Empresa y cargo.', type: 'text', required: true, autoComplete: 'organization' },
-			{ name: 'plazo', label: 'Plazo aproximado.', type: 'text', required: false, autoComplete: 'off' },
-		],
-		needsLabel: '¿Qué necesitas resolver?',
-		needsOptions: [
-			{ value: 'sistema-existente', label: 'Tengo un sistema con dolores' },
-			{ value: 'nuevo-producto', label: 'Quiero construir un negocio basado en software' },
-		],
-		textareas: [
-			{ name: 'decision', label: '¿Qué decisión necesitas tomar?' },
-			{ name: 'urgencia', label: '¿Por qué es importante resolverla ahora?' },
-		],
-		submit: 'Enviar',
-		disclaimer: 'Tus datos se usan únicamente para responder esta consulta.',
-		submitted: 'Gracias. El envío del formulario todavía no está conectado a un backend.',
+		openServicios: 'Abrir submenú de Servicios',
+		closeServicios: 'Cerrar submenú de Servicios',
 	},
 	footer: {
-		links: [
-			{ label: 'LinkedIn', href: 'https://www.linkedin.com/' },
-			{ label: 'Correo', href: 'mailto:hola@example.com' },
-			{ label: 'Política de privacidad', href: '/privacidad/' },
+		servicios: [
+			{ label: 'Sistemas existentes', href: '/sistemas-existentes' },
+			{ label: 'Nuevos productos', href: '/nuevos-productos' },
+			{ label: 'Diagnóstico ejecutivo', href: '/diagnostico' },
 		],
-		copyright: '© 2024 Brian Stefanovich Consulting. Arquitetura e Evolução.',
-		copyrightDesktop: '© 2024 Brian Stefanovich. All rights reserved.',
+		informacion: [
+			{ label: 'Cómo trabajo', href: '/#como-trabajo' },
+			{ label: 'Experiencia', href: '/#experiencia' },
+			{ label: 'Sobre mí', href: '/sobre-mi' },
+			{ label: 'Contacto', href: '/contacto' },
+		],
+		contacto: {
+			location: 'Santiago de Chile',
+			remoto: 'Trabajo remoto',
+			linkedin: { label: 'LinkedIn', href: 'https://www.linkedin.com/' },
+			correo: { label: 'Correo electrónico', href: 'mailto:hola@example.com' },
+		},
+		legal: [
+			{ label: 'Política de privacidad', href: '/privacidad' },
+			{ label: 'Términos del sitio', href: '/terminos' },
+		],
+		copyright: '© 2026 Brian Stefanovich Consulting',
+	},
+
+	// ---------------------------------------------------------------------
+	// Inicio
+	// ---------------------------------------------------------------------
+	home: {
+		meta: {
+			title: 'Brian Stefanovich Consulting | Arquitectura y productos de software',
+			description:
+				'Consultoría senior para diagnosticar y modernizar sistemas existentes, diseñar nuevos productos y liderar decisiones de arquitectura y ejecución.',
+		},
+		hero: {
+			eyebrow: 'Consultoría senior de arquitectura, modernización y productos de software',
+			headingLines: ['Decisiones claras.', 'Software bien diseñado.'],
+			body: 'Ayudo a empresas a tomar mejores decisiones sobre su software: diagnostico y modernizo sistemas que frenan la operación, y convierto ideas o prototipos en productos viables, con una arquitectura sólida, un roadmap realista y acompañamiento senior para ejecutar el cambio con seguridad.',
+			cta: 'Hablemos de tu software',
+			ctaHref: '/contacto',
+			secondaryCta: 'Explorar servicios',
+			secondaryCtaHref: '/#servicios',
+			note: 'Sesión de encaje de 25 minutos. Revisaremos tu situación y definiremos si puedo ayudarte. No es una auditoría técnica ni una llamada para venderte horas.',
+			imageAlt: 'Brian Stefanovich con un notebook',
+			supports: ['Atención senior directa', 'Arquitectura y ejecución', 'Santiago de Chile · Trabajo remoto'],
+		},
+		problemas: {
+			number: '01',
+			short: 'Problema',
+			long: 'Cuando el software comienza a limitar el negocio',
+			heading: 'La decisión difícil no suele ser qué tecnología usar.',
+			body: [
+				'El problema aparece cuando no está claro qué conviene cambiar, cuánto riesgo implica y cómo avanzar sin interrumpir lo que ya funciona. En productos nuevos ocurre algo parecido: construir demasiado pronto puede convertir supuestos de negocio en meses de desarrollo difícil de sostener.',
+			],
+			columns: [
+				{
+					id: 'existentes',
+					label: 'Sistemas existentes',
+					title: 'Situaciones reconocibles en sistemas existentes',
+					items: [
+						{
+							icon: { src: '/images/icon-problema-existente-1.svg', width: 20, height: 16 },
+							title: 'El sistema funciona, pero cada cambio cuesta más',
+							description:
+								'Las entregas se vuelven lentas, los errores reaparecen y solo unas pocas personas comprenden las partes críticas. Reescribir todo parece demasiado riesgoso, pero continuar igual también tiene un costo.',
+						},
+						{
+							icon: { src: '/images/icon-problema-existente-2.svg', width: 20, height: 20 },
+							title: 'La operación depende de software frágil',
+							description:
+								'Hay procesos manuales, integraciones inestables, poca observabilidad o infraestructura que genera incertidumbre. El equipo reacciona a urgencias, pero no consigue reducir el riesgo estructural.',
+						},
+					],
+				},
+				{
+					id: 'nuevos',
+					label: 'Nuevos productos',
+					title: 'Situaciones reconocibles en nuevos productos',
+					items: [
+						{
+							icon: { src: '/images/icon-problema-nuevo-1.svg', width: 11, height: 18 },
+							title: 'Existe una idea o un prototipo, pero no un plan de producto',
+							description:
+								'La oportunidad parece real, aunque todavía faltan decisiones sobre alcance, arquitectura, prioridades, costos y ruta de lanzamiento.',
+						},
+						{
+							icon: { src: '/images/icon-problema-nuevo-2.svg', width: 20, height: 18 },
+							title: 'Hay muchas opiniones técnicas y poca claridad ejecutiva',
+							description:
+								'El equipo, los proveedores y el negocio proponen caminos distintos. Falta una evaluación independiente que conecte alternativas técnicas con impacto, riesgo y capacidad de ejecución.',
+						},
+					],
+				},
+			],
+			callout:
+				'Mi trabajo comienza antes de elegir una solución: hago visible el problema, ordeno las decisiones y convierto la dirección acordada en un plan ejecutable.',
+		},
+		dosRutas: {
+			number: '02',
+			short: 'Servicios',
+			long: 'Dos puntos de partida',
+			heading: '¿Qué necesitas resolver?',
+			helpLabel: 'Incluye, según el caso',
+			rutas: [
+				{
+					subtitle: '01. Sistemas existentes',
+					title: 'Modernizar sin poner en riesgo la operación.',
+					description:
+						'Para empresas con plataformas críticas, deuda técnica, problemas de escalabilidad, entregas lentas o integraciones difíciles de sostener. Evalúo el estado actual, priorizo riesgos y diseño una evolución gradual que el equipo pueda ejecutar.',
+					items: [
+						'Diagnóstico de arquitectura y riesgos.',
+						'Estrategia de modernización o migración.',
+						'Revisión de calidad, infraestructura y entrega.',
+						'Roadmap priorizado por impacto y dependencia.',
+						'Liderazgo técnico y acompañamiento de ejecución.',
+					],
+					href: '/sistemas-existentes',
+					linkLabel: 'Explorar sistemas existentes →',
+				},
+				{
+					subtitle: '02. Nuevos productos',
+					title: 'Convertir una oportunidad en un producto viable.',
+					description:
+						'Para empresas y fundadores que necesitan transformar una idea, un proceso o un prototipo en software listo para operar. Aterrizo el alcance, las decisiones técnicas y la ruta de construcción antes de comprometer una inversión mayor.',
+					items: [
+						'Discovery técnico y definición de alcance.',
+						'Arquitectura y decisiones de plataforma.',
+						'Roadmap, hitos y estimación de escenarios.',
+						'Prototipo o primera versión operativa.',
+						'Preparación para crecimiento, operación y traspaso.',
+					],
+					href: '/nuevos-productos',
+					linkLabel: 'Explorar nuevos productos →',
+				},
+			],
+		},
+		diagnostico: {
+			number: '03',
+			short: 'Diagnóstico',
+			long: 'Una forma concreta de empezar',
+			heading: 'Primero entendemos. Después decidimos qué vale la pena cambiar.',
+			offerName: 'Diagnóstico Ejecutivo de Riesgo y Modernización',
+			body: [
+				'Una evaluación independiente y de alcance fijo para entender el estado real de un sistema, identificar los riesgos que afectan al negocio y definir una ruta de mejora defendible antes de iniciar una migración, una reescritura o una contratación mayor.',
+				'Te llevas: una visión compartida del problema, las decisiones prioritarias y un plan de acción que puede ejecutar tu equipo, un proveedor o Brian Stefanovich Consulting.',
+			],
+			detailsLabel: 'Modelo',
+			details: [
+				{ term: 'Modelo:', value: 'alcance y precio fijo.' },
+				{ term: 'Duración típica:', value: '7 a 10 días hábiles.' },
+				{ term: 'Inversión:', value: '45 UF + IVA.' },
+			],
+			includesLabel: 'Qué incluye',
+			includes: [
+				'Reunión de contexto con responsables de negocio y tecnología.',
+				'Revisión focalizada de arquitectura, código, infraestructura y proceso de entrega.',
+				'Mapa de riesgos, dependencias y cuellos de botella.',
+				'Alternativas con trade-offs, impacto y orden recomendado.',
+				'Roadmap ejecutivo de corto y mediano plazo.',
+				'Sesión de presentación y resolución de preguntas.',
+			],
+			cta: 'Evaluar si este diagnóstico aplica',
+			ctaHref: '/contacto',
+			note: 'El diagnóstico es un entregable independiente. No obliga a contratar una implementación posterior.',
+		},
+		comoTrabajo: {
+			number: '04',
+			short: 'Proceso',
+			long: 'De la incertidumbre a la ejecución',
+			heading: 'Un proceso que hace visibles las decisiones.',
+			steps: [
+				{
+					number: '01',
+					title: 'Entender',
+					description:
+						'Partimos del contexto del negocio, las restricciones reales y la razón por la que el problema importa ahora. Resultado: un problema bien encuadrado y criterios de éxito compartidos.',
+				},
+				{
+					number: '02',
+					title: 'Diagnosticar',
+					description:
+						'Reviso la arquitectura, los flujos críticos, la infraestructura, el proceso de entrega y las dependencias relevantes para separar síntomas de causas. Resultado: riesgos y oportunidades priorizados con evidencia.',
+				},
+				{
+					number: '03',
+					title: 'Decidir',
+					description:
+						'Comparamos alternativas, costos, trade-offs y secuencias posibles. No toda deuda debe pagarse ni toda idea debe construirse. Resultado: una dirección técnica defendible.',
+				},
+				{
+					number: '04',
+					title: 'Diseñar',
+					description:
+						'Traduzco la decisión en arquitectura, hitos, responsables, criterios de calidad y un roadmap que pueda ejecutarse. Resultado: un plan concreto, no una recomendación abstracta.',
+				},
+				{
+					number: '05',
+					title: 'Ejecutar y transferir',
+					description:
+						'Puedo liderar la implementación, trabajar junto al equipo existente o acompañar a otro proveedor. Las decisiones, diagramas y fundamentos quedan documentados. Resultado: avance verificable y menor dependencia de una persona o proveedor.',
+				},
+			],
+		},
+		continuidad: {
+			number: '05',
+			short: 'Modalidades',
+			long: 'Formas de trabajar',
+			heading: 'El modelo depende de la claridad del problema.',
+			options: [
+				{
+					title: 'Diagnóstico de alcance fijo',
+					description:
+						'Para comprender un sistema, reducir incertidumbre y priorizar antes de intervenir. Modalidad: entregables, plazo y precio acordados desde el inicio.',
+				},
+				{
+					title: 'Blueprint técnico de producto',
+					description:
+						'Para convertir una idea o prototipo en arquitectura, alcance, roadmap y plan de lanzamiento. Modalidad: alcance y precio fijo después de la sesión de encaje.',
+				},
+				{
+					title: 'Liderazgo técnico fraccional',
+					description:
+						'Para empresas que necesitan criterio senior recurrente sin incorporar todavía un rol ejecutivo a tiempo completo. Modalidad: retainer mensual con objetivos, capacidad y responsabilidades acordadas.',
+				},
+				{
+					title: 'Ejecución por hitos',
+					description:
+						'Para modernizaciones, migraciones o productos con resultados verificables por etapa. Modalidad: alcance progresivo, entregables definidos y revisión al cierre de cada hito.',
+				},
+			],
+			note: 'No vendo una bolsa indefinida de horas. Cuando el alcance puede definirse, trabajo por resultados y entregables; cuando la naturaleza del problema exige continuidad, acordamos capacidad, responsabilidades y criterios de avance.',
+		},
+		experiencia: {
+			number: '06',
+			short: 'Experiencia',
+			long: 'Experiencia aplicada',
+			heading: 'Arquitectura con responsabilidad sobre la ejecución.',
+			intro:
+				'Mi experiencia combina liderazgo técnico, desarrollo hands-on y evolución de sistemas en fintech, plataformas de datos, productos con IA, integraciones empresariales y aplicaciones orientadas a clientes.',
+			casos: [
+				{
+					title: 'Modernización sin detener la entrega',
+					text: 'Participé en la evolución de una plataforma de gran escala con API .NET y clientes web y móviles. Desde un equipo de arquitectura, lideré la migración a .NET 8 mientras el producto continuaba entregando, además de trabajar en la reimplementación de procesos críticos y liderar técnicamente un portal orientado a clientes.',
+					demuestra: 'Modernización progresiva, continuidad operativa y coordinación técnica transversal.',
+				},
+				{
+					title: 'De prototipo de IA a plataforma orientada a producción',
+					text: 'Lideré la transformación de un prototipo EdTech construido en Next.js hacia una plataforma multi-tenant basada en .NET, React y Azure. Definí arquitectura, límites de servicios, estrategia de reimplementación, pipelines de infraestructura y herramientas para flujos de ingestión y generación de contenido.',
+					demuestra: 'Prototype-to-production, arquitectura de producto y liderazgo entre aplicación, datos e infraestructura.',
+				},
+				{
+					title: 'Liderazgo técnico en soluciones fintech',
+					text: 'He liderado el diseño y la entrega de soluciones de software financiero, definiendo estándares técnicos y acompañando a equipos de ingeniería para sostener calidad, consistencia y evolución de largo plazo.',
+					demuestra: 'Criterio arquitectónico, estándares compartidos y acompañamiento de equipos.',
+				},
+				{
+					title: 'Integraciones y sistemas intensivos en datos',
+					text: 'También he trabajado en herramientas de presupuestación con grandes volúmenes de datos, integraciones para gestión y auditoría de permisos, soluciones CMS para instituciones financieras y pipelines de datos para validación biométrica.',
+					demuestra: 'Capacidad para comprender procesos complejos y convertirlos en sistemas operables.',
+				},
+			],
+			linkLabel: 'Ver experiencia ampliada →',
+			linkHref: '/experiencia',
+		},
+		diferenciales: {
+			number: '07',
+			short: 'Diferencial',
+			long: 'Por qué Brian Stefanovich Consulting',
+			heading: 'La persona que ayuda a decidir también puede ayudar a ejecutar.',
+			items: [
+				{
+					title: 'Atención senior directa',
+					description:
+						'Trabajas directamente conmigo durante el diagnóstico, el diseño y el acompañamiento. No hay una venta senior seguida de un traspaso automático a perfiles junior.',
+				},
+				{
+					title: 'Independencia de la solución',
+					description:
+						'Una buena recomendación puede ser modernizar, reemplazar, integrar, simplificar, posponer o no construir. La tecnología se elige después de comprender el problema.',
+				},
+				{
+					title: 'Arquitectura conectada con la operación',
+					description:
+						'Las decisiones consideran despliegue, observabilidad, seguridad, capacidad del equipo, costos, continuidad y mantenimiento; no solo la forma ideal del código.',
+				},
+				{
+					title: 'Capacidad hands-on',
+					description:
+						'Puedo pasar del análisis a diagramas, decisiones de arquitectura, prototipos, revisión de código y acompañamiento de implementación. Esto mantiene continuidad entre la recomendación y la realidad técnica.',
+				},
+				{
+					title: 'Transferencia de criterio',
+					description:
+						'El objetivo no es volverme indispensable. Dejo decisiones, fundamentos y próximos pasos comprensibles para que el equipo pueda continuar con mayor autonomía.',
+				},
+			],
+		},
+		encaje: {
+			number: '08',
+			short: 'Encaje',
+			long: 'Cuándo tiene sentido hablar',
+			heading: 'Trabajo mejor cuando hay una decisión importante detrás del software.',
+			fit: {
+				title: 'Probablemente encajemos si...',
+				items: [
+					'El software es relevante para la operación, los ingresos o una nueva línea de negocio.',
+					'Existe incertidumbre sobre modernizar, migrar, reescribir o continuar.',
+					'Necesitas conectar una decisión de negocio con arquitectura y ejecución.',
+					'Tu equipo necesita dirección senior temporal o una evaluación independiente.',
+					'Quieres empezar por comprender y priorizar, no por contratar capacidad sin contexto.',
+				],
+			},
+			noFit: {
+				title: 'Probablemente no sea el servicio adecuado si...',
+				items: [
+					'Solo buscas cubrir horas de desarrollo o aumentar headcount temporal.',
+					'Necesitas un sitio web simple, diseño visual aislado o una tarea técnica puntual sin contexto.',
+					'La solución y el alcance ya están completamente definidos y solo buscas el precio por hora más bajo.',
+					'Esperas una promesa de plazo o costo antes de permitir una evaluación mínima del problema.',
+				],
+			},
+			closing: 'Si tu necesidad requiere otro tipo de especialista, te lo diré con claridad durante la sesión de encaje.',
+		},
+		sobreBrian: {
+			number: '09',
+			short: 'Sobre mí',
+			long: 'Quién está detrás',
+			heading: 'Profundidad técnica para decisiones que también son de negocio.',
+			imageAlt: 'Retrato de Brian Stefanovich',
+			paragraphs: [
+				'Soy Brian Stefanovich, technical leader y consultor de software radicado en Santiago de Chile. He trabajado diseñando, construyendo y modernizando plataformas fintech, productos con IA, integraciones empresariales, sistemas intensivos en datos y aplicaciones orientadas a clientes.',
+				'Mi forma de trabajar combina arquitectura, pensamiento sistémico y ejecución hands-on. Me interesa comprender qué necesita realmente el negocio, hacer explícitos los trade-offs y diseñar soluciones que el equipo pueda operar y evolucionar, no solo presentar.',
+				'Trabajo directamente con responsables de negocio, líderes técnicos, equipos internos y proveedores. Cuando el desafío supera mi especialidad o capacidad, lo hago visible desde el inicio.',
+			],
+			links: [{ label: 'Conocer mi experiencia y forma de trabajo →', href: '/sobre-mi', icon: '/images/icon-external.svg' }],
+		},
+		faq: {
+			number: '10',
+			label: 'Preguntas frecuentes',
+			heading: 'Respuestas claras antes de empezar.',
+			items: [
+				{
+					question: '¿La sesión de encaje es una consultoría gratuita?',
+					answer:
+						'No. Es una conversación de 25 minutos para entender el contexto, el desafío y la urgencia, y evaluar si mi experiencia puede ayudarte. No incluye revisión de código, auditoría ni diseño de una solución.',
+				},
+				{
+					question: '¿Solo haces consultoría o también participas en la implementación?',
+					answer:
+						'Puedo trabajar en ambas etapas. Según el caso, el resultado puede ser un diagnóstico independiente, un blueprint técnico, liderazgo de la ejecución o una implementación por hitos. También puedo acompañar a tu equipo o proveedor sin reemplazarlo.',
+				},
+				{
+					question: '¿Trabajas con sistemas que ya están en producción?',
+					answer:
+						'Sí. Una parte central de mi experiencia es evolucionar software existente sin perder de vista la continuidad operativa, las restricciones del equipo y el riesgo de cada cambio.',
+				},
+				{
+					question: '¿Puedes ayudar si todavía solo tenemos una idea o un prototipo?',
+					answer:
+						'Sí, siempre que exista un problema de negocio suficientemente claro para evaluar. El primer objetivo será definir qué necesita validarse, qué conviene construir y qué debería esperar.',
+				},
+				{
+					question: '¿Trabajas por hora?',
+					answer:
+						'No como modalidad principal. Prefiero alcance y precio fijo cuando los entregables pueden definirse, ejecución por hitos cuando el trabajo evoluciona por etapas y retainer cuando se requiere liderazgo continuo.',
+				},
+				{
+					question: '¿Con qué tecnologías trabajas?',
+					answer:
+						'Mi experiencia principal incluye .NET, TypeScript, Node.js, React, React Native, Python, SQL y entornos cloud como Azure y AWS. La elección tecnológica se presenta como una consecuencia del contexto, no como el punto de partida de la conversación.',
+				},
+				{
+					question: '¿Puedes trabajar con nuestro equipo o proveedor actual?',
+					answer:
+						'Sí. Puedo aportar una evaluación independiente, definir arquitectura y estándares, revisar decisiones o acompañar la implementación. El objetivo es aumentar la claridad y la capacidad del equipo, no crear una dependencia innecesaria.',
+				},
+				{
+					question: '¿Cómo se formaliza la colaboración?',
+					answer:
+						'La modalidad es contractor, con un alcance, entregables, responsabilidades y condiciones de pago acordados por escrito. Emito las facturas correspondientes según los plazos definidos en la propuesta.',
+				},
+				{
+					question: '¿Qué ocurre si no eres la persona adecuada?',
+					answer:
+						'Te lo diré durante la sesión de encaje. Cuando sea posible, también indicaré qué perfil o especialidad parece más apropiado para el problema.',
+				},
+			],
+		},
+		ctaFinal: {
+			eyebrow: 'El siguiente paso',
+			heading: 'Antes de comprometer una inversión mayor, aclaremos la decisión.',
+			text: 'Cuéntame qué está ocurriendo con tu sistema o qué producto quieres construir. En 25 minutos revisaremos el contexto, los objetivos y los principales riesgos para determinar si tiene sentido trabajar juntos y cuál debería ser el siguiente paso.',
+			ctaLabel: 'Hablemos de tu software',
+			ctaHref: '/contacto',
+			microcopy: 'Sin auditoría improvisada ni discurso de venta. Si no existe encaje, lo sabrás con claridad.',
+		},
+	},
+
+	// ---------------------------------------------------------------------
+	// Sistemas existentes
+	// ---------------------------------------------------------------------
+	sistemasExistentes: {
+		meta: {
+			title: 'Modernización y arquitectura de software | Brian Stefanovich',
+			description:
+				'Diagnóstico, estrategia y liderazgo técnico para modernizar sistemas, reducir riesgo y evolucionar software sin detener la operación.',
+		},
+		hero: {
+			eyebrow: 'Arquitectura y modernización',
+			headingLines: ['Evoluciona tu software sin', 'detener lo que ya funciona.'],
+			body: 'Ayudo a empresas a comprender sistemas complejos, priorizar riesgos y diseñar una modernización gradual que mejore la capacidad de entrega, la operación y la evolución del producto sin convertir una reescritura en una apuesta a ciegas.',
+			cta: 'Evaluar mi sistema',
+			ctaHref: '/contacto',
+			note: 'Sesión de encaje de 25 minutos. No requiere preparar una presentación técnica.',
+			imageAlt: 'Brian Stefanovich con un notebook',
+		},
+		situaciones: {
+			heading: 'El problema rara vez es solamente "deuda técnica".',
+			items: [
+				'Cada entrega tarda más y aumenta el riesgo de regresión.',
+				'La plataforma depende de componentes o versiones difíciles de sostener.',
+				'Existen cuellos de botella de rendimiento, despliegue o escalabilidad.',
+				'Integraciones críticas fallan o requieren intervención manual frecuente.',
+				'El conocimiento está concentrado en pocas personas.',
+				'No está claro si conviene refactorizar, migrar, reemplazar o reescribir.',
+				'El negocio necesita crecer, pero la arquitectura actual condiciona el roadmap.',
+			],
+		},
+		queHago: {
+			heading: 'Qué hago',
+			steps: [
+				{
+					number: '01',
+					title: 'Diagnóstico de arquitectura y riesgo',
+					description: 'Hago visible el estado actual, los puntos críticos, las dependencias y el costo de continuar sin cambios.',
+				},
+				{
+					number: '02',
+					title: 'Estrategia de modernización',
+					description:
+						'Diseño una transición progresiva, con criterios para decidir qué preservar, qué aislar, qué reemplazar y en qué secuencia.',
+				},
+				{
+					number: '03',
+					title: 'Arquitectura de evolución',
+					description:
+						'Defino límites, patrones de integración, datos, infraestructura, observabilidad y estándares necesarios para sostener el cambio.',
+				},
+				{
+					number: '04',
+					title: 'Liderazgo de ejecución',
+					description: 'Acompaño al equipo en las decisiones, revisiones y hitos que convierten el roadmap en mejoras operativas reales.',
+				},
+			],
+		},
+		ofertaRecomendada: {
+			heading: 'Empieza con un diagnóstico independiente.',
+			text: 'El Diagnóstico Ejecutivo de Riesgo y Modernización concentra el análisis en 7 a 10 días hábiles y termina con un mapa de riesgos, alternativas y roadmap priorizado.',
+			facts: [
+				{ label: 'Inversión', value: '45 UF + IVA' },
+				{ label: 'Modalidad', value: 'alcance fijo' },
+				{ label: 'Independencia', value: 'puedes ejecutar el resultado con tu equipo, otro proveedor o conmigo.' },
+			],
+			ctaLabel: 'Ver el diagnóstico ejecutivo',
+			ctaHref: '/diagnostico',
+		},
+		resultado: {
+			heading: 'Resultado esperado',
+			items: [
+				'Lenguaje compartido entre negocio y tecnología.',
+				'Riesgos diferenciados de preferencias técnicas.',
+				'Decisiones documentadas con trade-offs explícitos.',
+				'Roadmap ordenado por impacto, dependencia y urgencia.',
+				'Próximo paso suficientemente claro para presupuestar y ejecutar.',
+			],
+		},
+		ctaFinal: {
+			heading: 'Modernizar no comienza reescribiendo. Comienza decidiendo bien.',
+			ctaLabel: 'Hablemos de tu sistema',
+			ctaHref: '/contacto',
+		},
+	},
+
+	// ---------------------------------------------------------------------
+	// Nuevos productos
+	// ---------------------------------------------------------------------
+	nuevosProductos: {
+		meta: {
+			title: 'Arquitectura y desarrollo de productos de software | Brian Stefanovich',
+			description:
+				'Convierte una idea o prototipo en un producto viable con discovery técnico, arquitectura, roadmap y ejecución por hitos.',
+		},
+		hero: {
+			eyebrow: 'Discovery, arquitectura y producto',
+			headingLines: ['Convierte una idea o prototipo en un', 'producto que pueda operar y evolucionar.'],
+			body: 'Ayudo a fundadores y empresas a traducir una oportunidad de negocio en alcance, arquitectura, hitos y una primera versión viable, evitando que los supuestos iniciales se conviertan demasiado pronto en complejidad técnica y costos difíciles de revertir.',
+			cta: 'Revisar mi producto',
+			ctaHref: '/contacto',
+			note: 'Sesión de encaje de 25 minutos. No requiere preparar una presentación técnica.',
+			imageAlt: 'Brian Stefanovich con un notebook',
+		},
+		cuandoTieneSentido: {
+			heading: 'Cuándo tiene sentido',
+			items: [
+				'Existe una idea con contexto de negocio, pero falta convertirla en un plan técnico.',
+				'Hay un prototipo que demuestra el concepto, pero todavía no está preparado para producción.',
+				'Debes decidir qué construir internamente, tercerizar o integrar.',
+				'Necesitas estimar escenarios antes de comprometer presupuesto y equipo.',
+				'El producto requiere coordinar aplicación, datos, infraestructura o IA.',
+				'Un proveedor propone construir, pero necesitas criterio técnico independiente.',
+			],
+		},
+		blueprint: {
+			heading: 'Un plan de construcción antes de una inversión mayor.',
+			body: [
+				'Te llevas: una definición técnica y operativa que conecta el problema de negocio con el primer alcance, las decisiones arquitectónicas y una secuencia realista de entrega.',
+			],
+			deliverablesLabel: 'Puede incluir',
+			deliverables: [
+				'Alcance inicial y criterios de exclusión.',
+				'Flujos principales y requisitos no funcionales.',
+				'Arquitectura, límites e integraciones.',
+				'Estrategia de datos, infraestructura y seguridad.',
+				'Decisiones de construir, comprar o integrar.',
+				'Roadmap de hitos y riesgos.',
+				'Escenarios de equipo, costo y plazo.',
+				'Plan de lanzamiento, operación y traspaso.',
+			],
+			modelLabel: 'Modalidad y horizonte',
+			model:
+				'Alcance y precio fijo definidos después de la sesión de encaje. Horizonte típico: 1 a 3 semanas, según complejidad y acceso a información.',
+			cta: 'Hablemos de tu producto',
+			ctaHref: '/contacto',
+		},
+		proceso: {
+			heading: 'De la idea a producción',
+			steps: [
+				{
+					number: '01',
+					title: 'Encuadre y validación de supuestos',
+					description: 'Definimos el problema, el usuario, la evidencia disponible y qué todavía no conviene dar por cierto.',
+				},
+				{
+					number: '02',
+					title: 'Alcance y arquitectura',
+					description: 'Traducimos la oportunidad en flujos, componentes, integraciones, restricciones y decisiones de plataforma.',
+				},
+				{
+					number: '03',
+					title: 'Primera versión',
+					description: 'Construimos el menor alcance capaz de operar, aprender y sostener la siguiente decisión.',
+				},
+				{
+					number: '04',
+					title: 'Evolución por evidencia',
+					description:
+						'Los siguientes hitos responden a uso, operación y aprendizaje real, no solo a una lista inicial de funcionalidades.',
+				},
+			],
+		},
+		queNoPrometo: {
+			heading: 'Qué no prometo',
+			items: [
+				'Un presupuesto definitivo sin comprender el alcance y los riesgos.',
+				'Escalabilidad ilimitada desde el primer día.',
+				'Construir todas las funcionalidades imaginadas para "aprovechar" el proyecto.',
+				'Resolver falta de validación comercial únicamente con tecnología.',
+			],
+		},
+		ctaFinal: {
+			heading: 'Construir mejor comienza por decidir qué merece ser construido.',
+			ctaLabel: 'Hablemos de tu producto',
+			ctaHref: '/contacto',
+		},
+	},
+
+	// ---------------------------------------------------------------------
+	// Diagnóstico ejecutivo
+	// ---------------------------------------------------------------------
+	diagnosticoPage: {
+		meta: {
+			title: 'Diagnóstico de riesgo y modernización de software | Brian Stefanovich',
+			description:
+				'Evaluación de alcance fijo para comprender riesgos, comparar alternativas y definir un roadmap de modernización antes de invertir.',
+		},
+		hero: {
+			eyebrow: 'Alcance fijo · 7 a 10 días hábiles',
+			headingLines: ['Comprende el riesgo antes', 'de elegir la solución.'],
+			body: 'El Diagnóstico Ejecutivo de Riesgo y Modernización transforma señales dispersas —entregas lentas, incidentes, dependencia de personas, costos o límites de arquitectura— en decisiones priorizadas y una ruta de acción defendible.',
+			note: 'Inversión: 45 UF + IVA',
+			cta: 'Evaluar si aplica a mi sistema',
+			ctaHref: '/contacto',
+			imageAlt: 'Brian Stefanovich con un notebook',
+		},
+		paraQuienEs: {
+			heading: 'Para quién es',
+			items: [
+				'Responsables de negocio que necesitan decidir una inversión técnica.',
+				'CTOs o líderes de ingeniería que requieren una evaluación externa.',
+				'Empresas que consideran una migración, modernización o reescritura.',
+				'Equipos que necesitan alinear prioridades antes de contratar o cambiar proveedor.',
+			],
+		},
+		preguntas: {
+			heading: 'Preguntas que busca responder',
+			items: [
+				'¿Cuál es el riesgo real de continuar como estamos?',
+				'¿Qué problemas son estructurales y cuáles son síntomas?',
+				'¿Qué conviene preservar, aislar, reemplazar o postergar?',
+				'¿Qué secuencia reduce más riesgo con la menor interrupción?',
+				'¿Qué capacidades, roles e inversión exige la ruta recomendada?',
+			],
+		},
+		proceso: {
+			heading: 'Proceso',
+			steps: [
+				{
+					number: 'Día 1',
+					title: 'Encuadre',
+					description: 'Objetivos, restricciones, síntomas, decisiones pendientes y acceso a información.',
+				},
+				{
+					number: 'Días 2 a 6',
+					title: 'Revisión focalizada',
+					description:
+						'Arquitectura, código, infraestructura, datos, entrega y conversaciones con personas clave, según el alcance acordado.',
+				},
+				{
+					number: 'Días 7 a 8',
+					title: 'Síntesis y alternativas',
+					description: 'Mapa de riesgos, causas, dependencias, escenarios y trade-offs.',
+				},
+				{
+					number: 'Días 9 a 10',
+					title: 'Roadmap y presentación',
+					description: 'Recomendación, secuencia de acción, responsables, próximos hitos y sesión ejecutiva.',
+				},
+			],
+		},
+		entregables: {
+			heading: 'Entregables',
+			items: [
+				'Resumen ejecutivo.',
+				'Mapa de riesgos priorizado.',
+				'Hallazgos y evidencia relevante.',
+				'Opciones consideradas y trade-offs.',
+				'Arquitectura objetivo o principios de evolución, cuando corresponda.',
+				'Roadmap de 30, 60 y 90 días.',
+				'Recomendaciones de ejecución y gobernanza.',
+				'Sesión de presentación y preguntas.',
+			],
+		},
+		limites: {
+			heading: 'Límites',
+			text: 'El diagnóstico no es una auditoría exhaustiva de seguridad, una certificación, una estimación contractual de toda la modernización ni una revisión línea por línea del código. El alcance se concentra en las decisiones de mayor impacto.',
+		},
+		despues: {
+			heading: 'Después del diagnóstico',
+			text: 'Puedes ejecutar el roadmap con tu equipo, con un proveedor actual o conmigo. Si continuamos, la siguiente etapa se cotiza por separado y se organiza mediante hitos o liderazgo técnico fraccional.',
+		},
+		ctaFinal: {
+			heading: 'Obtén una dirección clara antes de comprometer el cambio.',
+			ctaLabel: 'Agendar sesión de encaje',
+			ctaHref: '/contacto',
+		},
+	},
+
+	// ---------------------------------------------------------------------
+	// Sobre mí
+	// ---------------------------------------------------------------------
+	sobreMi: {
+		meta: {
+			title: 'Brian Stefanovich | Technical leader y consultor de software',
+			description:
+				'Experiencia en arquitectura, modernización, fintech, productos con IA, sistemas de datos y liderazgo técnico hands-on.',
+		},
+		hero: {
+			eyebrow: 'Brian Stefanovich',
+			headingLines: ['Arquitectura, liderazgo técnico y', 'ejecución en una misma conversación.'],
+			body: 'Soy technical leader y consultor de software. Trabajo con empresas que necesitan comprender sistemas complejos, reducir riesgo técnico o convertir una oportunidad de negocio en un producto viable.',
+			imageAlt: 'Brian Stefanovich con un notebook',
+		},
+		enfoque: {
+			heading: 'Mi enfoque',
+			paragraphs: [
+				'No entiendo la arquitectura como una colección de diagramas ni la modernización como una reescritura automática. Son procesos de decisión: qué debe cambiar, por qué, en qué orden y con qué capacidad real del negocio y del equipo.',
+				'Combino pensamiento sistémico, profundidad técnica y experiencia hands-on para conectar esas decisiones con código, datos, infraestructura, procesos de entrega y operación. Mi objetivo es que el resultado sea comprensible, ejecutable y transferible.',
+			],
+		},
+		experienciaList: {
+			heading: 'Experiencia',
+			items: [
+				'Plataformas fintech y software financiero.',
+				'Modernización de sistemas .NET y aplicaciones críticas.',
+				'Productos con IA y plataformas multi-tenant.',
+				'Aplicaciones web y móviles orientadas a clientes.',
+				'Integraciones empresariales y sistemas intensivos en datos.',
+				'Arquitectura cloud, infraestructura y pipelines de entrega.',
+			],
+			trayectoria:
+				'Mi trayectoria incluye liderazgo técnico en Vangwe y Kepler Coach, trabajo de arquitectura y modernización en CrunchLoop, e implementación de productos, integraciones y soluciones de datos en distintos contextos empresariales.',
+		},
+		comoEsTrabajar: {
+			heading: 'Cómo es trabajar conmigo',
+			items: [
+				'Pregunto antes de prescribir.',
+				'Explico alternativas y trade-offs en lenguaje comprensible.',
+				'Puedo entrar en detalle técnico sin perder el objetivo de negocio.',
+				'Documento decisiones y fundamentos, no solo conclusiones.',
+				'Señalo límites, riesgos e incertidumbres desde el inicio.',
+				'Busco que el equipo quede con mayor capacidad, no con mayor dependencia.',
+			],
+		},
+		cta: {
+			heading: 'Si hay una decisión importante detrás de tu software, conversemos.',
+			ctaLabel: 'Hablemos de tu software',
+			ctaHref: '/contacto',
+		},
+	},
+
+	// ---------------------------------------------------------------------
+	// Contacto
+	// ---------------------------------------------------------------------
+	contactoPage: {
+		meta: {
+			title: 'Hablemos de tu software | Brian Stefanovich Consulting',
+			description: 'Reserva una sesión de encaje de 25 minutos para revisar tu desafío de software y definir si tiene sentido trabajar juntos.',
+		},
+		hero: {
+			eyebrow: 'Sesión de encaje',
+			headingLines: ['Hablemos de tu software.'],
+			body: 'Conversemos durante 25 minutos para conocer tu situación, entender el desafío y evaluar si mi experiencia puede ayudarte. Revisaremos el contexto, los objetivos y los principales riesgos para definir con claridad el siguiente paso.',
+			note: 'No es una auditoría técnica ni una llamada de venta. Si el problema requiere otro tipo de especialista, te lo diré con claridad.',
+			cta: 'Reservar sesión de encaje',
+			ctaHref: '#formulario',
+			imageAlt: 'Brian Stefanovich con un notebook',
+		},
+		queConvieneTraer: {
+			heading: 'Qué conviene traer',
+			intro: 'No necesitas preparar una presentación. Es suficiente con poder explicar:',
+			items: [
+				'Qué está ocurriendo y por qué importa ahora.',
+				'Qué impacto tiene en el negocio, el equipo o los clientes.',
+				'Qué se ha intentado o decidido hasta el momento.',
+				'Qué decisión necesitas tomar.',
+				'Quiénes participan de esa decisión.',
+			],
+		},
+		form: {
+			heading: 'Formulario alternativo',
+			body: 'Si prefieres no usar Calendly, cuéntame tu contexto por escrito y te responderé por correo.',
+			info: 'Revisaré tu mensaje y te diré con claridad si puedo ayudarte y cuál sería el siguiente paso.',
+			...contactFormContent,
+		},
+	},
+
+	// ---------------------------------------------------------------------
+	// Fase 2 — Experiencia (casos ampliados)
+	// ---------------------------------------------------------------------
+	experienciaPage: {
+		meta: {
+			title: 'Experiencia | Brian Stefanovich Consulting',
+			description: 'Casos ampliados de arquitectura, modernización y construcción de productos de software.',
+		},
+		hero: {
+			eyebrow: 'Experiencia aplicada',
+			headingLines: ['Arquitectura con responsabilidad', 'sobre la ejecución.'],
+			body: 'Estos casos amplían, con más contexto técnico, los proyectos donde he liderado decisiones de arquitectura, modernización y construcción de producto.',
+			imageAlt: 'Brian Stefanovich con un notebook',
+		},
+		intro:
+			'Mi experiencia combina liderazgo técnico, desarrollo hands-on y evolución de sistemas en fintech, plataformas de datos, productos con IA, integraciones empresariales y aplicaciones orientadas a clientes. A continuación, más contexto sobre cada caso.',
+		casos: [
+			{
+				title: 'Modernización sin detener la entrega',
+				text: 'Participé en la evolución de una plataforma de gran escala con API .NET y clientes web y móviles. Desde un equipo de arquitectura, lideré la migración a .NET 8 mientras el producto continuaba entregando funcionalidad al negocio. En paralelo, trabajé en la reimplementación de procesos críticos que exigían compatibilidad con el sistema en producción y lideré técnicamente un portal orientado a clientes, coordinando prioridades entre equipos de plataforma y de producto.',
+				demuestra: 'Modernización progresiva, continuidad operativa y coordinación técnica transversal.',
+			},
+			{
+				title: 'De prototipo de IA a plataforma orientada a producción',
+				text: 'Lideré la transformación de un prototipo EdTech construido en Next.js hacia una plataforma multi-tenant basada en .NET, React y Azure. Definí la arquitectura objetivo, los límites de cada servicio, la estrategia de reimplementación progresiva, los pipelines de infraestructura como código y las herramientas necesarias para los flujos de ingestión y generación de contenido con modelos de IA.',
+				demuestra: 'Prototype-to-production, arquitectura de producto y liderazgo entre aplicación, datos e infraestructura.',
+			},
+			{
+				title: 'Liderazgo técnico en soluciones fintech',
+				text: 'He liderado el diseño y la entrega de soluciones de software financiero, definiendo estándares técnicos de arquitectura, calidad y seguridad, y acompañando a equipos de ingeniería para sostener consistencia y evolución de largo plazo en productos con alta exigencia regulatoria y operativa.',
+				demuestra: 'Criterio arquitectónico, estándares compartidos y acompañamiento de equipos.',
+			},
+			{
+				title: 'Integraciones y sistemas intensivos en datos',
+				text: 'También he trabajado en herramientas de presupuestación con grandes volúmenes de datos, integraciones para gestión y auditoría de permisos, soluciones CMS para instituciones financieras y pipelines de datos para validación biométrica, conectando procesos de negocio complejos con sistemas operables y mantenibles.',
+				demuestra: 'Capacidad para comprender procesos complejos y convertirlos en sistemas operables.',
+			},
+		],
+		nota:
+			'Nota editorial: hasta contar con autorización y métricas verificables de cada cliente, esta sección se presenta como experiencia aplicada y no como casos de éxito cuantificados.',
+		cta: {
+			heading: 'Si tu desafío se parece a alguno de estos casos, conversemos.',
+			ctaLabel: 'Hablemos de tu software',
+			ctaHref: '/contacto',
+		},
+	},
+
+	// ---------------------------------------------------------------------
+	// Fase 3 — Recursos (stub)
+	// ---------------------------------------------------------------------
+	recursosPage: {
+		meta: {
+			title: 'Recursos | Brian Stefanovich Consulting',
+			description: 'Artículos, guías y herramientas de decisión sobre arquitectura, modernización y construcción de productos de software.',
+		},
+		hero: {
+			eyebrow: 'Recursos',
+			headingLines: ['Artículos, guías y', 'herramientas de decisión.'],
+			body: 'Esta sección reunirá contenido práctico para evaluar modernización, arquitectura y decisiones de producto. Está en construcción: iré publicando aquí guías y artículos a medida que estén listos.',
+			imageAlt: 'Brian Stefanovich con un notebook',
+		},
+		cta: {
+			heading: 'Mientras tanto, conversemos directamente sobre tu situación.',
+			ctaLabel: 'Hablemos de tu software',
+			ctaHref: '/contacto',
+		},
+	},
+
+	// ---------------------------------------------------------------------
+	// Fase 3 — Liderazgo técnico fraccional (stub)
+	// ---------------------------------------------------------------------
+	liderazgoFraccionalPage: {
+		meta: {
+			title: 'Liderazgo técnico fraccional | Brian Stefanovich Consulting',
+			description: 'Criterio técnico senior recurrente para empresas que aún no necesitan un rol ejecutivo a tiempo completo.',
+		},
+		hero: {
+			eyebrow: 'Liderazgo técnico fraccional',
+			headingLines: ['Criterio técnico senior, sin', 'incorporar un rol a tiempo completo.'],
+			body: 'Para empresas que necesitan dirección arquitectónica recurrente, revisión de decisiones técnicas y acompañamiento a equipos internos o proveedores, sin todavía justificar un CTO o líder de ingeniería a tiempo completo.',
+			imageAlt: 'Brian Stefanovich con un notebook',
+		},
+		intro: [
+			'El liderazgo técnico fraccional funciona como un retainer mensual: objetivos, capacidad y responsabilidades se acuerdan por adelantado, y el trabajo se ajusta a la evolución real del negocio y del equipo.',
+			'Puede incluir revisión de arquitectura y decisiones técnicas, acompañamiento y mentoría al equipo, supervisión de proveedores, documentación de estándares y comunicación directa con la gerencia sobre riesgo, prioridades e inversión.',
+		],
+		cta: {
+			heading: 'Si necesitas criterio senior recurrente, conversemos primero sobre el contexto.',
+			ctaLabel: 'Hablemos de tu software',
+			ctaHref: '/contacto',
+		},
 	},
 } as const;

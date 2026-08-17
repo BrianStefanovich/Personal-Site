@@ -1,14 +1,16 @@
 import { SectionEyebrow } from '@/components/sections/SectionEyebrow';
-import { getTranslations } from '@/i18n';
+import type { Translations } from '@/i18n';
 
 const columnAccent = {
 	existentes: 'bg-[#a2502d]',
 	nuevos: 'bg-accent-soft',
 } as const;
 
-export default function Problemas() {
-	const { problemas } = getTranslations();
+interface ProblemasProps {
+	content: Translations['home']['problemas'];
+}
 
+export default function Problemas({ content: problemas }: ProblemasProps) {
 	return (
 		<section id="problemas" className="container flex flex-col gap-8 py-12 md:gap-12 md:py-[70px]">
 			<div className="flex flex-col gap-2">

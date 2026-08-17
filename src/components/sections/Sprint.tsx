@@ -1,15 +1,33 @@
-import { SectionEyebrow } from '@/components/sections/SectionEyebrow';
 import { buttonVariants } from '@/components/ui/button';
-import { getTranslations } from '@/i18n';
 import { cn } from '@/lib/utils';
 
-export default function Sprint() {
-	const { sprint } = getTranslations();
+interface SprintContent {
+	number?: string;
+	short?: string;
+	long?: string;
+	heading: string;
+	body: readonly string[];
+	deliverablesLabel: string;
+	deliverables: readonly string[];
+	modelLabel: string;
+	model: string;
+	cta: string;
+	ctaHref: string;
+}
 
+interface SprintProps {
+	content: SprintContent;
+}
+
+export default function Sprint({ content: sprint }: SprintProps) {
 	return (
 		<section className="container flex flex-col gap-8 py-12 md:gap-10 md:py-[64px]">
 			<div className="flex flex-col gap-2">
-				<SectionEyebrow number={sprint.number} short={sprint.short} long={sprint.long} />
+				{sprint.number ? (
+					<p className="eyebrow md:tracking-[0.1em] md:text-accent">
+						{sprint.number} / {sprint.long}
+					</p>
+				) : null}
 				<h2 className="pt-2 font-display text-[36px] leading-[43px] font-semibold text-foreground text-balance md:max-w-[768px] md:pt-4 md:text-[44px] md:leading-[54px]">
 					{sprint.heading}
 				</h2>
@@ -45,7 +63,7 @@ export default function Sprint() {
 						<p className="pt-1 text-sm leading-5 text-body">{sprint.model}</p>
 					</div>
 					<a
-						href="#contacto"
+						href={sprint.ctaHref}
 						className={cn(
 							buttonVariants({ full: true }),
 							'shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.1)] md:shadow-none',

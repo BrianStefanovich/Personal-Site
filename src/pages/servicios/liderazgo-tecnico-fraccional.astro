@@ -1,0 +1,24 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import CtaFinal from '@/components/sections/CtaFinal';
+import Hero from '@/components/sections/Hero';
+import { getTranslations } from '@/i18n';
+
+const { liderazgoFraccionalPage: page } = getTranslations();
+---
+
+<BaseLayout
+	title={page.meta.title}
+	description={page.meta.description}
+	canonicalPath="/servicios/liderazgo-tecnico-fraccional"
+>
+	<Hero client:load content={page.hero} />
+
+	<section class="container flex flex-col gap-4 py-12 md:py-[64px]">
+		{page.intro.map((paragraph) => (
+			<p class="text-[17px] leading-7 text-body md:max-w-[720px]">{paragraph}</p>
+		))}
+	</section>
+
+	<CtaFinal content={page.cta} />
+</BaseLayout>
