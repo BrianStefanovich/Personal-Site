@@ -60,7 +60,7 @@ export default function Footer() {
 						<a
 							key={link.href}
 							href={link.href}
-							className="font-mono text-xs leading-4 tracking-[0.06em] text-[#434845] underline md:font-body md:text-sm md:leading-[21px] md:tracking-normal md:text-[#606662]"
+							className="font-mono text-xs leading-4 tracking-[0.06em] text-nav underline md:font-body md:text-sm md:leading-[21px] md:tracking-normal md:text-nav"
 						>
 							{link.label}
 						</a>

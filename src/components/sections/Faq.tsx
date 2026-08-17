@@ -16,7 +16,7 @@ export default function Faq({ content: faq }: FaqProps) {
 	const hiddenCount = faq.items.length - VISIBLE_COUNT;
 
 	return (
-		<section className="bg-background md:bg-[#f7f3eb]">
+		<section className="bg-background md:bg-[#f1ede5]">
 			<div className="container flex flex-col gap-8 py-12 md:items-center md:gap-12 md:py-32">
 				<div className="flex flex-col gap-2 md:w-full md:items-center md:gap-4">
 					<p className="font-mono text-xs leading-4 tracking-[0.06em] text-accent-soft uppercase md:text-center md:tracking-[0.1em] md:text-accent">

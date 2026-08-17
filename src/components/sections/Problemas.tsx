@@ -1,12 +1,6 @@
 import { SectionEyebrow } from '@/components/sections/SectionEyebrow';
 import type { Translations } from '@/i18n';
 
-const columnAccent = {
-	existentes: 'bg-[#a2502d]',
-	nuevos: 'bg-accent-soft',
-	fraccional: 'bg-accent',
-} as const;
-
 const columnMobileIcon = {
 	existentes: { src: '/images/icon-sintoma-alerta.svg', width: 22, height: 23 },
 	nuevos: { src: '/images/icon-sintoma-info.svg', width: 20, height: 24 },
@@ -34,17 +28,26 @@ export default function Problemas({ content: problemas }: ProblemasProps) {
 				</div>
 			</div>
 
+			<nav aria-label={problemas.routingLabel} className="flex flex-col gap-3 rounded-[2px] border border-line bg-surface p-5 md:flex-row md:flex-wrap md:items-center md:gap-4 md:p-6">
+				<p className="font-display text-sm leading-6 font-semibold text-foreground">{problemas.routingLabel}</p>
+				<ul className="flex flex-col gap-2 md:flex-row md:flex-wrap md:gap-3">
+					{problemas.columns.map((column) => (
+						<li key={column.id}>
+							<a
+								href={`#problema-${column.id}`}
+								className="inline-flex rounded-[2px] border border-line bg-[#f1ede5] px-4 py-2 font-display text-sm leading-5 font-semibold text-foreground hover:border-accent md:bg-surface"
+							>
+								{column.tagline}
+							</a>
+						</li>
+					))}
+				</ul>
+			</nav>
+
 			<div className="flex flex-col gap-8 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:gap-y-0">
 				{problemas.columns.map((column) => (
-					<div key={column.id} className="flex flex-col gap-6">
-						<div
-							className="relative flex flex-col gap-6 rounded-[2px] border border-line bg-[#f1ede5] p-[25px] md:gap-0 md:rounded-none md:border-0 md:bg-transparent md:p-0"
-						>
-							<span
-								aria-hidden
-								className={`absolute inset-y-0 left-0 w-1 rounded-l-[2px] md:hidden ${columnAccent[column.id]}`}
-							/>
-
+					<div key={column.id} id={`problema-${column.id}`} className="flex flex-col gap-6 scroll-mt-24">
+						<div className="flex flex-col gap-6 rounded-[2px] border border-line bg-[#f1ede5] p-[25px] md:gap-0 md:rounded-none md:border-0 md:bg-transparent md:p-0">
 							<h3 className="font-display text-2xl leading-[31px] font-semibold text-foreground md:hidden">
 								{column.title}
 							</h3>
@@ -127,8 +130,8 @@ export default function Problemas({ content: problemas }: ProblemasProps) {
 				))}
 			</div>
 
-			<p className="rounded-[2px] bg-accent-soft p-6 font-mono text-[17px] leading-7 font-bold text-[#d8ded9] md:mt-8 md:border md:border-line md:bg-[#f1ede5] md:p-8 md:font-body md:text-base md:leading-6 md:font-semibold md:text-foreground">
-			{problemas.callout}
+			<p className="rounded-[2px] bg-accent-soft p-6 font-mono text-[17px] leading-7 font-bold break-words text-accent-fg md:mt-8 md:border md:border-line md:bg-[#f1ede5] md:p-8 md:font-body md:text-base md:leading-6 md:font-semibold md:text-foreground">
+				{problemas.callout}
 			</p>
 		</section>
 	);

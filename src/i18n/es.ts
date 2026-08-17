@@ -121,6 +121,7 @@ export const es = {
 				'El problema aparece cuando no está claro qué conviene cambiar, cuánto riesgo implica y cómo avanzar sin interrumpir lo que ya funciona. En productos nuevos ocurre algo parecido: construir demasiado pronto puede convertir supuestos de negocio en meses de desarrollo difícil de sostener. Y en ambos casos, la falta de criterio técnico senior suele ser la causa de fondo detrás de la decisión que no termina de tomarse.',
 			],
 			helpLabel: 'Incluye, según el caso',
+			routingLabel: '¿Cuál es tu situación?',
 			columns: [
 				{
 					id: 'existentes',

@@ -60,9 +60,9 @@ export default function Diagnostico({ content: diagnostico }: DiagnosticoProps) 
 					</h3>
 					<dl className="flex flex-col gap-3">
 						{diagnostico.details.map((detail) => (
-							<div key={detail.term} className="text-sm leading-5 text-body">
-								<dt className="inline font-display font-semibold text-foreground">{detail.term}</dt>
-								{detail.value ? <dd className="inline"> {detail.value}</dd> : null}
+							<div key={detail.term} className="flex flex-wrap gap-x-1 text-sm leading-5 text-body">
+								<dt className="font-display font-semibold text-foreground">{detail.term}</dt>
+								{detail.value ? <dd>{detail.value}</dd> : null}
 							</div>
 						))}
 					</dl>

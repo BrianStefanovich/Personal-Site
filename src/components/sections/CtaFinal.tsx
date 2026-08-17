@@ -16,7 +16,7 @@ interface CtaFinalProps {
 
 export default function CtaFinal({ content }: CtaFinalProps) {
 	return (
-		<section className="bg-background md:bg-[#f7f3eb]">
+		<section className="bg-background md:bg-[#f1ede5]">
 			<div className="container flex flex-col items-center gap-4 py-16 text-center md:gap-6 md:py-24">
 				{content.eyebrow ? <p className="eyebrow md:tracking-[0.1em] md:text-accent">{content.eyebrow}</p> : null}
 				<h2 className="max-w-[720px] font-display text-[32px] leading-[38px] font-semibold text-foreground text-balance md:text-[44px] md:leading-[54px]">
