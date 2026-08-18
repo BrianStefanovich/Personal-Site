@@ -8,48 +8,63 @@ web
 
 ## Users
 
-The primary audience is a mix of executives and business owners deciding on software investment, risk, vendors, or modernization; founders and innovation teams turning an idea or prototype into a viable product; and technology leaders responsible for architecture, delivery, and technical direction.
+Primary: founders, business owners, and engineering leaders (CTOs, Tech Leads) in Chile and international remote clients, who either run a system that has become costly/risky to change, are turning a business opportunity into software, or need senior technical judgment without hiring a full-time architect.
 
 ## Product Purpose
 
-Brian Stefanovich Consulting helps companies make better decisions about software. It diagnoses existing systems, supports progressive modernization, and turns ideas or prototypes into viable, operable software products. Success means giving the client enough clarity to decide what to do next and invest with criterio.
+Personal consulting/architecture brand site for Brian Stefanovich (software engineer and Technical Leader). It is a single-page landing whose sole commercial goal is getting a qualified prospect to book a free 30-minute conversation. The page must earn three micro-conversions first: "this problem sounds like mine," "Brian seems to understand this kind of situation," and "I can talk to him without a high-pressure sales process."
 
 ## Positioning
 
-The service combines independent, evidence-based clarity with business-to-architecture translation and an execution bridge. It does not default to selling an open-ended implementation: it makes risks, alternatives, costs, dependencies, and sequencing explicit, then helps the client or their team execute the decision.
+Senior software architecture, consultancy, modernization/integration, and fractional technical leadership — diagnosis before prescription, explicit trade-offs, and every recommendation tied to a business consequence. Core message: "Mejor software empieza con mejores decisiones." Brand promise: "Claridad antes que complejidad." Not a software factory or dev agency; a senior consultant who connects technical and business decisions.
+
+Three service lines correspond to three visitor situations:
+1. Sistemas existentes — the system is holding the business back (modernization/refactor/replace decisions).
+2. Nuevos negocios basados en software — an opportunity that needs to become software (discovery, MVP, architecture).
+3. Arquitecto de software fraccional — recurring senior technical judgment without a full-time hire.
 
 ## Operating Context
 
-The work serves companies in Chile and Latin America. Engagements are remote by default, with in-person meetings in Santiago when the context justifies them. Clients evaluate existing software systems or new software opportunities before approving migration, staffing, development, or further investment.
+Single-page (one-pager) landing with anchor navigation: Servicios · Cómo trabajo · Casos · Sobre mí, plus a persistent "Conversemos 30 minutos" CTA. Full narrative flow is specified in [docs/contenido_website.md](docs/contenido_website.md) (copy) and [docs/guia_website.md](docs/guia_website.md) (creative direction, sitemap, section-by-section design intent — hero, problem framing, three service "doors," philosophy/principles, process, case studies, about, FAQ, final CTA). Future evolution (not yet built) may add dedicated `/servicios/*`, `/casos/[caso]`, `/insights/[articulo]`, and `/sobre-mi` routes; the landing stays the center of the system.
+
+The site is built with Astro (static output), React islands, Tailwind CSS, and shadcn-compatible UI primitives. Copy lives in a typed i18n dictionary (`src/i18n/es.ts`) read via `getTranslations()`. Spanish (`es`) is the current default locale served unprefixed at `/`.
 
 ## Capabilities and Constraints
 
-- The site communicates two service contexts: systems with operational or architectural pain, and new software products based on an idea or prototype.
-- Current defined offers include a fixed-scope Executive Risk and Modernization Diagnosis and a Technical Product Viability Sprint.
-- Follow-on support may be delivered with the client's team, their provider, or Brian.
-- The current site is in Spanish and addresses Chile and Latin America.
-- The diagnosis is defined as 7 to 10 business days, with a fixed scope and a current investment of 45 UF plus IVA; payment is 50% at start and 50% at the executive presentation.
-- The initial fit conversation is 25 minutes and does not require a later implementation contract.
-- The service must not be represented as a free audit, an open-ended development capacity, a formal security or regulatory audit, or a promise of cost or schedule without sufficient evidence.
+- Stack is already decided (existing codebase): Astro 7 (static output), @astrojs/react, @astrojs/sitemap, Tailwind CSS 4, class-variance-authority, lucide-react. Not an open decision.
+- The current `src/pages/index.astro` and section components (Hero, Problemas, Diagnostico, Diferenciales, ProcessSteps, Encaje, Experiencia, SobreBrian, Continuidad, Faq, CtaFinal) referenced by the page are not yet implemented — the codebase is mid-rebuild/scaffold stage, not a finished site.
+- Contact form is intentionally markup-only for now (no submissions sent anywhere) — a known placeholder. Future integration planned with cal.com for booking; do not build a different booking backend without confirming.
+- i18n is architected for multiple locales (add a dictionary file + register in `src/i18n/config.ts` + `astro.config.mjs`); an English (`en`) version is planned as durable scope, not just Spanish-only. Timing/priority of the English rollout is undecided.
+- `PUBLIC_SITE_URL` must be set to the canonical production origin before build; `PUBLIC_GA_MEASUREMENT_ID` is optional (adds GA4 only in production output).
 
 ## Brand Commitments
 
-The existing name is Brian Stefanovich Consulting. The current tagline is "Decisiones claras. Software bien diseñado." The current supporting motto is "Clarity before complexity."
+Full brand system defined in [docs/manual_marca.md](docs/manual_marca.md); treat it as binding, not inspiration:
+
+- Name/voice: "Brian Stefanovich — Arquitectura y Consultoría de Software." First-person singular voice ("yo diagnostico"), calmed/senior/specific tone, not an agency "nosotros." Sentence case for headlines/body; uppercase + JetBrains Mono reserved for technical labels (eyebrows, nav, footer attributes, phase numbers) only. Natural Latin American Spanish, minimal spanglish, no emojis.
+- Vocabulary to favor: claridad, decisión, arquitectura, sistema, restricción, riesgo, tradeoff, evolución, hoja de ruta, evidencia, mantenibilidad, resultado. Vocabulary to avoid: disrupción, de vanguardia, world-class, 360°, transformación digital, solución escalable, sinergia, magia, garantizado, a prueba de futuro.
+- Logo: monochromatic linear glyph + "Brian Stefanovich" wordmark in Montserrat 700; asset at [public/images/logo-mark.svg](public/images/logo-mark.svg).
+- Color system: near-monochrome with two signature accents used asymmetrically — Carbon `#101311`, Graphite `#2A2F2C`, Steel `#717A75`, Fog `#D8DED9`, Porcelain `#F4F0E8`, Blueprint `#465CD4` (8%, action), Copper `#A65330` (2%, human consequence only, never equal weight to Blueprint).
+- Typography: Montserrat 700 (all headlines), Open Sans 400 (body), JetBrains Mono 500 uppercase (technical labels only).
+- Spacing/grid: 8px base unit, 12-column grid with 32px gutter, 90px page margins, 45px section vertical padding. Scale: 4·8·12·16·20·24·32·48·64px. Every section framed with a hairline (1px Fog top/right/left, 2px Fog bottom) — the recurring "technical schematic" motif. Corner radii: 8px small, 14px card/button default, 18px hero card, 9999px pill/circular. Cards use a 1px Fog inner hairline, never a shadow.
+- Motion: calm and purposeful, never decorative or continuous — 200–450ms transitions (300ms ease default), no continuous rotation/loops, buttons brighten slightly on hover (no color change).
+- Creative concept ("arquitectura visible"): the site should feel like a system being reasoned through — abstract technical diagrams, layers, nodes, alternative paths — never a futuristic tech page, creative agency, or generic corporate site.
 
 ## Evidence on Hand
 
-- The primary product surface is the Spanish landing page at `src/pages/index.astro`.
-- Service descriptions, process details, pricing, limitations, and contact copy are held in `src/i18n/es.ts`.
-- Existing visual assets are in `public/images/`.
-- No testimonials, customer logos, benchmarks, or other proof claims were established; future work must not fabricate them.
+- Full page copy already drafted in Spanish: [docs/contenido_website.md](docs/contenido_website.md).
+- Creative/design direction already drafted: [docs/guia_website.md](docs/guia_website.md) (hero composition, animation timing, section-by-section intent).
+- Real image assets exist in [public/images](public/images): `hero-desktop.webp`, `hero-mobile.webp`, `bio.webp`, `footer-mark.webp`, `logo-mark.svg`, and problem/symptom icon sets. These are real assets to use, not placeholders.
+- **Case studies (Sección 9 "Casos") are placeholders only** — `[CASO 01]`, `[Empresa / industria]`, `[Problema]`, etc. No real client details exist yet. Do not fabricate client names, situations, decisions, or results; keep placeholder/structural treatment until real cases are provided.
 
 ## Product Principles
 
-- Make the decision clearer before increasing implementation effort.
-- Connect business impact to technical choices, risk, cost, and sequencing.
-- Prefer explicit alternatives and trade-offs over abstract technical authority.
-- Leave clients with usable criteria and deliverables, not dependency on the consultant.
+1. Diagnosis before prescription — never open with a solution; open with understanding the business, system, and constraints.
+2. Senior consultant, not a factory — every surface should read as judgment and trade-off reasoning, not a list of technologies or services.
+3. Explicit trade-offs over false certainty — alternatives, costs, and consequences are named, not hidden behind confidence.
+4. Low-risk first step — the entire page funnels toward one low-commitment action: a free 30-minute conversation.
+5. Claridad antes que complejidad — clarity is the brand's single differentiator; never trade it for cleverness or decoration.
 
 ## Accessibility & Inclusion
 
-No product-specific accessibility standard was established. The web experience should remain usable across mobile and desktop contexts and preserve clear, direct Spanish communication.
+No product-specific requirement established beyond standard web accessibility practice (semantic structure, color contrast, keyboard/motion-reduction support implied by the calm-motion brand principle). Confirm a formal standard (e.g. WCAG 2.1 AA) if one is later required.

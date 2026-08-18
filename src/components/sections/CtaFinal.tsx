@@ -1,38 +1,26 @@
-import { buttonVariants } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
+import { CtaButton } from '@/components/CtaButton';
+import { Reveal } from '@/components/ui/Reveal';
+import { es } from '@/i18n/es';
 
-interface CtaFinalContent {
-	eyebrow?: string;
-	heading: string;
-	text?: string;
-	ctaLabel: string;
-	ctaHref: string;
-	microcopy?: string;
-}
+const { ctaFinal } = es.home;
 
-interface CtaFinalProps {
-	content: CtaFinalContent;
-}
-
-export default function CtaFinal({ content }: CtaFinalProps) {
+export default function CtaFinal() {
 	return (
-		<section className="bg-background md:bg-[#f1ede5]">
-			<div className="container flex flex-col items-center gap-4 py-16 text-center md:gap-6 md:py-24">
-				{content.eyebrow ? <p className="eyebrow md:tracking-[0.1em] md:text-accent">{content.eyebrow}</p> : null}
-				<h2 className="max-w-[720px] font-display text-[32px] leading-[38px] font-semibold text-foreground text-balance md:text-[44px] md:leading-[54px]">
-					{content.heading}
-				</h2>
-				{content.text ? <p className="max-w-[640px] text-[17px] leading-7 text-body">{content.text}</p> : null}
-				<a
-					href={content.ctaHref}
-					className={cn(
-						buttonVariants({ full: true }),
-						'shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.1)] md:w-auto md:px-8 md:py-4 md:shadow-none',
-					)}
-				>
-					{content.ctaLabel}
-				</a>
-				{content.microcopy ? <p className="font-mono text-xs leading-5 text-muted">{content.microcopy}</p> : null}
+		<section id="contacto" className="flex min-h-[70vh] items-center bg-carbon py-24 text-porcelain md:py-32">
+			<div className="container max-w-2xl">
+				<Reveal>
+					<p className="eyebrow eyebrow-invert">{ctaFinal.eyebrow}</p>
+					<h2 className="mt-5 font-display text-4xl font-bold leading-tight md:text-6xl">{ctaFinal.headline}</h2>
+					<p className="mt-6 text-base leading-relaxed text-fog md:text-lg">{ctaFinal.body}</p>
+
+					<div className="mt-9">
+						<CtaButton intent="other" className="px-7 py-4 text-base">
+							{ctaFinal.cta}
+						</CtaButton>
+					</div>
+
+					<p className="mt-5 eyebrow eyebrow-invert">{ctaFinal.microcopy}</p>
+				</Reveal>
 			</div>
 		</section>
 	);

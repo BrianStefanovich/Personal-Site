@@ -1,53 +1,61 @@
-import { SectionEyebrow } from '@/components/sections/SectionEyebrow';
-import { cn } from '@/lib/utils';
+import { Reveal } from '@/components/ui/Reveal';
+import { useReveal } from '@/lib/useReveal';
+import { es } from '@/i18n/es';
 
-interface ContinuidadContent {
-	number: string;
-	short: string;
-	long: string;
-	heading: string;
-	body?: string;
-	options: readonly { title: string; description: string }[];
-	note: string;
-}
+const { principios } = es.home;
 
-interface ContinuidadProps {
-	content: ContinuidadContent;
-}
+function PrincipioNode({ label, question, isLast }: { label: string; question: string; isLast: boolean }) {
+	const { ref, revealed } = useReveal<HTMLDivElement>('0px 0px -30% 0px');
 
-export default function Continuidad({ content: continuidad }: ContinuidadProps) {
 	return (
-		<section id="modalidades" className="container flex flex-col gap-8 py-12 md:gap-10 md:py-[64px]">
-			<div className="flex flex-col gap-2">
-				<SectionEyebrow number={continuidad.number} short={continuidad.short} long={continuidad.long} />
-				<h2 className="pt-2 font-display text-[36px] leading-[43px] font-semibold text-foreground text-balance md:max-w-[768px] md:pt-4 md:text-[44px] md:leading-[54px]">
-					{continuidad.heading}
-				</h2>
-				{continuidad.body ? (
-					<p className="pt-4 text-[17px] leading-7 text-body md:max-w-[720px]">{continuidad.body}</p>
-				) : null}
+		<div ref={ref} className="flex gap-5">
+			<div className="flex flex-col items-center">
+				<span
+					className={`h-3.5 w-3.5 shrink-0 rounded-full border-2 transition-colors duration-500 ${
+						revealed ? 'border-blueprint bg-blueprint' : 'border-fog bg-porcelain'
+					}`}
+				/>
+				{!isLast && (
+					<span
+						className={`mt-1 w-px flex-1 transition-colors duration-700 ${revealed ? 'bg-blueprint' : 'bg-fog'}`}
+						style={{ minHeight: '3.5rem' }}
+					/>
+				)}
 			</div>
-
-			<div className="flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-8">
-				{continuidad.options.map((option, index) => {
-					const isOrphan = index === continuidad.options.length - 1 && continuidad.options.length % 2 === 1;
-					return (
-						<article
-							key={option.title}
-							className={cn(
-								'flex flex-col gap-2 rounded-[2px] border border-line bg-[#f1ede5] p-6 md:bg-surface',
-								isOrphan && 'md:col-span-2 md:max-w-[520px]',
-							)}
-						>
-							<h3 className="font-display text-xl leading-7 font-semibold text-foreground">{option.title}</h3>
-							<p className="text-[15px] leading-6 text-body md:text-sm md:leading-6">{option.description}</p>
-						</article>
-					);
-				})}
+			<div className="pb-12">
+				<p className="eyebrow">{label}</p>
+				<p className="mt-1.5 max-w-md font-display text-lg font-bold text-carbon md:text-xl">{question}</p>
 			</div>
-
-			<p className="border-t border-line pt-6 text-center text-sm leading-6 text-body">{continuidad.note}</p>
-		</section>
+		</div>
 	);
 }
 
+export default function Continuidad() {
+	return (
+		<section id="como-pienso" className="border-b border-fog bg-porcelain py-20 md:py-28">
+			<div className="container">
+				<Reveal className="max-w-2xl">
+					<p className="eyebrow">{principios.eyebrow}</p>
+					<h2 className="mt-4 font-display text-3xl font-bold text-carbon md:text-4xl">{principios.headline}</h2>
+					<p className="mt-4 text-sm leading-relaxed text-graphite md:text-base">{principios.lede}</p>
+				</Reveal>
+
+				<div className="mt-12 max-w-lg">
+					{principios.nodes.map((node, i) => (
+						<PrincipioNode
+							key={node.label}
+							label={node.label}
+							question={node.question}
+							isLast={i === principios.nodes.length - 1}
+						/>
+					))}
+				</div>
+
+				<Reveal>
+					<p className="text-sm text-steel line-through decoration-1">{principios.closingNot}</p>
+					<p className="mt-1 max-w-2xl font-display text-xl font-bold text-carbon md:text-2xl">{principios.closing}</p>
+				</Reveal>
+			</div>
+		</section>
+	);
+}

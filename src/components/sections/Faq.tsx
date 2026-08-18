@@ -1,92 +1,46 @@
+import { Reveal } from '@/components/ui/Reveal';
+import { es } from '@/i18n/es';
 import { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
 
-import type { Translations } from '@/i18n';
+const { faq } = es.home;
 
-const VISIBLE_COUNT = 4;
-
-interface FaqProps {
-	content: Translations['home']['faq'];
-}
-
-export default function Faq({ content: faq }: FaqProps) {
+export default function Faq() {
 	const [openIndex, setOpenIndex] = useState<number | null>(0);
-	const [showAll, setShowAll] = useState(false);
-	const visibleItems = showAll ? faq.items : faq.items.slice(0, VISIBLE_COUNT);
-	const hiddenCount = faq.items.length - VISIBLE_COUNT;
 
 	return (
-		<section className="bg-background md:bg-[#f1ede5]">
-			<div className="container flex flex-col gap-8 py-12 md:items-center md:gap-12 md:py-32">
-				<div className="flex flex-col gap-2 md:w-full md:items-center md:gap-4">
-					<p className="font-mono text-xs leading-4 tracking-[0.06em] text-accent-soft uppercase md:text-center md:tracking-[0.1em] md:text-accent">
-						{faq.number} / {faq.label}
-					</p>
-					<h2 className="font-display text-[36px] leading-[43px] font-semibold text-foreground md:text-center md:text-5xl md:leading-[54px] md:font-bold md:tracking-[-0.01em]">
-						{faq.heading}
-					</h2>
-				</div>
+		<section id="faq" className="border-b border-fog bg-porcelain py-20 md:py-28">
+			<div className="container max-w-3xl">
+				<Reveal>
+					<p className="eyebrow">{faq.eyebrow}</p>
+					<h2 className="mt-4 font-display text-3xl font-bold text-carbon md:text-4xl">{faq.headline}</h2>
+				</Reveal>
 
-				{/* Mobile collapses into an accordion; the desktop design keeps every answer visible. */}
-				<p className="font-mono text-xs leading-4 tracking-[0.06em] text-muted uppercase md:hidden">{faq.mobileHint}</p>
-				<ul className="flex flex-col gap-6 md:hidden">
-					{visibleItems.map((item, index) => {
-						const open = openIndex === index;
+				<div className="tech-frame mt-10 divide-y divide-fog rounded-md">
+					{faq.items.map((item, i) => {
+						const isOpen = openIndex === i;
 						return (
-							<li key={item.question} className="border-b border-line pb-4">
-								<h3>
-									<button
-										type="button"
-										aria-expanded={open}
-										aria-controls={`faq-panel-${index}`}
-										id={`faq-trigger-${index}`}
-										onClick={() => setOpenIndex(open ? null : index)}
-										className="flex w-full items-center justify-between gap-4 text-left"
-									>
-										<span className="font-display text-base leading-6 font-semibold text-foreground">
-											{item.question}
-										</span>
-										<ChevronDown
-											aria-hidden
-											size={12}
-											className={`shrink-0 text-foreground transition-transform ${open ? 'rotate-180' : ''}`}
-										/>
-									</button>
-								</h3>
-								<div
-									id={`faq-panel-${index}`}
-									role="region"
-									aria-labelledby={`faq-trigger-${index}`}
-									hidden={!open}
-									className="pt-3"
+							<div key={item.q}>
+								<button
+									type="button"
+									aria-expanded={isOpen}
+									onClick={() => setOpenIndex(isOpen ? null : i)}
+									className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
 								>
-									<p className="text-sm leading-5 text-body">{item.answer}</p>
-								</div>
-							</li>
+									<span className="font-display text-base font-bold text-carbon">{item.q}</span>
+									<img
+										src="/images/icon-plus.svg"
+										alt=""
+										className={`shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-45' : ''}`}
+									/>
+								</button>
+								{isOpen && (
+									<p className="px-6 pb-5 text-sm leading-relaxed text-graphite">{item.a}</p>
+								)}
+							</div>
 						);
 					})}
-				</ul>
-
-				<dl className="hidden w-full max-w-[896px] md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-8">
-					{visibleItems.map((item) => (
-						<div key={item.question} className="flex flex-col gap-2">
-							<dt className="font-display text-base leading-6 text-foreground">{item.question}</dt>
-							<dd className="m-0 text-sm leading-5 text-body">{item.answer}</dd>
-						</div>
-					))}
-				</dl>
-
-				{hiddenCount > 0 && (
-					<button
-						type="button"
-						onClick={() => setShowAll((value) => !value)}
-						className="font-display text-sm leading-5 font-semibold text-accent underline underline-offset-2"
-					>
-						{showAll ? faq.showLess : `${faq.showMore} (${hiddenCount})`}
-					</button>
-				)}
+				</div>
 			</div>
 		</section>
 	);
 }
-

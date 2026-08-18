@@ -1,62 +1,47 @@
-import { SectionEyebrow } from '@/components/sections/SectionEyebrow';
+import { Reveal } from '@/components/ui/Reveal';
+import { es } from '@/i18n/es';
 
-interface Caso {
-	title: string;
-	text: string;
-	demuestra: string;
-}
+const { casos } = es.home;
 
-interface ExperienciaContent {
-	number?: string;
-	short?: string;
-	long?: string;
-	heading: string;
-	intro?: string;
-	casos: readonly Caso[];
-	linkLabel?: string;
-	linkHref?: string;
-}
-
-interface ExperienciaProps {
-	id?: string;
-	content: ExperienciaContent;
-}
-
-export default function Experiencia({ id, content: experiencia }: ExperienciaProps) {
+export default function Experiencia() {
 	return (
-		<section id={id} className="container flex flex-col gap-8 py-12 md:gap-10 md:py-[64px]">
-			<div className="flex flex-col gap-2">
-				{experiencia.number && experiencia.short && experiencia.long ? (
-					<SectionEyebrow number={experiencia.number} short={experiencia.short} long={experiencia.long} />
-				) : null}
-				<h2 className="pt-2 font-display text-[36px] leading-[43px] font-semibold text-foreground text-balance md:max-w-[768px] md:pt-4 md:text-[44px] md:leading-[54px]">
-					{experiencia.heading}
-				</h2>
-				{experiencia.intro ? (
-					<p className="pt-4 text-[17px] leading-7 text-body md:max-w-[720px]">{experiencia.intro}</p>
-				) : null}
-			</div>
+		<section id="casos" className="border-b border-fog bg-porcelain py-20 md:py-28">
+			<div className="container">
+				<Reveal className="max-w-2xl">
+					<p className="eyebrow">{casos.eyebrow}</p>
+					<h2 className="mt-4 font-display text-3xl font-bold text-carbon md:text-4xl">{casos.headline}</h2>
+					<p className="mt-4 text-sm leading-relaxed text-graphite md:text-base">{casos.lede}</p>
+				</Reveal>
 
-			<div className="flex flex-col gap-6 md:grid md:grid-cols-2 md:gap-8">
-				{experiencia.casos.map((caso) => (
-					<article
-						key={caso.title}
-						className="flex flex-col gap-3 rounded-[2px] border border-line bg-surface p-6"
-					>
-						<h3 className="font-display text-xl leading-7 font-semibold text-foreground">{caso.title}</h3>
-						<p className="text-[15px] leading-6 text-body">{caso.text}</p>
-						<p className="font-mono text-xs leading-4 tracking-[0.06em] text-accent-soft uppercase">
-							Demuestra: {caso.demuestra}
-						</p>
-					</article>
-				))}
-			</div>
+				<div className="mt-10 grid gap-6 md:grid-cols-3">
+					{casos.items.map((item, i) => (
+						<Reveal key={item.slug} delayMs={i * 80}>
+							<a
+								href={`/casos/${item.slug}`}
+								className="tech-frame group flex h-full flex-col rounded-md p-7 transition-colors hover:border-blueprint"
+							>
+								<p className="font-display text-sm font-bold uppercase tracking-wide text-carbon">{item.name}</p>
+								<p className="mt-3 font-display text-lg font-bold leading-snug text-carbon md:text-xl">
+									{item.card.headline}
+								</p>
+								<p className="mt-3 flex-1 text-sm leading-relaxed text-graphite">{item.card.body}</p>
 
-			{experiencia.linkLabel && experiencia.linkHref ? (
-				<a href={experiencia.linkHref} className="font-display text-base leading-6 font-semibold text-accent underline">
-					{experiencia.linkLabel}
-				</a>
-			) : null}
+								<span className="eyebrow mt-6 inline-block w-fit border border-fog px-2.5 py-1">{item.card.tag}</span>
+
+								<span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-blueprint">
+									Ver caso
+									<span
+										aria-hidden="true"
+										className="inline-block transition-transform duration-200 group-hover:translate-x-1"
+									>
+										→
+									</span>
+								</span>
+							</a>
+						</Reveal>
+					))}
+				</div>
+			</div>
 		</section>
 	);
 }

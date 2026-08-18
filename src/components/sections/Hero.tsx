@@ -1,80 +1,56 @@
-import { buttonVariants } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
+import { CtaButton } from '@/components/CtaButton';
+import { es } from '@/i18n/es';
+import type { CSSProperties } from 'react';
 
-interface HeroContent {
-	eyebrow: string;
-	headingLines: readonly string[];
-	body: string;
-	imageAlt: string;
-	cta?: string;
-	ctaHref?: string;
-	note?: string;
-	supports?: readonly string[];
-}
+const { hero } = es.home;
 
-interface HeroProps {
-	content: HeroContent;
-}
-
-export default function Hero({ content: hero }: HeroProps) {
-	const { supports } = hero;
-
+export default function Hero() {
 	return (
-		<section id="top" className="container pt-6 pb-16 md:pt-8 md:pb-24">
-			<div className="flex flex-col items-start gap-8 md:flex-row md:items-center md:gap-6">
-				<div className="flex min-w-0 flex-1 flex-col items-start gap-4 md:gap-[74px]">
-					<p className="eyebrow md:tracking-[0.1em] md:text-accent">{hero.eyebrow}</p>
+		<section id="inicio" className="border-b border-fog bg-porcelain pb-0 pt-10 md:pb-0 md:pt-10">
+			<div className="container grid gap-12 md:grid-cols-12 md:items-center md:gap-8">
+				<div className="md:col-span-7">
+					<p
+						className="eyebrow hero-eyebrow-type"
+						style={
+							{
+								'--hero-eyebrow-steps': hero.eyebrow.length,
+								'--hero-eyebrow-chars': `${hero.eyebrow.length}ch`,
+							} as CSSProperties
+						}
+					>
+						{hero.eyebrow}
+					</p>
 
-					<h1 className="font-display text-[44px] leading-[48px] font-bold tracking-[-0.01em] text-foreground text-balance md:text-[64px] md:leading-[68px] md:tracking-[-0.02em]">
-						{hero.headingLines.map((line) => (
-							<span key={line} className="block">
+					<h1 className="mt-5 font-display text-4xl font-bold leading-[1.08] tracking-tight text-carbon md:text-6xl">
+						{hero.headlineLines.map((line, i) => (
+							<span key={line} className="hero-line block" style={{ '--i': i } as CSSProperties}>
 								{line}
 							</span>
 						))}
 					</h1>
 
-					<p className="max-w-[672px] pt-4 text-xl leading-[31px] text-body md:max-w-[576px] md:pt-0">
-						{hero.body}
-					</p>
+					<p className="hero-subhead mt-6 max-w-xl text-lg leading-relaxed text-graphite md:text-xl">{hero.subhead}</p>
 
-					{hero.cta && hero.ctaHref ? (
-						<div className="flex w-full flex-col items-center gap-2 pt-6 md:items-start md:pt-4">
-							<a
-								href={hero.ctaHref}
-								className={cn(
-									buttonVariants({ full: true }),
-									'shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.1)] md:w-auto md:px-8 md:py-4 md:shadow-none',
-								)}
-							>
-								{hero.cta}
-							</a>
-							{hero.note ? (
-								<p className="max-w-[448px] pt-2 font-mono text-xs leading-[21px] text-body md:max-w-[576px] md:text-left">
-									{hero.note}
-								</p>
-							) : null}
-						</div>
-					) : null}
+					<div className="hero-cta-group mt-9">
+						<CtaButton intent="other" className="px-6 py-3.5 text-base">
+							{hero.cta}
+						</CtaButton>
+					</div>
 
-					{supports ? (
-						<ul className="flex flex-col gap-2 pt-4 md:flex-row md:flex-wrap md:gap-6">
-							{supports.map((item) => (
-								<li key={item} className="font-mono text-xs leading-4 tracking-[0.06em] text-muted uppercase">
-									{item}
-								</li>
-							))}
-						</ul>
-					) : null}
+					<p className="hero-supports mt-4 text-sm text-steel">{hero.microcopy}</p>
 				</div>
 
-				<div className="w-full min-w-0 flex-1">
+				<div className="hero-photo order-first md:order-none md:col-span-5 md:self-end">
 					<picture>
-						<source media="(min-width: 768px)" srcSet="/images/hero-desktop.webp" />
+						<source media="(min-width: 768px)" srcSet="/images/hero-desktop.webp" width="1206" height="1809" />
 						<img
 							src="/images/hero-mobile.webp"
-							alt={hero.imageAlt}
+							width={700}
+							height={1050}
+							alt="Brian Stefanovich, arquitecto de software, junto a su laptop"
+							className="mx-auto h-auto w-full max-w-[280px] md:max-w-none"
 							fetchPriority="high"
-							className="w-full"
+							decoding="async"
 						/>
 					</picture>
 				</div>

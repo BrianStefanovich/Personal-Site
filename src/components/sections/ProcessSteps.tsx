@@ -1,49 +1,67 @@
-import { SectionEyebrow } from '@/components/sections/SectionEyebrow';
-import { cn } from '@/lib/utils';
+import { CtaButton } from '@/components/CtaButton';
+import { Reveal } from '@/components/ui/Reveal';
+import { useReveal } from '@/lib/useReveal';
+import { es } from '@/i18n/es';
 
-interface Step {
-	number: string;
-	title: string;
-	description: string;
-}
+const { proceso } = es.home;
 
-interface ProcessStepsProps {
-	id?: string;
-	number?: string;
-	short?: string;
-	long?: string;
-	heading: string;
-	steps: readonly Step[];
-}
+function StepNode({ number, label, body, isLast }: { number: string; label: string; body: string; isLast: boolean }) {
+	const { ref, revealed } = useReveal<HTMLDivElement>('0px 0px -30% 0px');
 
-export default function ProcessSteps({ id, number, short, long, heading, steps }: ProcessStepsProps) {
 	return (
-		<section id={id} className="container flex flex-col gap-8 py-12 md:gap-10 md:py-[64px]">
-			<div className="flex flex-col gap-2">
-				{number && short && long ? <SectionEyebrow number={number} short={short} long={long} /> : null}
-				<h2 className="pt-2 font-display text-[36px] leading-[43px] font-semibold text-foreground text-balance md:max-w-[768px] md:pt-4 md:text-[44px] md:leading-[54px]">
-					{heading}
-				</h2>
+		<div ref={ref} className="flex gap-6">
+			<div className="flex flex-col items-center">
+				<span
+					className={`eyebrow flex h-10 w-10 shrink-0 items-center justify-center rounded-full border transition-colors duration-500 ${
+						revealed ? 'border-blueprint text-blueprint' : 'border-fog text-graphite'
+					}`}
+				>
+					{number}
+				</span>
+				{!isLast && (
+					<span
+						className={`mt-1 w-px flex-1 transition-colors duration-700 ${revealed ? 'bg-blueprint' : 'bg-fog'}`}
+						style={{ minHeight: '3rem' }}
+					/>
+				)}
 			</div>
+			<div className="pb-10">
+				<p className="font-display text-lg font-bold text-carbon md:text-xl">{label}</p>
+				<p className="mt-2 max-w-md text-sm leading-relaxed text-graphite md:text-base">{body}</p>
+			</div>
+		</div>
+	);
+}
 
-			<ol className="flex flex-col gap-4 md:grid md:grid-cols-4 md:gap-8">
-				{steps.map((step, index) => {
-					const isOrphan = index === steps.length - 1 && steps.length % 4 === 1;
-					return (
-						<li
+export default function ProcessSteps() {
+	return (
+		<section id="como-trabajo" className="border-b border-fog bg-porcelain py-20 md:py-28">
+			<div className="container">
+				<Reveal className="max-w-2xl">
+					<p className="eyebrow">{proceso.eyebrow}</p>
+					<h2 className="mt-4 font-display text-3xl font-bold text-carbon md:text-4xl">{proceso.headline}</h2>
+				</Reveal>
+
+				<div className="mt-12 max-w-lg">
+					{proceso.steps.map((step, i) => (
+						<StepNode
 							key={step.number}
-							className={cn(
-								'flex flex-col gap-2 rounded-[2px] border border-line bg-surface p-5 md:min-h-[270px]',
-								isOrphan && 'md:col-start-2 md:col-span-2',
-							)}
-						>
-							<span className="font-mono text-xl leading-6 text-accent-soft">{step.number}</span>
-							<h3 className="font-display text-base leading-6 font-semibold text-foreground">{step.title}</h3>
-							<p className="text-[13px] leading-5 text-body">{step.description}</p>
-						</li>
-					);
-				})}
-			</ol>
+							number={step.number}
+							label={step.label}
+							body={step.body}
+							isLast={i === proceso.steps.length - 1}
+						/>
+					))}
+				</div>
+
+				<Reveal>
+					<p className="text-sm text-steel line-through decoration-1">{proceso.closingNot}</p>
+					<p className="mt-1 max-w-xl font-display text-xl font-bold text-carbon md:text-2xl">{proceso.closing}</p>
+					<div className="mt-7">
+						<CtaButton intent="other">{proceso.cta}</CtaButton>
+					</div>
+				</Reveal>
+			</div>
 		</section>
 	);
 }
