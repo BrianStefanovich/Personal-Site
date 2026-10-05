@@ -22,7 +22,7 @@ All page copy lives in `src/i18n/es.ts` as a typed dictionary. Components read i
 
 Spanish is the default locale and is served unprefixed at `/`.
 
-The contact form in `src/components/sections/ContactForm.tsx` is markup only — submissions are not yet sent anywhere.
+Contact CTAs open `src/components/ContactDrawer.tsx`, which schedules through a Cal.com embed (`@calcom/embed-react`); the drawer's "Escribir por email" option falls back to a `mailto:` link.
 
 ## Quality checks
 

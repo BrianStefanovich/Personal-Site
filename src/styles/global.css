@@ -1,23 +1,38 @@
 @import "tailwindcss";
 
+@layer theme, base, components, utilities, brand;
+
 @theme {
 	--font-display: "Montserrat", sans-serif;
 	--font-body: "Open Sans", sans-serif;
 	--font-mono: "JetBrains Mono", ui-monospace, monospace;
 
-	/* Brand system — docs/manual_marca.md §4. Near-monochrome; Blueprint/Copper are accents, not neutrals. */
 	--color-carbon: #101311;
 	--color-graphite: #2a2f2c;
 	--color-steel: #717a75;
 	--color-fog: #d8ded9;
 	--color-porcelain: #f4f0e8;
 	--color-blueprint: #465cd4;
+	--color-blueprint-light: #91a0ff;
 	--color-copper: #a65330;
+	--color-copper-light: #d88755;
 
-	/* docs/manual_marca.md §6 — 8px small, 14px card/button default, 18px hero card. */
-	--radius-sm: 8px;
-	--radius-md: 14px;
-	--radius-lg: 18px;
+	--radius-card: 14px;
+
+	--breakpoint-xs: 30rem;
+}
+
+/* Semantic tokens resolve per theme, so utilities like bg-page follow prefers-color-scheme. */
+@theme inline {
+	--color-page: var(--surface-page);
+	--color-card: var(--surface-card);
+	--color-card-elevated: var(--surface-card-elevated);
+	--color-ink: var(--text-primary);
+	--color-muted: var(--text-secondary);
+	--color-link: var(--text-link);
+	--color-line: var(--border-hairline);
+	--color-strong: var(--border-strong);
+	--color-consequence: var(--text-consequence);
 }
 
 /* These must stay layered: unlayered CSS outranks every Tailwind utility. */
@@ -26,15 +41,54 @@
 		box-sizing: border-box;
 	}
 
+	:root {
+		color-scheme: light dark;
+		--header-h: 4.5rem;
+
+		/* z-index scale: menu < header < drawer */
+		--z-menu: 30;
+		--z-header: 40;
+		--z-drawer: 50;
+
+		--surface-page: #f4f0e8;
+		--surface-card: #faf8f3;
+		--surface-card-elevated: #faf8f3;
+		--surface-ink: #101311;
+		--text-primary: #101311;
+		/* Darker than Steel (#717a75, 4:1 on Porcelain) so secondary text clears AA. */
+		--text-secondary: #4a534d;
+		--text-link: #465cd4;
+		--border-hairline: #d8ded9;
+		--border-strong: #717a75;
+		--text-consequence: color-mix(in srgb, var(--color-copper) 82%, var(--color-carbon));
+		--focus: #465cd4;
+		--danger-500: #ba1a1a;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--surface-page: #101311;
+			--surface-card: #2a2f2c;
+			--surface-card-elevated: #2e3733;
+			--surface-ink: #2a2f2c;
+			--text-primary: #f4f0e8;
+			--text-secondary: #c5ccc7;
+			--text-link: #91a0ff;
+			--text-consequence: var(--color-copper-light);
+			--border-hairline: #4b534e;
+			--focus: #91a0ff;
+		}
+	}
+
 	html {
 		scroll-behavior: smooth;
-		scroll-padding-top: 5rem;
+		scroll-padding-top: calc(var(--header-h) + 1rem);
 	}
 
 	body {
 		margin: 0;
-		background: var(--color-porcelain);
-		color: var(--color-carbon);
+		background: var(--surface-page);
+		color: var(--text-primary);
 		font-family: var(--font-body);
 		line-height: 1.6;
 	}
@@ -44,163 +98,232 @@
 	}
 
 	:focus-visible {
-		outline: 3px solid var(--color-blueprint);
+		outline: 3px solid var(--focus);
 		outline-offset: 3px;
+	}
+
+	p {
+		text-wrap: pretty;
 	}
 
 	::selection {
 		background: var(--color-blueprint);
 		color: var(--color-porcelain);
 	}
+
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+	}
 }
 
-/* Overrides Tailwind's built-in `container` utility, which would otherwise win.
-   The side gutter widens at md/lg so mid-width desktop viewports (pre max-width
-   cap) don't read as edge-to-edge; the 75rem cap still governs very wide screens. */
+/* Overrides Tailwind's built-in `container`. 76.3125rem = the 1221px content column of the 1920px design. */
 @utility container {
-	width: min(100% - 2.5rem, 75rem);
+	width: min(100% - 2.5rem, 76.3125rem);
 	max-width: none;
 	margin-inline: auto;
 	padding-inline: 0;
 
 	@media (width >= 48rem) {
-		width: min(100% - 4rem, 75rem);
+		width: min(100% - 4rem, 76.3125rem);
 	}
 
 	@media (width >= 64rem) {
-		width: min(100% - 6rem, 75rem);
+		width: min(100% - 6rem, 76.3125rem);
 	}
 }
 
-@layer components {
-	/* Uppercase mono label that prefixes every section heading in the design.
-	   Graphite, not Steel: Steel-on-Porcelain measures ~3.9:1, under the 4.5:1 floor for 12px text. */
-	.eyebrow {
-		font-family: var(--font-mono);
-		font-size: 0.75rem;
-		line-height: 1rem;
-		letter-spacing: 0.06em;
-		text-transform: uppercase;
-		color: var(--color-graphite);
+/* JetBrains Mono 500, uppercase, wide tracking: eyebrows, nav, footer attributes. Size is set by the caller. */
+@utility label-mono {
+	font-family: var(--font-mono);
+	font-weight: 500;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+/* Card: radius 14, inset hairline, no shadow. Follows the page theme. */
+@utility surface-card {
+	border-radius: var(--radius-card);
+	background: var(--surface-card);
+	box-shadow: inset 0 0 0 1px var(--border-hairline);
+}
+
+/* Re-scopes text tokens for any dark surface sitting inside either theme. */
+@utility on-dark {
+	--text-primary: #f4f0e8;
+	--text-secondary: #d8ded9;
+	--text-link: #91a0ff;
+	--text-consequence: var(--color-copper-light);
+	--border-hairline: #3a423d;
+	--focus: #91a0ff;
+	color: var(--text-primary);
+}
+
+/* Dark accent panel: Carbon in light mode, Graphite in dark mode. */
+@utility surface-ink {
+	--text-primary: #f4f0e8;
+	--text-secondary: #d8ded9;
+	--text-link: #91a0ff;
+	--text-consequence: var(--color-copper-light);
+	--border-hairline: #3a423d;
+	--focus: #91a0ff;
+	border-radius: var(--radius-card);
+	background: var(--surface-ink);
+	color: var(--text-primary);
+}
+
+/* The single hero / offer card: 18px radius, Carbon in light mode, Graphite in dark. */
+@utility surface-hero {
+	--text-primary: #f4f0e8;
+	--text-secondary: #d8ded9;
+	--text-link: #91a0ff;
+	--text-consequence: var(--color-copper-light);
+	--border-hairline: #3a423d;
+	--focus: #91a0ff;
+	border-radius: 18px;
+	background: var(--surface-ink);
+	color: var(--text-primary);
+}
+
+/* Schematic frame: 1px hairline top, right and left, 2px on the bottom, like a drawing sheet. */
+@utility frame {
+	border: 1px solid var(--border-hairline);
+	border-bottom-width: 2px;
+}
+
+/* The frame around a section's content: runs edge to edge below md, where side margins would only squeeze text. */
+@utility sheet {
+	border: 1px solid var(--border-hairline);
+	border-bottom-width: 2px;
+
+	@media (width < 48rem) {
+		margin-inline: -1.25rem;
+		border-inline-width: 0;
+	}
+}
+
+/* Section tone flip: Carbon band on a light page, Porcelain band on a dark page. */
+@utility surface-inverse {
+	--surface-page: #101311;
+	--surface-card: #2a2f2c;
+	--surface-card-elevated: #2e3733;
+	--surface-ink: #2a2f2c;
+	--text-primary: #f4f0e8;
+	--text-secondary: #c5ccc7;
+	--text-link: #91a0ff;
+	--text-consequence: var(--color-copper-light);
+	--border-hairline: #4b534e;
+	--focus: #91a0ff;
+	background: var(--surface-page);
+	color: var(--text-primary);
+
+	@media (prefers-color-scheme: dark) {
+		--surface-page: #f4f0e8;
+		--surface-card: #faf8f3;
+		--surface-card-elevated: #faf8f3;
+		--surface-ink: #101311;
+		--text-primary: #101311;
+		--text-secondary: #4a534d;
+		--text-link: #465cd4;
+		--text-consequence: color-mix(in srgb, var(--color-copper) 82%, var(--color-carbon));
+		--border-hairline: #d8ded9;
+		--focus: #465cd4;
+	}
+}
+
+@utility measure {
+	max-width: 65ch;
+}
+
+@utility section-y {
+	padding-block: 2.5rem;
+
+	@media (width >= 48rem) {
+		padding-block: 4rem;
+	}
+}
+
+@layer brand {
+	:where(main > section) {
+		position: relative;
 	}
 
-	/* Dark-section counterpart (Carbon backgrounds) — Fog carries the same 4.5:1+ floor there. */
-	.eyebrow-invert {
-		color: var(--color-fog);
+	:where(main h1, main h2, main h3, main h4) {
+		font-family: var(--font-display);
+		font-weight: 700;
+		text-wrap: balance;
 	}
 
-	/* docs/manual_marca.md §6 "marco técnico" — the recurring technical-schematic frame around sections, cards, and diagrams. */
-	.tech-frame {
-		border: 1px solid var(--color-fog);
-		border-bottom-width: 2px;
+	:where(main h1) {
+		font-size: clamp(2rem, 1rem + 2.6vw, 3.375rem);
+		line-height: 1.1;
+		letter-spacing: -0.02em;
 	}
 
-	.tech-frame-dark {
-		border: 1px solid color-mix(in oklab, var(--color-fog) 30%, transparent);
-		border-bottom-width: 2px;
+	:where(main h2) {
+		font-size: clamp(1.75rem, 1.2rem + 1.4vw, 2.5rem);
+		line-height: 1.2;
 	}
 
-	/*
-	 * Hero's one-time "declassified report" reveal: plays only when index.astro's
-	 * inline gating script adds `.hero-declass-play` to <html> (first visit this
-	 * session, motion allowed). Without that class every rule below is inert, so
-	 * no-JS visitors and repeat views in the same session get the plain, fully
-	 * visible hero with zero cost.
-	 */
+	:where(main h3) {
+		font-size: clamp(1.25rem, 1.05rem + 0.7vw, 1.6875rem);
+		line-height: 1.25;
+	}
+
+	:where(a, button) {
+		transition-duration: 300ms;
+		transition-timing-function: ease;
+	}
+
 	@media (prefers-reduced-motion: no-preference) {
-		.hero-declass-play .hero-eyebrow-type {
-			display: inline-block;
-			overflow: hidden;
-			width: 0;
-			white-space: nowrap;
-			vertical-align: bottom;
-			border-right: 2px solid var(--color-blueprint);
-			animation:
-				hero-type 0.6s steps(var(--hero-eyebrow-steps, 30)) 0.1s forwards,
-				hero-caret 0.7s steps(1) 3 0.7s both;
+		/* Hero entry: establishes reading order. --i staggers each element. */
+		.enter {
+			animation: rise 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
+			animation-delay: calc(var(--i, 0) * 90ms);
 		}
 
-		.hero-declass-play .hero-line {
-			clip-path: inset(0 var(--hero-reveal, 0%) 0 0);
-			animation: hero-line-reveal 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
-			animation-delay: calc(0.3s + var(--i, 0) * 0.08s);
+		/* Scroll reveal: completes within ~7rem of scroll so tall blocks never sit half-faded. Static where unsupported. */
+		@supports (animation-timeline: view()) {
+			.reveal {
+				animation: rise linear both;
+				animation-timeline: view();
+				animation-range: entry 0% entry min(60%, 7rem);
+			}
+
+			/* Diagram linework draws as it scrolls into view; fully drawn where unsupported. */
+			.draw {
+				stroke-dasharray: 1;
+				animation: draw linear both;
+				animation-timeline: view();
+				animation-range: entry 10% entry 90%;
+			}
 		}
 
-		.hero-declass-play .hero-subhead {
-			animation: hero-fade-up 0.45s ease-out 0.55s both;
+		@keyframes rise {
+			from {
+				opacity: 0;
+				transform: translateY(0.75rem);
+			}
+			to {
+				opacity: 1;
+				transform: none;
+			}
 		}
 
-		.hero-declass-play .hero-cta-group {
-			animation: hero-fade-up 0.45s ease-out 0.65s both;
+		@keyframes draw {
+			from {
+				stroke-dashoffset: 1;
+			}
+			to {
+				stroke-dashoffset: 0;
+			}
 		}
-
-		.hero-declass-play .hero-supports {
-			animation: hero-fade-up 0.45s ease-out 0.72s both;
-		}
-
-		.hero-declass-play .hero-photo {
-			animation: hero-fade-up 0.5s ease-out 0.5s both;
-		}
-	}
-
-	/* Scroll-triggered entrance for prose blocks (guia_website.md §21 "fade + translate 8–16px"). Driven by the useReveal hook adding data-revealed. */
-	.reveal {
-		opacity: 0;
-		transform: translateY(12px);
-		transition:
-			opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-			transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-	}
-
-	.reveal[data-revealed='true'] {
-		opacity: 1;
-		transform: translateY(0);
 	}
 
 	@media (prefers-reduced-motion: reduce) {
-		.reveal {
-			opacity: 1;
-			transform: none;
+		:where(*, *::before, *::after) {
 			transition: none;
 		}
-	}
-}
-
-/* Percentage type registration lets --hero-reveal interpolate smoothly in the keyframes below. */
-@property --hero-reveal {
-	syntax: "<percentage>";
-	inherits: false;
-	initial-value: 0%;
-}
-
-@keyframes hero-type {
-	to {
-		width: var(--hero-eyebrow-chars, 100%);
-	}
-}
-
-@keyframes hero-caret {
-	to {
-		border-right-color: transparent;
-	}
-}
-
-@keyframes hero-line-reveal {
-	from {
-		--hero-reveal: 100%;
-	}
-	to {
-		--hero-reveal: 0%;
-	}
-}
-
-@keyframes hero-fade-up {
-	from {
-		opacity: 0;
-		transform: translateY(8px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
 	}
 }

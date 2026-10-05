@@ -1,67 +1,35 @@
-import { CtaButton } from '@/components/CtaButton';
-import { Reveal } from '@/components/ui/Reveal';
-import { useReveal } from '@/lib/useReveal';
+import { Section } from '@/components/ui/Section';
+import { SectionHeading } from '@/components/ui/SectionHeading';
 import { es } from '@/i18n/es';
 
 const { proceso } = es.home;
 
-function StepNode({ number, label, body, isLast }: { number: string; label: string; body: string; isLast: boolean }) {
-	const { ref, revealed } = useReveal<HTMLDivElement>('0px 0px -30% 0px');
-
-	return (
-		<div ref={ref} className="flex gap-6">
-			<div className="flex flex-col items-center">
-				<span
-					className={`eyebrow flex h-10 w-10 shrink-0 items-center justify-center rounded-full border transition-colors duration-500 ${
-						revealed ? 'border-blueprint text-blueprint' : 'border-fog text-graphite'
-					}`}
-				>
-					{number}
-				</span>
-				{!isLast && (
-					<span
-						className={`mt-1 w-px flex-1 transition-colors duration-700 ${revealed ? 'bg-blueprint' : 'bg-fog'}`}
-						style={{ minHeight: '3rem' }}
-					/>
-				)}
-			</div>
-			<div className="pb-10">
-				<p className="font-display text-lg font-bold text-carbon md:text-xl">{label}</p>
-				<p className="mt-2 max-w-md text-sm leading-relaxed text-graphite md:text-base">{body}</p>
-			</div>
-		</div>
-	);
-}
-
 export default function ProcessSteps() {
 	return (
-		<section id="como-trabajo" className="border-b border-fog bg-porcelain py-20 md:py-28">
-			<div className="container">
-				<Reveal className="max-w-2xl">
-					<p className="eyebrow">{proceso.eyebrow}</p>
-					<h2 className="mt-4 font-display text-3xl font-bold text-carbon md:text-4xl">{proceso.headline}</h2>
-				</Reveal>
-
-				<div className="mt-12 max-w-lg">
-					{proceso.steps.map((step, i) => (
-						<StepNode
-							key={step.number}
-							number={step.number}
-							label={step.label}
-							body={step.body}
-							isLast={i === proceso.steps.length - 1}
-						/>
-					))}
+		<Section id="como-trabajo">
+			<div className="grid gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:gap-x-16">
+				<div className="lg:sticky lg:top-[calc(var(--header-h)+2rem)] lg:self-start">
+					<SectionHeading eyebrow={proceso.eyebrow} title={proceso.headline} subhead={proceso.subhead} />
+					<p className="reveal measure mt-4 text-base md:text-lg">{proceso.intro}</p>
 				</div>
 
-				<Reveal>
-					<p className="text-sm text-steel line-through decoration-1">{proceso.closingNot}</p>
-					<p className="mt-1 max-w-xl font-display text-xl font-bold text-carbon md:text-2xl">{proceso.closing}</p>
-					<div className="mt-7">
-						<CtaButton intent="other">{proceso.cta}</CtaButton>
-					</div>
-				</Reveal>
+				<ol className="relative space-y-12">
+					<span aria-hidden="true" className="absolute bottom-3 left-[3.5px] top-3 w-px bg-line" />
+					{proceso.steps.map((step) => (
+						<li key={step.title} className="reveal relative pl-10">
+							<span aria-hidden="true" className="absolute left-0 top-[0.4rem] size-2 bg-link" />
+							<p className="label-mono text-sm text-link">{proceso.phaseLabel} {step.phase}</p>
+							<h3 className="mt-3">{step.title}</h3>
+							<p className="measure mt-3 text-base md:text-lg">{step.body}</p>
+						</li>
+					))}
+				</ol>
 			</div>
-		</section>
+
+			<div className="reveal mt-16 grid gap-4 border-t border-line pt-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:gap-x-16">
+				<h3 className="text-2xl md:text-3xl">{proceso.closingTitle}</h3>
+				<p className="measure text-lg text-muted md:text-xl">{proceso.closing}</p>
+			</div>
+		</Section>
 	);
 }

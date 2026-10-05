@@ -1,0 +1,13 @@
+{
+	"servers": {
+		"figpea": {
+			"type": "stdio",
+			"command": "npx",
+			"args": [
+				"-y",
+				"figpea-mcp"
+			]
+		}
+	},
+	"inputs": []
+}

@@ -1,530 +1,384 @@
+/** Inline emphasis: plain strings render as-is, `{ b }` renders as <strong>. */
+export type Rich = readonly (string | { readonly b: string })[];
+
 export const es = {
 	nav: {
 		name: 'Brian Stefanovich',
+		descriptor: 'Arquitectura y consultoría de software',
+		homeLabel: 'Brian Stefanovich, inicio',
 		links: [
-			{ label: 'Servicios', href: '/#servicios' },
-			{ label: 'Cómo trabajo', href: '/#como-trabajo' },
-			{ label: 'Casos', href: '/#casos' },
-			{ label: 'Sobre mí', href: '/#sobre-mi' },
+			{ label: 'Servicios', href: '#servicios' },
+			{ label: 'Cómo trabajo', href: '#como-trabajo' },
+			{ label: 'Casos', href: '#casos' },
+			{ label: 'Sobre Brian', href: '#sobre-brian' },
 		],
-		cta: 'Conversemos 30 minutos',
+		openMenu: 'Abrir menú',
+		closeMenu: 'Cerrar menú',
 	},
 
 	home: {
 		meta: {
-			title: 'Brian Stefanovich — Arquitectura y consultoría de software',
+			title: 'Brian Stefanovich | Arquitectura y consultoría de software',
 			description:
-				'Ayudo a empresas a resolver sistemas que las frenan, construir nuevos productos y tomar decisiones técnicas con criterio de negocio. Primera conversación sin costo.',
+				'Ayudo a fundadores, dueños de negocio y líderes de tecnología a decidir qué construir, qué mejorar y cómo hacerlo viable. Primera conversación sin costo.',
 		},
 
 		hero: {
-			eyebrow: 'Arquitectura · Consultoría · Software',
-			headlineLines: ['Mejor software empieza', 'con mejores decisiones.'],
+			eyebrow: 'Arquitectura y consultoría de software',
+			headlineLines: ['Arquitectura de software', 'con visión de negocio'],
 			subhead:
-				'Ayudo a empresas a resolver sistemas que las frenan, construir nuevos productos y tomar decisiones técnicas con criterio de negocio.',
+				'Ayudo a fundadores, dueños de negocio y líderes de tecnología a decidir qué construir, qué mejorar y cómo hacerlo viable.',
 			cta: 'Conversemos 30 minutos',
-			microcopy: 'Primera conversación sin costo · No sustituye una asesoría.',
+			note: '30 min · Sin costo · No sustituye una asesoría',
+			imageAlt: 'Brian Stefanovich',
 		},
 
-		problem: {
-			eyebrow: 'Cuando el software empieza a pesar',
-			headline: 'No todos los problemas de software necesitan más código.',
+		presentacion: {
+			eyebrow: 'Enfoque',
+			headline: 'El mejor software comienza con mejores decisiones',
 			paragraphs: [
-				'A veces un sistema funciona, pero cada cambio cuesta más.',
-				'A veces existe una oportunidad de negocio, pero todavía no está claro qué conviene construir.',
-				'Y otras veces el equipo puede ejecutar, pero necesita criterio técnico senior para tomar decisiones importantes.',
-			],
-			lede: 'En cualquiera de esos escenarios, empezar por la solución suele ser demasiado pronto.',
-			emphasis: 'Primero hay que entender qué está pasando y qué necesita realmente el negocio.',
-			chain: ['Más código', 'Más dependencias', 'Más riesgo', 'Más costo de cambio'],
-			closing: 'A veces lo primero que necesitamos cambiar no es el software. Es la decisión.',
+				[
+					{ b: 'Ofrezco arquitectura de software, consultoría tecnológica, desarrollo de software y liderazgo técnico' },
+					' para empresas que necesitan mejorar sus sistemas, desarrollar nuevos productos digitales o resolver desafíos tecnológicos.',
+				],
+				[
+					'Analizo tu negocio y tu tecnología para encontrar ',
+					{ b: 'soluciones simples, eficientes y que puedan evolucionar' },
+					', evaluando las distintas alternativas antes de tomar decisiones.',
+				],
+				[
+					'Te ayudo a ',
+					{
+						b: 'modernizar sistemas, reducir deuda técnica, mejorar la arquitectura de software, integrar tecnologías y desarrollar nuevos productos digitales',
+					},
+					'.',
+				],
+				[{ b: 'Si tu software necesita evolucionar o tienes un nuevo proyecto tecnológico, conversemos.' }],
+			] satisfies readonly Rich[],
+			diagram: {
+				label: 'Diagrama: un problema con cuatro caminos posibles y una decisión',
+				problem: 'Problema',
+				options: ['Refactorizar', 'Modernizar', 'Reemplazar', 'No cambiar'],
+				decision: 'Decisión',
+			},
 		},
 
-		doors: {
-			headline: 'Tres situaciones. Tres formas de ayudar.',
+		problema: {
+			eyebrow: 'Cuando el software empieza a pesar',
+			headline: 'Cuando necesitas tomar una decisión sobre software',
+			subhead: 'No todos los problemas de software se solucionan escribiendo más código.',
+			paragraphs: [
+				'Cuando un sistema comienza a frenar al negocio, aumentar los costos o dificultar la evolución del producto, el primer paso no necesariamente es desarrollar.',
+				'Antes hay que entender qué está ocurriendo.',
+			],
+			question: '¿Te encuentras en alguna de estas situaciones?',
+			doorLabel: 'Ver cómo ayudo',
+			chain: {
+				label: 'Cadena de consecuencias',
+				steps: ['Más código', 'Más dependencias', 'Más riesgo', 'Más costo de cambio'],
+				closing: 'A veces lo primero que necesitamos cambiar no es el software. Es la decisión.',
+			},
+			situations: [
+				{
+					title: 'El sistema funciona pero cada cambio cuesta más.',
+					body: 'Los cambios tardan más, las integraciones fallan o el equipo dedica demasiado tiempo a resolver problemas del sistema. Necesitas entender las causas y decidir qué conviene mejorar primero.',
+				},
+				{
+					title: 'Tienes una oportunidad de negocio y necesitas definir qué construir.',
+					body: 'Quieres crear un producto basado en software, pero todavía hay dudas sobre el alcance, la viabilidad o la inversión. Necesitas decidir qué validar antes de comprometer meses de desarrollo.',
+				},
+				{
+					title: 'Tu equipo necesita dirección técnica senior',
+					body: 'El equipo avanza, pero las decisiones de arquitectura y tecnología requieren una mirada que conecte el trabajo diario con la evolución del producto.',
+				},
+			],
+		},
+
+		servicios: {
+			eyebrow: 'Qué hago',
+			headline: 'Servicios',
+			subhead: 'Arquitectura y consultoría para las decisiones de tu negocio',
+			intro:
+				'Puedes comenzar con un problema concreto, una idea de producto o una decisión pendiente. Según el contexto, trabajo en un diagnóstico puntual, acompaño al equipo de forma recurrente o participo en la implementación.',
+			workLabel: 'En qué trabajo',
+			getLabel: 'Qué obtienes',
+			itemLabel: 'Servicio',
+			diagrams: {
+				existing: {
+					label: 'Diagrama: un sistema enredado, con una dependencia de riesgo, que evoluciona hacia una dirección clara',
+					dependency: 'Dependencia',
+					risk: 'Riesgo',
+					direction: 'Dirección',
+				},
+				newProduct: {
+					label: 'Diagrama: de una oportunidad a una hipótesis que se valida antes de construir un MVP',
+					opportunity: 'Oportunidad',
+					hypothesis: 'Hipótesis',
+					validate: 'Validar',
+					build: 'Construir',
+					mvp: 'MVP',
+				},
+				fractional: {
+					label: 'Diagrama: producto, equipo y negocio convergen en una decisión que orienta la arquitectura',
+					product: 'Producto',
+					team: 'Equipo',
+					business: 'Negocio',
+					decision: 'Decisión',
+					architecture: 'Arquitectura',
+				},
+			},
 			items: [
 				{
-					number: '01',
-					tag: 'El sistema está frenando al negocio',
-					body: 'El producto funciona, pero evolucionarlo se volvió lento, costoso o riesgoso. Hay deuda técnica, integraciones frágiles, problemas de rendimiento, decisiones acumuladas o partes del sistema que nadie quiere tocar.',
-					emphasis:
-						'Te ayudo a entender qué está causando el problema, qué vale la pena cambiar y cómo hacerlo sin introducir más riesgo del necesario.',
-					service: 'Consultoría y desarrollo para sistemas existentes',
-					cta: 'Ver servicio',
-					href: '/#sistemas-existentes',
+					id: 'sistemas-existentes',
+					phase: '01',
+					cta: 'Conversemos sobre tu sistema',
+					title: 'Arquitectura y modernización de sistemas existentes',
+					lead: 'Cuando el software funciona, pero evolucionarlo se volvió cada vez más difícil.',
+					intro: ['Cuando tu empresa depende de un sistema que necesita evolucionar.'],
+					work: [
+						'Diagnóstico de arquitectura, deuda técnica y problemas de rendimiento.',
+						'Revisión de integraciones, dependencias y riesgos operativos.',
+						'Evaluación de alternativas de modernización.',
+						'Priorización de cambios y definición de una hoja de ruta.',
+					],
+					get: [
+						'Un diagnóstico con los principales problemas y riesgos, una recomendación con sus razones y un plan de cambios ordenado por prioridad. El objetivo es que puedas decidir dónde invertir y cómo avanzar teniendo en cuenta la continuidad de la operación.',
+						'Cuando el proyecto requiere desarrollo, puedo acompañar al equipo o participar en la implementación. Ese alcance se acuerda por separado.',
+					],
 					intent: 'existing-system',
 				},
 				{
-					number: '02',
-					tag: 'Hay una oportunidad que necesita convertirse en software',
-					body: 'Tienes una idea, un nuevo producto o una oportunidad de negocio donde el software será una pieza central. Antes de invertir meses desarrollando, necesitas claridad sobre qué construir, qué validar primero y qué decisiones pueden condicionar el negocio.',
-					emphasis: 'Te ayudo a convertir esa oportunidad en una estrategia de producto y tecnología que pueda ejecutarse.',
-					service: 'Consultoría estratégica para nuevos negocios basados en software',
-					cta: 'Ver servicio',
-					href: '/#nuevos-negocios',
+					id: 'nuevos-negocios',
+					phase: '02',
+					cta: 'Conversemos sobre tu idea',
+					title: 'Consultoría estratégica para productos y negocios basados en software',
+					lead: 'Cuando necesitas decidir qué producto construir y por dónde comenzar.',
+					intro: [
+						'Trabajo contigo para entender la oportunidad de negocio y convertirla en decisiones de producto y tecnología. Identifico qué hipótesis conviene validar, qué necesita incluir una primera versión y qué restricciones pueden condicionar su desarrollo.',
+					],
+					work: [
+						'Revisión del modelo de negocio y las necesidades de quienes usarán el producto.',
+						'Definición del alcance inicial y de lo que conviene validar primero.',
+						'Evaluación de desarrollar, comprar o integrar soluciones existentes.',
+						'Análisis de riesgos, arquitectura inicial y prioridades de desarrollo.',
+					],
+					get: [
+						'Una dirección de producto y tecnología: alcance inicial, supuestos por validar, alternativas con sus costos y riesgos, y una hoja de ruta para la primera etapa. Esto permite evaluar la inversión antes de comprometer el desarrollo.',
+					],
 					intent: 'new-product',
 				},
 				{
-					number: '03',
-					tag: 'El equipo necesita dirección técnica senior',
-					body: 'El equipo sabe desarrollar. Lo que falta es una mirada transversal para decisiones de arquitectura, deuda técnica, integraciones, estándares, evolución del sistema o roadmap tecnológico.',
-					emphasis: 'Me incorporo de manera recurrente para aportar criterio técnico senior sin necesidad de crear un rol full-time.',
-					service: 'Arquitecto de software fraccional',
-					cta: 'Ver servicio',
-					href: '/#arquitecto-fraccional',
+					id: 'arquitecto-fraccional',
+					phase: '03',
+					cta: 'Evaluemos si tiene sentido',
+					title: 'Arquitecto de software fraccional',
+					lead: 'Dirección técnica senior con dedicación parcial y acompañamiento recurrente.',
+					intro: [
+						'Me integro al trabajo de tu equipo para revisar decisiones de arquitectura, orientar prioridades técnicas y resolver dudas que afectan la evolución del producto. La dedicación, la frecuencia de las reuniones y las responsabilidades se acuerdan según lo que necesita la empresa.',
+					],
+					work: [
+						'Revisión de arquitectura y decisiones de diseño.',
+						'Evaluación de tecnologías, integraciones y deuda técnica.',
+						'Definición de criterios y estándares junto al equipo.',
+						'Seguimiento de la hoja de ruta tecnológica y apoyo en decisiones críticas.',
+					],
+					get: [
+						'Recomendaciones documentadas, criterios compartidos para decidir y seguimiento de las prioridades técnicas. A diferencia de una consultoría puntual, el acompañamiento continúa mientras el equipo implementa y aparecen nuevas decisiones.',
+					],
 					intent: 'fractional',
 				},
 			],
 		},
 
-		services: {
-			existentes: {
-				id: 'sistemas-existentes',
-				eyebrow: 'Consultoría · Modernización · Desarrollo',
-				headline: 'Cuando cambiar el sistema se vuelve más difícil que mantenerlo igual.',
-				intro:
-					'Un sistema puede seguir funcionando y al mismo tiempo convertirse en una restricción. Las señales suelen aparecer gradualmente:',
-				signals: [
-					'cada funcionalidad tarda más de lo esperado',
-					'modificar una parte rompe otra',
-					'existen componentes que nadie quiere tocar',
-					'los despliegues generan incertidumbre',
-					'aparecen problemas de rendimiento o escalabilidad',
-					'las integraciones son cada vez más difíciles de mantener',
-					'la deuda técnica condiciona decisiones de producto',
-					'una migración parece inevitable, pero nadie tiene claro por dónde comenzar',
-				],
-				pivot: 'Mi trabajo no empieza suponiendo que necesitas una reescritura.',
-				pivotEmphasis: 'Empieza entendiendo qué está limitando realmente al sistema y qué consecuencia tiene para el negocio.',
-				steps: [
-					{
-						label: 'Diagnosticar',
-						body: 'Separar síntomas de causas y hacer visibles las restricciones, dependencias y riesgos relevantes.',
-					},
-					{
-						label: 'Decidir',
-						body: 'Evaluar alternativas y hacer explícitos sus costos, beneficios y trade-offs. Refactorizar. Modernizar. Migrar. Reemplazar una parte. Cambiar una integración. O no hacer nada todavía.',
-					},
-					{
-						label: 'Diseñar',
-						body: 'Convertir la decisión en una arquitectura objetivo y una hoja de ruta que pueda ejecutarse progresivamente.',
-					},
-					{
-						label: 'Ejecutar',
-						body: 'Cuando el proyecto lo necesita, también puedo participar directamente de la modernización o desarrollo junto al equipo.',
-					},
-				],
-				resultLabel: 'El resultado que buscamos',
-				resultNot: 'No una arquitectura más sofisticada.',
-				result: 'Recuperar la capacidad de cambiar el software con una relación razonable entre velocidad, costo y riesgo.',
-				cta: 'Conversemos sobre tu sistema',
-				intent: 'existing-system',
-			},
-			nuevos: {
-				id: 'nuevos-negocios',
-				eyebrow: 'Producto · Tecnología · Negocio',
-				headline: 'Construir bien importa. Construir lo correcto importa más.',
-				intro:
-					'Cuando el software es parte central de un nuevo negocio, las primeras decisiones tienen consecuencias desproporcionadas. Una mala decisión temprana puede convertirse después en meses de desarrollo, infraestructura innecesaria, una arquitectura difícil de modificar o inversión destinada a funcionalidades que nunca debieron construirse.',
-				pivot: 'Antes de hablar de frameworks o infraestructura, trabajamos sobre preguntas más importantes.',
-				questions: [
-					{
-						q: '¿Qué problema estamos resolviendo?',
-						a: 'Qué necesidad existe, para quién y qué tendría que ocurrir para considerar que la solución funciona.',
-					},
-					{
-						q: '¿Qué necesitamos construir primero?',
-						a: 'Separar lo esencial de lo accesorio y determinar qué puede validarse antes de invertir en desarrollo.',
-					},
-					{
-						q: '¿Qué deberíamos construir y qué deberíamos integrar?',
-						a: 'No todo necesita ser tecnología propia. La ventaja competitiva está en identificar dónde realmente vale la pena invertir.',
-					},
-					{
-						q: '¿Qué decisiones técnicas necesita esta etapa?',
-						a: 'Diseñar para las restricciones actuales sin intentar resolver prematuramente problemas que todavía no existen.',
-					},
-					{
-						q: '¿Cómo debería evolucionar si funciona?',
-						a: 'Pensar desde el comienzo en una dirección posible sin convertir esa dirección en complejidad innecesaria hoy.',
-					},
-				],
-				scopeLede: 'Puedo acompañar el proceso desde la definición inicial hasta la arquitectura y construcción del producto.',
-				scope: 'Discovery, MVP, arquitectura, estimación, roadmap, selección tecnológica, proveedores, desarrollo y evolución.',
-				resultLabel: 'El resultado que buscamos',
-				result: 'Reducir incertidumbre antes de aumentar inversión. Entender qué vale la pena construir y después construirlo con una dirección clara.',
-				cta: 'Conversemos sobre tu idea',
-				intent: 'new-product',
-			},
-			fraccional: {
-				id: 'arquitecto-fraccional',
-				eyebrow: 'Liderazgo técnico · Arquitectura · Decisión',
-				headline: 'Criterio técnico senior, sin crear un rol full-time.',
-				intro: 'Hay equipos que no necesitan más personas escribiendo código. Necesitan alguien que pueda mirar el sistema completo.',
-				pivot:
-					'Como arquitecto fraccional me incorporo de manera recurrente para acompañar las decisiones técnicas que pueden afectar la evolución del producto y del negocio.',
-				workWith: 'Puedo trabajar junto a founders, CTOs, Tech Leads, producto y equipos de ingeniería en:',
-				topics: [
-					'arquitectura y diseño de sistemas',
-					'decisiones técnicas de alto impacto',
-					'evaluación de riesgos y trade-offs',
-					'deuda técnica',
-					'modernizaciones y migraciones',
-					'integraciones',
-					'estándares técnicos',
-					'revisión de propuestas y diseños',
-					'roadmap tecnológico',
-					'acompañamiento del equipo',
-					'traducción de necesidades de negocio a decisiones técnicas ejecutables',
-				],
-				notReplace: 'No reemplazo al equipo.',
-				notReplaceEmphasis: 'Aumento su capacidad para tomar buenas decisiones.',
-				fitLabel: 'Tiene sentido cuando...',
-				fits: [
-					'Existe un equipo capaz de ejecutar, pero falta una mirada senior transversal.',
-					'El CTO o Tech Lead necesita un segundo criterio para una decisión importante.',
-					'La empresa creció y decisiones antes informales están empezando a tener consecuencias estructurales.',
-					'O todavía no tiene sentido incorporar un arquitecto de software a tiempo completo.',
-				],
-				cta: 'Evaluemos si tiene sentido',
-				intent: 'fractional',
-			},
-		},
-
-		principios: {
-			eyebrow: 'Cómo pienso el software',
+		decision: {
+			eyebrow: 'Cómo pienso',
 			headline: 'La arquitectura es una decisión, no un objetivo.',
-			lede: 'No parto de una arquitectura favorita ni de una tecnología predeterminada. Empiezo por entender cuatro cosas.',
-			nodes: [
-				{ label: 'Negocio', question: '¿Qué necesita conseguir la empresa y por qué importa?' },
-				{ label: 'Sistema', question: '¿Qué capacidades, restricciones y riesgos existen hoy?' },
-				{ label: 'Alternativas', question: '¿Qué opciones reales tenemos?' },
-				{ label: 'Trade-offs', question: '¿Qué ganamos, qué sacrificamos y qué estamos decidiendo postergar?' },
-				{ label: 'Decisión', question: '¿Qué tiene sentido ahora?' },
+			body: [
+				'No existe una arquitectura perfecta ni una tecnología que sea la respuesta para todos los negocios.',
+				'El punto de partida es entender qué necesita la empresa, qué existe actualmente y qué restricciones deben considerarse.',
 			],
-			closingNot: 'Una buena arquitectura no es la más sofisticada.',
-			closing: 'Es la que permite que el software acompañe al negocio sin introducir complejidad antes de que sea necesaria.',
+			questions: [
+				{ label: 'Negocio', question: '¿Qué necesita conseguir la empresa y por qué importa?' },
+				{ label: 'Sistema', question: '¿Qué capacidades, restricciones y riesgos existen actualmente?' },
+				{ label: 'Alternativas', question: '¿Qué opciones reales tenemos para resolver el problema?' },
+				{ label: 'Trade-offs', question: '¿Qué ganamos, qué sacrificamos y qué estamos decidiendo postergar?', consequence: true },
+				{ label: 'Decisión', question: '¿Qué tiene sentido hacer ahora?' },
+			],
 		},
 
 		proceso: {
-			eyebrow: 'El proceso',
-			headline: 'Diagnosticar antes de prescribir.',
+			eyebrow: 'Método',
+			phaseLabel: 'Fase',
+			headline: 'Cómo trabajo',
+			subhead: 'Diagnosticar antes de prescribir',
+			intro:
+				'Cada proyecto comienza por entender qué necesita conseguir la empresa y qué impide avanzar. La profundidad del análisis y mi participación se ajustan al servicio y al alcance acordado.',
 			steps: [
 				{
-					number: '01',
-					label: 'Entender',
-					body: 'Comprender el negocio, el sistema, las personas y las restricciones. No solamente qué está pasando técnicamente, sino por qué importa.',
+					phase: '01',
+					title: 'Entender el contexto',
+					body: 'Converso con las personas involucradas y reviso el producto o sistema para identificar objetivos, restricciones y riesgos. El resultado es una definición compartida del problema y de las decisiones que necesitamos tomar.',
 				},
 				{
-					number: '02',
-					label: 'Hacer visible el problema',
-					body: 'Separar síntomas de causas. Identificar dependencias, riesgos y decisiones que hoy están siendo tomadas de forma implícita.',
+					phase: '02',
+					title: 'Comparar alternativas y definir una dirección',
+					body: 'Evalúo las opciones considerando costo, esfuerzo, riesgo y consecuencias para el negocio. Dejo explícito qué permite cada alternativa y qué limita. El resultado es una recomendación fundamentada y una hoja de ruta con prioridades.',
 				},
 				{
-					number: '03',
-					label: 'Evaluar alternativas',
-					body: 'Normalmente existe más de una solución razonable. Hago explícitos sus costos, beneficios, riesgos y consecuencias para poder compararlas.',
-				},
-				{
-					number: '04',
-					label: 'Definir una dirección',
-					body: 'Convertir la decisión en arquitectura, prioridades y una hoja de ruta que pueda ejecutarse.',
-				},
-				{
-					number: '05',
-					label: 'Llevarla al software',
-					body: 'Dependiendo del proyecto, puedo participar como consultor, arquitecto fraccional, líder técnico o directamente en el desarrollo.',
+					phase: '03',
+					title: 'Acompañar la ejecución',
+					body: 'Según el alcance, reviso decisiones con el equipo, doy seguimiento a la arquitectura o participo en el desarrollo. El objetivo es llevar la dirección acordada al software y revisarla cuando aparece nueva información.',
 				},
 			],
-			closingNot: 'Porque el objetivo no es producir un documento.',
-			closing: 'Es conseguir que una buena decisión llegue al software.',
-			cta: 'Conversemos 30 minutos',
+			closingTitle: 'Claridad antes que complejidad',
+			closing:
+				'La arquitectura debe responder al problema y a la etapa del negocio. Cada recomendación tiene que explicar qué resuelve, cuánto exige y qué consecuencias introduce.',
 		},
 
 		casos: {
-			eyebrow: 'Experiencia',
-			headline: 'Del problema a la decisión.',
-			lede: 'Tres contextos diferentes, con algo en común: el desafío no era simplemente desarrollar software, sino entender qué necesitaba el negocio y diseñar una dirección técnica que pudiera sostenerlo.',
-			backLabel: 'Casos',
-			cta: 'Conversemos 30 minutos',
+			eyebrow: 'Evidencia',
+			headline: 'Casos',
+			subhead: 'Decisiones de arquitectura llevadas a la práctica',
+			intro:
+				'Estos proyectos muestran cómo conecto el contexto del producto con el diseño del sistema y el trabajo de implementación.',
 			items: [
 				{
-					slug: 'kepler-coach',
 					name: 'Kepler Coach',
-					card: {
-						headline: 'De prototipo a plataforma multi-tenant.',
-						body: 'Transformación de un prototipo de IA en una plataforma sobre .NET, React y Azure preparada para operar como producto real.',
-						tag: 'PROTOTIPO → PLATAFORMA',
-					},
-					detail: {
-						tagline: 'Producto · Arquitectura · Azure',
-						intro: [
-							'Kepler Coach había demostrado su idea mediante un prototipo funcional: utilizar IA para transformar documentos, videos y otras fuentes de información en cursos estructurados.',
-							'El siguiente desafío era muy diferente: el sistema debía convertirse en una plataforma robusta, capaz de operar para una de las empresas públicas más grandes de Uruguay, soportar múltiples clientes y seguir evolucionando como producto.',
-						],
-						problema: {
-							heading: 'El problema',
-							paragraphs: [
-								'El prototipo permitía validar la propuesta, pero no había sido diseñado como fundamento de una plataforma multi-tenant de largo plazo.',
-								'Era necesario resolver decisiones estructurales:',
-							],
-							list: [
-								'cómo separar clientes y responsabilidades',
-								'cómo procesar distintas fuentes de contenido',
-								'cómo integrar los procesos de datos e IA',
-								'cómo evolucionar nuevas capacidades sin aumentar innecesariamente el acoplamiento',
-								'cómo desplegar y operar todo el sistema sobre Azure',
-							],
-							closing: '¿Qué necesita este producto para convertirse en una plataforma?',
-						},
-						decision: {
-							heading: 'La decisión',
-							paragraphs: [
-								'En lugar de continuar agregando complejidad sobre el prototipo, definimos una nueva base técnica orientada a producción.',
-								'Diseñé la arquitectura de una plataforma multi-tenant sobre .NET, React y Azure, definiendo los límites entre servicios, las capacidades compartidas y la estrategia de evolución del producto. También diseñé servicios y herramientas para soportar los procesos de ingestión, procesamiento y generación de contenido mediante IA.',
-							],
-							closing:
-								'El prototipo seguía siendo evidencia de lo que debía hacer el producto — pero ya no tenía que determinar cómo debía estar construido.',
-						},
-						rol: {
-							heading: 'Mi rol',
-							label: 'Technical Leader · Arquitectura de software',
-							items: [
-								'Definición de la arquitectura objetivo',
-								'Estrategia de reimplementación',
-								'Diseño de límites y responsabilidades del sistema',
-								'Arquitectura multi-tenant',
-								'Diseño de capacidades para ingestión y procesamiento',
-								'Integración con workflows de datos e IA',
-								'Fundamentos de infraestructura sobre Azure',
-								'Acompañamiento técnico del equipo durante la implementación',
-							],
-						},
-						resultado: {
-							heading: 'Resultado',
-							paragraphs: [
-								'Kepler Coach pasó de ser un prototipo utilizado para demostrar una hipótesis a tener las bases de una plataforma multi-tenant orientada a producción, preparada para recibir distintas fuentes de contenido y transformarlas en cursos, módulos, actividades y evaluaciones.',
-							],
-							closing:
-								'El cambio más importante no fue tecnológico: fue pasar de demostrar que algo podía construirse a diseñar cómo debía evolucionar como producto real.',
-						},
-					},
+					headline: 'De un prototipo a una plataforma para múltiples organizaciones',
+					body: [
+						'Kepler Coach necesitaba evolucionar un prototipo educativo basado en inteligencia artificial hacia una plataforma orientada a producción. Lideré la estrategia de reimplementación y definí la arquitectura, los límites entre servicios y las bases de infraestructura.',
+						'El trabajo dio forma a una plataforma capaz de convertir documentos, videos y otras fuentes en cursos estructurados, con una arquitectura para atender a múltiples organizaciones.',
+					],
+					tags: '.NET, React, Azure',
 				},
 				{
-					slug: 'rollkall',
 					name: 'RollKall',
-					card: {
-						headline: 'Modernizar sin detener el producto.',
-						body: 'Migración progresiva de una aplicación legada hacia .NET moderno mientras el equipo continuaba entregando nuevas funcionalidades.',
-						tag: 'LEGACY → MODERNIZACIÓN → DELIVERY',
-					},
-					detail: {
-						tagline: 'Modernización · Arquitectura · .NET',
-						intro: [
-							'RollKall era una aplicación madura, con un backend de gran tamaño y múltiples clientes construidos sobre él. El sistema seguía evolucionando y el negocio necesitaba continuar entregando funcionalidades.',
-							'Al mismo tiempo, parte importante de su núcleo tecnológico permanecía sobre .NET Framework y necesitaba avanzar hacia una plataforma .NET moderna.',
-						],
-						problema: {
-							heading: 'El problema',
-							paragraphs: [
-								'Modernizar un sistema activo presenta una tensión difícil: la tecnología necesita cambiar, pero el negocio no puede detenerse mientras cambia.',
-								'Una migración completa podía consumir meses de capacidad del equipo y congelar el roadmap. Postergarla indefinidamente significaba acumular restricciones sobre una base cada vez más costosa de evolucionar.',
-							],
-							closing: 'El problema no era simplemente migrar de framework: era modernizar y seguir entregando al mismo tiempo.',
-						},
-						decision: {
-							heading: 'La decisión',
-							paragraphs: [
-								'La modernización se planteó de manera incremental. En lugar de detener el desarrollo para una gran reescritura, trabajamos sobre una migración progresiva hacia .NET moderno, usando las necesidades reales del producto como oportunidades para avanzar también sobre la arquitectura.',
-								'Desde el Architecture Pod participé en la estrategia de migración hacia .NET 8, así como en la reimplementación y refactorización de procesos críticos del negocio.',
-							],
-							closing:
-								'Esto permitió separar la modernización en decisiones más pequeñas y controlables, sin convertirla en un proyecto aislado del roadmap.',
-						},
-						rol: {
-							heading: 'Mi rol',
-							label: 'Architecture Pod · Technical Lead · Full-Stack Engineer',
-							items: [
-								'Estrategia de modernización de .NET',
-								'Migración progresiva hacia .NET 8',
-								'Revisión de arquitectura',
-								'Reimplementación de procesos críticos',
-								'Refactorización de componentes existentes',
-								'Liderazgo técnico de iniciativas de producto',
-								'Acompañamiento del equipo durante la transición',
-							],
-						},
-						resultado: {
-							heading: 'Resultado',
-							paragraphs: [
-								'La aplicación pudo avanzar hacia una base tecnológica moderna sin transformar la migración en una pausa prolongada del desarrollo de producto. Las nuevas funcionalidades continuaron llegando mientras partes estratégicas del sistema eran modernizadas progresivamente.',
-							],
-							closing:
-								'La decisión no fue elegir entre delivery o modernización: fue diseñar una estrategia que permitiera sostener ambos.',
-						},
-					},
+					headline: 'Modernización mientras el equipo seguía entregando funcionalidades',
+					body: [
+						'RollKall necesitaba modernizar una aplicación existente sin frenar el desarrollo del producto. Como parte del equipo de arquitectura, lideré la migración a .NET 8 y trabajé en la reimplementación y refactorización de procesos críticos.',
+						'La modernización avanzó de forma progresiva mientras el equipo continuaba entregando nuevas funcionalidades.',
+					],
+					tags: '.NET, modernización progresiva',
 				},
 				{
-					slug: 'bavastro',
 					name: 'Bavastro',
-					card: {
-						headline: 'Una operación de remates de punta a punta.',
-						body: 'Un sistema que conecta el ingreso de un artículo en bodega con su publicación y una experiencia de pujas en tiempo real.',
-						tag: 'BODEGA → PUBLICACIÓN → PUJA',
-					},
-					detail: {
-						tagline: 'Producto · Operaciones · Tiempo real',
-						intro: [
-							'Para Bavastro, la mayor casa de remates de Uruguay, el software debía representar mucho más que un portal donde publicar productos.',
-							'Un artículo ingresa a bodega, debe ser registrado, identificado y preparado para su venta. Después se publica, forma parte de un remate y finalmente recibe ofertas de compradores que participan en tiempo real.',
-						],
-						problema: {
-							heading: 'El problema',
-							paragraphs: [
-								'El desafío era construir un sistema capaz de acompañar todo el ciclo operativo de un producto, desde su ingreso físico a la empresa hasta el momento en que alguien realiza una puja.',
-								'Eso significaba conectar dos mundos que normalmente se resuelven por separado: la operación interna de la casa de remates y la experiencia digital del comprador.',
-							],
-							closing:
-								'El sistema debía mantener una relación coherente entre inventario, catálogo, publicación, remates y ofertas en tiempo real.',
-						},
-						decision: {
-							heading: 'La decisión',
-							paragraphs: [
-								'Diseñamos el producto alrededor del flujo real del negocio. En lugar de construir herramientas independientes para cada etapa, desarrollamos un sistema end-to-end donde un artículo mantiene continuidad durante todo su recorrido.',
-							],
-							list: [
-								'Ingreso en bodega',
-								'Registro y gestión',
-								'Preparación para remate',
-								'Publicación',
-								'Portal del comprador',
-								'Puja en tiempo real',
-							],
-							closing:
-								'La arquitectura debía servir tanto a los procesos internos de Bavastro como a una experiencia pública donde múltiples compradores interactúan simultáneamente durante un remate.',
-						},
-						rol: {
-							heading: 'Mi rol',
-							label: 'Arquitectura · Diseño de producto · Desarrollo full-stack',
-							items: [
-								'Modelado del flujo operativo',
-								'Diseño de arquitectura',
-								'Desarrollo del sistema de gestión',
-								'Integración entre back-office y publicación',
-								'Portal público de remates',
-								'Diseño de la experiencia de pujas',
-								'Comunicación y actualización en tiempo real',
-							],
-						},
-						resultado: {
-							heading: 'Resultado',
-							paragraphs: [
-								'Bavastro obtuvo un sistema que conecta digitalmente el recorrido completo de un artículo: desde que entra a la bodega hasta que recibe una oferta durante un remate.',
-							],
-							closing:
-								'Más que digitalizar una etapa aislada, el proyecto permitió tratar la operación como un único sistema conectado, manteniendo continuidad entre los procesos internos y la experiencia del comprador.',
-						},
-					},
+					headline: 'Un sistema que conecta la operación de remates',
+					body: [
+						'El proyecto reúne el ingreso de artículos en bodega, su publicación y las pujas en tiempo real dentro de un mismo sistema.',
+						'El desarrollo conecta las etapas de la operación con la experiencia de quienes participan en el remate.',
+					],
+					tags: 'Bodega, publicación, pujas en tiempo real',
 				},
 			],
 		},
 
-		sobreMi: {
-			eyebrow: 'Brian Stefanovich',
-			headline: 'Entre el negocio y la ingeniería.',
+		sobreBrian: {
+			eyebrow: 'Perfil',
+			headline: 'Sobre Brian',
+			subhead: 'Experiencia en arquitectura e implementación de software',
 			paragraphs: [
-				'Soy ingeniero de software y Technical Leader.',
-				'He trabajado diseñando, construyendo y evolucionando sistemas en fintech, plataformas digitales, integraciones empresariales, productos basados en datos y aplicaciones utilizadas directamente por clientes.',
-				'Mi experiencia combina arquitectura con desarrollo hands-on. Eso me permite moverme entre una conversación sobre negocio, producto y riesgo y el nivel técnico necesario para que una decisión pueda ejecutarse.',
+				'Soy Brian Stefanovich, ingeniero de software y líder técnico. Trabajo en el diseño, la construcción y la evolución de sistemas, con experiencia en fintech, integraciones empresariales y plataformas utilizadas por clientes.',
+				'En Kepler Coach lideré la evolución de un prototipo hacia una plataforma para múltiples organizaciones. En RollKall participé en el equipo de arquitectura y lideré una migración tecnológica mientras continuaba el desarrollo del producto.',
 			],
-			intersectionLabel: 'Trabajo especialmente bien en la intersección entre:',
-			intersection: ['negocio', 'producto', 'arquitectura', 'ingeniería'],
-			closingNot: 'No busco introducir complejidad para demostrar sofisticación técnica.',
-			closing: 'Busco encontrar la decisión adecuada para el problema, las restricciones y la etapa actual del negocio.',
-			cta: 'Conoce mi experiencia',
-		},
-
-		fit: {
-			eyebrow: 'Cuándo tiene sentido trabajar juntos',
-			headline: 'No todos los problemas necesitan consultoría.',
-			yesLabel: 'Probablemente podamos trabajar bien juntos si:',
-			yes: [
-				'tu empresa depende de un sistema que necesita evolucionar y no está claro cómo hacerlo',
-				'una decisión tecnológica tiene consecuencias importantes para el negocio',
-				'quieres construir un producto y reducir incertidumbre antes de comprometer una inversión importante',
-				'tienes un equipo técnico que necesita acompañamiento senior',
-				'quieres entender alternativas y trade-offs, no solamente recibir una recomendación cerrada',
-				'buscas a alguien capaz de discutir estrategia y también entender profundamente la implementación',
+			imageAlt: 'Brian Stefanovich sosteniendo un notebook',
+			lead: 'Esa experiencia me permite conectar una conversación sobre negocio y riesgo con las decisiones de arquitectura y el trabajo de implementación. Puedo ayudarte a evaluar una inversión en software y acompañar al equipo que la lleva a la práctica.',
+			areas: [
+				{ title: 'Negocio', body: 'Entender qué necesita conseguir la empresa y cómo el software puede contribuir.' },
+				{ title: 'Producto', body: 'Definir qué problema resolver, para quién y qué conviene construir primero.' },
+				{ title: 'Arquitectura', body: 'Elegir una dirección técnica teniendo en cuenta costos, restricciones y riesgos.' },
+				{ title: 'Ingeniería', body: 'Llevar las decisiones al sistema y revisar sus efectos durante la implementación.' },
 			],
-			noLabel: 'Probablemente no sea lo que necesitas si:',
-			no: [
-				'solo buscas aumentar temporalmente la cantidad de desarrolladores',
-				'la solución ya está completamente definida y únicamente necesitas ejecución por horas',
-				'necesitas una software factory capaz de incorporar un equipo grande de forma inmediata',
-				'buscas aplicar una tecnología específica independientemente del problema',
-				'esperas una solución antes de que exista suficiente contexto para entender el problema',
-			],
-			closing:
-				'A veces la mejor recomendación es no reescribir, no construir o no agregar más arquitectura. Eso también forma parte del trabajo.',
 		},
 
 		faq: {
-			eyebrow: 'FAQ',
-			headline: 'Preguntas frecuentes.',
+			eyebrow: 'Antes de contactarme',
+			headline: 'Preguntas frecuentes',
+			featured: {
+				q: '¿Qué ocurre en la primera conversación?',
+				a: 'Durante unos 30 minutos conversamos sobre tu situación, lo que necesitas conseguir y la decisión que tienes pendiente. Evaluamos si puedo ayudarte y qué tipo de trabajo tendría sentido como siguiente paso. Si el problema queda fuera de mi experiencia, te lo diré.',
+			},
 			items: [
 				{
-					q: '¿Qué ocurre en la primera conversación?',
-					a: 'Nos conocemos y entiendo brevemente qué está ocurriendo, por qué importa y qué tipo de ayuda estás buscando. Si veo una forma en la que puedo ayudarte, definimos cuál podría ser el siguiente paso. Si no soy la persona adecuada para el problema, también te lo diré.',
+					q: '¿La primera conversación tiene costo?',
+					a: 'No. La primera conversación no tiene costo. No sustituye una consultoría, un diagnóstico ni una auditoría: su objetivo es obtener suficiente contexto para determinar si tiene sentido trabajar juntos.',
 				},
 				{
-					q: '¿La reunión gratuita incluye asesoría?',
-					a: 'No. La conversación inicial no sustituye una consultoría, diagnóstico o auditoría. Su objetivo es obtener suficiente contexto para determinar si tiene sentido trabajar juntos.',
+					q: '¿También participas en el desarrollo?',
+					a: 'Sí. Dependiendo del problema puedo participar como consultor, arquitecto de software fraccional, líder técnico o directamente en el desarrollo. La modalidad viene después de entender qué necesita el proyecto.',
 				},
 				{
 					q: '¿Tengo que saber qué servicio necesito?',
 					a: 'No. No espero que diagnostiques el problema antes de contactarme. Cuéntame qué está ocurriendo. A partir de ahí podemos determinar qué tipo de intervención tiene sentido.',
 				},
 				{
-					q: '¿Trabajas con equipos existentes?',
-					a: 'Sí. Muchos de estos problemas no requieren reemplazar al equipo. Puedo trabajar junto a developers, Tech Leads, CTOs, producto, founders y proveedores existentes.',
-				},
-				{
-					q: '¿Solo trabajas como consultor?',
-					a: 'No. Dependiendo del problema puedo participar como consultor, arquitecto fraccional, Technical Leader o directamente en el desarrollo. La modalidad viene después de entender qué necesita el proyecto.',
-				},
-				{
 					q: '¿Trabajas con una tecnología específica?',
 					a: 'No parto de una tecnología determinada. Tengo experiencia principalmente en ecosistemas .NET, JavaScript/TypeScript, React, Python, Node.js, SQL y plataformas cloud. La selección tecnológica depende del sistema, el equipo, las restricciones y el negocio.',
+				},
+				{
+					q: '¿Trabajas con equipos existentes?',
+					a: 'Sí. Muchos de estos problemas no requieren reemplazar al equipo. Puedo trabajar junto a desarrolladores, líderes técnicos, CTOs, equipos de producto, fundadores y proveedores existentes.',
 				},
 				{
 					q: '¿Trabajas de forma remota?',
 					a: 'Sí. Trabajo con empresas en Chile y con equipos internacionales de forma remota.',
 				},
 			],
+			expandLabel: 'Mostrar respuesta',
+			collapseLabel: 'Ocultar respuesta',
 		},
 
 		ctaFinal: {
-			eyebrow: 'Primera conversación',
-			headline: 'Cuéntame qué está pasando.',
-			body: 'Si el software está frenando a tu empresa, estás evaluando construir un nuevo producto o tu equipo necesita dirección técnica senior, podemos empezar por una conversación. 30 minutos para conocernos, entender brevemente el contexto y evaluar si puedo ayudarte.',
+			eyebrow: '30 min · Sin costo',
+			headline: 'Primera conversación',
+			subhead: 'Conversemos sobre la decisión que necesitas tomar',
+			paragraphs: [
+				'Si necesitas mejorar un sistema, evaluar un producto de software o darle dirección técnica a tu equipo, podemos comenzar por entender el contexto.',
+				'Cuéntame qué está pasando, qué necesitas conseguir y cuál es la principal decisión pendiente. En 30 minutos evaluaremos si puedo ayudarte y cuál podría ser el siguiente paso.',
+			],
 			cta: 'Conversemos 30 minutos',
-			microcopy: 'Primera conversación sin costo · No sustituye una asesoría.',
+			imageAlt: 'Brian Stefanovich',
+		},
+
+		contacto: {
+			eyebrow: 'Por escrito',
+			headline: 'Contacto',
+			subhead: 'Cuéntame qué está pasando.',
+			intro:
+				'Puedes escribirme aunque todavía no tengas definido el servicio. Comencemos por el problema o la oportunidad que quieres evaluar.',
+			directLabel: 'Escríbeme directamente',
+			linkedinLabel: 'LinkedIn de Brian Stefanovich',
+			form: {
+				name: 'Nombre',
+				email: 'Correo',
+				phone: 'Teléfono',
+				message: 'Mensaje',
+				submit: 'Enviar',
+				subject: 'Contacto desde brianstefanovich.com',
+				consentData: 'Acepto y consiento el tratamiento de mis datos personales para gestionar mi solicitud de contacto.',
+				consentMarketing: 'Acepto recibir comunicaciones comerciales y boletines informativos de Brian Stefanovich.',
+				sent: 'Se abrió tu correo con el mensaje listo para enviar. Si no se abrió, escríbeme a',
+				required: 'Campo obligatorio',
+			},
 		},
 	},
 
 	footer: {
-		name: 'Brian Stefanovich',
-		tagline: 'Arquitectura y consultoría de software.',
-		promise: 'Claridad antes que complejidad.',
 		servicesLabel: 'Servicios',
 		services: [
-			{ label: 'Sistemas existentes', href: '/#sistemas-existentes' },
-			{ label: 'Nuevos negocios basados en software', href: '/#nuevos-negocios' },
-			{ label: 'Arquitecto fraccional', href: '/#arquitecto-fraccional' },
+			{ label: 'Sistemas existentes', href: '#sistemas-existentes' },
+			{ label: 'Nuevos productos y negocios', href: '#nuevos-negocios' },
+			{ label: 'Arquitecto de software fraccional', href: '#arquitecto-fraccional' },
 		],
-		linkedin: 'LinkedIn',
-		email: 'Email',
-		copyright: '© Brian Stefanovich · 2026',
+		resourcesLabel: 'Recursos',
+		resources: [
+			{ label: 'Casos', href: '#casos' },
+			{ label: 'Cómo trabajo', href: '#como-trabajo' },
+			{ label: 'Preguntas frecuentes', href: '#faq' },
+			{ label: 'Contacto', href: '#contacto' },
+		],
+		attributes: ['Riguroso', 'Intencional'],
+		tagline: 'Claridad antes que complejidad',
+		copyright: '© 2026 Brian Stefanovich',
 	},
 
 	contact: {
@@ -539,7 +393,6 @@ export const es = {
 			{ id: 'other', label: 'Otro' },
 		],
 		scheduleCta: 'Elegir horario',
-		schedulePlaceholder: 'La agenda se conecta pronto. Mientras tanto, escríbeme directamente y coordinamos un horario.',
 		emailCta: 'Escribir por email',
 		close: 'Cerrar',
 		back: 'Volver',

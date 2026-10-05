@@ -1,47 +1,34 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import Continuidad from '@/components/sections/Continuidad';
+import Contacto from '@/components/sections/Contacto';
 import CtaFinal from '@/components/sections/CtaFinal';
-import Diagnostico from '@/components/sections/Diagnostico';
-import Diferenciales from '@/components/sections/Diferenciales';
-import Encaje from '@/components/sections/Encaje';
+import Decision from '@/components/sections/Decision';
 import Experiencia from '@/components/sections/Experiencia';
 import Faq from '@/components/sections/Faq';
 import Hero from '@/components/sections/Hero';
-import ProcessSteps from '@/components/sections/ProcessSteps';
+import Presentacion from '@/components/sections/Presentacion';
 import Problemas from '@/components/sections/Problemas';
+import ProcessSteps from '@/components/sections/ProcessSteps';
+import Servicios from '@/components/sections/Servicios';
 import SobreBrian from '@/components/sections/SobreBrian';
 import ContactDrawer from '@/components/ContactDrawer';
 import { getTranslations } from '@/i18n';
 
-const t = getTranslations();
-const { home } = t;
+const { home } = getTranslations();
 ---
 
 <BaseLayout title={home.meta.title} description={home.meta.description} canonicalPath="/">
-	<script is:inline>
-		(function () {
-			try {
-				var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-				var seen = sessionStorage.getItem('hero-declass');
-				if (!seen && !reduceMotion) {
-					sessionStorage.setItem('hero-declass', '1');
-					document.documentElement.classList.add('hero-declass-play');
-				}
-			} catch (e) {}
-		})();
-	</script>
 	<Hero client:load />
-	<Problemas client:visible />
-	<Diferenciales client:visible />
-	<Diagnostico client:visible />
-	<Continuidad client:visible />
-	<ProcessSteps client:visible />
-	<Experiencia client:visible />
-	<SobreBrian client:visible />
-	<Encaje client:visible />
+	<Presentacion />
+	<Problemas />
+	<Servicios client:visible />
+	<Decision />
+	<ProcessSteps />
+	<Experiencia />
+	<SobreBrian />
 	<Faq client:visible />
 	<CtaFinal client:visible />
+	<Contacto client:visible />
 	<ContactDrawer client:load />
 </BaseLayout>
 

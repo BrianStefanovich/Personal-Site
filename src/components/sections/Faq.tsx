@@ -1,46 +1,60 @@
-import { Reveal } from '@/components/ui/Reveal';
+import { Section } from '@/components/ui/Section';
+import { SectionHeading } from '@/components/ui/SectionHeading';
 import { es } from '@/i18n/es';
+import { Plus } from 'lucide-react';
 import { useState } from 'react';
 
 const { faq } = es.home;
 
 export default function Faq() {
-	const [openIndex, setOpenIndex] = useState<number | null>(0);
+	const [openIndex, setOpenIndex] = useState<number | null>(null);
 
 	return (
-		<section id="faq" className="border-b border-fog bg-porcelain py-20 md:py-28">
-			<div className="container max-w-3xl">
-				<Reveal>
-					<p className="eyebrow">{faq.eyebrow}</p>
-					<h2 className="mt-4 font-display text-3xl font-bold text-carbon md:text-4xl">{faq.headline}</h2>
-				</Reveal>
+		<Section id="faq">
+			<div className="grid gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-x-16">
+				<div className="lg:sticky lg:top-[calc(var(--header-h)+2rem)] lg:self-start">
+					<SectionHeading eyebrow={faq.eyebrow} title={faq.headline} />
+					<h3 className="reveal mt-8">{faq.featured.q}</h3>
+					<p className="reveal measure mt-4 text-base md:text-lg">{faq.featured.a}</p>
+				</div>
 
-				<div className="tech-frame mt-10 divide-y divide-fog rounded-md">
+				<ul className="border-y border-line">
 					{faq.items.map((item, i) => {
-						const isOpen = openIndex === i;
+						const open = openIndex === i;
 						return (
-							<div key={item.q}>
-								<button
-									type="button"
-									aria-expanded={isOpen}
-									onClick={() => setOpenIndex(isOpen ? null : i)}
-									className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
+							<li key={item.q} className="border-t border-line first:border-t-0">
+								<h4>
+									<button
+										type="button"
+										aria-expanded={open}
+										aria-controls={`faq-panel-${i}`}
+										id={`faq-button-${i}`}
+										onClick={() => setOpenIndex(open ? null : i)}
+										className="flex min-h-16 w-full items-center justify-between gap-6 py-4 text-left font-display text-lg font-bold hover:text-link md:text-xl"
+									>
+										<span>{item.q}</span>
+										<Plus
+											aria-hidden="true"
+											size={24}
+											strokeWidth={2}
+											className={`shrink-0 text-link transition-transform duration-300 ${open ? 'rotate-45' : ''}`}
+										/>
+									</button>
+								</h4>
+								<div
+									id={`faq-panel-${i}`}
+									role="region"
+									aria-labelledby={`faq-button-${i}`}
+									hidden={!open}
+									className="pb-6 pr-12 text-base md:text-lg"
 								>
-									<span className="font-display text-base font-bold text-carbon">{item.q}</span>
-									<img
-										src="/images/icon-plus.svg"
-										alt=""
-										className={`shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-45' : ''}`}
-									/>
-								</button>
-								{isOpen && (
-									<p className="px-6 pb-5 text-sm leading-relaxed text-graphite">{item.a}</p>
-								)}
-							</div>
+									<p className="measure">{item.a}</p>
+								</div>
+							</li>
 						);
 					})}
-				</div>
+				</ul>
 			</div>
-		</section>
+		</Section>
 	);
 }

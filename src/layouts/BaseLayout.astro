@@ -1,7 +1,11 @@
 ---
-import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Header from '@/components/Header';
 import Seo from '@/components/Seo.astro';
+import '@fontsource/montserrat/latin-700.css';
+import '@fontsource/open-sans/latin-400.css';
+import '@fontsource/open-sans/latin-700.css';
+import '@fontsource/jetbrains-mono/latin-500.css';
 import '@/styles/global.css';
 
 interface Props {
@@ -20,10 +24,8 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
+		<meta name="color-scheme" content="light dark" />
 		<meta name="generator" content={Astro.generator} />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<Seo title={title} description={description} canonicalPath={canonicalPath} type={type} />
 		{import.meta.env.PROD && gaMeasurementId && <>
@@ -32,8 +34,14 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
 		</>}
 	</head>
 	<body>
+		<a
+			href="#contenido"
+			class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-card focus:bg-blueprint focus:px-5 focus:py-3 focus:font-display focus:font-bold focus:text-porcelain"
+		>
+			Saltar al contenido
+		</a>
 		<Header client:load />
-		<main class="pt-16"><slot /></main>
+		<main id="contenido" class="pt-(--header-h)"><slot /></main>
 		<Footer />
 	</body>
 </html>
