@@ -127,7 +127,7 @@ export default function Header() {
 					</nav>
 
 					<div className="flex items-center gap-3">
-						<ThemeToggle className="max-[374px]:hidden" />
+						<ThemeToggle className="max-xl:hidden" />
 						<CtaButton variant="compact" intent="other" className="hidden whitespace-nowrap sm:inline-flex">
 							{ctaLabel}
 						</CtaButton>
@@ -167,7 +167,7 @@ export default function Header() {
 								{link.label}
 							</a>
 						))}
-						<div className="mt-6 flex items-center justify-between border-b border-line pb-4 min-[375px]:hidden">
+						<div className="flex items-center justify-between border-b border-line py-2">
 							<span className="label-mono text-base">{nav.themeLabel}</span>
 							<ThemeToggle />
 						</div>
