@@ -20,14 +20,14 @@ export const es = {
 		meta: {
 			title: 'Brian Stefanovich | Arquitectura y consultoría de software',
 			description:
-				'Ayudo a fundadores, dueños de negocio y líderes de tecnología a decidir qué construir, qué mejorar y cómo hacerlo viable. Primera conversación sin costo.',
+				'Aporto criterio técnico para decidir qué corregir, qué validar y cómo liderar entregas de software con consecuencias de negocio. Primera conversación sin costo.',
 		},
 
 		hero: {
 			eyebrow: 'Arquitectura y consultoría de software',
-			headlineLines: ['Arquitectura de software', 'con visión de negocio'],
+			headlineLines: ['Decisiones de software', 'que importan al negocio'],
 			subhead:
-				'Ayudo a fundadores, dueños de negocio y líderes de tecnología a decidir qué construir, qué mejorar y cómo hacerlo viable.',
+				'Aporto criterio técnico para recuperar el control de un sistema, validar una inversión o liderar una entrega, y acompaño su ejecución.',
 			cta: 'Conversemos 30 minutos',
 			note: '30 min · Sin costo · No sustituye una asesoría',
 			imageAlt: 'Brian Stefanovich',
@@ -35,25 +35,21 @@ export const es = {
 
 		presentacion: {
 			eyebrow: 'Enfoque',
-			headline: 'El mejor software comienza con mejores decisiones',
+			headline: 'Criterio técnico para decidir y avanzar',
 			paragraphs: [
 				[
-					{ b: 'Ofrezco arquitectura de software, consultoría tecnológica, desarrollo de software y liderazgo técnico' },
-					' para empresas que necesitan mejorar sus sistemas, desarrollar nuevos productos digitales o resolver desafíos tecnológicos.',
+					'Ayudo a empresas que dependen de un sistema, evalúan una nueva línea de negocio basada en software o necesitan liderazgo técnico para una entrega importante.',
 				],
 				[
-					'Analizo tu negocio y tu tecnología para encontrar ',
-					{ b: 'soluciones simples, eficientes y que puedan evolucionar' },
-					', evaluando las distintas alternativas antes de tomar decisiones.',
+					'Primero entiendo el problema, comparo alternativas y recomiendo una dirección con sus ',
+					{ b: 'costos, riesgos y dependencias' },
+					'. Después puedo acompañar la ejecución acordada.',
 				],
 				[
-					'Te ayudo a ',
-					{
-						b: 'modernizar sistemas, reducir deuda técnica, mejorar la arquitectura de software, integrar tecnologías y desarrollar nuevos productos digitales',
-					},
+					'El punto de partida es la decisión que necesitas tomar: ',
+					{ b: 'qué corregir, qué validar o cómo llevar una entrega adelante' },
 					'.',
 				],
-				[{ b: 'Si tu software necesita evolucionar o tienes un nuevo proyecto tecnológico, conversemos.' }],
 			] satisfies readonly Rich[],
 			diagram: {
 				label: 'Diagrama: un problema con cuatro caminos posibles y una decisión',
@@ -65,11 +61,11 @@ export const es = {
 
 		problema: {
 			eyebrow: 'Cuando el software empieza a pesar',
-			headline: 'Cuando necesitas tomar una decisión sobre software',
-			subhead: 'No todos los problemas de software se solucionan escribiendo más código.',
+			headline: 'Tres decisiones de software con consecuencias de negocio',
+			subhead: 'El trabajo empieza por entender qué decisión necesita resolver la empresa.',
 			paragraphs: [
-				'Cuando un sistema comienza a frenar al negocio, aumentar los costos o dificultar la evolución del producto, el primer paso no necesariamente es desarrollar.',
-				'Antes hay que entender qué está ocurriendo.',
+				'Puede ser recuperar una operación que depende de un sistema difícil de cambiar, decidir cuánto invertir en una oportunidad o asumir el liderazgo técnico de una entrega.',
+				'En los tres casos, primero hay que entender el contexto y las alternativas.',
 			],
 			question: '¿Te encuentras en alguna de estas situaciones?',
 			doorLabel: 'Ver cómo ayudo',
@@ -80,16 +76,16 @@ export const es = {
 			},
 			situations: [
 				{
-					title: 'El sistema funciona pero cada cambio cuesta más.',
-					body: 'Los cambios tardan más, las integraciones fallan o el equipo dedica demasiado tiempo a resolver problemas del sistema. Necesitas entender las causas y decidir qué conviene mejorar primero.',
+					title: 'El sistema deteriora la operación y cuesta evaluar qué hacer.',
+					body: 'Cada cambio tarda más, fallan integraciones o el proveedor propone una solución difícil de contrastar. Necesitas saber qué corregir, qué conservar y si conviene modernizar, reemplazar componentes o cambiar de proveedor.',
 				},
 				{
-					title: 'Tienes una oportunidad de negocio y necesitas definir qué construir.',
-					body: 'Quieres crear un producto basado en software, pero todavía hay dudas sobre el alcance, la viabilidad o la inversión. Necesitas decidir qué validar antes de comprometer meses de desarrollo.',
+					title: 'Quieres abrir una nueva línea de negocio basada en software.',
+					body: 'Ya tienes actividad, clientes o conocimiento de la industria, pero todavía falta evidencia para decidir cuánto invertir. Necesitas saber qué incertidumbre probar primero y cuándo continuar, cambiar de rumbo o detenerte.',
 				},
 				{
-					title: 'Tu equipo necesita dirección técnica senior',
-					body: 'El equipo avanza, pero las decisiones de arquitectura y tecnología requieren una mirada que conecte el trabajo diario con la evolución del producto.',
+					title: 'Un proyecto exige liderazgo técnico que hoy no está cubierto.',
+					body: 'El equipo puede ejecutar, pero necesita una persona responsable de las decisiones de arquitectura y la coordinación técnica. Hay que definir qué autoridad, dedicación y capacidad de entrega hacen falta.',
 				},
 			],
 		},
@@ -97,9 +93,9 @@ export const es = {
 		servicios: {
 			eyebrow: 'Qué hago',
 			headline: 'Servicios',
-			subhead: 'Arquitectura y consultoría para las decisiones de tu negocio',
+			subhead: 'Tres ofertas para tres decisiones de negocio',
 			intro:
-				'Puedes comenzar con un problema concreto, una idea de producto o una decisión pendiente. Según el contexto, trabajo en un diagnóstico puntual, acompaño al equipo de forma recurrente o participo en la implementación.',
+				'Cada trabajo comienza con un alcance concreto. Puedes contratar un diagnóstico autónomo, avanzar por etapas para validar una inversión o acordar una responsabilidad técnica recurrente. La continuidad y cualquier implementación se definen por separado.',
 			workLabel: 'En qué trabajo',
 			getLabel: 'Qué obtienes',
 			itemLabel: 'Servicio',
@@ -132,18 +128,18 @@ export const es = {
 					id: 'sistemas-existentes',
 					phase: '01',
 					cta: 'Conversemos sobre tu sistema',
-					title: 'Arquitectura y modernización de sistemas existentes',
-					lead: 'Cuando el software funciona, pero evolucionarlo se volvió cada vez más difícil.',
+					title: 'Diagnóstico técnico y plan de intervención',
+					lead: 'Recupera capacidad de decisión sobre un sistema del que depende tu negocio.',
 					intro: ['Cuando tu empresa depende de un sistema que necesita evolucionar.'],
 					work: [
-						'Diagnóstico de arquitectura, deuda técnica y problemas de rendimiento.',
-						'Revisión de integraciones, dependencias y riesgos operativos.',
-						'Evaluación de alternativas de modernización.',
-						'Priorización de cambios y definición de una hoja de ruta.',
+						'Evaluación de arquitectura, mantenimiento, operación, integraciones y riesgos relevantes.',
+						'Revisión de las propuestas del proveedor y de las dependencias que condicionan cada alternativa.',
+						'Comparación de corregir, conservar, mejorar el trabajo con el proveedor, modernizar, reemplazar componentes o cambiar de proveedor.',
+						'Recomendación priorizada con costos, dependencias y secuencia de intervención.',
 					],
 					get: [
-						'Un diagnóstico con los principales problemas y riesgos, una recomendación con sus razones y un plan de cambios ordenado por prioridad. El objetivo es que puedas decidir dónde invertir y cómo avanzar teniendo en cuenta la continuidad de la operación.',
-						'Cuando el proyecto requiere desarrollo, puedo acompañar al equipo o participar en la implementación. Ese alcance se acuerda por separado.',
+						'Un diagnóstico sustentado y un plan útil por sí mismo para decidir qué hacer y en qué orden. El alcance del diagnóstico se acuerda con precio cerrado.',
+						'No tienes que contratarme para ejecutar la recomendación: puedes llevarla a tu equipo o a otro proveedor. Si quieres que acompañe o supervise técnicamente la ejecución, se define como una etapa independiente.',
 					],
 					intent: 'existing-system',
 				},
@@ -151,19 +147,20 @@ export const es = {
 					id: 'nuevos-negocios',
 					phase: '02',
 					cta: 'Conversemos sobre tu idea',
-					title: 'Consultoría estratégica para productos y negocios basados en software',
-					lead: 'Cuando necesitas decidir qué producto construir y por dónde comenzar.',
+					title: 'Diseño de validación y plan de prototipo',
+					lead: 'Decide qué incertidumbre resolver antes de comprometer una inversión mayor.',
 					intro: [
-						'Trabajo contigo para entender la oportunidad de negocio y convertirla en decisiones de producto y tecnología. Identifico qué hipótesis conviene validar, qué necesita incluir una primera versión y qué restricciones pueden condicionar su desarrollo.',
+						'Trabajo con empresas que ya operan, tienen clientes o conocen su industria y quieren abrir una nueva línea de negocio. Primero distinguimos qué necesita evidencia comercial, qué requiere validación técnica y qué puede esperar.',
 					],
 					work: [
-						'Revisión del modelo de negocio y las necesidades de quienes usarán el producto.',
-						'Definición del alcance inicial y de lo que conviene validar primero.',
-						'Evaluación de desarrollar, comprar o integrar soluciones existentes.',
-						'Análisis de riesgos, arquitectura inicial y prioridades de desarrollo.',
+						'Priorización de hipótesis sobre demanda, disposición a pagar, factibilidad, integración y costo de operación.',
+						'Diseño del experimento adecuado: puede ser una prueba manual; no siempre hace falta construir software.',
+						'Definición del alcance mínimo del prototipo cuando el software sea necesario.',
+						'Presupuesto, dependencias y criterios acordados para continuar, modificar o detener la inversión.',
 					],
 					get: [
-						'Una dirección de producto y tecnología: alcance inicial, supuestos por validar, alternativas con sus costos y riesgos, y una hoja de ruta para la primera etapa. Esto permite evaluar la inversión antes de comprometer el desarrollo.',
+						'Un plan por etapas con hipótesis críticas, experimentos, alcance mínimo del prototipo si aplica, presupuesto y criterios de decisión. El trabajo se contrata por etapas para que cada inversión responda a la evidencia obtenida.',
+						'Mi criterio ayuda a evaluar factibilidad técnica y a diseñar cómo obtener evidencia comercial; una evaluación técnica, por sí sola, no demuestra que exista mercado.',
 					],
 					intent: 'new-product',
 				},
@@ -171,19 +168,20 @@ export const es = {
 					id: 'arquitecto-fraccional',
 					phase: '03',
 					cta: 'Evaluemos si tiene sentido',
-					title: 'Arquitecto de software fraccional',
-					lead: 'Dirección técnica senior con dedicación parcial y acompañamiento recurrente.',
+					title: 'Liderazgo técnico fraccional para una entrega definida',
+					lead: 'Asumo una responsabilidad técnica acordada dentro de un proyecto y su equipo.',
 					intro: [
-						'Me integro al trabajo de tu equipo para revisar decisiones de arquitectura, orientar prioridades técnicas y resolver dudas que afectan la evolución del producto. La dedicación, la frecuencia de las reuniones y las responsabilidades se acuerdan según lo que necesita la empresa.',
+						'La arquitectura fraccional describe la modalidad, no el alcance. Antes de comenzar acordamos qué decisiones y funciones delegas, mi autoridad, disponibilidad, dedicación y límites de responsabilidad.',
 					],
 					work: [
-						'Revisión de arquitectura y decisiones de diseño.',
-						'Evaluación de tecnologías, integraciones y deuda técnica.',
-						'Definición de criterios y estándares junto al equipo.',
-						'Seguimiento de la hoja de ruta tecnológica y apoyo en decisiones críticas.',
+						'Arquitectura inicial y revisión de decisiones críticas.',
+						'Estándares, acompañamiento del equipo y coordinación técnica con el cliente final.',
+						'Alineamiento con quien aprueba el presupuesto y con quienes deben hacer cumplir las decisiones.',
+						'Confirmación de que el equipo tiene capacidad de desarrollo suficiente para ejecutar el proyecto.',
 					],
 					get: [
-						'Recomendaciones documentadas, criterios compartidos para decidir y seguimiento de las prioridades técnicas. A diferencia de una consultoría puntual, el acompañamiento continúa mientras el equipo implementa y aparecen nuevas decisiones.',
+						'Una responsabilidad y dedicación mensual definidas de antemano, con disponibilidad, autoridad, límites y entregables acordados. La mensualidad corresponde al compromiso pactado, no a una promesa abierta de cubrir cualquier función técnica.',
+						'Esta participación cubre una brecha de liderazgo; no sustituye a las personas necesarias para desarrollar y entregar el software.',
 					],
 					intent: 'fractional',
 				},
@@ -192,17 +190,17 @@ export const es = {
 
 		decision: {
 			eyebrow: 'Cómo pienso',
-			headline: 'La arquitectura es una decisión, no un objetivo.',
+			headline: 'El mismo criterio; cambia la decisión.',
 			body: [
-				'No existe una arquitectura perfecta ni una tecnología que sea la respuesta para todos los negocios.',
-				'El punto de partida es entender qué necesita la empresa, qué existe actualmente y qué restricciones deben considerarse.',
+				'No existe una arquitectura perfecta ni una tecnología que resuelva por sí sola un problema de negocio.',
+				'Entiendo el contexto, comparo alternativas y recomiendo con evidencia. Después acompaño una ejecución que pueda observarse y medirse.',
 			],
 			questions: [
-				{ label: 'Negocio', question: '¿Qué necesita conseguir la empresa y por qué importa?' },
-				{ label: 'Sistema', question: '¿Qué capacidades, restricciones y riesgos existen actualmente?' },
-				{ label: 'Alternativas', question: '¿Qué opciones reales tenemos para resolver el problema?' },
-				{ label: 'Trade-offs', question: '¿Qué ganamos, qué sacrificamos y qué estamos decidiendo postergar?', consequence: true },
-				{ label: 'Decisión', question: '¿Qué tiene sentido hacer ahora?' },
+				{ label: 'Contexto', question: '¿Qué necesita conseguir el negocio y qué capacidad tiene para hacerlo?' },
+				{ label: 'Evidencia', question: '¿Qué sabemos y qué incertidumbre conviene resolver primero?' },
+				{ label: 'Alternativas', question: '¿Qué opciones son viables y qué costos, riesgos y dependencias implican?' },
+				{ label: 'Trade-offs', question: '¿Qué ganamos, qué sacrificamos y qué decidimos postergar?', consequence: true },
+				{ label: 'Siguiente paso', question: '¿Qué decisión y qué ejecución tienen sentido ahora?' },
 			],
 		},
 
@@ -212,35 +210,35 @@ export const es = {
 			headline: 'Cómo trabajo',
 			subhead: 'Diagnosticar antes de prescribir',
 			intro:
-				'Cada proyecto comienza por entender qué necesita conseguir la empresa y qué impide avanzar. La profundidad del análisis y mi participación se ajustan al servicio y al alcance acordado.',
+				'Entiendo qué necesita conseguir la empresa y qué decisión está pendiente. Comparo alternativas, explicito costos, riesgos y dependencias, y recomiendo un siguiente paso con alcance acordado.',
 			steps: [
 				{
 					phase: '01',
-					title: 'Entender el contexto',
-					body: 'Converso con las personas involucradas y reviso el producto o sistema para identificar objetivos, restricciones y riesgos. El resultado es una definición compartida del problema y de las decisiones que necesitamos tomar.',
+					title: 'Entender el problema y quién decide',
+					body: 'Converso con las personas involucradas y reviso el producto o sistema para identificar objetivos, restricciones, autoridad y capacidad de ejecución. El resultado es una definición compartida del problema.',
 				},
 				{
 					phase: '02',
-					title: 'Comparar alternativas y definir una dirección',
-					body: 'Evalúo las opciones considerando costo, esfuerzo, riesgo y consecuencias para el negocio. Dejo explícito qué permite cada alternativa y qué limita. El resultado es una recomendación fundamentada y una hoja de ruta con prioridades.',
+					title: 'Comparar alternativas y recomendar',
+					body: 'Evalúo las opciones considerando costos, esfuerzo, riesgos, dependencias y consecuencias para el negocio. La recomendación explica qué permite cada alternativa, qué limita y qué evidencia falta.',
 				},
 				{
 					phase: '03',
-					title: 'Acompañar la ejecución',
-					body: 'Según el alcance, reviso decisiones con el equipo, doy seguimiento a la arquitectura o participo en el desarrollo. El objetivo es llevar la dirección acordada al software y revisarla cuando aparece nueva información.',
+					title: 'Acompañar una ejecución medible',
+					body: 'Según el servicio, reviso una intervención, acompaño una validación por etapas o asumo una responsabilidad técnica acordada. Revisamos el rumbo cuando aparece nueva evidencia y comprobamos qué cambió.',
 				},
 			],
 			closingTitle: 'Claridad antes que complejidad',
 			closing:
-				'La arquitectura debe responder al problema y a la etapa del negocio. Cada recomendación tiene que explicar qué resuelve, cuánto exige y qué consecuencias introduce.',
+				'Cada recomendación debe explicar qué resuelve, qué exige y qué consecuencias introduce. El diagnóstico es útil por sí mismo, incluso si otra persona ejecuta el plan.',
 		},
 
 		casos: {
 			eyebrow: 'Evidencia',
-			headline: 'Casos',
-			subhead: 'Decisiones de arquitectura llevadas a la práctica',
+			headline: 'Decisiones técnicas llevadas a la práctica',
+			subhead: 'Experiencia, responsabilidad y cambios observados',
 			intro:
-				'Estos proyectos muestran cómo conecto el contexto del producto con el diseño del sistema y el trabajo de implementación.',
+				'Los casos muestran el contexto, la responsabilidad que asumí y el cambio observado. No presento tecnologías como sustituto de explicar el trabajo.',
 			items: [
 				{
 					name: 'Kepler Coach',
@@ -275,7 +273,7 @@ export const es = {
 		sobreBrian: {
 			eyebrow: 'Perfil',
 			headline: 'Sobre Brian',
-			subhead: 'Experiencia en arquitectura e implementación de software',
+			subhead: 'Criterio de arquitectura conectado con la ejecución',
 			paragraphs: [
 				'Soy Brian Stefanovich, ingeniero de software y líder técnico. Trabajo en el diseño, la construcción y la evolución de sistemas, con experiencia en fintech, integraciones empresariales y plataformas utilizadas por clientes.',
 				'En Kepler Coach lideré la evolución de un prototipo hacia una plataforma para múltiples organizaciones. En RollKall participé en el equipo de arquitectura y lideré una migración tecnológica mientras continuaba el desarrollo del producto.',
@@ -295,7 +293,7 @@ export const es = {
 			headline: 'Preguntas frecuentes',
 			featured: {
 				q: '¿Qué ocurre en la primera conversación?',
-				a: 'Durante unos 30 minutos conversamos sobre tu situación, lo que necesitas conseguir y la decisión que tienes pendiente. Evaluamos si puedo ayudarte y qué tipo de trabajo tendría sentido como siguiente paso. Si el problema queda fuera de mi experiencia, te lo diré.',
+				a: 'Durante unos 30 minutos conversamos sobre el contexto, quién decide, qué necesitas conseguir y qué evidencia o capacidad de ejecución existe. Evaluamos si puedo ayudarte y cuál podría ser el siguiente paso. Si el problema queda fuera de mi experiencia, te lo diré.',
 			},
 			items: [
 				{
@@ -305,6 +303,18 @@ export const es = {
 				{
 					q: '¿También participas en el desarrollo?',
 					a: 'Sí. Dependiendo del problema puedo participar como consultor, arquitecto de software fraccional, líder técnico o directamente en el desarrollo. La modalidad viene después de entender qué necesita el proyecto.',
+				},
+				{
+					q: '¿Cómo se contrata cada tipo de trabajo?',
+					a: 'Distingo el valor potencial de una oportunidad, lo que mi intervención puede influir de forma defendible y lo que la empresa puede realizar con su presupuesto, autoridad y capacidad de ejecución. Eso orienta la propuesta; el alcance y las dependencias sustentan el precio. El diagnóstico se cotiza a precio cerrado, la validación avanza por etapas y el liderazgo fraccional se acuerda con una mensualidad según dedicación, disponibilidad y responsabilidad.',
+				},
+				{
+					q: '¿El diagnóstico me obliga a contratar la implementación?',
+					a: 'No. El diagnóstico y el plan deben servirte aunque otro proveedor ejecute los cambios. Cualquier acompañamiento o implementación posterior se acuerda por separado.',
+				},
+				{
+					q: '¿Puedes confirmar si existe mercado para una idea?',
+					a: 'Puedo ayudarte a identificar incertidumbres, diseñar pruebas y evaluar factibilidad técnica. La existencia de mercado requiere evidencia comercial —por ejemplo, conversaciones, pruebas de demanda o disposición a pagar— y una evaluación técnica no la reemplaza.',
 				},
 				{
 					q: '¿Tengo que saber qué servicio necesito?',
