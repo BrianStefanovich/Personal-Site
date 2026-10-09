@@ -43,7 +43,7 @@ Full brand system defined in [docs/manual_marca.md](docs/manual_marca.md); treat
 
 - Name/voice: "Brian Stefanovich — Arquitectura y Consultoría de Software." First-person singular voice ("yo diagnostico"), calmed/senior/specific tone, not an agency "nosotros." Sentence case for headlines/body; uppercase + JetBrains Mono reserved for technical labels (eyebrows, nav, footer attributes, phase numbers) only. Natural Latin American Spanish, minimal spanglish, no emojis.
 - Vocabulary to favor: claridad, decisión, arquitectura, sistema, restricción, riesgo, tradeoff, evolución, hoja de ruta, evidencia, mantenibilidad, resultado. Vocabulary to avoid: disrupción, de vanguardia, world-class, 360°, transformación digital, solución escalable, sinergia, magia, garantizado, a prueba de futuro.
-- Logo: monochromatic linear glyph + "Brian Stefanovich" wordmark in Montserrat 700; asset at [public/images/logo-mark.svg](public/images/logo-mark.svg).
+- Logo: monochromatic linear glyph + "Brian Stefanovich" wordmark in Montserrat 700; symbol vector in `src/components/logo-symbol-path.ts`.
 - Color system: near-monochrome with two signature accents used asymmetrically — Carbon `#101311`, Graphite `#2A2F2C`, Steel `#717A75`, Fog `#D8DED9`, Porcelain `#F4F0E8`, Blueprint `#465CD4` (8%, action), Copper `#A65330` (2%, human consequence only, never equal weight to Blueprint).
 - Typography: Montserrat 700 (all headlines), Open Sans 400 (body), JetBrains Mono 500 uppercase (technical labels only).
 - Spacing/grid: 8px base unit, 12-column grid with 32px gutter, 90px page margins, 45px section vertical padding. Scale: 4·8·12·16·20·24·32·48·64px. Every section framed with a hairline (1px Fog top/right/left, 2px Fog bottom) — the recurring "technical schematic" motif. Corner radii: 8px small, 14px card/button default, 18px hero card, 9999px pill/circular. Cards use a 1px Fog inner hairline, never a shadow.
@@ -54,7 +54,7 @@ Full brand system defined in [docs/manual_marca.md](docs/manual_marca.md); treat
 
 - Full page copy already drafted in Spanish: [docs/contenido_website.md](docs/contenido_website.md).
 - Creative/design direction already drafted: [docs/guia_website.md](docs/guia_website.md) (hero composition, animation timing, section-by-section intent).
-- Real image assets exist in [public/images](public/images): `hero-desktop.webp`, `hero-mobile.webp`, `bio.webp`, `footer-mark.webp`, `logo-mark.svg`, and problem/symptom icon sets. These are real assets to use, not placeholders.
+- The only real photo in use is [public/images/sobre-brian.webp](public/images/sobre-brian.webp) (portrait in the About section). The logo symbol lives in `src/components/logo-symbol-path.ts`.
 - **Case studies (Sección 9 "Casos") are placeholders only** — `[CASO 01]`, `[Empresa / industria]`, `[Problema]`, etc. No real client details exist yet. Do not fabricate client names, situations, decisions, or results; keep placeholder/structural treatment until real cases are provided.
 
 ## Product Principles

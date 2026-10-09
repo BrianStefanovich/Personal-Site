@@ -1,22 +1,24 @@
-import { CONTACT_EMAIL_HREF, openContact, type ContactIntent } from '@/lib/contact';
+import { openContact, CONTACT_EMAIL_HREF, type ContactIntent } from '@/lib/contact';
 import { cn } from '@/lib/utils';
-import { ArrowRight } from 'lucide-react';
 import type { AnchorHTMLAttributes } from 'react';
 
 interface CtaButtonProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'href'> {
-	/** primary: hero and closing CTA. compact: header. outline: secondary action. link: contextual CTA inside a service. */
+	/** primary: hero and closing CTA. compact: header and service cards. outline: secondary action. link: mono text action. */
 	variant?: 'primary' | 'compact' | 'outline' | 'link';
 	intent?: ContactIntent;
 	href?: string;
 }
 
-const base = 'group inline-flex items-center justify-center gap-2 whitespace-nowrap font-display font-bold transition';
+const base = 'inline-flex items-center justify-center whitespace-nowrap transition';
 
 const variants = {
-	primary: 'rounded-card bg-blueprint px-8 py-3.5 text-base text-porcelain hover:brightness-110 active:brightness-95 sm:text-lg',
-	compact: 'min-h-11 rounded-card bg-blueprint px-5 py-2 text-sm text-porcelain hover:brightness-110 active:brightness-95',
-	outline: 'rounded-card border-2 border-strong px-8 py-3 text-base text-ink hover:border-link hover:text-link sm:text-lg',
-	link: 'min-h-11 text-base text-link underline decoration-current/30 underline-offset-8 hover:decoration-current',
+	primary:
+		'font-display font-bold min-h-12 rounded-card bg-blueprint px-6 py-3 text-lg text-porcelain hover:brightness-110 active:brightness-95',
+	compact:
+		'font-display font-bold min-h-11 rounded-card bg-blueprint px-[1.125rem] py-2 text-base text-porcelain hover:brightness-110 active:brightness-95',
+	outline:
+		'font-display font-bold min-h-12 rounded-card px-6 py-3 text-lg text-ink shadow-[inset_0_0_0_1.5px_var(--border-hairline)] hover:text-link hover:shadow-[inset_0_0_0_1.5px_var(--text-link)]',
+	link: 'label-mono min-h-11 text-sm tracking-[0.05em] text-link hover:text-ink',
 } as const;
 
 /**
@@ -25,8 +27,6 @@ const variants = {
  * fires for no-JS visitors, since the click handler below intercepts everything else.
  */
 export function CtaButton({ variant = 'primary', intent, href, className, children, onClick, ...rest }: CtaButtonProps) {
-	const showArrow = variant !== 'compact';
-
 	return (
 		<a
 			href={href ?? CONTACT_EMAIL_HREF}
@@ -40,10 +40,8 @@ export function CtaButton({ variant = 'primary', intent, href, className, childr
 			className={cn(base, variants[variant], className)}
 			{...rest}
 		>
-			<span>{children}</span>
-			{showArrow && (
-				<ArrowRight aria-hidden="true" size={20} strokeWidth={2} className="transition-transform duration-200 group-hover:translate-x-1" />
-			)}
+			{children}
+			{variant === 'link' && <span aria-hidden="true">&nbsp;→</span>}
 		</a>
 	);
 }

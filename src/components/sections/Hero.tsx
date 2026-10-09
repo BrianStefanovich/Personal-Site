@@ -1,4 +1,5 @@
 import { CtaButton } from '@/components/CtaButton';
+import { DecisionPaths } from '@/components/diagrams/DecisionPaths';
 import { Section } from '@/components/ui/Section';
 import { es } from '@/i18n/es';
 import type { CSSProperties } from 'react';
@@ -9,43 +10,39 @@ export default function Hero() {
 	return (
 		<Section
 			id="inicio"
-			className="pt-6 md:pt-8"
-			sheetClassName="grid items-center gap-10 md:grid-cols-[minmax(0,1fr)_17rem] md:gap-x-10 lg:grid-cols-[minmax(0,1fr)_21rem] xl:grid-cols-[minmax(0,1fr)_26rem]"
+			className="md:pb-16 lg:flex lg:min-h-[calc(100dvh-var(--header-h)-11rem)] lg:items-center"
+			contentClassName="grid w-full items-center gap-12 lg:grid-cols-[minmax(0,13fr)_minmax(0,11fr)] lg:gap-x-16"
 		>
-			<div>
-				<p className="enter label-mono text-sm text-link" style={{ '--i': 0 } as CSSProperties}>
+			<div className="flex flex-col gap-6 md:gap-8">
+				<p className="enter label-mono text-sm text-muted" style={{ '--i': 0 } as CSSProperties}>
 					{hero.eyebrow}
 				</p>
-				<h1 className="enter mt-3" style={{ '--i': 1 } as CSSProperties}>
-					{hero.headlineLines[0]} <br className="hidden sm:block" />
-					{hero.headlineLines[1]}
+				<h1 className="enter text-hero max-w-[48rem]" style={{ '--i': 1 } as CSSProperties}>
+					{hero.headline.map((part) =>
+						typeof part === 'string' ? (
+							part
+						) : (
+							<span key={part.b} className="text-consequence">
+								{part.b}
+							</span>
+						),
+					)}
 				</h1>
-				<p className="enter measure mt-5 text-lg text-muted sm:text-xl" style={{ '--i': 2 } as CSSProperties}>
+				<p className="enter text-lead max-w-[37.5rem] text-muted" style={{ '--i': 2 } as CSSProperties}>
 					{hero.subhead}
 				</p>
-				<div className="enter mt-8 flex flex-wrap items-center gap-x-8 gap-y-2" style={{ '--i': 3 } as CSSProperties}>
-					<CtaButton intent="other">{hero.cta}</CtaButton>
-					<CtaButton variant="link" href="#como-trabajo">
+				<div className="enter mt-2 flex flex-wrap items-center gap-4" style={{ '--i': 3 } as CSSProperties}>
+					<CtaButton intent="other" data-hero-cta="">
+						{hero.cta}
+					</CtaButton>
+					<CtaButton variant="outline" href="#como-trabajo">
 						{es.nav.links[1].label}
 					</CtaButton>
 				</div>
-				<p className="enter label-mono mt-5 text-xs text-muted" style={{ '--i': 4 } as CSSProperties}>
-					{hero.note}
-				</p>
 			</div>
 
-			<div
-				className="enter surface-hero flex w-full max-w-[26rem] items-end justify-center overflow-hidden md:max-w-none"
-				style={{ '--i': 2 } as CSSProperties}
-			>
-				<img
-					src="/images/hero-brian.webp"
-					alt={hero.imageAlt}
-					width={464}
-					height={397}
-					fetchPriority="high"
-					className="h-auto w-full max-w-[26rem]"
-				/>
+			<div className="enter surface-hero p-6 md:p-10 lg:p-12" style={{ '--i': 2 } as CSSProperties}>
+				<DecisionPaths intro className="h-auto w-full" />
 			</div>
 		</Section>
 	);

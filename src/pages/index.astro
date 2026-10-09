@@ -1,17 +1,15 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Contacto from '@/components/sections/Contacto';
-import CtaFinal from '@/components/sections/CtaFinal';
 import Decision from '@/components/sections/Decision';
-import Experiencia from '@/components/sections/Experiencia';
 import Faq from '@/components/sections/Faq';
 import Hero from '@/components/sections/Hero';
+import Prueba from '@/components/sections/Prueba';
 import Presentacion from '@/components/sections/Presentacion';
 import Problemas from '@/components/sections/Problemas';
 import ProcessSteps from '@/components/sections/ProcessSteps';
 import Servicios from '@/components/sections/Servicios';
 import SobreBrian from '@/components/sections/SobreBrian';
-import ContactDrawer from '@/components/ContactDrawer';
 import { getTranslations } from '@/i18n';
 
 const { home } = getTranslations();
@@ -19,16 +17,14 @@ const { home } = getTranslations();
 
 <BaseLayout title={home.meta.title} description={home.meta.description} canonicalPath="/">
 	<Hero client:load />
+	<Prueba />
 	<Presentacion />
 	<Problemas />
 	<Servicios client:visible />
 	<Decision />
 	<ProcessSteps />
-	<Experiencia />
 	<SobreBrian />
 	<Faq client:visible />
-	<CtaFinal client:visible />
 	<Contacto client:visible />
-	<ContactDrawer client:load />
 </BaseLayout>
 

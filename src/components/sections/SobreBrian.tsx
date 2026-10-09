@@ -6,40 +6,24 @@ const { sobreBrian } = es.home;
 
 export default function SobreBrian() {
 	return (
-		<Section id="sobre-brian">
-			<div className="grid items-start gap-12 lg:grid-cols-[minmax(0,26rem)_minmax(0,1fr)] lg:gap-x-16">
-				<div className="reveal surface-hero flex w-full max-w-[26rem] items-end justify-center overflow-hidden lg:sticky lg:top-[calc(var(--header-h)+2rem)]">
-					<img
-						src="/images/sobre-brian.webp"
-						alt={sobreBrian.imageAlt}
-						width={544}
-						height={563}
-						loading="lazy"
-						className="h-auto w-full max-w-[26rem]"
-					/>
-				</div>
+		<Section id="sobre-brian" contentClassName="grid gap-12 lg:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] lg:gap-x-24">
+			<div className="surface-hero flex aspect-[4/5] w-full max-w-[26rem] items-end justify-center overflow-hidden shadow-[inset_0_0_0_1px_var(--border-hairline)] lg:max-w-none">
+				<img src="/images/sobre-brian.webp" alt={sobreBrian.imageAlt} width={544} height={563} loading="lazy" className="h-auto w-full" />
+			</div>
 
-				<div>
-					<SectionHeading eyebrow={sobreBrian.eyebrow} title={sobreBrian.headline} subhead={sobreBrian.subhead} />
-					<div className="measure mt-6 space-y-4 text-base md:text-lg">
-						{sobreBrian.paragraphs.map((text) => (
-							<p key={text} className="reveal">
-								{text}
-							</p>
-						))}
-					</div>
+			<div className="flex flex-col gap-8">
+				<SectionHeading eyebrow={sobreBrian.headline} title={sobreBrian.subhead} />
+				<p className="text-lead">{sobreBrian.intro}</p>
+				<p className="text-body max-w-[45rem] text-muted">{sobreBrian.lead}</p>
 
-					<p className="reveal measure mt-8 text-lg md:text-xl">{sobreBrian.lead}</p>
-
-					<dl className="mt-10 grid gap-x-8 gap-y-8 sm:grid-cols-2">
-						{sobreBrian.areas.map((area) => (
-							<div key={area.title} className="reveal relative border-t border-line pt-5 before:absolute before:-top-1 before:left-0 before:size-2 before:bg-link">
-								<dt className="font-display text-xl font-bold md:text-2xl">{area.title}</dt>
-								<dd className="mt-2 text-base text-muted md:text-lg">{area.body}</dd>
-							</div>
-						))}
-					</dl>
-				</div>
+				<dl className="mt-2 grid gap-x-12 sm:grid-cols-2">
+					{sobreBrian.areas.map((area) => (
+						<div key={area.title} className="flex flex-col gap-2.5 border-t border-line py-6">
+							<dt className="label-mono text-sm text-link">{area.title}</dt>
+							<dd className="text-base text-muted">{area.body}</dd>
+						</div>
+					))}
+				</dl>
 			</div>
 		</Section>
 	);

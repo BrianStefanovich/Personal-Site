@@ -1,11 +1,28 @@
 import { cn } from '@/lib/utils';
-import type { ReactNode } from 'react';
+import type { CSSProperties, ReactNode } from 'react';
 
 /** Shared SVG vocabulary: neutral linework in muted ink, one Blueprint path per diagram, Copper only for risk. */
 
-export function Diagram({ label, viewBox, className, children }: { label: string; viewBox: string; className?: string; children: ReactNode }) {
+export function Diagram({
+	label,
+	viewBox,
+	className,
+	children,
+}: {
+	label: string;
+	viewBox: string;
+	className?: string;
+	children: ReactNode;
+}) {
 	return (
-		<svg role="img" aria-label={label} viewBox={viewBox} fill="none" strokeWidth={1.5} className={cn('h-auto w-full text-muted', className)}>
+		<svg
+			role="img"
+			aria-label={label}
+			viewBox={viewBox}
+			fill="none"
+			strokeWidth={1.5}
+			className={cn('h-auto w-full text-muted', className)}
+		>
 			{children}
 		</svg>
 	);
@@ -43,14 +60,26 @@ export function Label({
 }
 
 /** The path that carries the decision: Blueprint, drawn on scroll. */
-export function Path({ d, tone = 'link', width = 2.5 }: { d: string; tone?: 'link' | 'consequence'; width?: number }) {
+export function Path({
+	d,
+	tone = 'link',
+	width = 2.5,
+	delay,
+}: {
+	d: string;
+	tone?: 'link' | 'consequence';
+	width?: number;
+	/** ms: draws once on load after this delay instead of on scroll. */
+	delay?: number;
+}) {
 	return (
 		<path
 			d={d}
 			pathLength={1}
 			strokeWidth={width}
 			strokeLinecap="round"
-			className={cn('draw', tone === 'link' ? 'stroke-link' : 'stroke-consequence')}
+			style={delay === undefined ? undefined : ({ '--d': `${delay}ms` } as CSSProperties)}
+			className={cn(delay === undefined ? 'draw' : 'intro-draw', tone === 'link' ? 'stroke-link' : 'stroke-consequence')}
 		/>
 	);
 }

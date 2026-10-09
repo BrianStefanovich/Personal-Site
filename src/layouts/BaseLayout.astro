@@ -1,4 +1,5 @@
 ---
+import ContactDrawer from '@/components/ContactDrawer';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import Seo from '@/components/Seo.astro';
@@ -13,9 +14,10 @@ interface Props {
 	description: string;
 	canonicalPath?: string;
 	type?: 'website' | 'article';
+	noindex?: boolean;
 }
 
-const { title, description, canonicalPath, type } = Astro.props;
+const { title, description, canonicalPath, type, noindex } = Astro.props;
 const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
 ---
 
@@ -25,9 +27,20 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="color-scheme" content="light dark" />
+		<script is:inline>
+			(function () {
+				var stored = null;
+				try {
+					stored = localStorage.getItem('theme');
+				} catch {
+					stored = null;
+				}
+				document.documentElement.dataset.theme = stored === 'dark' ? 'dark' : 'light';
+			})();
+		</script>
 		<meta name="generator" content={Astro.generator} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<Seo title={title} description={description} canonicalPath={canonicalPath} type={type} />
+		<Seo title={title} description={description} canonicalPath={canonicalPath} type={type} noindex={noindex} />
 		{import.meta.env.PROD && gaMeasurementId && <>
 			<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}></script>
 			<script is:inline define:vars={{ gaMeasurementId }}>window.dataLayer = window.dataLayer || []; function gtag(){window.dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', gaMeasurementId);</script>
@@ -41,7 +54,10 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
 			Saltar al contenido
 		</a>
 		<Header client:load />
-		<main id="contenido" class="pt-(--header-h)"><slot /></main>
-		<Footer />
+		<div class="page-frame mt-(--header-h)">
+			<main id="contenido"><slot /></main>
+			<Footer />
+		</div>
+		<ContactDrawer client:load />
 	</body>
 </html>

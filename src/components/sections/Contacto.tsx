@@ -1,5 +1,5 @@
+import { CtaButton } from '@/components/CtaButton';
 import { Section } from '@/components/ui/Section';
-import { SectionHeading } from '@/components/ui/SectionHeading';
 import { es } from '@/i18n/es';
 import { CONTACT_EMAIL, CONTACT_EMAIL_HREF } from '@/lib/contact';
 import { useState, type ReactNode, type SyntheticEvent } from 'react';
@@ -8,15 +8,27 @@ const { contacto } = es.home;
 const { form } = contacto;
 
 const fieldClass =
-	'block w-full rounded-lg border border-strong bg-page px-5 text-lg text-ink focus-visible:outline-(--focus) focus-visible:-outline-offset-4';
+	'block w-full rounded-lg border border-strong bg-transparent px-4 text-base text-ink placeholder:text-muted focus-visible:outline-(--focus) focus-visible:-outline-offset-2';
 
-function Field({ id, label, required, children }: { id: string; label: string; required?: boolean; children: ReactNode }) {
+function Field({
+	id,
+	label,
+	required,
+	children,
+	className,
+}: {
+	id: string;
+	label: string;
+	required?: boolean;
+	children: ReactNode;
+	className?: string;
+}) {
 	return (
-		<div>
-			<label htmlFor={id} className="mb-2 block text-base">
+		<div className={className}>
+			<label htmlFor={id} className="label-mono mb-2 block text-sm tracking-[0.05em] text-muted">
 				{label}
 				{required && (
-					<span aria-hidden="true" className="ml-1 text-link">
+					<span aria-hidden="true" className="ml-1">
 						*
 					</span>
 				)}
@@ -45,50 +57,71 @@ export default function Contacto() {
 	}
 
 	return (
-		<Section id="contacto">
-			<div className="grid gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:gap-x-16">
+		<Section id="contacto" tone="inverse" contentClassName="grid gap-12 lg:grid-cols-[minmax(0,6fr)_minmax(0,5fr)] lg:gap-x-24">
+			<div className="flex flex-col gap-7">
+				<h2 className="text-display">{contacto.headline}</h2>
+				<p className="text-lead">{contacto.lead}</p>
+				<p className="text-body text-muted">{contacto.intro}</p>
 				<div>
-					<SectionHeading eyebrow={contacto.eyebrow} title={contacto.headline} subhead={contacto.subhead} />
-					<p className="reveal measure mt-4 text-base md:text-lg">{contacto.intro}</p>
-					<div className="reveal mt-8">
-						<p className="label-mono text-sm text-link">{contacto.directLabel}</p>
-						<a href={CONTACT_EMAIL_HREF} className="mt-2 inline-flex min-h-11 items-center text-lg underline underline-offset-4 hover:text-link">
-							{CONTACT_EMAIL}
-						</a>
-					</div>
+					<CtaButton intent="other">{contacto.cta}</CtaButton>
+				</div>
+				<div className="mt-4 flex flex-col gap-2 border-t border-line pt-6">
+					<p className="label-mono text-sm text-muted">{contacto.directLabel}</p>
+					<a
+						href={CONTACT_EMAIL_HREF}
+						className="inline-flex min-h-11 items-center font-display text-xl font-bold text-link hover:text-ink md:text-[1.6875rem]"
+					>
+						{CONTACT_EMAIL}
+					</a>
+				</div>
+			</div>
+
+			<form
+				onSubmit={sendByEmail}
+				className="flex flex-col gap-5 rounded-[18px] bg-card p-6 shadow-[inset_0_0_0_2px_var(--border-hairline)] md:p-10"
+			>
+				<div className="grid gap-4 sm:grid-cols-2">
+					<Field id="contact-name" label={form.name} required>
+						<input id="contact-name" name="name" type="text" autoComplete="name" required className={`${fieldClass} h-12`} />
+					</Field>
+					<Field id="contact-email" label={form.email} required>
+						<input id="contact-email" name="email" type="email" autoComplete="email" required className={`${fieldClass} h-12`} />
+					</Field>
+				</div>
+				<Field id="contact-phone" label={form.phone}>
+					<input id="contact-phone" name="phone" type="tel" autoComplete="tel" className={`${fieldClass} h-12`} />
+				</Field>
+				<Field id="contact-message" label={form.message} required>
+					<textarea
+						id="contact-message"
+						name="message"
+						required
+						rows={5}
+						placeholder={form.messagePlaceholder}
+						className={`${fieldClass} resize-y py-3.5 leading-[1.6]`}
+					/>
+				</Field>
+
+				<div className="flex flex-col gap-3 text-sm leading-[1.5] text-muted">
+					<label className="flex items-start gap-3">
+						<input type="checkbox" name="consent" required className="mt-0.5 size-4 shrink-0 accent-blueprint" />
+						<span>{form.consentData}</span>
+					</label>
+					<label className="flex items-start gap-3">
+						<input type="checkbox" name="marketing" className="mt-0.5 size-4 shrink-0 accent-blueprint" />
+						<span>{form.consentMarketing}</span>
+					</label>
 				</div>
 
-				<form onSubmit={sendByEmail} className="max-w-xl">
-					<div className="space-y-5">
-						<Field id="contact-name" label={form.name} required>
-							<input id="contact-name" name="name" type="text" autoComplete="name" required className={`${fieldClass} h-11`} />
-						</Field>
-						<Field id="contact-email" label={form.email} required>
-							<input id="contact-email" name="email" type="email" autoComplete="email" required className={`${fieldClass} h-11`} />
-						</Field>
-						<Field id="contact-phone" label={form.phone}>
-							<input id="contact-phone" name="phone" type="tel" autoComplete="tel" className={`${fieldClass} h-11`} />
-						</Field>
-						<Field id="contact-message" label={form.message} required>
-							<textarea id="contact-message" name="message" required className={`${fieldClass} h-36 resize-y py-2.5`} />
-						</Field>
-					</div>
-
-					<div className="mt-6 space-y-4 text-base leading-6">
-						<label className="flex items-start gap-3">
-							<input type="checkbox" name="consent" required className="mt-0.5 size-5 shrink-0 accent-blueprint" />
-							<span>{form.consentData}</span>
-						</label>
-						<label className="flex items-start gap-3">
-							<input type="checkbox" name="marketing" className="mt-0.5 size-5 shrink-0 accent-blueprint" />
-							<span>{form.consentMarketing}</span>
-						</label>
-					</div>
-
-					<div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+				<div className="mt-2 flex flex-col gap-4">
+					<p id="contact-handoff" className="text-sm leading-[1.5] text-muted">
+						{form.handoff}
+					</p>
+					<div className="flex flex-wrap items-center gap-x-6 gap-y-3">
 						<button
 							type="submit"
-							className="min-h-11 rounded-card bg-blueprint px-8 py-3 font-display text-lg font-bold text-porcelain transition hover:brightness-110 active:brightness-95"
+							aria-describedby="contact-handoff"
+							className="min-h-12 whitespace-nowrap rounded-card bg-blueprint px-6 py-3 font-display text-lg font-bold text-porcelain transition hover:brightness-110 active:brightness-95"
 						>
 							{form.submit}
 						</button>
@@ -104,8 +137,8 @@ export default function Contacto() {
 							)}
 						</p>
 					</div>
-				</form>
-			</div>
+				</div>
+			</form>
 		</Section>
 	);
 }

@@ -1,0 +1,16 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import CasoDetalle from '@/components/sections/CasoDetalle';
+import { es } from '@/i18n/es';
+
+export function getStaticPaths() {
+	return es.home.casos.items.map((item) => ({ params: { slug: item.slug }, props: { item } }));
+}
+
+const { item } = Astro.props;
+---
+
+<!-- noindex while the detail pages carry placeholder copy -->
+<BaseLayout title={`${item.name} | Casos de éxito`} description={item.headline} canonicalPath={`/cases/${item.slug}`} noindex>
+	<CasoDetalle item={item} />
+</BaseLayout>
