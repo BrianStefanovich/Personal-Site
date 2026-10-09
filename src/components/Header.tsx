@@ -1,5 +1,5 @@
 import { CtaButton } from '@/components/CtaButton';
-import { Logo } from '@/components/Logo';
+import { LogoImage } from '@/components/Logo';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { es } from '@/i18n/es';
 import { cn } from '@/lib/utils';
@@ -107,7 +107,7 @@ export default function Header() {
 			<header className="fixed inset-x-0 top-0 z-(--z-header) h-(--header-h) border-b-2 border-line bg-page text-ink">
 				<div className="frame-width frame-pad flex h-full items-center justify-between gap-4 xl:gap-8">
 					<a href="/" aria-label={nav.homeLabel} className="shrink-0">
-						<Logo name={nav.name} />
+						<LogoImage />
 					</a>
 
 					<nav aria-label="Principal" className="ml-auto hidden items-center gap-x-8 xl:flex">
