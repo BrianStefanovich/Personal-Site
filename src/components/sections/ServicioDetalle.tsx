@@ -1,3 +1,4 @@
+import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { CtaButton } from '@/components/CtaButton';
 import { ExistingSystemMap, ResponsibilityMap, ValidationMap } from '@/components/diagrams/Diagrams';
 import { Section } from '@/components/ui/Section';
@@ -38,9 +39,7 @@ export default function ServicioDetalle({ service }: { service: Service }) {
 			<div hidden data-track-view="service_page_view" data-track-service={service.id} />
 
 			<Section contentClassName="flex flex-col gap-12 lg:gap-16">
-				<a href="/servicios" className="label-mono inline-flex min-h-11 items-center self-start text-sm tracking-[0.05em] text-link hover:text-ink">
-					←&nbsp;{es.nav.links[0].label}
-				</a>
+				<Breadcrumbs className="mb-0 md:mb-0" trail={[{ label: es.nav.links[0].label, href: '/servicios' }, { label: service.navLabel }]} />
 
 				<div className="grid items-start gap-12 lg:grid-cols-[minmax(0,6fr)_minmax(0,6fr)] lg:gap-x-16">
 					<div className="flex flex-col gap-6">

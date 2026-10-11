@@ -1,3 +1,4 @@
+import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { Section } from '@/components/ui/Section';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { es } from '@/i18n/es';
@@ -9,6 +10,7 @@ const { servicios, problema } = es.home;
 export default function ServiciosList() {
 	return (
 		<Section>
+			<Breadcrumbs trail={[{ label: es.nav.links[0].label }]} />
 			<div className="flex flex-col gap-6">
 				<SectionHeading as="h1" title={servicios.index.headline} />
 				<p className="text-body max-w-[65ch] text-muted">{servicios.index.intro}</p>

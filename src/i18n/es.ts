@@ -4,18 +4,18 @@ export type Rich = readonly (string | { readonly b: string })[];
 export const es = {
 	nav: {
 		name: 'Brian Stefanovich',
-		descriptor: 'Arquitectura y consultoría de software',
 		homeLabel: 'Brian Stefanovich, inicio',
 		links: [
 			{ label: 'Servicios', href: '/servicios' },
-			{ label: 'Cómo trabajo', href: '/#como-trabajo' },
 			{ label: 'Casos', href: '/cases' },
-			{ label: 'Sobre Brian', href: '/#sobre-brian' },
+			{ label: 'Sobre mí', href: '/#sobre-brian' },
 		],
-		cta: 'Agendar 30 minutos',
+		cta: 'Hablemos',
 		openMenu: 'Abrir menú',
 		closeMenu: 'Cerrar menú',
 		themeLabel: 'Modo oscuro',
+		breadcrumbLabel: 'Ruta de navegación',
+		homeCrumb: 'Inicio',
 	},
 
 	home: {
@@ -31,7 +31,7 @@ export const es = {
 			subhead:
 				'Soy Brian Stefanovich. Ayudo a empresas a recuperar el control de sistemas que frenan su operación, validar nuevas oportunidades con software y dar liderazgo técnico a proyectos en marcha.',
 			method: 'Primero aclaro el problema y las alternativas; después acordamos qué conviene hacer y quién lo ejecuta.',
-			cta: 'Agendar conversación de 30 minutos',
+			cta: 'Hablemos',
 			microcopy: 'Primera conversación sin costo para entender el problema y definir el siguiente paso. No incluye una auditoría de código.',
 			imageAlt: 'Brian Stefanovich',
 		},
@@ -241,7 +241,6 @@ export const es = {
 				description: 'Decisiones técnicas llevadas a la práctica: el contexto, la responsabilidad que asumí y el cambio observado en cada caso.',
 			},
 			viewCase: 'Ver el caso',
-			backLabel: 'Todos los casos',
 			headline: 'Decisiones técnicas llevadas a la práctica',
 			labels: {
 				role: 'Mi rol',
@@ -361,7 +360,7 @@ export const es = {
 			lead: 'Cuéntame qué está pasando, qué necesitas conseguir y cuál es la principal decisión pendiente.',
 			intro:
 				'No necesitas saber qué servicio corresponde. En 30 minutos evaluaremos si puedo ayudarte y cuál podría ser el siguiente paso. Si el problema queda fuera de mi experiencia, te lo diré.',
-			cta: 'Agendar conversación de 30 minutos',
+			cta: 'Hablemos',
 			emailLabel: 'O escríbeme directamente',
 			linkedinLabel: 'LinkedIn de Brian Stefanovich',
 		},

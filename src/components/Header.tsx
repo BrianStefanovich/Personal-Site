@@ -2,10 +2,13 @@ import { CtaButton } from '@/components/CtaButton';
 import { LogoImage } from '@/components/Logo';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { es } from '@/i18n/es';
+import { CaretDownIcon } from '@phosphor-icons/react';
 import { cn } from '@/lib/utils';
 import { useEffect, useRef, useState } from 'react';
 
 const { nav } = es;
+const services = es.home.servicios.items;
+const SERVICES_HREF = '/servicios';
 const ctaLabel = nav.cta;
 const hashOf = (href: string) => href.split('#')[1];
 const sectionIds = nav.links.map((link) => hashOf(link.href)).filter((id): id is string => Boolean(id));
@@ -59,6 +62,130 @@ function useHeroCtaPassed() {
 	return passed;
 }
 
+type Current = 'page' | 'location' | undefined;
+
+/** Desktop disclosure: Servicios opens its three services on click. Closes on Escape, outside press or focus leaving. */
+function ServicesMenu({ pathname, current }: { pathname: string; current: Current }) {
+	const [open, setOpen] = useState(false);
+	const rootRef = useRef<HTMLDivElement>(null);
+	const triggerRef = useRef<HTMLButtonElement>(null);
+
+	useEffect(() => {
+		if (!open) return;
+		const onPointer = (event: PointerEvent) => {
+			if (!rootRef.current?.contains(event.target as Node)) setOpen(false);
+		};
+		const onKey = (event: KeyboardEvent) => {
+			if (event.key !== 'Escape') return;
+			setOpen(false);
+			triggerRef.current?.focus();
+		};
+		document.addEventListener('pointerdown', onPointer);
+		window.addEventListener('keydown', onKey);
+		return () => {
+			document.removeEventListener('pointerdown', onPointer);
+			window.removeEventListener('keydown', onKey);
+		};
+	}, [open]);
+
+	const itemClass =
+		'group flex flex-col gap-0.5 px-5 py-3 transition-colors hover:bg-ink hover:text-page focus-visible:bg-ink focus-visible:text-page aria-[current]:text-link hover:aria-[current]:text-page focus-visible:aria-[current]:text-page';
+
+	return (
+		<div
+			ref={rootRef}
+			className="relative flex"
+			onBlur={(event) => {
+				if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setOpen(false);
+			}}
+		>
+			<button
+				ref={triggerRef}
+				type="button"
+				aria-expanded={open}
+				aria-controls="menu-servicios"
+				aria-current={current}
+				onClick={() => setOpen((value) => !value)}
+				className={cn(
+					'label-mono inline-flex items-center gap-1.5 border-b-2 border-transparent pt-1.5 pb-1 text-sm tracking-[0.1em] transition hover:border-strong hover:text-link focus-visible:border-transparent',
+					(current || open) && 'border-blueprint text-link hover:border-blueprint',
+				)}
+			>
+				{nav.links[0].label}
+				<CaretDownIcon
+					aria-hidden="true"
+					size={12}
+					weight="bold"
+					className={cn('transition-transform duration-200', open && 'rotate-180')}
+				/>
+			</button>
+
+			{open && (
+				<div
+					id="menu-servicios"
+					className="absolute left-0 top-[calc(50%+var(--header-h)/2-2px)] z-(--z-menu) w-[22rem] border-2 border-t-0 border-line bg-page text-ink shadow-[0_16px_32px_-16px_rgba(16,19,17,0.3)]"
+				>
+					<ul>
+						{services.map((service) => (
+							<li key={service.id} className="border-b border-line last:border-b-0">
+								<a href={service.path} aria-current={pathname === service.path ? 'page' : undefined} className={itemClass}>
+									<span className="font-display text-base font-bold leading-snug">{service.navLabel}</span>
+									<span className="label-mono text-xs text-muted transition-colors group-hover:text-page group-focus-visible:text-page">
+										{service.model}
+									</span>
+								</a>
+							</li>
+						))}
+					</ul>
+				</div>
+			)}
+		</div>
+	);
+}
+
+/** Mobile disclosure: the same three services, expanded inline under Servicios. */
+function MobileServices({ pathname, current, onNavigate }: { pathname: string; current: Current; onNavigate: () => void }) {
+	const [open, setOpen] = useState(pathname === SERVICES_HREF || pathname.startsWith(`${SERVICES_HREF}/`));
+	const subClass = 'block border-b border-line py-3 pl-4 text-base aria-[current]:text-link';
+
+	return (
+		<div>
+			<button
+				type="button"
+				aria-expanded={open}
+				aria-controls="menu-movil-servicios"
+				aria-current={current}
+				onClick={() => setOpen((value) => !value)}
+				className="label-mono flex min-h-14 w-full items-center justify-between border-b border-line py-4 text-left text-base aria-[current]:text-link"
+			>
+				{nav.links[0].label}
+				<CaretDownIcon
+					aria-hidden="true"
+					size={16}
+					weight="bold"
+					className={cn('transition-transform duration-200', open && 'rotate-180')}
+				/>
+			</button>
+			{open && (
+				<ul id="menu-movil-servicios">
+					{services.map((service) => (
+						<li key={service.id}>
+							<a
+								href={service.path}
+								onClick={onNavigate}
+								aria-current={pathname === service.path ? 'page' : undefined}
+								className={subClass}
+							>
+								{service.navLabel}
+							</a>
+						</li>
+					))}
+				</ul>
+			)}
+		</div>
+	);
+}
+
 export default function Header() {
 	const [menuOpen, setMenuOpen] = useState(false);
 	const active = useActiveSection();
@@ -81,7 +208,7 @@ export default function Header() {
 			el.inert = true;
 		});
 		document.documentElement.style.overflow = 'hidden';
-		menuRef.current?.querySelector<HTMLElement>('a')?.focus();
+		menuRef.current?.querySelector<HTMLElement>('a, button')?.focus();
 
 		const desktop = window.matchMedia('(min-width: 80rem)');
 		const closeOnDesktop = () => desktop.matches && setMenuOpen(false);
@@ -111,19 +238,23 @@ export default function Header() {
 					</a>
 
 					<nav aria-label="Principal" className="ml-auto hidden items-center gap-x-8 xl:flex">
-						{nav.links.map((link) => (
-							<a
-								key={link.href}
-								href={link.href}
-								aria-current={currentOf(link.href)}
-								className={cn(
-									'label-mono border-b-2 border-transparent pb-1 text-sm tracking-[0.1em] transition hover:border-strong hover:text-link focus-visible:border-transparent',
-									currentOf(link.href) && 'border-blueprint text-link hover:border-blueprint',
-								)}
-							>
-								{link.label}
-							</a>
-						))}
+						{nav.links.map((link) =>
+							link.href === SERVICES_HREF ? (
+								<ServicesMenu key={link.href} pathname={pathname} current={currentOf(link.href)} />
+							) : (
+								<a
+									key={link.href}
+									href={link.href}
+									aria-current={currentOf(link.href)}
+									className={cn(
+										'label-mono border-b-2 border-transparent pt-1.5 pb-1 text-sm tracking-[0.1em] transition hover:border-strong hover:text-link focus-visible:border-transparent',
+										currentOf(link.href) && 'border-blueprint text-link hover:border-blueprint',
+									)}
+								>
+									{link.label}
+								</a>
+							),
+						)}
 					</nav>
 
 					<div className="flex items-center gap-3">
@@ -139,7 +270,7 @@ export default function Header() {
 							aria-expanded={menuOpen}
 							aria-controls="menu-movil"
 							onClick={() => setMenuOpen((open) => !open)}
-							className="flex h-11 w-11 flex-col items-center justify-center gap-1.5 xl:hidden"
+							className="-mr-2 flex h-11 w-11 flex-col items-center justify-center gap-1.5 xl:hidden"
 						>
 							<span className={`h-0.5 w-7 bg-ink transition-transform duration-200 ${menuOpen ? 'translate-y-2 rotate-45' : ''}`} />
 							<span className={`h-0.5 w-7 bg-ink transition-opacity duration-200 ${menuOpen ? 'opacity-0' : ''}`} />
@@ -156,17 +287,21 @@ export default function Header() {
 					className="fixed inset-0 top-(--header-h) z-(--z-menu) overflow-y-auto bg-page text-ink xl:hidden"
 				>
 					<nav aria-label="Principal" className="container flex flex-col pb-10 pt-4">
-						{nav.links.map((link) => (
-							<a
-								key={link.href}
-								href={link.href}
-								onClick={() => setMenuOpen(false)}
-								aria-current={currentOf(link.href)}
-								className="label-mono border-b border-line py-4 text-base aria-[current]:text-link"
-							>
-								{link.label}
-							</a>
-						))}
+						{nav.links.map((link) =>
+							link.href === SERVICES_HREF ? (
+								<MobileServices key={link.href} pathname={pathname} current={currentOf(link.href)} onNavigate={() => setMenuOpen(false)} />
+							) : (
+								<a
+									key={link.href}
+									href={link.href}
+									onClick={() => setMenuOpen(false)}
+									aria-current={currentOf(link.href)}
+									className="label-mono border-b border-line py-4 text-base aria-[current]:text-link"
+								>
+									{link.label}
+								</a>
+							),
+						)}
 						<div className="flex items-center justify-between border-b border-line py-2">
 							<span className="label-mono text-base">{nav.themeLabel}</span>
 							<ThemeToggle />

@@ -1,3 +1,4 @@
+import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { CaseCard } from '@/components/sections/CaseCard';
 import { Section } from '@/components/ui/Section';
 import { SectionHeading } from '@/components/ui/SectionHeading';
@@ -9,6 +10,7 @@ const { casos } = es.home;
 export default function CasosList() {
 	return (
 		<Section>
+			<Breadcrumbs trail={[{ label: es.nav.links[1].label }]} />
 			<div className="flex flex-col gap-6">
 				<SectionHeading as="h1" title={casos.headline} />
 				<p className="text-body max-w-[65ch] text-muted">{casos.intro}</p>

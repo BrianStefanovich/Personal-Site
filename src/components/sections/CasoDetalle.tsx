@@ -1,3 +1,4 @@
+import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { CaseRow } from '@/components/sections/CaseRow';
 import { CtaButton } from '@/components/CtaButton';
 import { Section } from '@/components/ui/Section';
@@ -14,9 +15,7 @@ export default function CasoDetalle({ item }: { item: Item }) {
 	return (
 		<>
 			<Section>
-				<a href="/cases" className="label-mono inline-flex min-h-11 items-center text-sm tracking-[0.05em] text-link hover:text-ink">
-					←&nbsp;{casos.backLabel}
-				</a>
+				<Breadcrumbs trail={[{ label: es.nav.links[1].label, href: '/cases' }, { label: item.name }]} className="mb-0 md:mb-0" />
 				<div className="mt-8 flex max-w-[48rem] flex-col gap-5">
 					<p className="label-mono text-sm text-muted">{item.tags}</p>
 					<h1 className="text-display">{item.name}</h1>

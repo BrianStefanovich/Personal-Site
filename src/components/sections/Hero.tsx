@@ -37,9 +37,6 @@ export default function Hero() {
 						<CtaButton intent="other" location="hero" data-hero-cta="">
 							{hero.cta}
 						</CtaButton>
-						<CtaButton variant="outline" href="#como-trabajo">
-							{es.nav.links[1].label}
-						</CtaButton>
 					</div>
 					<p className="max-w-[34rem] text-sm leading-[1.5] text-muted">{hero.microcopy}</p>
 				</div>

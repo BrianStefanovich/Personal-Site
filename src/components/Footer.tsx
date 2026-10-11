@@ -1,4 +1,4 @@
-import { Logo } from '@/components/Logo';
+import { LogoSignature } from '@/components/Logo';
 import { es } from '@/i18n/es';
 import { LINKEDIN_URL } from '@/lib/contact';
 
@@ -25,10 +25,9 @@ function LinkColumn({ label, links }: { label: string; links: readonly { label: 
 export default function Footer() {
 	return (
 		<footer className="frame-pad bg-page pb-10 pt-12 text-ink max-sm:pb-28 md:pt-16">
-			<div className="grid gap-10 md:grid-cols-[minmax(0,6fr)_minmax(0,3fr)_minmax(0,3fr)] md:gap-x-8">
-				<div className="flex flex-col items-start gap-4">
-					<Logo name={nav.name} size="lg" />
-					<p className="label-mono text-sm tracking-[0.05em] text-muted">{nav.descriptor}</p>
+			<div className="grid gap-10 md:grid-cols-2 md:gap-x-8 lg:grid-cols-[minmax(0,6fr)_minmax(0,3fr)_minmax(0,3fr)]">
+				<div className="flex flex-col items-start gap-4 md:col-span-2 lg:col-span-1">
+					<LogoSignature alt={nav.name} />
 					<a
 						href={LINKEDIN_URL}
 						target="_blank"
