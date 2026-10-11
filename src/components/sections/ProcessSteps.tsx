@@ -4,11 +4,12 @@ import { es } from '@/i18n/es';
 
 const { proceso } = es.home;
 
+/** How work begins: a free conversation, then a scoped engagement. The point where paid work starts is stated, not hidden. */
 export default function ProcessSteps() {
 	return (
 		<Section id="como-trabajo">
 			<div className="grid gap-y-10 lg:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] lg:grid-rows-[auto_1fr] lg:gap-x-24 lg:gap-y-12">
-				<SectionHeading title={proceso.subhead} className="lg:col-start-1 lg:row-start-1" />
+				<SectionHeading title={proceso.headline} className="lg:col-start-1 lg:row-start-1" />
 
 				<ol className="flex flex-col lg:col-start-2 lg:row-span-2 lg:row-start-1">
 					{proceso.steps.map((step, index) => (

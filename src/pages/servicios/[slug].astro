@@ -1,0 +1,18 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Faq from '@/components/sections/Faq';
+import ServicioDetalle, { ServicioCierre } from '@/components/sections/ServicioDetalle';
+import { es } from '@/i18n/es';
+
+export function getStaticPaths() {
+	return es.home.servicios.items.map((service) => ({ params: { slug: service.id }, props: { service } }));
+}
+
+const { service } = Astro.props;
+---
+
+<BaseLayout title={service.meta.title} description={service.meta.description} canonicalPath={service.path}>
+	<ServicioDetalle client:load service={service} />
+	<Faq client:visible id={`faq-${service.id}`} items={service.faq} headline={es.home.servicios.faqHeadline} />
+	<ServicioCierre client:load service={service} />
+</BaseLayout>

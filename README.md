@@ -22,6 +22,8 @@ All page copy lives in `src/i18n/es.ts` as a typed dictionary. Components read i
 
 Spanish is the default locale and is served unprefixed at `/`.
 
+Service pages live at `/servicios/[slug]` and are generated from `home.servicios.items`; case pages at `/cases/[slug]` from `home.casos.items`. Diagrams are in `src/components/diagrams/` and read their text from `es.diagrams`. Analytics events are declared with `data-track*` attributes (see `src/lib/analytics.ts`).
+
 Contact CTAs open `src/components/ContactDrawer.tsx`, which schedules through a Cal.com embed (`@calcom/embed-react`); the drawer's "Escribir por email" option falls back to a `mailto:` link.
 
 ## Quality checks

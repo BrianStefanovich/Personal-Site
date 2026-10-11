@@ -59,5 +59,9 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
 			<Footer />
 		</div>
 		<ContactDrawer client:load />
+		<script>
+			import { initTracking } from '@/lib/analytics';
+			initTracking();
+		</script>
 	</body>
 </html>

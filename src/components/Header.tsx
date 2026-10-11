@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils';
 import { useEffect, useRef, useState } from 'react';
 
 const { nav } = es;
-const ctaLabel = es.home.hero.cta;
+const ctaLabel = nav.cta;
 const hashOf = (href: string) => href.split('#')[1];
 const sectionIds = nav.links.map((link) => hashOf(link.href)).filter((id): id is string => Boolean(id));
 const HEADER_PX = 72;
@@ -66,6 +66,7 @@ export default function Header() {
 	// In-page links follow the scrolled section; page links (/cases) stay current across their sub-pages.
 	const currentOf = (href: string) => {
 		const hash = hashOf(href);
+		if (hash === 'servicios' && pathname.startsWith('/servicios/')) return 'page';
 		if (hash) return pathname === '/' && active === hash ? 'location' : undefined;
 		return pathname === href || pathname.startsWith(`${href}/`) ? 'page' : undefined;
 	};
@@ -117,8 +118,8 @@ export default function Header() {
 								href={link.href}
 								aria-current={currentOf(link.href)}
 								className={cn(
-									'label-mono border-b border-blueprint pb-1 text-sm tracking-[0.1em] transition hover:text-link',
-									currentOf(link.href) && 'text-link',
+									'label-mono border-b-2 border-transparent pb-1 text-sm tracking-[0.1em] transition hover:border-strong hover:text-link focus-visible:border-transparent',
+									currentOf(link.href) && 'border-blueprint text-link hover:border-blueprint',
 								)}
 							>
 								{link.label}
@@ -128,7 +129,7 @@ export default function Header() {
 
 					<div className="flex items-center gap-3">
 						<ThemeToggle className="max-xl:hidden" />
-						<CtaButton variant="compact" intent="other" className="hidden whitespace-nowrap sm:inline-flex">
+						<CtaButton variant="compact" intent="other" location="header" className="hidden whitespace-nowrap sm:inline-flex">
 							{ctaLabel}
 						</CtaButton>
 
@@ -172,7 +173,7 @@ export default function Header() {
 							<ThemeToggle />
 						</div>
 						<div className="mt-8 sm:hidden">
-							<CtaButton intent="other" className="w-full" onClick={() => setMenuOpen(false)}>
+							<CtaButton intent="other" location="menu" className="w-full" onClick={() => setMenuOpen(false)}>
 								{ctaLabel}
 							</CtaButton>
 						</div>
@@ -182,7 +183,7 @@ export default function Header() {
 
 			{showBar && !menuOpen && (
 				<div className="fixed inset-x-0 bottom-0 z-(--z-header) border-t-2 border-line bg-page px-5 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3 sm:hidden">
-					<CtaButton intent="other" className="w-full">
+					<CtaButton intent="other" location="mobile-bar" className="w-full">
 						{ctaLabel}
 					</CtaButton>
 				</div>

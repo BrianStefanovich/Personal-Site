@@ -4,6 +4,7 @@ export const CONTACT_EMAIL = 'hi@brianstefanovich.com';
 export const CONTACT_EMAIL_HREF = `mailto:${CONTACT_EMAIL}`;
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/brian-stefanovich/';
 export const CAL_LINK = 'brianstefanovich/consulta';
+export const CAL_URL = `https://cal.com/${CAL_LINK}`;
 export const CAL_NAMESPACE = 'consulta';
 
 const OPEN_CONTACT_EVENT = 'open-contact';

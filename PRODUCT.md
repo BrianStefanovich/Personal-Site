@@ -25,15 +25,15 @@ Three service lines correspond to three visitor situations:
 
 ## Operating Context
 
-Single-page (one-pager) landing with anchor navigation: Servicios · Cómo trabajo · Casos · Sobre mí, plus a persistent "Conversemos 30 minutos" CTA. Full narrative flow is specified in [docs/contenido_website.md](docs/contenido_website.md) (copy) and [docs/guia_website.md](docs/guia_website.md) (creative direction, sitemap, section-by-section design intent — hero, problem framing, three service "doors," philosophy/principles, process, case studies, about, FAQ, final CTA). Future evolution (not yet built) may add dedicated `/servicios/*`, `/casos/[caso]`, `/insights/[articulo]`, and `/sobre-mi` routes; the landing stays the center of the system.
+Landing at `/` with anchor navigation (Servicios · Cómo trabajo · Casos · Sobre Brian) plus a persistent booking CTA ("Agendar 30 minutos" in the header, "Agendar conversación de 30 minutos" in hero and contact). The landing routes each visitor situation to its own page: `/servicios/sistemas-existentes`, `/servicios/nuevos-negocios`, `/servicios/arquitecto-fraccional`, plus `/cases` and `/cases/[slug]`. Full narrative flow and creative direction: [docs/contenido_website.md](docs/contenido_website.md) and [docs/guia_website.md](docs/guia_website.md); the design/conversion audit that drove the current structure is `Informe_diseno_y_conversion_sitio_Brian_Stefanovich.md`. Future evolution (not yet built) may add `/insights/[articulo]` and `/sobre-mi`.
 
 The site is built with Astro (static output), React islands, Tailwind CSS, and shadcn-compatible UI primitives. Copy lives in a typed i18n dictionary (`src/i18n/es.ts`) read via `getTranslations()`. Spanish (`es`) is the current default locale served unprefixed at `/`.
 
 ## Capabilities and Constraints
 
 - Stack is already decided (existing codebase): Astro 7 (static output), @astrojs/react, @astrojs/sitemap, Tailwind CSS 4, class-variance-authority, lucide-react. Not an open decision.
-- The current `src/pages/index.astro` and section components (Hero, Problemas, Diagnostico, Diferenciales, ProcessSteps, Encaje, Experiencia, SobreBrian, Continuidad, Faq, CtaFinal) referenced by the page are not yet implemented — the codebase is mid-rebuild/scaffold stage, not a finished site.
-- Contact form is intentionally markup-only for now (no submissions sent anywhere) — a known placeholder. Future integration planned with cal.com for booking; do not build a different booking backend without confirming.
+- Contact is real: every booking CTA opens `ContactDrawer` (cal.com embed, `CAL_LINK` in `src/lib/contact.ts`), with `hi@brianstefanovich.com` as the email alternative. There is no contact form; do not add one unless it posts to a working endpoint. Without JavaScript, CTAs go to the public cal.com page.
+- Events (`cta_click`, `service_route_open`, `service_page_view`, `case_open`, `calendar_select`, `email_click`) are declared with `data-track*` attributes and sent to GA4 by `src/lib/analytics.ts` when `PUBLIC_GA_MEASUREMENT_ID` is set in a production build.
 - i18n is architected for multiple locales (add a dictionary file + register in `src/i18n/config.ts` + `astro.config.mjs`); an English (`en`) version is planned as durable scope, not just Spanish-only. Timing/priority of the English rollout is undecided.
 - `PUBLIC_SITE_URL` must be set to the canonical production origin before build; `PUBLIC_GA_MEASUREMENT_ID` is optional (adds GA4 only in production output).
 
@@ -55,7 +55,7 @@ Full brand system defined in [docs/manual_marca.md](docs/manual_marca.md); treat
 - Full page copy already drafted in Spanish: [docs/contenido_website.md](docs/contenido_website.md).
 - Creative/design direction already drafted: [docs/guia_website.md](docs/guia_website.md) (hero composition, animation timing, section-by-section intent).
 - The only real photo in use is [public/images/sobre-brian.webp](public/images/sobre-brian.webp) (portrait in the About section). The logo symbol lives in `src/components/logo-symbol-path.ts`.
-- **Case studies (Sección 9 "Casos") are placeholders only** — `[CASO 01]`, `[Empresa / industria]`, `[Problema]`, etc. No real client details exist yet. Do not fabricate client names, situations, decisions, or results; keep placeholder/structural treatment until real cases are provided.
+- **Published cases are Kepler Coach and RollKall**, written only from what Brian's CV documents. Bavastro is held back in `es.home.casos.pending` until Brian confirms his exact role and the state of the system. Do not fabricate client details, decisions, metrics, or architecture diagrams for cases; diagrams on the site are labeled "Esquema ilustrativo".
 
 ## Product Principles
 

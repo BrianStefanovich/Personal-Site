@@ -1,3 +1,4 @@
+import { CtaButton } from '@/components/CtaButton';
 import { Section } from '@/components/ui/Section';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { es } from '@/i18n/es';
@@ -15,6 +16,9 @@ export default function SobreBrian() {
 				<SectionHeading eyebrow={sobreBrian.headline} title={sobreBrian.subhead} />
 				<p className="text-lead">{sobreBrian.intro}</p>
 				<p className="text-body max-w-[45rem] text-muted">{sobreBrian.lead}</p>
+				<CtaButton variant="link" href="/cases" data-track="case_open" data-track-case="all" data-track-location="about" className="justify-start">
+					{sobreBrian.casesCta}
+				</CtaButton>
 
 				<dl className="mt-2 grid gap-x-12 sm:grid-cols-2">
 					{sobreBrian.areas.map((area) => (

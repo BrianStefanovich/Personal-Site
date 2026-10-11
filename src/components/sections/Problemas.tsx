@@ -4,9 +4,10 @@ import { es } from '@/i18n/es';
 
 const { problema, servicios } = es.home;
 
+/** The three routes in: a symptom, the decision it hides, and the page that goes deeper. */
 export default function Problemas() {
 	return (
-		<Section>
+		<Section id="servicios">
 			<div className="flex flex-col gap-6">
 				<SectionHeading title={problema.headline} />
 				<p className="text-body max-w-[65ch] text-muted">{problema.subhead}</p>
@@ -22,12 +23,18 @@ export default function Problemas() {
 						>
 							<p className="label-mono text-sm text-link">{situation.tag}</p>
 							<h3 className="text-balance">{situation.title}</h3>
-							<p className="text-body text-muted">{situation.body}</p>
+							<div className="flex flex-col gap-2">
+								<p className="label-mono text-sm text-muted">{problema.decisionLabel}</p>
+								<p className="text-body">{situation.decision}</p>
+							</div>
 							<a
-								href={`#${service.id}`}
-								className="label-mono mt-2 inline-flex min-h-11 items-center text-sm tracking-[0.05em] text-link hover:text-ink"
+								href={service.path}
+								data-track="service_route_open"
+								data-track-service={service.id}
+								data-track-location="home"
+								className="label-mono mt-auto inline-flex min-h-11 items-center pt-2 text-sm tracking-[0.05em] text-link hover:text-ink"
 							>
-								{problema.doorLabel}&nbsp;→
+								{situation.link}&nbsp;→
 							</a>
 						</li>
 					);

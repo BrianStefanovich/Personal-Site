@@ -1,14 +1,11 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Contacto from '@/components/sections/Contacto';
-import Decision from '@/components/sections/Decision';
 import Faq from '@/components/sections/Faq';
 import Hero from '@/components/sections/Hero';
 import Prueba from '@/components/sections/Prueba';
-import Presentacion from '@/components/sections/Presentacion';
 import Problemas from '@/components/sections/Problemas';
 import ProcessSteps from '@/components/sections/ProcessSteps';
-import Servicios from '@/components/sections/Servicios';
 import SobreBrian from '@/components/sections/SobreBrian';
 import { getTranslations } from '@/i18n';
 
@@ -18,10 +15,7 @@ const { home } = getTranslations();
 <BaseLayout title={home.meta.title} description={home.meta.description} canonicalPath="/">
 	<Hero client:load />
 	<Prueba />
-	<Presentacion />
 	<Problemas />
-	<Servicios client:visible />
-	<Decision />
 	<ProcessSteps />
 	<SobreBrian />
 	<Faq client:visible />

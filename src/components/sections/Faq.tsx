@@ -4,14 +4,21 @@ import { es } from '@/i18n/es';
 import { useState } from 'react';
 
 const { faq } = es.home;
-const items = [faq.featured, ...faq.items];
+const homeItems = [faq.featured, ...faq.items];
 
-export default function Faq() {
+interface FaqProps {
+	/** Defaults to the general questions that block a first contact. */
+	items?: readonly { q: string; a: string }[];
+	headline?: string;
+	id?: string;
+}
+
+export default function Faq({ items = homeItems, headline = faq.headline, id = 'faq' }: FaqProps) {
 	const [openIndex, setOpenIndex] = useState<number | null>(0);
 
 	return (
-		<Section id="faq" contentClassName="flex flex-col gap-10 md:gap-14">
-			<SectionHeading title={faq.headline} />
+		<Section id={id} contentClassName="flex flex-col gap-10 md:gap-14">
+			<SectionHeading title={headline} />
 
 			<ul className="border-t border-line">
 				{items.map((item, i) => {
@@ -22,8 +29,8 @@ export default function Faq() {
 								<button
 									type="button"
 									aria-expanded={open}
-									aria-controls={`faq-panel-${i}`}
-									id={`faq-button-${i}`}
+									aria-controls={`${id}-panel-${i}`}
+									id={`${id}-button-${i}`}
 									onClick={() => setOpenIndex(open ? null : i)}
 									className="flex min-h-16 w-full items-center justify-between gap-6 py-5 text-left font-display text-lg font-bold hover:text-link md:text-xl"
 								>
@@ -36,7 +43,7 @@ export default function Faq() {
 									</span>
 								</button>
 							</h3>
-							<div id={`faq-panel-${i}`} role="region" aria-labelledby={`faq-button-${i}`} hidden={!open} className="pb-7 md:pr-18">
+							<div id={`${id}-panel-${i}`} role="region" aria-labelledby={`${id}-button-${i}`} hidden={!open} className="pb-7 md:pr-18">
 								<p className="text-body text-muted">{item.a}</p>
 							</div>
 						</li>

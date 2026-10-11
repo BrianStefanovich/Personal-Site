@@ -3,6 +3,7 @@ import { es } from '@/i18n/es';
 import { LINKEDIN_URL } from '@/lib/contact';
 
 const { footer, nav } = es;
+const serviceLinks = es.home.servicios.items.map((item) => ({ label: item.navLabel, href: item.path }));
 
 function LinkColumn({ label, links }: { label: string; links: readonly { label: string; href: string }[] }) {
 	return (
@@ -52,7 +53,7 @@ export default function Footer() {
 						</svg>
 					</a>
 				</div>
-				<LinkColumn label={footer.servicesLabel} links={footer.services} />
+				<LinkColumn label={footer.servicesLabel} links={serviceLinks} />
 				<LinkColumn label={footer.resourcesLabel} links={footer.resources} />
 			</div>
 

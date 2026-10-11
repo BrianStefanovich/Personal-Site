@@ -174,6 +174,8 @@ export default function ContactDrawer() {
 								type="button"
 								disabled={cal !== 'ready'}
 								aria-busy={cal === 'loading'}
+								data-track="calendar_select"
+								data-track-intent={intent}
 								data-cal-namespace={CAL_NAMESPACE}
 								data-cal-link={selected ? `${CAL_LINK}?notes=${encodeURIComponent(selected.label)}` : CAL_LINK}
 								data-cal-config={JSON.stringify({
@@ -189,6 +191,8 @@ export default function ContactDrawer() {
 
 						<a
 							href={CONTACT_EMAIL_HREF}
+							data-track="email_click"
+							data-track-location="drawer"
 							className="mt-4 block text-center font-display text-sm font-bold text-link underline decoration-current/40 underline-offset-4 hover:decoration-current"
 						>
 							{contact.emailCta}

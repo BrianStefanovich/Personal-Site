@@ -10,7 +10,6 @@ export function getStaticPaths() {
 const { item } = Astro.props;
 ---
 
-<!-- noindex while the detail pages carry placeholder copy -->
-<BaseLayout title={`${item.name} | Casos de éxito`} description={item.headline} canonicalPath={`/cases/${item.slug}`} noindex>
-	<CasoDetalle item={item} />
+<BaseLayout title={`${item.name} | Casos | Brian Stefanovich`} description={item.headline} canonicalPath={`/cases/${item.slug}`}>
+	<CasoDetalle client:load item={item} />
 </BaseLayout>

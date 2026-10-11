@@ -1,13 +1,16 @@
+import { CaseRow } from '@/components/sections/CaseRow';
 import { CtaButton } from '@/components/CtaButton';
 import { Section } from '@/components/ui/Section';
 import { es } from '@/i18n/es';
 
-const { casos, hero } = es.home;
+const { casos, servicios } = es.home;
 
 type Item = (typeof casos.items)[number];
 
-/** A single case. The summary rows are real; the sections below them are placeholder copy. */
+/** A published case: only what can be stated and defended, then the service it belongs to. */
 export default function CasoDetalle({ item }: { item: Item }) {
+	const service = servicios.items.find((entry) => entry.id === item.service);
+
 	return (
 		<>
 			<Section>
@@ -21,36 +24,39 @@ export default function CasoDetalle({ item }: { item: Item }) {
 				</div>
 
 				<dl className="mt-12 flex flex-col md:mt-20">
-					<Row label={casos.labels.context}>{item.context}</Row>
-					{'responsibility' in item && <Row label={casos.labels.responsibility}>{item.responsibility}</Row>}
-					<Row label={casos.labels.result} tone="consequence">
+					<CaseRow label={casos.labels.role}>{item.role}</CaseRow>
+					<CaseRow label={casos.labels.context}>{item.context}</CaseRow>
+					<CaseRow label={casos.labels.responsibility}>{item.responsibility}</CaseRow>
+					<CaseRow label={casos.labels.result} tone="consequence">
 						{item.result}
-					</Row>
+					</CaseRow>
 				</dl>
+				<p className="text-body mt-8 max-w-[65ch] text-muted">{casos.scopeNote}</p>
 			</Section>
 
-			<Section tone="inverse">
-				<div className="grid gap-10 lg:grid-cols-3 lg:gap-x-12">
-					{casos.dummy.sections.map((section) => (
-						<div key={section.title} className="flex flex-col gap-3 border-t-2 border-ink pt-6">
-							<h2 className="text-headline">{section.title}</h2>
-							<p className="text-body text-muted">{section.body}</p>
-						</div>
-					))}
-				</div>
-				<div className="mt-12 md:mt-16">
-					<CtaButton intent="other">{hero.cta}</CtaButton>
-				</div>
-			</Section>
+			{service && (
+				<Section tone="inverse" contentClassName="grid gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:items-end lg:gap-x-24">
+					<div className="flex flex-col gap-4">
+						<p className="label-mono text-sm text-muted">{casos.relatedLabel}</p>
+						<h2 className="text-headline">{service.title}</h2>
+						<p className="text-body max-w-[65ch] text-muted">{service.lead}</p>
+						<a
+							href={service.path}
+							data-track="service_route_open"
+							data-track-service={service.id}
+							data-track-location="case"
+							className="label-mono inline-flex min-h-11 items-center text-sm tracking-[0.05em] text-link hover:text-ink"
+						>
+							{service.navLabel}&nbsp;→
+						</a>
+					</div>
+					<div>
+						<CtaButton intent={service.intent} location={`case-${item.slug}`}>
+							{service.cta}
+						</CtaButton>
+					</div>
+				</Section>
+			)}
 		</>
-	);
-}
-
-function Row({ label, tone, children }: { label: string; tone?: 'consequence'; children: string }) {
-	return (
-		<div className="grid gap-2 border-t border-line py-5 last:border-b md:grid-cols-[11.25rem_minmax(0,1fr)] md:gap-x-6">
-			<dt className={`label-mono text-sm ${tone === 'consequence' ? 'text-consequence' : 'text-muted'}`}>{label}</dt>
-			<dd className={`text-body max-w-[65ch] ${tone === 'consequence' ? '' : 'text-muted'}`}>{children}</dd>
-		</div>
 	);
 }

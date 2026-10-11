@@ -13,7 +13,10 @@ export default defineConfig({
 	output: 'static',
 	server: {
 		host: true,
-		allowedHosts: ['4321--personal-site--personal-site--brianstefanovich.coder.brianstefanovich.com'],
+		allowedHosts: [
+			'4321--personal-site--personal-site--brianstefanovich.coder.brianstefanovich.com',
+			'4321--workspace--personal-site--brianstefanovich.coder.brianstefanovich.com',
+		],
 	},
 	i18n: {
 		defaultLocale: 'es',

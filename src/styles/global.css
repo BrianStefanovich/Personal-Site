@@ -36,6 +36,13 @@
 	--color-line: var(--border-hairline);
 	--color-strong: var(--border-strong);
 	--color-consequence: var(--text-consequence);
+	--color-diagram-node: var(--diagram-node);
+	--color-diagram-edge: var(--diagram-edge);
+	--color-diagram-label: var(--diagram-label);
+	--color-diagram-boundary: var(--diagram-boundary);
+	--color-diagram-selected: var(--diagram-selected);
+	--color-diagram-risk: var(--diagram-risk);
+	--color-document-paper: var(--document-paper);
 }
 
 /* These must stay layered: unlayered CSS outranks every Tailwind utility. */
@@ -219,7 +226,7 @@
 
 /* The hero headline: one step above display, still under the 6rem ceiling. */
 @utility text-hero {
-	font-size: clamp(2.5rem, 1.1rem + 4.4vw, 4.75rem);
+	font-size: clamp(2.25rem, 1.15rem + 3.5vw, 4rem);
 	line-height: 1.04;
 	letter-spacing: -0.03em;
 }
@@ -342,6 +349,17 @@
 @layer brand {
 	:where(main > section) {
 		position: relative;
+	}
+
+	/* Diagram and document tokens resolve where they are used, so they follow any re-scoped surface (hero panel, inverse band, dark theme). */
+	.diagram-scope {
+		--diagram-node: var(--text-secondary);
+		--diagram-edge: var(--text-secondary);
+		--diagram-label: var(--text-primary);
+		--diagram-boundary: var(--text-secondary);
+		--diagram-selected: var(--text-link);
+		--diagram-risk: var(--text-consequence);
+		--document-paper: var(--surface-card);
 	}
 
 	:where(a, button) {

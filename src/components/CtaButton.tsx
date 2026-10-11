@@ -1,4 +1,4 @@
-import { openContact, CONTACT_EMAIL_HREF, type ContactIntent } from '@/lib/contact';
+import { openContact, CAL_URL, type ContactIntent } from '@/lib/contact';
 import { cn } from '@/lib/utils';
 import type { AnchorHTMLAttributes } from 'react';
 
@@ -7,13 +7,15 @@ interface CtaButtonProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, '
 	variant?: 'primary' | 'compact' | 'outline' | 'link';
 	intent?: ContactIntent;
 	href?: string;
+	/** Where the button sits on the page; reported with the click so conversions can be traced to a section. */
+	location?: string;
 }
 
 const base = 'inline-flex items-center justify-center whitespace-nowrap transition';
 
 const variants = {
 	primary:
-		'font-display font-bold min-h-12 rounded-card bg-blueprint px-6 py-3 text-lg text-porcelain hover:brightness-110 active:brightness-95',
+		'font-display font-bold min-h-12 whitespace-normal rounded-card bg-blueprint px-6 py-3 text-center text-lg text-porcelain hover:brightness-110 active:brightness-95',
 	compact:
 		'font-display font-bold min-h-11 rounded-card bg-blueprint px-[1.125rem] py-2 text-base text-porcelain hover:brightness-110 active:brightness-95',
 	outline:
@@ -22,21 +24,27 @@ const variants = {
 } as const;
 
 /**
- * The page's single CTA: every "Conversemos 30 minutos" opens the contact drawer with an
- * intent, or scrolls to an in-page anchor when `href` is given. The mailto fallback only
- * fires for no-JS visitors, since the click handler below intercepts everything else.
+ * The page's single booking CTA: it opens the contact drawer with an intent, or follows an in-page or
+ * internal link when `href` is given. Without JavaScript it goes straight to the public booking page.
  */
-export function CtaButton({ variant = 'primary', intent, href, className, children, onClick, ...rest }: CtaButtonProps) {
+export function CtaButton({ variant = 'primary', intent, href, location, className, children, onClick, ...rest }: CtaButtonProps) {
+	const opensContact = !href;
 	return (
 		<a
-			href={href ?? CONTACT_EMAIL_HREF}
+			href={href ?? CAL_URL}
 			onClick={(event) => {
-				if (!href) {
+				if (opensContact) {
 					event.preventDefault();
 					openContact(intent ?? 'other');
 				}
 				onClick?.(event);
 			}}
+			{...(opensContact && {
+				'aria-haspopup': 'dialog' as const,
+				'data-track': 'cta_click',
+				'data-track-location': location ?? 'page',
+				'data-track-intent': intent ?? 'other',
+			})}
 			className={cn(base, variants[variant], className)}
 			{...rest}
 		>
