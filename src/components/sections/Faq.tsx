@@ -32,7 +32,7 @@ export default function Faq({ items = homeItems, headline = faq.headline, id = '
 									aria-controls={`${id}-panel-${i}`}
 									id={`${id}-button-${i}`}
 									onClick={() => setOpenIndex(open ? null : i)}
-									className="flex min-h-16 w-full items-center justify-between gap-6 py-5 text-left font-display text-lg font-bold hover:text-link md:text-xl"
+									className="flex min-h-16 w-full items-center justify-between gap-6 py-5 text-left font-display text-lg font-bold hover:text-link md:text-lg"
 								>
 									<span>{item.q}</span>
 									<span

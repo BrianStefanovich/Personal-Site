@@ -15,11 +15,11 @@ const base = 'inline-flex items-center justify-center whitespace-nowrap transiti
 
 const variants = {
 	primary:
-		'font-display font-bold min-h-12 whitespace-normal rounded-card bg-blueprint px-6 py-3 text-center text-lg text-porcelain hover:brightness-110 active:brightness-95',
+		'font-display font-bold min-h-12 whitespace-normal rounded-card bg-blueprint px-6 py-3 text-center text-base text-porcelain hover:brightness-110 active:brightness-95',
 	compact:
 		'font-display font-bold min-h-11 rounded-card bg-blueprint px-[1.125rem] py-2 text-base text-porcelain hover:brightness-110 active:brightness-95',
 	outline:
-		'font-display font-bold min-h-12 rounded-card px-6 py-3 text-lg text-ink shadow-[inset_0_0_0_1.5px_var(--border-hairline)] hover:text-link hover:shadow-[inset_0_0_0_1.5px_var(--text-link)]',
+		'font-display font-bold min-h-12 rounded-card px-6 py-3 text-base text-ink shadow-[inset_0_0_0_1.5px_var(--border-hairline)] hover:text-link hover:shadow-[inset_0_0_0_1.5px_var(--text-link)]',
 	link: 'label-mono min-h-11 text-sm tracking-[0.05em] text-link hover:text-ink',
 } as const;
 

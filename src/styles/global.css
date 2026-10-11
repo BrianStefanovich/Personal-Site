@@ -132,18 +132,18 @@
 	}
 
 	main h1 {
-		font-size: clamp(2.125rem, 1.35rem + 2.2vw, 3.375rem);
+		font-size: clamp(2rem, 1.35rem + 1.75vw, 3rem);
 		line-height: 1.1;
 		letter-spacing: -0.02em;
 	}
 
 	main h2 {
-		font-size: clamp(1.75rem, 1.2rem + 1.4vw, 2.5rem);
+		font-size: clamp(1.625rem, 1.2rem + 1.1vw, 2.25rem);
 		line-height: 1.2;
 	}
 
 	main h3 {
-		font-size: clamp(1.25rem, 1.05rem + 0.7vw, 1.6875rem);
+		font-size: clamp(1.1875rem, 1.05rem + 0.5vw, 1.4375rem);
 		line-height: 1.3;
 	}
 
@@ -167,18 +167,18 @@
 	padding-inline: 0;
 }
 
-/* The technical frame: a centered column hairlined on both sides from md up. 90rem = the 1440px design column. */
+/* The technical frame: a centered column hairlined on both sides from md up. 76rem (1216px) is the widest it grows, so wide screens get outer margins instead of a wider column. */
 @utility page-frame {
 	margin-inline: auto;
 	width: 100%;
 
 	@media (width >= 48rem) {
-		width: min(100% - 3rem, 90rem);
+		width: min(100% - 3rem, 76rem);
 		border-inline: 1px solid var(--border-hairline);
 	}
 
 	@media (width >= 64rem) {
-		width: min(100% - 6rem, 90rem);
+		width: min(100% - 4rem, 76rem);
 	}
 }
 
@@ -188,24 +188,24 @@
 	width: 100%;
 
 	@media (width >= 48rem) {
-		width: min(100% - 3rem, 90rem);
+		width: min(100% - 3rem, 76rem);
 	}
 
 	@media (width >= 64rem) {
-		width: min(100% - 6rem, 90rem);
+		width: min(100% - 4rem, 76rem);
 	}
 }
 
-/* Inner gutter shared by every section, the header and the footer: 42px on desktop. */
+/* Inner gutter shared by every section, the header and the footer: 24px on phones, up to 64px on wide screens. */
 @utility frame-pad {
-	padding-inline: 1.25rem;
+	padding-inline: 1.5rem;
 
 	@media (width >= 48rem) {
-		padding-inline: 2rem;
+		padding-inline: 2.5rem;
 	}
 
-	@media (width >= 64rem) {
-		padding-inline: 2.625rem;
+	@media (width >= 80rem) {
+		padding-inline: 4rem;
 	}
 }
 
@@ -217,34 +217,34 @@
 	text-transform: uppercase;
 }
 
-/* Display (54/59), headline (34/41) and lead/body sizes from the design system; they step down on small screens. */
+/* Display (48), headline (30), lead (20) and body (17) sizes; they step down on small screens. */
 @utility text-display {
-	font-size: clamp(2.125rem, 1.35rem + 2.2vw, 3.375rem);
+	font-size: clamp(2rem, 1.35rem + 1.75vw, 3rem);
 	line-height: 1.1;
 	letter-spacing: -0.02em;
 }
 
-/* The hero headline: one step above display, still under the 6rem ceiling. */
+/* The hero headline: one step above display. */
 @utility text-hero {
-	font-size: clamp(2.25rem, 1.15rem + 3.5vw, 4rem);
-	line-height: 1.04;
+	font-size: clamp(2.125rem, 1.4rem + 2.4vw, 3.5rem);
+	line-height: 1.06;
 	letter-spacing: -0.03em;
 }
 
 @utility text-headline {
-	font-size: clamp(1.625rem, 1.3rem + 1vw, 2.125rem);
+	font-size: clamp(1.5rem, 1.25rem + 0.8vw, 1.875rem);
 	line-height: 1.2;
 	letter-spacing: -0.025em;
 }
 
 @utility text-lead {
-	font-size: clamp(1.125rem, 1.02rem + 0.45vw, 1.4375rem);
+	font-size: clamp(1.0625rem, 1rem + 0.35vw, 1.25rem);
 	line-height: 1.6;
 }
 
 @utility text-body {
-	font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
-	line-height: 1.6;
+	font-size: clamp(1rem, 0.96rem + 0.15vw, 1.0625rem);
+	line-height: 1.65;
 }
 
 /* Card: radius 14, inset hairline, no shadow. Follows the page theme. */
@@ -335,14 +335,14 @@
 	max-width: 65ch;
 }
 
-/* Section rhythm: 40px top, 128px bottom on desktop, framed by a 2px bottom rule. */
+/* Section rhythm: more air below than above, framed by a 2px bottom rule. 56/72px on phones, 72/104px on desktop. */
 @utility section-y {
-	padding-top: 2rem;
+	padding-top: 3.5rem;
 	padding-bottom: 4.5rem;
 
 	@media (width >= 48rem) {
-		padding-top: 2.5rem;
-		padding-bottom: 8rem;
+		padding-top: 4.5rem;
+		padding-bottom: 6.5rem;
 	}
 }
 

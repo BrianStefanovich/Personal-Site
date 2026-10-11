@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import CasosList from '@/components/sections/CasosList';
+import Contacto from '@/components/sections/Contacto';
 import { es } from '@/i18n/es';
 
 const { meta } = es.home.casos;
@@ -8,4 +9,5 @@ const { meta } = es.home.casos;
 
 <BaseLayout title={meta.title} description={meta.description} canonicalPath="/cases">
 	<CasosList />
+	<Contacto client:visible />
 </BaseLayout>

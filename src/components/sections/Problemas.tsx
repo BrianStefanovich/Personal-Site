@@ -1,3 +1,4 @@
+import { CtaButton } from '@/components/CtaButton';
 import { Section } from '@/components/ui/Section';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { es } from '@/i18n/es';
@@ -19,7 +20,7 @@ export default function Problemas() {
 					return (
 						<li
 							key={situation.title}
-							className="flex flex-col gap-5 border-b border-line py-10 last:border-b-0 lg:border-b-0 lg:border-r lg:px-10 lg:pb-0 lg:last:border-r-0 lg:first:pl-0 lg:last:pr-0"
+							className="flex flex-col gap-5 border-b border-line py-10 last:border-b-0 lg:border-b-0 lg:border-r lg:px-8 lg:pb-0 lg:last:border-r-0 lg:first:pl-0 lg:last:pr-0"
 						>
 							<p className="label-mono text-sm text-link">{situation.tag}</p>
 							<h3 className="text-balance">{situation.title}</h3>
@@ -40,6 +41,10 @@ export default function Problemas() {
 					);
 				})}
 			</ol>
+
+			<CtaButton variant="link" href="/servicios" data-track="service_route_open" data-track-service="all" data-track-location="home" className="mt-8 justify-start">
+				{servicios.allLabel}
+			</CtaButton>
 		</Section>
 	);
 }

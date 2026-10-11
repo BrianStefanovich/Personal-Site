@@ -3,7 +3,6 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import Contacto from '@/components/sections/Contacto';
 import Faq from '@/components/sections/Faq';
 import Hero from '@/components/sections/Hero';
-import Prueba from '@/components/sections/Prueba';
 import Problemas from '@/components/sections/Problemas';
 import ProcessSteps from '@/components/sections/ProcessSteps';
 import SobreBrian from '@/components/sections/SobreBrian';
@@ -14,7 +13,6 @@ const { home } = getTranslations();
 
 <BaseLayout title={home.meta.title} description={home.meta.description} canonicalPath="/">
 	<Hero client:load />
-	<Prueba />
 	<Problemas />
 	<ProcessSteps />
 	<SobreBrian />

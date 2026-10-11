@@ -45,7 +45,7 @@ export default function Hero() {
 				</div>
 			</div>
 
-			<div className="enter surface-hero p-5 md:p-10 lg:p-12" style={{ '--i': 2 } as CSSProperties}>
+			<div className="enter surface-hero p-5 md:p-8 lg:p-10" style={{ '--i': 2 } as CSSProperties}>
 				<HeroMap />
 			</div>
 		</Section>

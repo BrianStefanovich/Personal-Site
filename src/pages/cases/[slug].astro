@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import CasoDetalle from '@/components/sections/CasoDetalle';
+import Contacto from '@/components/sections/Contacto';
 import { es } from '@/i18n/es';
 
 export function getStaticPaths() {
@@ -12,4 +13,5 @@ const { item } = Astro.props;
 
 <BaseLayout title={`${item.name} | Casos | Brian Stefanovich`} description={item.headline} canonicalPath={`/cases/${item.slug}`}>
 	<CasoDetalle client:load item={item} />
+	<Contacto client:visible />
 </BaseLayout>

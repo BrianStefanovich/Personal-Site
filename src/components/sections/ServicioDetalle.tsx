@@ -38,7 +38,7 @@ export default function ServicioDetalle({ service }: { service: Service }) {
 			<div hidden data-track-view="service_page_view" data-track-service={service.id} />
 
 			<Section contentClassName="flex flex-col gap-12 lg:gap-16">
-				<a href="/#servicios" className="label-mono inline-flex min-h-11 items-center self-start text-sm tracking-[0.05em] text-link hover:text-ink">
+				<a href="/servicios" className="label-mono inline-flex min-h-11 items-center self-start text-sm tracking-[0.05em] text-link hover:text-ink">
 					←&nbsp;{es.nav.links[0].label}
 				</a>
 
@@ -58,7 +58,7 @@ export default function ServicioDetalle({ service }: { service: Service }) {
 						</div>
 					</div>
 
-					<div className="surface-card-lg p-6 md:p-10">{diagramOf[service.id]}</div>
+					<div className="surface-card-lg p-6 md:p-8">{diagramOf[service.id]}</div>
 				</div>
 			</Section>
 
@@ -119,7 +119,7 @@ export function ServicioCierre({ service }: { service: Service }) {
 	const others = servicios.items.filter((item) => item.id !== service.id);
 
 	return (
-		<Section tone="inverse" contentClassName="grid gap-10 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:items-end lg:gap-x-24">
+		<Section tone="inverse" contentClassName="grid gap-10 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:items-end lg:gap-x-16">
 			<div className="flex flex-col gap-6">
 				<h2 className="text-display">{es.home.contacto.headline}</h2>
 				<div>

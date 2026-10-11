@@ -7,7 +7,7 @@ export const es = {
 		descriptor: 'Arquitectura y consultoría de software',
 		homeLabel: 'Brian Stefanovich, inicio',
 		links: [
-			{ label: 'Servicios', href: '/#servicios' },
+			{ label: 'Servicios', href: '/servicios' },
 			{ label: 'Cómo trabajo', href: '/#como-trabajo' },
 			{ label: 'Casos', href: '/cases' },
 			{ label: 'Sobre Brian', href: '/#sobre-brian' },
@@ -34,12 +34,6 @@ export const es = {
 			cta: 'Agendar conversación de 30 minutos',
 			microcopy: 'Primera conversación sin costo para entender el problema y definir el siguiente paso. No incluye una auditoría de código.',
 			imageAlt: 'Brian Stefanovich',
-		},
-
-		prueba: {
-			headline: 'Casos',
-			cta: 'Ver todos los casos',
-			roleLabel: 'Mi rol',
 		},
 
 		problema: {
@@ -75,6 +69,18 @@ export const es = {
 			caseLabel: 'Caso relacionado',
 			faqHeadline: 'Preguntas sobre este servicio',
 			relatedLabel: 'Otros servicios',
+			allLabel: 'Ver todos los servicios',
+			index: {
+				meta: {
+					title: 'Servicios | Brian Stefanovich',
+					description:
+						'Diagnóstico de sistemas existentes, validación de nuevos negocios con software y liderazgo técnico fraccional: tres formas de trabajo según la decisión que necesitas tomar.',
+				},
+				headline: 'Servicios',
+				intro:
+					'Tres formas de trabajo según la decisión que necesitas tomar. Primero entiendo el problema; después acordamos el alcance y la modalidad.',
+				open: 'Ver el servicio',
+			},
 			items: [
 				{
 					id: 'sistemas-existentes',

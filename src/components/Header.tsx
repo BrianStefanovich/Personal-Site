@@ -63,10 +63,9 @@ export default function Header() {
 	const [menuOpen, setMenuOpen] = useState(false);
 	const active = useActiveSection();
 	const pathname = usePathname();
-	// In-page links follow the scrolled section; page links (/cases) stay current across their sub-pages.
+	// In-page links follow the scrolled section; page links (/cases, /servicios) stay current across their sub-pages.
 	const currentOf = (href: string) => {
 		const hash = hashOf(href);
-		if (hash === 'servicios' && pathname.startsWith('/servicios/')) return 'page';
 		if (hash) return pathname === '/' && active === hash ? 'location' : undefined;
 		return pathname === href || pathname.startsWith(`${href}/`) ? 'page' : undefined;
 	};

@@ -35,7 +35,7 @@ export default function CasoDetalle({ item }: { item: Item }) {
 			</Section>
 
 			{service && (
-				<Section tone="inverse" contentClassName="grid gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:items-end lg:gap-x-24">
+				<Section contentClassName="grid gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:items-end lg:gap-x-16">
 					<div className="flex flex-col gap-4">
 						<p className="label-mono text-sm text-muted">{casos.relatedLabel}</p>
 						<h2 className="text-headline">{service.title}</h2>

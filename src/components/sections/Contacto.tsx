@@ -9,7 +9,7 @@ const { hero } = es.home;
 /** One real path: book a slot. Email stays as the alternative; there is no form that only looks like it sends. */
 export default function Contacto() {
 	return (
-		<Section id="contacto" tone="inverse" contentClassName="grid gap-12 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:items-end lg:gap-x-24">
+		<Section id="contacto" tone="inverse" contentClassName="grid gap-12 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:items-end lg:gap-x-16">
 			<div className="flex flex-col gap-7">
 				<h2 className="text-display">{contacto.headline}</h2>
 				<p className="text-lead">{contacto.lead}</p>
@@ -31,7 +31,7 @@ export default function Contacto() {
 						href={CONTACT_EMAIL_HREF}
 						data-track="email_click"
 						data-track-location="contact"
-						className="inline-flex min-h-11 items-center break-all font-display text-xl font-bold text-link hover:text-ink md:text-[1.6875rem]"
+						className="inline-flex min-h-11 items-center break-all font-display text-xl font-bold text-link hover:text-ink md:text-[1.5rem]"
 					>
 						{CONTACT_EMAIL}
 					</a>
