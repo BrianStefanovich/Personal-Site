@@ -473,8 +473,7 @@ export const es = {
 			{ label: 'Privacidad', href: '/privacy' },
 			{ label: 'Términos', href: '/terms' },
 		],
-		attributes: ['Riguroso', 'Intencional'],
-		tagline: 'Claridad antes que complejidad',
+		slogan: 'Decisiones de software · Razones de negocio',
 		copyright: '© 2026 Brian Stefanovich',
 	},
 
