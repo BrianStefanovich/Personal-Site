@@ -3,25 +3,25 @@ import { SectionHeading } from '@/components/ui/SectionHeading';
 import { es } from '@/i18n/es';
 import { ArrowUpRightIcon, CompassIcon, FlaskIcon, MagnifyingGlassIcon } from '@phosphor-icons/react';
 
-const { problema, servicios } = es.home;
+const { problems, services } = es.home;
 
 const icons = [MagnifyingGlassIcon, FlaskIcon, CompassIcon];
 
 /**
- * Three situations a visitor can recognise themselves in, styled like the cards on /servicios: the whole card is the link. Each card answers, in order: what is happening to me,
+ * Three situations a visitor can recognise themselves in, styled like the cards on /services: the whole card is the link. Each card answers, in order: what is happening to me,
  * how Brian helps, what I get. On desktop the cards share six subgrid rows so every layer lines up across the three.
  */
-export default function Problemas() {
+export default function Problems() {
 	return (
-		<Section id="servicios">
+		<Section id="services">
 			<div className="flex flex-col gap-6">
-				<SectionHeading title={problema.headline} />
-				<p className="text-body max-w-[65ch] text-muted">{problema.subhead}</p>
+				<SectionHeading title={problems.headline} />
+				<p className="text-body max-w-[65ch] text-muted">{problems.subhead}</p>
 			</div>
 
 			<div className="mt-10 grid gap-6 md:mt-[4.5rem] lg:grid-cols-3 lg:gap-y-0">
-				{problema.situations.map((situation, i) => {
-					const service = servicios.items[i];
+				{problems.situations.map((situation, i) => {
+					const service = services.items[i];
 					const Icon = icons[i];
 					return (
 						<a
@@ -53,7 +53,7 @@ export default function Problemas() {
 							<span className="pb-6 text-[0.9375rem] leading-[1.6] text-muted transition-colors group-hover:text-page">{situation.intervention}</span>
 
 							<span className="flex flex-col gap-2 border-t border-line pb-6 pt-5 transition-colors group-hover:border-page/30">
-								<span className="label-mono text-sm text-consequence transition-colors group-hover:text-page">{problema.outcomeLabel}</span>
+								<span className="label-mono text-sm text-consequence transition-colors group-hover:text-page">{problems.outcomeLabel}</span>
 								<span className="text-[0.9375rem] font-semibold leading-[1.55]">{situation.outcome}</span>
 							</span>
 

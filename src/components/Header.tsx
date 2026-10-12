@@ -6,8 +6,8 @@ import { cn } from '@/lib/utils';
 import { useEffect, useRef, useState } from 'react';
 
 const { nav } = es;
-const services = es.home.servicios.items;
-const SERVICES_HREF = '/servicios';
+const services = es.home.services.items;
+const SERVICES_HREF = '/services';
 const ctaLabel = nav.cta;
 const hashOf = (href: string) => href.split('#')[1];
 const sectionIds = nav.links.map((link) => hashOf(link.href)).filter((id): id is string => Boolean(id));
@@ -102,7 +102,7 @@ function ServicesMenu({ pathname, current }: { pathname: string; current: Curren
 				ref={triggerRef}
 				type="button"
 				aria-expanded={open}
-				aria-controls="menu-servicios"
+				aria-controls="menu-services"
 				aria-current={current}
 				onClick={() => setOpen((value) => !value)}
 				className={cn(
@@ -121,7 +121,7 @@ function ServicesMenu({ pathname, current }: { pathname: string; current: Curren
 
 			{open && (
 				<div
-					id="menu-servicios"
+					id="menu-services"
 					className="absolute left-0 top-[calc(50%+var(--header-h)/2-2px)] z-(--z-menu) w-[24rem] border-2 border-t-0 border-line bg-page text-ink shadow-[0_16px_32px_-16px_rgba(16,19,17,0.3)]"
 				>
 					<ul>
@@ -152,7 +152,7 @@ function MobileServices({ pathname, current, onNavigate }: { pathname: string; c
 			<button
 				type="button"
 				aria-expanded={open}
-				aria-controls="menu-movil-servicios"
+				aria-controls="mobile-menu-services"
 				aria-current={current}
 				onClick={() => setOpen((value) => !value)}
 				className="label-mono flex min-h-14 w-full items-center justify-between border-b border-line py-4 text-left text-base aria-[current]:text-link"
@@ -166,7 +166,7 @@ function MobileServices({ pathname, current, onNavigate }: { pathname: string; c
 				/>
 			</button>
 			{open && (
-				<ul id="menu-movil-servicios">
+				<ul id="mobile-menu-services">
 					{services.map((service) => (
 						<li key={service.id}>
 							<a
@@ -190,7 +190,7 @@ export default function Header() {
 	const [menuOpen, setMenuOpen] = useState(false);
 	const active = useActiveSection();
 	const pathname = usePathname();
-	// In-page links follow the scrolled section; page links (/cases, /servicios) stay current across their sub-pages.
+	// In-page links follow the scrolled section; page links (/cases, /services) stay current across their sub-pages.
 	const currentOf = (href: string) => {
 		const hash = hashOf(href);
 		if (hash) return pathname === '/' && active === hash ? 'location' : undefined;
@@ -237,7 +237,7 @@ export default function Header() {
 						<LogoImage />
 					</a>
 
-					<nav aria-label="Principal" className="ml-auto hidden items-center gap-x-8 xl:flex">
+					<nav aria-label={nav.primaryLabel} className="ml-auto hidden items-center gap-x-8 xl:flex">
 						{nav.links.map((link) =>
 							link.href === SERVICES_HREF ? (
 								<ServicesMenu key={link.href} pathname={pathname} current={currentOf(link.href)} />
@@ -267,7 +267,7 @@ export default function Header() {
 							type="button"
 							aria-label={menuOpen ? nav.closeMenu : nav.openMenu}
 							aria-expanded={menuOpen}
-							aria-controls="menu-movil"
+							aria-controls="mobile-menu"
 							onClick={() => setMenuOpen((open) => !open)}
 							className="-mr-2 flex h-11 w-11 flex-col items-center justify-center gap-1.5 xl:hidden"
 						>
@@ -282,10 +282,10 @@ export default function Header() {
 			{menuOpen && (
 				<div
 					ref={menuRef}
-					id="menu-movil"
+					id="mobile-menu"
 					className="fixed inset-0 top-(--header-h) z-(--z-menu) overflow-y-auto bg-page text-ink xl:hidden"
 				>
-					<nav aria-label="Principal" className="container flex flex-col pb-10 pt-4">
+					<nav aria-label={nav.primaryLabel} className="container flex flex-col pb-10 pt-4">
 						{nav.links.map((link) =>
 							link.href === SERVICES_HREF ? (
 								<MobileServices key={link.href} pathname={pathname} current={currentOf(link.href)} onNavigate={() => setMenuOpen(false)} />

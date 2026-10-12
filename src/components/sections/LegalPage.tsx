@@ -4,7 +4,7 @@ import { SectionHeading } from '@/components/ui/SectionHeading';
 import type { LegalDocument } from '@/i18n/legal';
 
 /** A long-form legal page: one reading column, headings that carry the structure, bullets in the site's square-marker style. */
-export default function LegalDocumento({ doc }: { doc: LegalDocument }) {
+export default function LegalPage({ doc }: { doc: LegalDocument }) {
 	return (
 		<Section>
 			<Breadcrumbs trail={[{ label: doc.crumb }]} />

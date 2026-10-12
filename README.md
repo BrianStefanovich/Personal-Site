@@ -22,7 +22,7 @@ All page copy lives in `src/i18n/es.ts` as a typed dictionary. Components read i
 
 Spanish is the default locale and is served unprefixed at `/`.
 
-Service pages live at `/servicios/[slug]` and are generated from `home.servicios.items`, with the index of all three at `/servicios`; case pages at `/cases/[slug]` from `home.casos.items`, with the full list at `/cases`. Diagrams are in `src/components/diagrams/` and read their text from `es.diagrams`. Analytics events are declared with `data-track*` attributes (see `src/lib/analytics.ts`).
+Service pages live at `/services/[slug]` and are generated from `home.services.items`, with the index of all three at `/services`; case pages at `/cases/[slug]` from `home.cases.items`, with the full list at `/cases`; legal pages at `/privacy` and `/terms` (from `src/i18n/legal.ts`). Routes, anchors, ids and dictionary keys are always English; only the dictionary values are translated. Diagrams are in `src/components/diagrams/` and read their text from `es.diagrams`. Analytics events are declared with `data-track*` attributes (see `src/lib/analytics.ts`).
 
 Contact CTAs open `src/components/ContactDrawer.tsx`, which schedules through a Cal.com embed (`@calcom/embed-react`); the drawer's "Escribir por email" option falls back to a `mailto:` link.
 

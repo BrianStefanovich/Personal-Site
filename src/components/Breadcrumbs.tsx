@@ -9,7 +9,7 @@ export interface Crumb {
 
 const { nav } = es;
 
-/** Trail from Inicio to the current page. The last crumb is the page itself and is not a link. */
+/** Trail from the home crumb to the current page. The last crumb is the page itself and is not a link. */
 export function Breadcrumbs({ trail, className }: { trail: readonly Crumb[]; className?: string }) {
 	const crumbs: readonly Crumb[] = [{ label: nav.homeCrumb, href: '/' }, ...trail];
 

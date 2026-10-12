@@ -4,7 +4,7 @@ import { es } from '@/i18n/es';
 import { LINKEDIN_URL } from '@/lib/contact';
 
 const { footer, nav } = es;
-const serviceLinks = es.home.servicios.items.map((item) => ({ label: item.navLabel, href: item.path }));
+const serviceLinks = es.home.services.items.map((item) => ({ label: item.navLabel, href: item.path }));
 
 function LinkColumn({ label, links }: { label: string; links: readonly { label: string; href: string }[] }) {
 	return (
@@ -42,7 +42,7 @@ export default function Footer() {
 							href={LINKEDIN_URL}
 							target="_blank"
 							rel="noopener noreferrer"
-							aria-label={es.home.contacto.linkedinLabel}
+							aria-label={es.home.contactSection.linkedinLabel}
 							className="inline-flex size-11 items-center justify-center rounded-full text-link shadow-[inset_0_0_0_2px_var(--color-blueprint)] transition hover:brightness-125"
 						>
 							<svg

@@ -3,14 +3,14 @@ import { Section } from '@/components/ui/Section';
 import { es } from '@/i18n/es';
 import type { CSSProperties } from 'react';
 
-const { hero, servicios, problema } = es.home;
+const { hero, services, problems } = es.home;
 
 /** The portrait stands on the bottom rule of the band: the pedestal in the photo is the floor of the hero. The three scenarios sit in the band right below it. */
 export default function Hero() {
 	return (
 		<>
 			<Section
-				id="inicio"
+				id="home"
 				className="pb-12 md:pb-0! lg:flex lg:min-h-[calc(100dvh-var(--header-h)-8rem)] lg:pt-0!"
 				contentClassName="grid w-full gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-stretch lg:gap-x-10 xl:grid-cols-[minmax(0,12fr)_minmax(0,11fr)] xl:gap-x-16"
 			>
@@ -43,7 +43,7 @@ export default function Hero() {
 							</CtaButton>
 							<p className="max-w-[34rem] text-sm leading-[1.5] text-muted">{hero.ctaNote}</p>
 						</div>
-						<CtaButton variant="link" href="/servicios" data-track="service_index_open" data-track-location="hero" className="self-start">
+						<CtaButton variant="link" href="/services" data-track="service_index_open" data-track-location="hero" className="self-start">
 							{hero.secondaryLink}
 						</CtaButton>
 					</div>
@@ -77,9 +77,9 @@ export default function Hero() {
 						{hero.scenarios.map((scenario, i) => (
 							<li key={scenario.title} className="border-t border-line first:border-t-0 md:border-t-0 md:px-8 md:first:pl-0 md:last:pr-0">
 								<a
-									href={`#${problema.situations[i].id}`}
+									href={`#${problems.situations[i].id}`}
 									data-track="service_route_open"
-									data-track-service={servicios.items[i].id}
+									data-track-service={services.items[i].id}
 									data-track-location="hero"
 									className="group grid h-full grid-cols-[minmax(0,1fr)_auto] items-start gap-x-6 gap-y-1.5 py-5 md:py-9"
 								>

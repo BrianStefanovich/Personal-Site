@@ -4,13 +4,13 @@ import { CtaButton } from '@/components/CtaButton';
 import { Section } from '@/components/ui/Section';
 import { es } from '@/i18n/es';
 
-const { casos, servicios } = es.home;
+const { cases, services } = es.home;
 
-type Item = (typeof casos.items)[number];
+type Item = (typeof cases.items)[number];
 
 /** A published case: only what can be stated and defended, then the service it belongs to. */
-export default function CasoDetalle({ item }: { item: Item }) {
-	const service = servicios.items.find((entry) => entry.id === item.service);
+export default function CaseDetail({ item }: { item: Item }) {
+	const service = services.items.find((entry) => entry.id === item.service);
 
 	return (
 		<>
@@ -23,20 +23,20 @@ export default function CasoDetalle({ item }: { item: Item }) {
 				</div>
 
 				<dl className="mt-12 flex flex-col md:mt-20">
-					<CaseRow label={casos.labels.role}>{item.role}</CaseRow>
-					<CaseRow label={casos.labels.context}>{item.context}</CaseRow>
-					<CaseRow label={casos.labels.responsibility}>{item.responsibility}</CaseRow>
-					<CaseRow label={casos.labels.result} tone="consequence">
+					<CaseRow label={cases.labels.role}>{item.role}</CaseRow>
+					<CaseRow label={cases.labels.context}>{item.context}</CaseRow>
+					<CaseRow label={cases.labels.responsibility}>{item.responsibility}</CaseRow>
+					<CaseRow label={cases.labels.result} tone="consequence">
 						{item.result}
 					</CaseRow>
 				</dl>
-				<p className="text-body mt-8 max-w-[65ch] text-muted">{casos.scopeNote}</p>
+				<p className="text-body mt-8 max-w-[65ch] text-muted">{cases.scopeNote}</p>
 			</Section>
 
 			{service && (
 				<Section contentClassName="grid gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:items-end lg:gap-x-16">
 					<div className="flex flex-col gap-4">
-						<p className="label-mono text-sm text-muted">{casos.relatedLabel}</p>
+						<p className="label-mono text-sm text-muted">{cases.relatedLabel}</p>
 						<h2 className="text-headline">{service.title}</h2>
 						<p className="text-body max-w-[65ch] text-muted">{service.lead}</p>
 						<a

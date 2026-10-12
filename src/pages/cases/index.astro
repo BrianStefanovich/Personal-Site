@@ -1,13 +1,13 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import CasosList from '@/components/sections/CasosList';
-import Contacto from '@/components/sections/Contacto';
+import CasesList from '@/components/sections/CasesList';
+import ContactSection from '@/components/sections/ContactSection';
 import { es } from '@/i18n/es';
 
-const { meta } = es.home.casos;
+const { meta } = es.home.cases;
 ---
 
 <BaseLayout title={meta.title} description={meta.description} canonicalPath="/cases">
-	<CasosList />
-	<Contacto client:visible />
+	<CasesList />
+	<ContactSection client:visible />
 </BaseLayout>

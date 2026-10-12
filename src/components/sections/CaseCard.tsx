@@ -1,9 +1,9 @@
 import { es } from '@/i18n/es';
 import { ArrowUpRightIcon } from '@phosphor-icons/react';
 
-const { casos } = es.home;
+const { cases } = es.home;
 
-type Item = (typeof casos.items)[number];
+type Item = (typeof cases.items)[number];
 
 interface CaseCardProps {
 	item: Item;
@@ -43,18 +43,18 @@ export function CaseCard({ item, index, location, detailed = false, as: Heading 
 
 			<span className="flex flex-col gap-2 border-t border-line pb-6 pt-5 text-base leading-[1.5] transition-colors group-hover:border-page/30">
 				<span>
-					<span className="label-mono mr-2 text-[0.8125rem] text-muted transition-colors group-hover:text-page">{casos.labels.role}</span>{' '}
+					<span className="label-mono mr-2 text-[0.8125rem] text-muted transition-colors group-hover:text-page">{cases.labels.role}</span>{' '}
 					{item.role}
 				</span>
 				<span>
 					<span className="label-mono mr-2 text-[0.8125rem] text-consequence transition-colors group-hover:text-page">
-						{casos.labels.result}
+						{cases.labels.result}
 					</span>{' '}
 					{item.outcome}
 				</span>
 			</span>
 			<span className="label-mono flex items-center justify-between text-sm tracking-[0.05em] text-link transition-colors group-hover:text-page">
-				{casos.viewCase}
+				{cases.viewCase}
 				<ArrowUpRightIcon
 					weight="bold"
 					aria-hidden="true"

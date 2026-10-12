@@ -4,21 +4,21 @@ import { SectionHeading } from '@/components/ui/SectionHeading';
 import { es } from '@/i18n/es';
 import { ArrowUpRightIcon } from '@phosphor-icons/react';
 
-const { servicios, problema } = es.home;
+const { services, problems } = es.home;
 
-/** The three services as cards: folio and billing model, the situation it answers, the decision it resolves. Lives on /servicios. */
-export default function ServiciosList() {
+/** The three services as cards: folio and billing model, the situation it answers, the decision it resolves. Lives on /services. */
+export default function ServicesList() {
 	return (
 		<Section>
 			<Breadcrumbs trail={[{ label: es.nav.links[0].label }]} />
 			<div className="flex flex-col gap-6">
-				<SectionHeading as="h1" title={servicios.index.headline} />
-				<p className="text-body max-w-[65ch] text-muted">{servicios.index.intro}</p>
+				<SectionHeading as="h1" title={services.index.headline} />
+				<p className="text-body max-w-[65ch] text-muted">{services.index.intro}</p>
 			</div>
 
 			<div className="mt-10 grid gap-6 md:mt-[4.5rem] lg:grid-cols-3">
-				{servicios.items.map((service, index) => {
-					const situation = problema.situations[index];
+				{services.items.map((service, index) => {
+					const situation = problems.situations[index];
 					return (
 						<a
 							key={service.id}
@@ -45,12 +45,12 @@ export default function ServiciosList() {
 
 							<span className="flex flex-col gap-2 border-t border-line pb-6 pt-5 transition-colors group-hover:border-page/30">
 								<span className="label-mono text-[0.8125rem] text-consequence transition-colors group-hover:text-page">
-									{problema.decisionLabel}
+									{problems.decisionLabel}
 								</span>
 								<span className="text-base leading-[1.5]">{situation.decision}</span>
 							</span>
 							<span className="label-mono flex items-center justify-between text-sm tracking-[0.05em] text-link transition-colors group-hover:text-page">
-								{servicios.index.open}
+								{services.index.open}
 								<ArrowUpRightIcon
 									weight="bold"
 									aria-hidden="true"

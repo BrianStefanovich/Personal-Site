@@ -4,7 +4,7 @@ import { SectionHeading } from '@/components/ui/SectionHeading';
 import { cn } from '@/lib/utils';
 import { es } from '@/i18n/es';
 
-const { proceso } = es.home;
+const processCopy = es.home.process;
 
 /** The last stage trails off in open rings: deliveries and validations repeat, so the timeline has no finish line. */
 const FOLLOW_UP_MARKERS = [0, 1];
@@ -17,12 +17,12 @@ const ROW_START = ['md:row-start-1', 'md:row-start-2', 'md:row-start-3', 'md:row
  * alternate left and right. The second stage (visiting the operation) is the differentiator and gets its own surface.
  */
 export default function ProcessSteps() {
-	const lastIndex = proceso.steps.length - 1;
+	const lastIndex = processCopy.steps.length - 1;
 
 	return (
-		<Section id="como-trabajo">
+		<Section id="how-i-work">
 			<div className="flex flex-col gap-12 md:gap-16">
-				<SectionHeading eyebrow={proceso.eyebrow} title={proceso.headline} className="max-w-3xl" />
+				<SectionHeading eyebrow={processCopy.eyebrow} title={processCopy.headline} className="max-w-3xl" />
 
 				<ol
 					className={cn(
@@ -32,7 +32,7 @@ export default function ProcessSteps() {
 						'md:before:[mask-image:linear-gradient(to_bottom,#000_calc(100%-9rem),transparent)]',
 					)}
 				>
-					{proceso.steps.map((step, index) => {
+					{processCopy.steps.map((step, index) => {
 						const featured = index === 1;
 						const last = index === lastIndex;
 						const left = index % 2 === 0;
@@ -99,8 +99,8 @@ export default function ProcessSteps() {
 				</ol>
 
 				<div className="surface-ink flex flex-col gap-3 p-6 md:p-10 xl:flex-row xl:items-baseline xl:gap-12">
-					<p className="font-display text-xl font-bold xl:shrink-0">{proceso.closingTitle}</p>
-					<p className="max-w-prose text-base text-muted">{proceso.closing}</p>
+					<p className="font-display text-xl font-bold xl:shrink-0">{processCopy.closingTitle}</p>
+					<p className="max-w-prose text-base text-muted">{processCopy.closing}</p>
 				</div>
 			</div>
 		</Section>

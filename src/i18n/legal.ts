@@ -1,7 +1,7 @@
 export type LegalBlock = { h2: string } | { h3: string } | { p: string } | { ul: readonly string[] };
 
 export interface LegalDocument {
-	slug: 'privacidad' | 'terminos';
+	slug: 'privacy' | 'terms';
 	path: string;
 	crumb: string;
 	title: string;
@@ -10,9 +10,9 @@ export interface LegalDocument {
 	blocks: readonly LegalBlock[];
 }
 
-export const privacidad: LegalDocument = {
-	slug: 'privacidad',
-	path: '/privacidad',
+export const privacy: LegalDocument = {
+	slug: 'privacy',
+	path: '/privacy',
 	crumb: 'Privacidad',
 	title: 'Política de privacidad',
 	meta: {
@@ -106,9 +106,9 @@ export const privacidad: LegalDocument = {
 	],
 };
 
-export const terminos: LegalDocument = {
-	slug: 'terminos',
-	path: '/terminos',
+export const terms: LegalDocument = {
+	slug: 'terms',
+	path: '/terms',
 	crumb: 'Términos',
 	title: 'Términos y condiciones generales de prestación de servicios',
 	meta: {

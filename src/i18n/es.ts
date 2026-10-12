@@ -6,10 +6,10 @@ export const es = {
 		name: 'Brian Stefanovich',
 		homeLabel: 'Brian Stefanovich, inicio',
 		links: [
-			{ label: 'Servicios', href: '/servicios' },
+			{ label: 'Servicios', href: '/services' },
 			{ label: 'Casos', href: '/cases' },
-			{ label: 'Cómo trabajo', href: '/#como-trabajo' },
-			{ label: 'Sobre mí', href: '/#sobre-brian' },
+			{ label: 'Cómo trabajo', href: '/#how-i-work' },
+			{ label: 'Sobre mí', href: '/#about' },
 		],
 		cta: 'Hablemos',
 		openMenu: 'Abrir menú',
@@ -17,6 +17,8 @@ export const es = {
 		themeLabel: 'Modo oscuro',
 		breadcrumbLabel: 'Ruta de navegación',
 		homeCrumb: 'Inicio',
+		skipToContent: 'Saltar al contenido',
+		primaryLabel: 'Principal',
 	},
 
 	home: {
@@ -48,15 +50,15 @@ export const es = {
 			imageAlt: 'Brian Stefanovich',
 		},
 
-		problema: {
+		problems: {
 			headline: '¿Qué necesita hoy tu negocio para avanzar?',
 			subhead: 'Identifica tu situación. Te ayudo a entender las opciones y definir el siguiente paso.',
-			/** Each card answers, in order: what is happening to me, how Brian helps, what I get. `tag` and `decision` feed /servicios. */
+			/** Each card answers, in order: what is happening to me, how Brian helps, what I get. `tag` and `decision` feed /services. */
 			outcomeLabel: 'Con qué cuentas',
 			decisionLabel: 'Decisión por tomar',
 			situations: [
 				{
-					id: 'recuperar-control',
+					id: 'regain-control',
 					tag: 'Sistema existente',
 					/** One entry per sentence so the problem breaks cleanly at every width. */
 					problem: ['Tu sistema falla.', 'Cada cambio cuesta más.'],
@@ -69,7 +71,7 @@ export const es = {
 					decision: 'Qué corregir, qué conservar y si conviene modernizar, reemplazar o cambiar de proveedor.',
 				},
 				{
-					id: 'validar-oportunidad',
+					id: 'validate-opportunity',
 					tag: 'Nuevo negocio',
 					problem: ['Ves una oportunidad.', 'Necesitas saber si vale la inversión.'],
 					situation:
@@ -81,7 +83,7 @@ export const es = {
 					decision: 'Qué incertidumbre probar primero y cuándo continuar, cambiar de rumbo o detenerte.',
 				},
 				{
-					id: 'sumar-liderazgo',
+					id: 'add-leadership',
 					tag: 'Liderazgo técnico',
 					problem: ['Tienes el proyecto.', 'Te falta liderazgo técnico.'],
 					situation:
@@ -96,7 +98,7 @@ export const es = {
 			],
 		},
 
-		servicios: {
+		services: {
 			workLabel: 'En qué trabajo',
 			getLabel: 'Qué obtienes',
 			notIncludedLabel: 'Qué no incluye',
@@ -116,8 +118,8 @@ export const es = {
 			},
 			items: [
 				{
-					id: 'sistemas-existentes',
-					path: '/servicios/sistemas-existentes',
+					id: 'existing-systems',
+					path: '/services/existing-systems',
 					navLabel: 'Sistemas existentes',
 					/** Menu entry: the client's goal first, the service name beneath. */
 					menuTitle: 'Recupera el control de tu software',
@@ -162,8 +164,8 @@ export const es = {
 					],
 				},
 				{
-					id: 'nuevos-negocios',
-					path: '/servicios/nuevos-negocios',
+					id: 'new-ventures',
+					path: '/services/new-ventures',
 					navLabel: 'Nuevos negocios con software',
 					/** Menu entry: the client's goal first, the service name beneath. */
 					menuTitle: 'Valida tu idea de negocio',
@@ -206,8 +208,8 @@ export const es = {
 					],
 				},
 				{
-					id: 'arquitecto-fraccional',
-					path: '/servicios/arquitecto-fraccional',
+					id: 'fractional-architect',
+					path: '/services/fractional-architect',
 					navLabel: 'Arquitecto de software fraccional',
 					/** Menu entry: the client's goal first, the service name beneath. */
 					menuTitle: 'Suma liderazgo técnico a tu equipo',
@@ -256,7 +258,7 @@ export const es = {
 			],
 		},
 
-		proceso: {
+		process: {
 			eyebrow: 'Cómo trabajo',
 			headline: 'Me involucro en tu negocio. Avanzamos con claridad.',
 			steps: [
@@ -292,9 +294,10 @@ export const es = {
 				'Las decisiones, los documentos y los aprendizajes se entregan durante el proyecto, organizados para que tu equipo pueda utilizarlos.',
 		},
 
-		casos: {
+		cases: {
 			meta: {
 				title: 'Casos | Brian Stefanovich',
+				titleSuffix: 'Casos | Brian Stefanovich',
 				description: 'Decisiones técnicas llevadas a la práctica: el contexto, la responsabilidad que asumí y el cambio observado en cada caso.',
 			},
 			viewCase: 'Ver el caso',
@@ -324,7 +327,7 @@ export const es = {
 					result:
 						'El trabajo dio forma a una plataforma capaz de convertir documentos, videos y otras fuentes en cursos estructurados, con una arquitectura para atender a múltiples organizaciones.',
 					tags: '.NET, React, Azure',
-					service: 'nuevos-negocios',
+					service: 'new-ventures',
 				},
 				{
 					slug: 'rollkall',
@@ -337,7 +340,7 @@ export const es = {
 						'Como parte del equipo de arquitectura, lideré la migración a .NET 8 y trabajé en la reimplementación y refactorización de procesos críticos.',
 					result: 'La modernización avanzó de forma progresiva mientras el equipo continuaba entregando nuevas funcionalidades.',
 					tags: '.NET, modernización progresiva',
-					service: 'sistemas-existentes',
+					service: 'existing-systems',
 				},
 			],
 			// Held back until Brian confirms his exact role and the state of the system; not rendered anywhere.
@@ -354,7 +357,7 @@ export const es = {
 			],
 		},
 
-		sobreBrian: {
+		about: {
 			titleLines: ['Hablo de negocio contigo.', 'De arquitectura con tu equipo.'],
 			identityName: 'Soy Brian Stefanovich.',
 			identityRole: 'Arquitecto de software senior y líder técnico.',
@@ -411,7 +414,7 @@ export const es = {
 			],
 		},
 
-		contacto: {
+		contactSection: {
 			headline: 'Conversemos sobre la decisión que necesitas tomar',
 			lead: 'Cuéntame qué está pasando, qué necesitas conseguir y cuál es la principal decisión pendiente.',
 			intro:
@@ -460,15 +463,15 @@ export const es = {
 		resourcesLabel: 'Recursos',
 		resources: [
 			{ label: 'Casos', href: '/cases' },
-			{ label: 'Cómo trabajo', href: '/#como-trabajo' },
+			{ label: 'Cómo trabajo', href: '/#how-i-work' },
 			{ label: 'Preguntas frecuentes', href: '/#faq' },
-			{ label: 'Contacto', href: '/#contacto' },
+			{ label: 'Contacto', href: '/#contact' },
 		],
 		company: { name: 'Stefanovich SpA', address: ['Badajoz 100, of 1014', 'Las Condes, Santiago de Chile'] },
 		legalLabel: 'Legal',
 		legal: [
-			{ label: 'Privacidad', href: '/privacidad' },
-			{ label: 'Términos', href: '/terminos' },
+			{ label: 'Privacidad', href: '/privacy' },
+			{ label: 'Términos', href: '/terms' },
 		],
 		attributes: ['Riguroso', 'Intencional'],
 		tagline: 'Claridad antes que complejidad',

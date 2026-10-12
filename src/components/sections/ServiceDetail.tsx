@@ -5,14 +5,14 @@ import { Section } from '@/components/ui/Section';
 import { es } from '@/i18n/es';
 import type { ReactNode } from 'react';
 
-const { servicios, hero, casos } = es.home;
+const { services, hero, cases } = es.home;
 
-type Service = (typeof servicios.items)[number];
+type Service = (typeof services.items)[number];
 
 const diagramOf: Record<Service['id'], ReactNode> = {
-	'sistemas-existentes': <ExistingSystemMap />,
-	'nuevos-negocios': <ValidationMap />,
-	'arquitecto-fraccional': <ResponsibilityMap />,
+	'existing-systems': <ExistingSystemMap />,
+	'new-ventures': <ValidationMap />,
+	'fractional-architect': <ResponsibilityMap />,
 };
 
 function Bullets({ items }: { items: readonly string[] }) {
@@ -31,15 +31,15 @@ function Bullets({ items }: { items: readonly string[] }) {
 }
 
 /** A service page: who it is for, the one diagram that explains it, what is delivered, what is not, and one contextual next step. */
-export default function ServicioDetalle({ service }: { service: Service }) {
-	const relatedCase = casos.items.find((item) => item.slug === service.caseSlug);
+export default function ServiceDetail({ service }: { service: Service }) {
+	const relatedCase = cases.items.find((item) => item.slug === service.caseSlug);
 
 	return (
 		<>
 			<div hidden data-track-view="service_page_view" data-track-service={service.id} />
 
 			<Section contentClassName="flex flex-col gap-12 lg:gap-16">
-				<Breadcrumbs className="mb-0 md:mb-0" trail={[{ label: es.nav.links[0].label, href: '/servicios' }, { label: service.navLabel }]} />
+				<Breadcrumbs className="mb-0 md:mb-0" trail={[{ label: es.nav.links[0].label, href: '/services' }, { label: service.navLabel }]} />
 
 				<div className="grid items-start gap-12 lg:grid-cols-[minmax(0,6fr)_minmax(0,6fr)] lg:gap-x-16">
 					<div className="flex flex-col gap-6">
@@ -63,20 +63,20 @@ export default function ServicioDetalle({ service }: { service: Service }) {
 
 			<Section contentClassName="grid gap-12 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-x-16">
 				<div className="flex flex-col gap-6">
-					<h2 className="label-mono text-sm font-medium text-muted">{servicios.workLabel}</h2>
+					<h2 className="label-mono text-sm font-medium text-muted">{services.workLabel}</h2>
 					<Bullets items={service.work} />
 				</div>
 
 				<div className="flex flex-col gap-10 lg:border-l lg:border-line lg:pl-12">
 					<div className="flex flex-col gap-3">
-						<h2 className="label-mono text-sm font-medium text-muted">{servicios.getLabel}</h2>
+						<h2 className="label-mono text-sm font-medium text-muted">{services.getLabel}</h2>
 						<p className="text-body">{service.get}</p>
 						<p className="text-base text-muted">
 							<span className="font-bold text-consequence">{service.note.lead}</span> {service.note.body}
 						</p>
 					</div>
 					<div className="flex flex-col gap-4">
-						<h2 className="label-mono text-sm font-medium text-muted">{servicios.notIncludedLabel}</h2>
+						<h2 className="label-mono text-sm font-medium text-muted">{services.notIncludedLabel}</h2>
 						<ul className="flex flex-col gap-3">
 							{service.notIncluded.map((text) => (
 								<li key={text} className="text-base text-muted">
@@ -91,7 +91,7 @@ export default function ServicioDetalle({ service }: { service: Service }) {
 			{relatedCase && (
 				<Section contentClassName="grid gap-6 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:items-end lg:gap-x-16">
 					<div className="flex flex-col gap-3">
-						<p className="label-mono text-sm text-muted">{servicios.caseLabel}</p>
+						<p className="label-mono text-sm text-muted">{services.caseLabel}</p>
 						<h2 className="text-headline">{relatedCase.name}</h2>
 					</div>
 					<div className="flex flex-col gap-3">
@@ -104,7 +104,7 @@ export default function ServicioDetalle({ service }: { service: Service }) {
 							data-track-location={`service-${service.id}`}
 							className="label-mono inline-flex min-h-11 items-center self-start text-sm tracking-[0.05em] text-link hover:text-ink"
 						>
-							{casos.viewCase}&nbsp;→
+							{cases.viewCase}&nbsp;→
 						</a>
 					</div>
 				</Section>
@@ -114,21 +114,21 @@ export default function ServicioDetalle({ service }: { service: Service }) {
 }
 
 /** Closing band for a service page: the same contextual CTA, plus the other two routes. */
-export function ServicioCierre({ service }: { service: Service }) {
-	const others = servicios.items.filter((item) => item.id !== service.id);
+export function ServiceClosing({ service }: { service: Service }) {
+	const others = services.items.filter((item) => item.id !== service.id);
 
 	return (
 		<Section tone="inverse" contentClassName="grid gap-10 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:items-end lg:gap-x-16">
 			<div className="flex flex-col gap-6">
-				<h2 className="text-display">{es.home.contacto.headline}</h2>
+				<h2 className="text-display">{es.home.contactSection.headline}</h2>
 				<div>
 					<CtaButton intent={service.intent} location={`service-${service.id}-end`}>
 						{service.cta}
 					</CtaButton>
 				</div>
 			</div>
-			<nav aria-label={servicios.relatedLabel} className="flex flex-col gap-2">
-				<p className="label-mono text-sm text-muted">{servicios.relatedLabel}</p>
+			<nav aria-label={services.relatedLabel} className="flex flex-col gap-2">
+				<p className="label-mono text-sm text-muted">{services.relatedLabel}</p>
 				{others.map((item) => (
 					<a
 						key={item.id}

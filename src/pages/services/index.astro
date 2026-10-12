@@ -1,0 +1,15 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ContactSection from '@/components/sections/ContactSection';
+import ProcessSteps from '@/components/sections/ProcessSteps';
+import ServicesList from '@/components/sections/ServicesList';
+import { es } from '@/i18n/es';
+
+const { meta } = es.home.services.index;
+---
+
+<BaseLayout title={meta.title} description={meta.description} canonicalPath="/services">
+	<ServicesList />
+	<ProcessSteps />
+	<ContactSection client:visible />
+</BaseLayout>

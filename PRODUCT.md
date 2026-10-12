@@ -25,7 +25,7 @@ Three service lines correspond to three visitor situations:
 
 ## Operating Context
 
-Landing at `/` with anchor navigation (Servicios → `/servicios` · Cómo trabajo · Casos → `/cases` · Sobre Brian) plus a persistent booking CTA ("Agendar 30 minutos" in the header, "Agendar conversación de 30 minutos" in hero and contact). The landing routes each visitor situation to its own page: `/servicios/sistemas-existentes`, `/servicios/nuevos-negocios`, `/servicios/arquitecto-fraccional`, plus `/cases` and `/cases/[slug]`. Full narrative flow and creative direction: [docs/contenido_website.md](docs/contenido_website.md) and [docs/guia_website.md](docs/guia_website.md); the design/conversion audit that drove the current structure is `Informe_diseno_y_conversion_sitio_Brian_Stefanovich.md`. Future evolution (not yet built) may add `/insights/[articulo]` and `/sobre-mi`.
+Landing at `/` with anchor navigation (Services → `/services` · How I work · Cases → `/cases` · About) plus a persistent booking CTA (the "Hablemos" button in the header, the scheduling CTA in hero and contact; labels are i18n copy). The landing routes each visitor situation to its own page: `/services/existing-systems`, `/services/new-ventures`, `/services/fractional-architect`, plus `/cases` and `/cases/[slug]`; legal pages live at `/privacy` and `/terms`. Routes, anchors (`#how-i-work`, `#about`, `#faq`, `#contact`), ids and dictionary keys are always English, whatever the language of the copy. Full narrative flow and creative direction: [docs/website_content.md](docs/website_content.md) and [docs/website_guide.md](docs/website_guide.md); the design/conversion audit that drove the current structure is `Informe_diseno_y_conversion_sitio_Brian_Stefanovich.md`. Future evolution (not yet built) may add `/insights/[article]` and `/about-me`.
 
 The site is built with Astro (static output), React islands, Tailwind CSS, and shadcn-compatible UI primitives. Copy lives in a typed i18n dictionary (`src/i18n/es.ts`) read via `getTranslations()`. Spanish (`es`) is the current default locale served unprefixed at `/`.
 
@@ -39,7 +39,7 @@ The site is built with Astro (static output), React islands, Tailwind CSS, and s
 
 ## Brand Commitments
 
-Full brand system defined in [docs/manual_marca.md](docs/manual_marca.md); treat it as binding, not inspiration:
+Full brand system defined in [docs/brand_manual.md](docs/brand_manual.md); treat it as binding, not inspiration:
 
 - Name/voice: "Brian Stefanovich — Arquitectura y Consultoría de Software." First-person singular voice ("yo diagnostico"), calmed/senior/specific tone, not an agency "nosotros." Sentence case for headlines/body; uppercase + JetBrains Mono reserved for technical labels (eyebrows, nav, footer attributes, phase numbers) only. Natural Latin American Spanish, minimal spanglish, no emojis.
 - Vocabulary to favor: claridad, decisión, arquitectura, sistema, restricción, riesgo, tradeoff, evolución, hoja de ruta, evidencia, mantenibilidad, resultado. Vocabulary to avoid: disrupción, de vanguardia, world-class, 360°, transformación digital, solución escalable, sinergia, magia, garantizado, a prueba de futuro.
@@ -52,10 +52,10 @@ Full brand system defined in [docs/manual_marca.md](docs/manual_marca.md); treat
 
 ## Evidence on Hand
 
-- Full page copy already drafted in Spanish: [docs/contenido_website.md](docs/contenido_website.md).
-- Creative/design direction already drafted: [docs/guia_website.md](docs/guia_website.md) (hero composition, animation timing, section-by-section intent).
+- Full page copy already drafted in Spanish: [docs/website_content.md](docs/website_content.md).
+- Creative/design direction already drafted: [docs/website_guide.md](docs/website_guide.md) (hero composition, animation timing, section-by-section intent).
 - Real photos in use: [public/images/hero-brian-1024.webp](public/images/hero-brian-1024.webp) (transparent cut-out standing on the hero floor; 640w variant alongside) and [public/images/brian-portrait.webp](public/images/brian-portrait.webp) (portrait in the About section). The logo symbol lives in `src/components/logo-symbol-path.ts`.
-- **Published cases are Kepler Coach and RollKall**, written only from what Brian's CV documents. Bavastro is held back in `es.home.casos.pending` until Brian confirms his exact role and the state of the system. Do not fabricate client details, decisions, metrics, or architecture diagrams for cases; diagrams on the site are labeled "Esquema ilustrativo".
+- **Published cases are Kepler Coach and RollKall**, written only from what Brian's CV documents. Bavastro is held back in `es.home.cases.pending` until Brian confirms his exact role and the state of the system. Do not fabricate client details, decisions, metrics, or architecture diagrams for cases; diagrams on the site are labeled "Esquema ilustrativo".
 
 ## Product Principles
 

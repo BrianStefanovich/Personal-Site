@@ -3,6 +3,7 @@ import ContactDrawer from '@/components/ContactDrawer';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import Seo from '@/components/Seo.astro';
+import { es } from '@/i18n/es';
 import '@fontsource/montserrat/latin-700.css';
 import '@fontsource/open-sans/latin-400.css';
 import '@fontsource/open-sans/latin-700.css';
@@ -48,14 +49,14 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
 	</head>
 	<body>
 		<a
-			href="#contenido"
+			href="#content"
 			class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-card focus:bg-blueprint focus:px-5 focus:py-3 focus:font-display focus:font-bold focus:text-porcelain"
 		>
-			Saltar al contenido
+			{es.nav.skipToContent}
 		</a>
 		<Header client:load />
 		<div class="page-frame mt-(--header-h)">
-			<main id="contenido"><slot /></main>
+			<main id="content"><slot /></main>
 			<Footer client:visible />
 		</div>
 		<ContactDrawer client:load />

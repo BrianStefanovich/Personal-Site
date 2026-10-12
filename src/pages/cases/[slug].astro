@@ -1,17 +1,17 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import CasoDetalle from '@/components/sections/CasoDetalle';
-import Contacto from '@/components/sections/Contacto';
+import CaseDetail from '@/components/sections/CaseDetail';
+import ContactSection from '@/components/sections/ContactSection';
 import { es } from '@/i18n/es';
 
 export function getStaticPaths() {
-	return es.home.casos.items.map((item) => ({ params: { slug: item.slug }, props: { item } }));
+	return es.home.cases.items.map((item) => ({ params: { slug: item.slug }, props: { item } }));
 }
 
 const { item } = Astro.props;
 ---
 
-<BaseLayout title={`${item.name} | Casos | Brian Stefanovich`} description={item.headline} canonicalPath={`/cases/${item.slug}`}>
-	<CasoDetalle client:load item={item} />
-	<Contacto client:visible />
+<BaseLayout title={`${item.name} | ${es.home.cases.meta.titleSuffix}`} description={item.headline} canonicalPath={`/cases/${item.slug}`}>
+	<CaseDetail client:load item={item} />
+	<ContactSection client:visible />
 </BaseLayout>
