@@ -90,7 +90,7 @@ export const es = {
 					offer: 'Suma experiencia para dirigir la ejecución.',
 					intervention:
 						'Me integro a tu equipo con una dedicación acordada para definir la arquitectura, orientar las decisiones y acompañar el desarrollo.',
-					outcome: 'Una responsabilidad técnica definida y acompañamiento durante la ejecución.',
+					outcome: 'Un responsable técnico definido y acompañamiento durante la ejecución.',
 					cta: 'Quiero sumar liderazgo técnico',
 				},
 			],

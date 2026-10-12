@@ -11,7 +11,7 @@ export default function Hero() {
 		<>
 			<Section
 				id="home"
-				className="pb-12 md:pb-0! lg:flex lg:min-h-[calc(100dvh-var(--header-h)-8rem)] lg:pt-0!"
+				className="pb-0! lg:flex lg:min-h-[calc(100dvh-var(--header-h)-8rem)] lg:pt-0!"
 				contentClassName="grid w-full gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-stretch lg:gap-x-10 xl:grid-cols-[minmax(0,12fr)_minmax(0,11fr)] xl:gap-x-16"
 			>
 				<div className="flex flex-col gap-6 md:gap-8 lg:justify-center lg:py-12 xl:py-16">
@@ -49,23 +49,19 @@ export default function Hero() {
 					</div>
 				</div>
 
-				{/* Not shown on phones. From md it sits under the text (capped); from lg it fills its column and stands on the floor of the band. */}
-				<div className="enter hidden items-end justify-center md:mx-auto md:flex md:max-w-[30rem] lg:mx-0 lg:max-w-none" style={{ '--i': 2 } as CSSProperties}>
-					<picture className="block w-full">
-						<source
-							media="(min-width: 48rem)"
-							srcSet="/images/hero-brian-640.webp 640w, /images/hero-brian-1024.webp 1024w"
-							sizes="(min-width: 1024px) 40vw, 30rem"
-						/>
-						{/* Blank placeholder so phones never download the photo. */}
+				{/* On phones the portrait is cropped above the pedestal, keeping the laptop, and rests on the band below. From md it shows in full under the text (capped); from lg it fills its column and stands on the floor of the band. */}
+				<div className="enter mx-auto flex aspect-[5/6] w-full max-w-[30rem] items-end justify-center overflow-hidden md:aspect-auto md:overflow-visible lg:mx-0 lg:max-w-none" style={{ '--i': 2 } as CSSProperties}>
+					<picture className="block h-full w-full md:h-auto">
 						<img
-							src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+							src="/images/hero-brian-640.webp"
+							srcSet="/images/hero-brian-640.webp 640w, /images/hero-brian-1024.webp 1024w"
+							sizes="(min-width: 1024px) 40vw, min(100vw, 30rem)"
 							alt={hero.imageAlt}
 							width={1024}
 							height={1536}
 							fetchPriority="high"
 							decoding="async"
-							className="block h-auto w-full"
+							className="block h-full w-full object-cover object-top md:h-auto"
 						/>
 					</picture>
 				</div>
