@@ -1,3 +1,5 @@
+import { casesSection, publishedCases } from './cases';
+
 /** Inline emphasis: plain strings render as-is, `{ b }` renders as <strong>. */
 export type Rich = readonly (string | { readonly b: string })[];
 
@@ -53,9 +55,8 @@ export const es = {
 		problems: {
 			headline: '¿Qué necesita hoy tu negocio para avanzar?',
 			subhead: 'Identifica tu situación. Te ayudo a entender las opciones y definir el siguiente paso.',
-			/** Each card answers, in order: what is happening to me, how Brian helps, what I get. `tag` and `decision` feed /services. */
-			outcomeLabel: 'Con qué cuentas',
-			decisionLabel: 'Decisión por tomar',
+			/** Each card answers, in order: what is happening to me, how Brian helps, what I get. `tag` and `outcome` also feed /services. */
+			outcomeLabel: 'Qué obtienes',
 			situations: [
 				{
 					id: 'regain-control',
@@ -68,7 +69,6 @@ export const es = {
 						'Reviso qué está pasando y te ayudo a decidir qué corregir, qué conservar y cuándo conviene modernizar o cambiar de solución.',
 					outcome: 'Un diagnóstico fundamentado y un plan de acción priorizado.',
 					cta: 'Quiero recuperar el control',
-					decision: 'Qué corregir, qué conservar y si conviene modernizar, reemplazar o cambiar de proveedor.',
 				},
 				{
 					id: 'validate-opportunity',
@@ -80,7 +80,6 @@ export const es = {
 					intervention: 'Defino contigo una prueba concreta y el software mínimo necesario para obtener evidencia de clientes reales.',
 					outcome: 'Un plan de validación, presupuesto y criterios para continuar, ajustar o detenerte.',
 					cta: 'Quiero evaluar mi oportunidad',
-					decision: 'Qué incertidumbre probar primero y cuándo continuar, cambiar de rumbo o detenerte.',
 				},
 				{
 					id: 'add-leadership',
@@ -93,7 +92,6 @@ export const es = {
 						'Me integro a tu equipo con una dedicación acordada para definir la arquitectura, orientar las decisiones y acompañar el desarrollo.',
 					outcome: 'Una responsabilidad técnica definida y acompañamiento durante la ejecución.',
 					cta: 'Quiero sumar liderazgo técnico',
-					decision: 'Qué decisiones, autoridad y dedicación debe asumir una persona responsable.',
 				},
 			],
 		},
@@ -242,8 +240,9 @@ export const es = {
 					],
 					intent: 'fractional',
 					cta: 'Conversar sobre liderazgo técnico',
-					caseSlug: null,
-					caseNote: null,
+					caseSlug: 'innspiral',
+					caseNote:
+						'Muestra una dirección técnica externa con dedicación acordada, conectada con la operación que se quiere mejorar. El proyecto sigue en curso.',
 					faq: [
 						{
 							q: '¿También participas en el desarrollo?',
@@ -294,86 +293,57 @@ export const es = {
 				'Las decisiones, los documentos y los aprendizajes se entregan durante el proyecto, organizados para que tu equipo pueda utilizarlos.',
 		},
 
+		clients: {
+			headline: 'Empresas con las que he trabajado',
+			intro: 'Con algunas trabajé directamente; con otras, a través de otra empresa o desde dentro de su equipo.',
+			listLabel: 'Logos de las empresas con las que he trabajado',
+			pause: 'Pausar',
+			play: 'Reanudar',
+		},
+
 		cases: {
 			meta: {
 				title: 'Casos | Brian Stefanovich',
 				titleSuffix: 'Casos | Brian Stefanovich',
-				description: 'Decisiones técnicas llevadas a la práctica: el contexto, la responsabilidad que asumí y el cambio observado en cada caso.',
+				description:
+					'Proyectos y experiencia seleccionada: sistemas que evolucionan, productos que toman forma y equipos con dirección técnica.',
 			},
 			viewCase: 'Ver el caso',
-			headline: 'Decisiones técnicas llevadas a la práctica',
+			headline: casesSection.title,
 			labels: {
-				role: 'Mi rol',
-				context: 'Contexto',
-				responsibility: 'Responsabilidad',
-				result: 'Resultado',
+				company: 'Empresa',
+				relation: 'Relación',
+				role: 'Mi participación',
+				service: 'Servicio',
 			},
-			intro:
-				'Los casos muestran el contexto, la responsabilidad que asumí y el cambio observado. No presento tecnologías como sustituto de explicar el trabajo.',
+			intro: casesSection.intro,
+			moreHeadline: 'Más experiencia',
+			moreIntro: 'Otros proyectos y líneas de trabajo, con la relación que tuve con cada empresa.',
+			ongoingLabel: 'En curso',
 			scopeNote:
 				'Esta ficha resume lo que puedo contar públicamente. Las alternativas que se evaluaron y sus trade-offs los explico en una conversación.',
 			relatedLabel: 'Servicio relacionado',
-			items: [
-				{
-					slug: 'kepler-coach',
-					name: 'Kepler Coach',
-					headline: 'De un prototipo a una plataforma para múltiples organizaciones',
-					role: 'Líder de la reimplementación y de la arquitectura',
-					outcome: 'Arquitectura para atender a múltiples organizaciones definida',
-					context:
-						'Kepler Coach necesitaba evolucionar un prototipo educativo basado en inteligencia artificial hacia una plataforma orientada a producción.',
-					responsibility:
-						'Lideré la estrategia de reimplementación y definí la arquitectura, los límites entre servicios y las bases de infraestructura.',
-					result:
-						'El trabajo dio forma a una plataforma capaz de convertir documentos, videos y otras fuentes en cursos estructurados, con una arquitectura para atender a múltiples organizaciones.',
-					tags: '.NET, React, Azure',
-					service: 'new-ventures',
-				},
-				{
-					slug: 'rollkall',
-					name: 'RollKall',
-					headline: 'Modernización mientras el equipo seguía entregando funcionalidades',
-					role: 'Equipo de arquitectura; líder de la migración a .NET 8',
-					outcome: 'Migración a .NET 8 sin frenar la entrega de funcionalidades',
-					context: 'RollKall necesitaba modernizar una aplicación existente sin frenar el desarrollo del producto.',
-					responsibility:
-						'Como parte del equipo de arquitectura, lideré la migración a .NET 8 y trabajé en la reimplementación y refactorización de procesos críticos.',
-					result: 'La modernización avanzó de forma progresiva mientras el equipo continuaba entregando nuevas funcionalidades.',
-					tags: '.NET, modernización progresiva',
-					service: 'existing-systems',
-				},
-			],
-			// Held back until Brian confirms his exact role and the state of the system; not rendered anywhere.
-			pending: [
-				{
-					slug: 'bavastro',
-					name: 'Bavastro',
-					headline: 'Un sistema que conecta la operación de remates',
-					context:
-						'El proyecto reúne el ingreso de artículos en bodega, su publicación y las pujas en tiempo real dentro de un mismo sistema.',
-					result: 'El desarrollo conecta las etapas de la operación con la experiencia de quienes participan en el remate.',
-					tags: 'Bodega, publicación, pujas en tiempo real',
-				},
-			],
+			// Copy for each case lives in cases.es.json; the dictionary only receives what is cleared for publication.
+			items: publishedCases,
 		},
 
 		about: {
 			titleLines: ['Hablo de negocio contigo.', 'De arquitectura con tu equipo.'],
 			identityName: 'Soy Brian Stefanovich.',
-			identityRole: 'Arquitecto de software senior y líder técnico.',
+			identityRole: 'Arquitecto de software y líder técnico.',
 			imageAlt: 'Retrato de Brian Stefanovich',
 			paragraphs: [
 				'He diseñado y desarrollado software, liderado equipos y participado en la modernización de sistemas en producción. Esa experiencia me permite conectar lo que tu negocio necesita con lo que realmente implica construirlo.',
-				'Mi formación en Matemática en la Universidad de la República y en Marketing aporta dos perspectivas a mi trabajo: analizar los problemas con rigor y entender para quién estamos creando valor. Mi especialidad técnica está en el desarrollo y la arquitectura de aplicaciones, con foco en .NET y Azure.',
+				'Mi formación en Matemática y mi experiencia en múltiples proyectos de software aporta dos perspectivas a mi trabajo: analizar los problemas con rigor y entender para quién estamos creando valor. Mi especialidad técnica está en el desarrollo y la arquitectura de aplicaciones, con foco en .NET y Azure.',
 				'Me involucro para entender el problema, cuestionar supuestos y hacer explícitas las alternativas. Puedo ayudarte a evaluar una propuesta de tu proveedor, convertir una oportunidad en un prototipo o acompañar a tu equipo en decisiones difíciles.',
 			],
 			mottoLines: ['Mi recomendación tiene que ayudarte a decidir.', 'Mi trabajo, a avanzar.'],
 			experienceTitle: 'Experiencia llevada a la práctica',
 			experience: [
 				{
-					slug: 'rollkall',
-					title: 'Modernizar mientras el negocio sigue funcionando',
-					body: 'En RollKall formé parte del equipo de arquitectura y lideré la migración a .NET 8, manteniendo la entrega de nuevas funcionalidades.',
+					slug: 'innspiral',
+					title: 'Dirección técnica para una operación de abastecimiento compleja',
+					body: 'En INNSPIRAL acompaño como arquitecto y líder técnico externo una solución de cotizaciones y abastecimiento para una constructora chilena. El proyecto sigue en curso.',
 				},
 				{
 					slug: 'kepler-coach',
@@ -477,23 +447,12 @@ export const es = {
 		copyright: '© 2026 Brian Stefanovich',
 	},
 
+	/** Pre-fills the booking notes when a CTA already knows which route the visitor chose. */
 	contact: {
-		title: 'Conversemos',
-		intro:
-			'Esta conversación sirve para entender brevemente tu situación y evaluar si tiene sentido trabajar juntos. No es una sesión de asesoría ni un diagnóstico.',
-		situationLabel: '¿Qué describe mejor tu situación?',
 		situations: [
 			{ id: 'existing-system', label: 'Sistema existente' },
 			{ id: 'new-product', label: 'Nuevo producto' },
 			{ id: 'fractional', label: 'Arquitectura fraccional' },
-			{ id: 'other', label: 'Otro' },
 		],
-		scheduleCta: 'Elegir horario',
-		calLoading: 'Cargando calendario...',
-		calError: 'No se pudo cargar el calendario. Puedes reintentar o escribirme por email.',
-		calRetry: 'Reintentar',
-		emailCta: 'Escribir por email',
-		close: 'Cerrar',
-		back: 'Volver',
 	},
 } as const;

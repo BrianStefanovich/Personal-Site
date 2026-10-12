@@ -5,6 +5,7 @@ import Faq from '@/components/sections/Faq';
 import Hero from '@/components/sections/Hero';
 import Problems from '@/components/sections/Problems';
 import ProcessSteps from '@/components/sections/ProcessSteps';
+import ClientLogos from '@/components/sections/ClientLogos';
 import About from '@/components/sections/About';
 import { getTranslations } from '@/i18n';
 
@@ -15,6 +16,7 @@ const { home } = getTranslations();
 	<Hero client:load />
 	<Problems />
 	<ProcessSteps />
+	<ClientLogos client:visible />
 	<About />
 	<Faq client:visible />
 	<ContactSection client:visible />

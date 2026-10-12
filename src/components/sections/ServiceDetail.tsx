@@ -1,19 +1,37 @@
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { CtaButton } from '@/components/CtaButton';
-import { ExistingSystemMap, ResponsibilityMap, ValidationMap } from '@/components/diagrams/Diagrams';
 import { Section } from '@/components/ui/Section';
 import { es } from '@/i18n/es';
-import type { ReactNode } from 'react';
+import { ArrowUpRightIcon } from '@phosphor-icons/react';
 
 const { services, hero, cases } = es.home;
 
 type Service = (typeof services.items)[number];
 
-const diagramOf: Record<Service['id'], ReactNode> = {
-	'existing-systems': <ExistingSystemMap />,
-	'new-ventures': <ValidationMap />,
-	'fractional-architect': <ResponsibilityMap />,
-};
+/** Decoration for the hero's unused right side, drawn entirely inside the content column: concentric arcs and a stacked pair of layers in the top-right corner, in Blueprint hairlines. */
+function HeroDecor() {
+	return (
+		<svg
+			aria-hidden="true"
+			focusable="false"
+			viewBox="0 0 520 520"
+			preserveAspectRatio="xMaxYMid meet"
+			fill="none"
+			className="pointer-events-none absolute inset-y-0 right-0 hidden h-full w-[44%] text-link lg:block"
+		>
+			<g stroke="currentColor" strokeWidth="1" vectorEffect="non-scaling-stroke">
+				<circle cx="260" cy="260" r="250" opacity="0.08" />
+				<circle cx="260" cy="260" r="190" opacity="0.12" />
+				<circle cx="260" cy="260" r="130" opacity="0.18" />
+				<circle cx="260" cy="260" r="70" opacity="0.26" />
+				<rect x="400" y="20" width="100" height="100" rx="8" opacity="0.22" />
+			</g>
+			<path d="M260 190 A70 70 0 0 1 330 260 L260 260 Z" fill="currentColor" opacity="0.14" />
+			<rect x="370" y="50" width="100" height="100" rx="8" fill="currentColor" opacity="0.08" />
+			<rect x="370" y="50" width="100" height="100" rx="8" stroke="currentColor" opacity="0.4" vectorEffect="non-scaling-stroke" />
+		</svg>
+	);
+}
 
 function Bullets({ items }: { items: readonly string[] }) {
 	return (
@@ -38,11 +56,12 @@ export default function ServiceDetail({ service }: { service: Service }) {
 		<>
 			<div hidden data-track-view="service_page_view" data-track-service={service.id} />
 
-			<Section contentClassName="flex flex-col gap-12 lg:gap-16">
-				<Breadcrumbs className="mb-0 md:mb-0" trail={[{ label: es.nav.links[0].label, href: '/services' }, { label: service.navLabel }]} />
+			<Section className="surface-service-hero" contentClassName="relative flex flex-col gap-12 lg:gap-16">
+				<HeroDecor />
+				<Breadcrumbs className="relative mb-0 md:mb-0" trail={[{ label: es.nav.links[0].label, href: '/services' }, { label: service.navLabel }]} />
 
-				<div className="grid items-start gap-12 lg:grid-cols-[minmax(0,6fr)_minmax(0,6fr)] lg:gap-x-16">
-					<div className="flex flex-col gap-6">
+				<div className="relative">
+					<div className="flex max-w-[44rem] flex-col gap-6">
 						<p className="label-mono text-sm text-link">{service.model}</p>
 						<h1 className="text-display max-w-[22ch]">{service.title}</h1>
 						<p className="text-lead">{service.lead}</p>
@@ -56,8 +75,6 @@ export default function ServiceDetail({ service }: { service: Service }) {
 							<p className="max-w-[34rem] text-sm leading-[1.5] text-muted">{hero.microcopy}</p>
 						</div>
 					</div>
-
-					<div className="surface-card-lg p-6 md:p-8">{diagramOf[service.id]}</div>
 				</div>
 			</Section>
 
@@ -89,24 +106,29 @@ export default function ServiceDetail({ service }: { service: Service }) {
 			</Section>
 
 			{relatedCase && (
-				<Section contentClassName="grid gap-6 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:items-end lg:gap-x-16">
-					<div className="flex flex-col gap-3">
-						<p className="label-mono text-sm text-muted">{services.caseLabel}</p>
-						<h2 className="text-headline">{relatedCase.name}</h2>
-					</div>
-					<div className="flex flex-col gap-3">
-						<p className="text-body max-w-[60ch]">{relatedCase.headline}.</p>
-						<p className="text-base text-muted">{service.caseNote}</p>
-						<a
-							href={`/cases/${relatedCase.slug}`}
-							data-track="case_open"
-							data-track-case={relatedCase.slug}
-							data-track-location={`service-${service.id}`}
-							className="label-mono inline-flex min-h-11 items-center self-start text-sm tracking-[0.05em] text-link hover:text-ink"
-						>
-							{cases.viewCase}&nbsp;→
-						</a>
-					</div>
+				<Section tone="inverse" className="py-6! md:py-8!">
+					<a
+						href={`/cases/${relatedCase.slug}`}
+						data-track="case_open"
+						data-track-case={relatedCase.slug}
+						data-track-location={`service-${service.id}`}
+						className="group grid items-center gap-x-10 gap-y-3 lg:grid-cols-[minmax(0,1fr)_auto]"
+					>
+						<span className="flex flex-col gap-1.5">
+							<span className="label-mono text-sm text-muted">{services.caseLabel}</span>
+							<span className="font-display text-xl font-bold leading-snug text-balance">{relatedCase.title}</span>
+							<span className="text-base text-muted">{service.caseNote}</span>
+						</span>
+						<span className="label-mono inline-flex min-h-11 items-center gap-2 text-sm tracking-[0.05em] text-link group-hover:text-ink">
+							{cases.viewCase}
+							<ArrowUpRightIcon
+								weight="bold"
+								aria-hidden="true"
+								size={20}
+								className="transition-transform duration-300 ease-out group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+							/>
+						</span>
+					</a>
 				</Section>
 			)}
 		</>

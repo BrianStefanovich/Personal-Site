@@ -11,7 +11,7 @@ export function getStaticPaths() {
 const { item } = Astro.props;
 ---
 
-<BaseLayout title={`${item.name} | ${es.home.cases.meta.titleSuffix}`} description={item.headline} canonicalPath={`/cases/${item.slug}`}>
+<BaseLayout title={`${item.name} | ${es.home.cases.meta.titleSuffix}`} description={item.card} canonicalPath={`/cases/${item.slug}`}>
 	<CaseDetail client:load item={item} />
 	<ContactSection client:visible />
 </BaseLayout>

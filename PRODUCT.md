@@ -32,7 +32,7 @@ The site is built with Astro (static output), React islands, Tailwind CSS, and s
 ## Capabilities and Constraints
 
 - Stack is already decided (existing codebase): Astro 7 (static output), @astrojs/react, @astrojs/sitemap, Tailwind CSS 4, class-variance-authority, lucide-react. Not an open decision.
-- Contact is real: every booking CTA opens `ContactDrawer` (cal.com embed, `CAL_LINK` in `src/lib/contact.ts`), with `hi@brianstefanovich.com` as the email alternative. There is no contact form; do not add one unless it posts to a working endpoint. Without JavaScript, CTAs go to the public cal.com page.
+- Contact is real: every booking CTA opens the cal.com popup directly via `CalLauncher` with no intermediate selector (`@calcom/embed-react`, `CAL_LINK` in `src/lib/contact.ts`), with `hi@brianstefanovich.com` as the email alternative in the contact section. There is no contact form; do not add one unless it posts to a working endpoint. Without JavaScript, CTAs go to the public cal.com page.
 - Events (`cta_click`, `service_route_open`, `service_page_view`, `case_open`, `calendar_select`, `email_click`) are declared with `data-track*` attributes and sent to GA4 by `src/lib/analytics.ts` when `PUBLIC_GA_MEASUREMENT_ID` is set in a production build.
 - i18n is architected for multiple locales (add a dictionary file + register in `src/i18n/config.ts` + `astro.config.mjs`); an English (`en`) version is planned as durable scope, not just Spanish-only. Timing/priority of the English rollout is undecided.
 - `PUBLIC_SITE_URL` must be set to the canonical production origin before build; `PUBLIC_GA_MEASUREMENT_ID` is optional (adds GA4 only in production output).

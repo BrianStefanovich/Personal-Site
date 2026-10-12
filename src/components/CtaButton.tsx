@@ -24,7 +24,7 @@ const variants = {
 } as const;
 
 /**
- * The page's single booking CTA: it opens the contact drawer with an intent, or follows an in-page or
+ * The page's single booking CTA: it opens the Cal.com booking popup directly, passing an intent, or follows an in-page or
  * internal link when `href` is given. Without JavaScript it goes straight to the public booking page.
  */
 export function CtaButton({ variant = 'primary', intent, href, location, className, children, onClick, ...rest }: CtaButtonProps) {

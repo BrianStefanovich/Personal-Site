@@ -24,7 +24,7 @@ Spanish is the default locale and is served unprefixed at `/`.
 
 Service pages live at `/services/[slug]` and are generated from `home.services.items`, with the index of all three at `/services`; case pages at `/cases/[slug]` from `home.cases.items`, with the full list at `/cases`; legal pages at `/privacy` and `/terms` (from `src/i18n/legal.ts`). Routes, anchors, ids and dictionary keys are always English; only the dictionary values are translated. Diagrams are in `src/components/diagrams/` and read their text from `es.diagrams`. Analytics events are declared with `data-track*` attributes (see `src/lib/analytics.ts`).
 
-Contact CTAs open `src/components/ContactDrawer.tsx`, which schedules through a Cal.com embed (`@calcom/embed-react`); the drawer's "Escribir por email" option falls back to a `mailto:` link.
+Contact CTAs open the Cal.com booking popup directly through `src/components/CalLauncher.tsx` (`@calcom/embed-react`), with no intermediate step; if the embed fails to load it opens the public booking page.
 
 ## Quality checks
 

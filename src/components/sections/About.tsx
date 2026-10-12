@@ -2,6 +2,7 @@ import { CtaButton } from '@/components/CtaButton';
 import { Section } from '@/components/ui/Section';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { es } from '@/i18n/es';
+import { ArrowUpRightIcon } from '@phosphor-icons/react';
 
 const { about, cases } = es.home;
 const [firstLine, secondLine] = about.titleLines;
@@ -63,15 +64,33 @@ export default function About() {
 					{about.experience.map((item) => {
 						const project = cases.items.find((entry) => entry.slug === item.slug);
 						return (
-							<li key={item.slug} className="surface-card flex flex-col gap-4 p-6 md:p-8">
-								<h4 className="font-display text-[1.375rem] font-bold leading-[1.25]">{item.title}</h4>
-								<p className="text-base leading-[1.6] text-muted">{item.body}</p>
-								{project && (
-									<p className="mt-auto flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-t border-line pt-4">
-										<span className="font-display font-bold">{project.name}</span>
-										<span className="label-mono text-sm text-muted">{project.tags}</span>
-									</p>
-								)}
+							<li key={item.slug} className="flex">
+								<a
+									href={`/cases/${item.slug}`}
+									data-track="case_open"
+									data-track-case={item.slug}
+									data-track-location="about"
+									className="group surface-card flex w-full flex-col gap-4 p-6 transition-colors hover:bg-ink hover:text-page md:p-8"
+								>
+									<span className="font-display text-[1.375rem] font-bold leading-[1.25]">{item.title}</span>
+									<span className="text-base leading-[1.6] text-muted transition-colors group-hover:text-page">{item.body}</span>
+									{project && (
+										<span className="mt-auto flex items-center justify-between gap-4 border-t border-line pt-4 transition-colors group-hover:border-page/30">
+											<span className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+												<span className="font-display font-bold">{project.name}</span>
+												{project.ongoing && (
+													<span className="label-mono text-sm text-muted transition-colors group-hover:text-page">{cases.ongoingLabel}</span>
+												)}
+											</span>
+											<ArrowUpRightIcon
+												weight="bold"
+												aria-hidden="true"
+												size={24}
+												className="shrink-0 text-link transition-transform duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-page"
+											/>
+										</span>
+									)}
+								</a>
 							</li>
 						);
 					})}

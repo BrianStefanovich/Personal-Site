@@ -261,6 +261,13 @@
 	box-shadow: inset 0 0 0 1px var(--border-hairline);
 }
 
+/* Service hero wash: a Blueprint tint pooling in the top-right corner, fading into the page. Image only, so the band keeps its page color. */
+@utility surface-service-hero {
+	background-image:
+		radial-gradient(48rem 30rem at 100% 0%, color-mix(in srgb, var(--color-blueprint) 14%, transparent), transparent 72%),
+		radial-gradient(36rem 22rem at 78% 118%, color-mix(in srgb, var(--color-blueprint) 7%, transparent), transparent 70%);
+}
+
 /* Re-scopes text tokens for any dark surface sitting inside either theme. */
 @utility on-dark {
 	--text-primary: #f4f0e8;
@@ -436,6 +443,52 @@
 	@media (prefers-reduced-motion: reduce) {
 		:where(*, *::before, *::after) {
 			transition: none;
+		}
+	}
+}
+/* Logo strip: a static wrapped row by default; it only scrolls when the visitor allows motion, and the toggle or hover pauses it. */
+@layer brand {
+	.logo-marquee__group {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1rem;
+	}
+
+	.logo-marquee__group[aria-hidden='true'] {
+		display: none;
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		.logo-marquee {
+			overflow: hidden;
+			mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+		}
+
+		.logo-marquee__track {
+			display: flex;
+			width: max-content;
+			animation: marquee 56s linear infinite;
+		}
+
+		.logo-marquee__group,
+		.logo-marquee__group[aria-hidden='true'] {
+			display: flex;
+			flex-shrink: 0;
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+			padding-right: 1rem;
+		}
+
+		.logo-marquee:hover .logo-marquee__track,
+		.logo-marquee[data-paused='true'] .logo-marquee__track {
+			animation-play-state: paused;
+		}
+
+		@keyframes marquee {
+			to {
+				transform: translateX(-50%);
+			}
 		}
 	}
 }

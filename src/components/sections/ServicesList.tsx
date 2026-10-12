@@ -6,7 +6,7 @@ import { ArrowUpRightIcon } from '@phosphor-icons/react';
 
 const { services, problems } = es.home;
 
-/** The three services as cards: folio and billing model, the situation it answers, the decision it resolves. Lives on /services. */
+/** The three services as cards: folio and billing model, the situation it answers, what you get. Lives on /services. */
 export default function ServicesList() {
 	return (
 		<Section>
@@ -29,11 +29,10 @@ export default function ServicesList() {
 							className="group surface-card flex flex-col p-6 transition-colors hover:bg-ink hover:text-page md:p-8 lg:row-span-3 lg:grid lg:grid-rows-subgrid lg:gap-y-0"
 						>
 							<span className="flex flex-col gap-10 pb-10">
-								<span className="label-mono flex items-baseline justify-between gap-x-6 text-sm">
+								<span className="label-mono text-sm">
 									<span aria-hidden="true" className="text-link transition-colors group-hover:text-page">
 										{String(index + 1).padStart(2, '0')}
 									</span>
-									<span className="text-muted transition-colors group-hover:text-page">{service.model}</span>
 								</span>
 
 								<span className="flex flex-col gap-4">
@@ -45,9 +44,9 @@ export default function ServicesList() {
 
 							<span className="flex flex-col gap-2 border-t border-line pb-6 pt-5 transition-colors group-hover:border-page/30">
 								<span className="label-mono text-[0.8125rem] text-consequence transition-colors group-hover:text-page">
-									{problems.decisionLabel}
+									{problems.outcomeLabel}
 								</span>
-								<span className="text-base leading-[1.5]">{situation.decision}</span>
+								<span className="text-base leading-[1.5]">{situation.outcome}</span>
 							</span>
 							<span className="label-mono flex items-center justify-between text-sm tracking-[0.05em] text-link transition-colors group-hover:text-page">
 								{services.index.open}

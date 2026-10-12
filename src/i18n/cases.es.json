@@ -1,0 +1,168 @@
+{
+  "section_title": "Proyectos y experiencia seleccionada",
+  "section_intro": "Sistemas que evolucionan, productos que toman forma y equipos con dirección técnica. Estos proyectos muestran mi participación en decisiones y desarrollo de software.",
+  "cases": [
+    {
+      "id": "rollkall",
+      "company": "RollKall",
+      "logo": "rollkall",
+      "service": "Consultoría técnica",
+      "status": "vía Crunchloop",
+      "role": "Integrante del equipo de arquitectura, líder técnico y desarrollador full-stack",
+      "title": "Modernizar mientras el producto sigue avanzando",
+      "card": "Participé en la evolución de una plataforma en producción y lideré su migración a .NET 8, manteniendo la entrega de funcionalidades para el negocio.",
+      "story": [
+        "Una plataforma en producción necesita evolucionar sin perder de vista a quienes la usan cada día. En RollKall, una solución para gestionar servicios policiales fuera de turno, el desafío era trabajar sobre una base técnica extensa mientras el producto continuaba desarrollándose.",
+        "Como parte del equipo de arquitectura de Crunchloop, lideré la migración a .NET 8 y participé en la reimplementación de procesos críticos. También asumí el liderazgo técnico de un equipo encargado de un portal para clientes, coordinando decisiones y desarrollo.",
+        "Esta experiencia reúne dos responsabilidades que deben avanzar juntas: mejorar los fundamentos del sistema y seguir entregando valor al negocio."
+      ],
+      "takeaway": "Evolucionar el sistema mientras continúa la entrega.",
+      "cta": "Conversemos sobre la evolución de tu sistema",
+      "home_priority": 4
+    },
+    {
+      "id": "kepler-coach",
+      "company": "Kepler Coach",
+      "logo": "kepler",
+      "service": "Consultoría y desarrollo de MVP",
+      "status": "",
+      "role": "Líder técnico y responsable de arquitectura y estrategia de reimplementación",
+      "title": "Del prototipo con IA a una plataforma para múltiples empresas",
+      "card": "Lideré la evolución de un prototipo educativo con IA hacia una plataforma multiempresa, definiendo su arquitectura y los fundamentos para continuar desarrollando el producto.",
+      "story": [
+        "Un prototipo permite mostrar una idea. Llevar esa idea a una plataforma para distintos clientes exige definir cómo se organizará el producto, cómo se procesará la información y cómo podrá evolucionar el equipo.",
+        "En Kepler Coach lideré la transformación de un prototipo construido en Next.js hacia una plataforma multiempresa con .NET, React y Azure. Definí la arquitectura, los límites entre servicios y la estrategia de reimplementación. También diseñé herramientas para la ingesta de contenidos y su procesamiento con IA.",
+        "El trabajo articuló la generación de cursos, módulos y actividades con una base de producto orientada a producción. Una experiencia que conecta una oportunidad de negocio con las decisiones necesarias para construirla."
+      ],
+      "takeaway": "Una idea prometedora necesita una base para convertirse en producto.",
+      "cta": "Conversemos sobre tu próximo producto",
+      "home_priority": 3
+    },
+    {
+      "id": "innspiral",
+      "company": "INNSPIRAL",
+      "logo": "innspiral",
+      "service": "Arquitecto fraccional",
+      "status": "Proyecto en curso",
+      "role": "Arquitectura y liderazgo técnico externo",
+      "title": "Liderazgo técnico para una operación de abastecimiento compleja",
+      "card": "Acompaño a INNSPIRAL en la arquitectura y el desarrollo de una solución de cotizaciones y abastecimiento para una constructora chilena, conectando decisiones técnicas y procesos de negocio.",
+      "story": [
+        "La coordinación de cotizaciones involucra solicitudes, proveedores, documentos, reglas de agrupación y decisiones de compra. Convertir ese recorrido en software exige comprender qué necesita resolver cada parte.",
+        "Trabajo con INNSPIRAL como arquitecto y líder técnico externo en una solución para una constructora chilena. Mi participación conecta el diseño de arquitectura con la planificación del desarrollo y la evolución de funcionalidades de captura, agrupación y seguimiento de cotizaciones.",
+        "El proyecto muestra cómo se incorpora dirección técnica senior con una dedicación acordada: decisiones fundamentadas, un equipo acompañado y un trabajo vinculado a la operación que se quiere mejorar. El desarrollo continúa; sus resultados operativos se documentarán por hitos."
+      ],
+      "takeaway": "La dirección técnica conecta el proceso de negocio con la ejecución.",
+      "cta": "Conversemos sobre el liderazgo de tu proyecto",
+      "home_priority": 1
+    },
+    {
+      "id": "csbyte",
+      "company": "CSBYTE",
+      "logo": "csbyte",
+      "service": "Consultoría técnica",
+      "status": "Proyecto en curso",
+      "role": "Consultoría e implementación de ERP; relevamiento y validación operativa",
+      "title": "Un ERP que se construye desde la operación",
+      "card": "Acompaño la implementación de Odoo con relevamiento de procesos, trabajo con el equipo y validaciones por estación. La configuración parte de cómo funciona realmente el negocio.",
+      "story": [
+        "En un negocio de computadores reacondicionados, la operación conecta ventas, inventario, compras, servicio técnico y postventa. Implementar un ERP exige comprender esas relaciones y las personas que las sostienen.",
+        "En CSBYTE trabajo en el relevamiento, la implementación y la evolución de Odoo. El proceso incluye visitas, conversaciones con el equipo, definición de flujos y preparación de pruebas para validar el trabajo en las distintas estaciones de la tienda.",
+        "El proyecto avanza con un plan documentado y revisión de procesos concretos. El objetivo es que las decisiones sobre el ERP se sostengan en la operación real y en validaciones compartidas con quienes utilizarán el sistema."
+      ],
+      "takeaway": "Un ERP útil empieza por entender cómo trabaja la empresa.",
+      "cta": "Conversemos sobre tu operación y tus sistemas",
+      "home_priority": 2
+    },
+    {
+      "id": "gt-audit",
+      "company": "GT Audit / GrumanTech",
+      "logo": "grumantech",
+      "service": "Consultoría y desarrollo de MVP",
+      "status": "Producto en desarrollo",
+      "role": "Diseño de arquitectura y desarrollo de plataforma y agente de evidencias",
+      "title": "Del control de cumplimiento a la evidencia trazable",
+      "card": "Desarrollo una plataforma que vincula controles, verificaciones y evidencias. La arquitectura organiza documentos, datos de dispositivos y aportes humanos para sostener el trabajo de auditoría.",
+      "story": [
+        "Una auditoría necesita explicar qué se verificó, con qué evidencia y cómo se llegó a una conclusión. Ese recorrido debe quedar conectado desde el diseño del producto.",
+        "En GT Audit trabajo en una plataforma de cumplimiento con modelos OSCAL y tres fuentes de evidencia: documentación, agentes instalados en dispositivos y formularios para personas. La demo técnica incorpora un agente .NET que ejecuta consultas con osquery, genera resultados estructurados y los integra al flujo de revisión.",
+        "La iniciativa combina diseño de producto, arquitectura y desarrollo. Su objetivo es construir un proceso de auditoría con evidencia organizada y trazable; la validación técnica y normativa continúa como parte del proyecto."
+      ],
+      "takeaway": "Cada conclusión necesita una evidencia que permita explicarla.",
+      "cta": "Conversemos sobre tu producto especializado",
+      "home_priority": null
+    },
+    {
+      "id": "vangwe",
+      "company": "Vangwe",
+      "logo": "vangwe",
+      "service": "Arquitecto fraccional",
+      "status": "",
+      "role": "Líder técnico en proyectos fintech",
+      "title": "Criterio de arquitectura para productos financieros",
+      "card": "He liderado diseño y desarrollo de soluciones fintech, orientando equipos y definiendo estándares técnicos para sostener la calidad y la evolución del software.",
+      "story": [
+        "Los productos financieros requieren coordinar funcionalidad, integraciones y decisiones de arquitectura. La dirección técnica debe dar al equipo una base compartida para construir y evolucionar el sistema.",
+        "En Vangwe mi experiencia como líder técnico incluye diseño y entrega de soluciones fintech, acompañamiento de equipos de ingeniería y definición de estándares. Trabajo sobre las decisiones que afectan la consistencia, la mantenibilidad y la evolución del producto.",
+        "Esta experiencia aporta un criterio práctico para dirigir proyectos en dominios exigentes: conectar las decisiones de arquitectura con el trabajo diario del equipo y las prioridades de entrega."
+      ],
+      "takeaway": "La arquitectura toma forma en las decisiones que comparte el equipo.",
+      "cta": "Conversemos sobre la dirección técnica de tu equipo",
+      "home_priority": null
+    },
+    {
+      "id": "presupuestos-globaluy",
+      "company": "GlobalUY",
+      "logo": "globaluy",
+      "service": "Consultoría y desarrollo de MVP",
+      "status": "dentro de GlobalUY",
+      "role": "Desarrollo full-stack",
+      "title": "Datos complejos convertidos en una herramienta de presupuestos",
+      "card": "Desarrollé una aplicación de presupuestos que procesa grandes volúmenes de información y los presenta en paneles configurables, acercando los datos al trabajo de quienes los necesitan.",
+      "story": [
+        "La información aporta valor cuando puede consultarse y utilizarse para una tarea concreta. Una herramienta de presupuestos debe conectar el procesamiento de datos con una experiencia comprensible para sus usuarios.",
+        "Dentro de GlobalUY desarrollé una aplicación que trabaja con grandes volúmenes de información y los presenta mediante paneles personalizables. Mi participación estuvo en la construcción del software que une esa capacidad de procesamiento con la interfaz utilizada para explorar los datos.",
+        "La experiencia muestra cómo una necesidad de negocio se convierte en una aplicación: definir qué información debe procesarse, cómo presentarla y qué interacción necesita la persona que la utiliza."
+      ],
+      "takeaway": "Los datos necesitan una herramienta que los vuelva utilizables.",
+      "cta": "Conversemos sobre la herramienta que necesita tu negocio",
+      "home_priority": null
+    },
+    {
+      "id": "netsuite-globaluy",
+      "company": "GlobalUY · integración con NetSuite",
+      "logo": "globaluy",
+      "service": "Consultoría técnica",
+      "status": "dentro de GlobalUY",
+      "role": "Diseño y desarrollo de integración",
+      "title": "Conectar el ERP con la gestión de roles y permisos",
+      "card": "Diseñé y desarrollé una integración con NetSuite para apoyar la gestión y auditoría de roles y permisos, conectando el ERP con una necesidad concreta de control interno.",
+      "story": [
+        "Gestionar roles y permisos requiere saber cómo se organiza el acceso y disponer de información que pueda revisarse. Cuando esa gestión involucra un ERP, la integración forma parte de la solución.",
+        "Durante mi trabajo en GlobalUY diseñé y desarrollé una integración con NetSuite orientada a la gestión y auditoría de roles y permisos dentro de organizaciones. Mi aporte combinó comprensión del requerimiento, diseño de la conexión y desarrollo.",
+        "Este proyecto ilustra una forma concreta de hacer evolucionar sistemas existentes: conectar sus capacidades con una necesidad del negocio y construir la integración que permite utilizar esa información."
+      ],
+      "takeaway": "Una integración tiene valor cuando resuelve una necesidad de control.",
+      "cta": "Conversemos sobre las integraciones de tu empresa",
+      "home_priority": null
+    },
+    {
+      "id": "cms-financieros-globaluy",
+      "company": "GlobalUY · instituciones financieras",
+      "logo": "globaluy",
+      "service": "Consultoría técnica",
+      "status": "conjunto de proyectos",
+      "role": "Desarrollo y mantenimiento de soluciones CMS",
+      "title": "Más de veinte soluciones web con necesidades propias",
+      "card": "Participé en el desarrollo y mantenimiento de más de veinte soluciones CMS personalizadas para instituciones financieras, trabajando sobre sus funcionalidades y su evolución.",
+      "story": [
+        "Las plataformas web de una institución financiera deben responder a sus contenidos, funcionalidades y necesidades particulares. Esa personalización continúa durante el mantenimiento y la evolución del software.",
+        "En GlobalUY desarrollé y mantuve más de veinte soluciones CMS altamente personalizadas para instituciones financieras. Esta experiencia me llevó a trabajar con aplicaciones existentes, requerimientos diferentes y ciclos de desarrollo que combinan nuevas funcionalidades con mantenimiento.",
+        "El aporte relevante es la práctica acumulada sobre sistemas utilizados por organizaciones reales: comprender cada implementación y continuar construyendo sobre ella con atención a su contexto."
+      ],
+      "takeaway": "La experiencia también se construye haciendo evolucionar lo que ya existe.",
+      "cta": "Conversemos sobre la evolución de tu plataforma",
+      "home_priority": null
+    }
+  ]
+}
