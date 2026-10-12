@@ -8,7 +8,7 @@ import { es } from '@/i18n/es';
 const { meta } = es.home.services.index;
 ---
 
-<BaseLayout title={meta.title} description={meta.description} canonicalPath="/services">
+<BaseLayout title={meta.title} description={meta.description} canonicalPath="/services" breadcrumbs={[{ name: es.nav.links[0].label, path: '/services' }]}>
 	<ServicesList />
 	<ProcessSteps />
 	<ContactSection client:visible />

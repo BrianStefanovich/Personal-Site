@@ -3,12 +3,15 @@ type Params = Record<string, string>;
 declare global {
 	interface Window {
 		gtag?: (command: 'event', name: string, params: Params) => void;
+		dataLayer?: Record<string, unknown>[];
 	}
 }
 
 export function track(event: string, params: Params = {}) {
 	if (import.meta.env.DEV) console.debug('[track]', event, params);
-	window.gtag?.('event', event, params);
+	// With Tag Manager the event goes to the dataLayer as a custom event; a GA4 tag in the container picks it up by name.
+	if (import.meta.env.PUBLIC_GTM_ID) window.dataLayer?.push({ event, ...params });
+	else window.gtag?.('event', event, params);
 }
 
 const paramsOf = (el: HTMLElement): Params =>
@@ -21,7 +24,7 @@ const paramsOf = (el: HTMLElement): Params =>
 /**
  * Declarative tracking: any element with `data-track="event"` reports a click, and any element with
  * `data-track-view="event"` reports once on load. Extra `data-track-*` attributes become event params.
- * Events only reach GA4 when the production build has a measurement id; otherwise they are no-ops.
+ * Events reach Google Tag Manager (`PUBLIC_GTM_ID`) or, without it, GA4 directly (`PUBLIC_GA_MEASUREMENT_ID`), and only in production builds; otherwise they are no-ops.
  */
 export function initTracking() {
 	document.addEventListener('click', (event) => {

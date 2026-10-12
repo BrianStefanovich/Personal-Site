@@ -3,6 +3,7 @@ import CalLauncher from '@/components/CalLauncher';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import Seo from '@/components/Seo.astro';
+import type { BreadcrumbItem, JsonLd } from '@/lib/seo';
 import { es } from '@/i18n/es';
 import '@fontsource/montserrat/latin-700.css';
 import '@fontsource/open-sans/latin-400.css';
@@ -16,10 +17,19 @@ interface Props {
 	canonicalPath?: string;
 	type?: 'website' | 'article';
 	noindex?: boolean;
+	image?: string;
+	imageAlt?: string;
+	breadcrumbs?: readonly BreadcrumbItem[];
+	jsonLd?: readonly JsonLd[];
 }
 
-const { title, description, canonicalPath, type, noindex } = Astro.props;
-const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
+const { title, description, canonicalPath = '/', type, noindex, image, imageAlt, breadcrumbs, jsonLd } = Astro.props;
+const gtmId = import.meta.env.PROD ? import.meta.env.PUBLIC_GTM_ID : undefined;
+// When Tag Manager is configured it owns GA4 (add the GA4 tag inside the container); the direct gtag.js snippet is the fallback.
+const gaMeasurementId = import.meta.env.PROD && !gtmId ? import.meta.env.PUBLIC_GA_MEASUREMENT_ID : undefined;
+const [section, detail] = canonicalPath.split('/').filter(Boolean);
+const pageType = section ? (detail ? `${section}_detail` : `${section}_index`) : 'home';
+const pageContext = { page_type: pageType, page_language: Astro.currentLocale ?? 'es', page_path: canonicalPath };
 ---
 
 <!doctype html>
@@ -41,13 +51,34 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
 		</script>
 		<meta name="generator" content={Astro.generator} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<Seo title={title} description={description} canonicalPath={canonicalPath} type={type} noindex={noindex} />
-		{import.meta.env.PROD && gaMeasurementId && <>
+		<Seo
+			title={title}
+			description={description}
+			canonicalPath={canonicalPath}
+			type={type}
+			noindex={noindex}
+			image={image}
+			imageAlt={imageAlt}
+			breadcrumbs={breadcrumbs}
+			jsonLd={jsonLd}
+		/>
+		{gtmId && (
+			<script
+				is:inline
+				define:vars={{ gtmId, pageContext }}
+			>window.dataLayer = window.dataLayer || []; window.dataLayer.push(pageContext); (function(w,d,s,l,i){w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer',gtmId);</script>
+		)}
+		{gaMeasurementId && <>
 			<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}></script>
 			<script is:inline define:vars={{ gaMeasurementId }}>window.dataLayer = window.dataLayer || []; function gtag(){window.dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', gaMeasurementId);</script>
 		</>}
 	</head>
 	<body>
+		{gtmId && (
+			<noscript>
+				<iframe src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`} height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe>
+			</noscript>
+		)}
 		<a
 			href="#content"
 			class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-card focus:bg-blueprint focus:px-5 focus:py-3 focus:font-display focus:font-bold focus:text-porcelain"

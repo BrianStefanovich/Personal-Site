@@ -7,7 +7,7 @@ import { es } from '@/i18n/es';
 const { meta } = es.home.cases;
 ---
 
-<BaseLayout title={meta.title} description={meta.description} canonicalPath="/cases">
+<BaseLayout title={meta.title} description={meta.description} canonicalPath="/cases" breadcrumbs={[{ name: es.nav.links[1].label, path: '/cases' }]}>
 	<CasesList />
 	<ContactSection client:visible />
 </BaseLayout>

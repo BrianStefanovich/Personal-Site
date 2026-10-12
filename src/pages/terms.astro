@@ -4,6 +4,6 @@ import LegalPage from '@/components/sections/LegalPage';
 import { terms } from '@/i18n/legal';
 ---
 
-<BaseLayout title={terms.meta.title} description={terms.meta.description} canonicalPath={terms.path}>
+<BaseLayout title={terms.meta.title} description={terms.meta.description} canonicalPath={terms.path} breadcrumbs={[{ name: terms.crumb, path: terms.path }]}>
 	<LegalPage doc={terms} />
 </BaseLayout>

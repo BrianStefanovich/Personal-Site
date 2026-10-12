@@ -9,9 +9,27 @@ export function getStaticPaths() {
 }
 
 const { service } = Astro.props;
+const site = new URL(Astro.site ?? 'https://brianstefanovich.com');
+const serviceLd = {
+	'@type': 'Service',
+	'@id': `${site.origin}${service.path}/#service`,
+	name: service.meta.title.split(' | ')[0],
+	description: service.meta.description,
+	url: `${site.origin}${service.path}/`,
+	serviceType: service.menuService,
+	provider: { '@id': `${site.origin}/#business` },
+	areaServed: [{ '@type': 'Country', name: 'Chile' }, 'Worldwide'],
+	availableLanguage: ['es', 'en'],
+};
 ---
 
-<BaseLayout title={service.meta.title} description={service.meta.description} canonicalPath={service.path}>
+<BaseLayout title={service.meta.title} description={service.meta.description} canonicalPath={service.path}
+	breadcrumbs={[
+		{ name: es.nav.links[0].label, path: '/services' },
+		{ name: service.navLabel, path: service.path },
+	]}
+	jsonLd={[serviceLd]}
+>
 	<ServiceDetail client:load service={service} />
 	<Faq client:visible id={`faq-${service.id}`} items={service.faq.items} headline={service.faq.headline} />
 	<ServiceClosing client:load service={service} />

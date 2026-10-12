@@ -61,7 +61,7 @@ export const privacy: LegalDocument = {
 		{
 			ul: [
 				'Cal.com, que gestiona la agenda de conversaciones cuando reservas un horario.',
-				'Google Analytics, que entrega estadísticas agregadas de uso del sitio.',
+				'Google Analytics y Google Tag Manager, que entregan estadísticas agregadas de uso del sitio.',
 				'Proveedores de correo y alojamiento que permiten recibir tus mensajes y publicar el sitio.',
 				'Autoridades, cuando una ley u orden judicial lo exija, o para proteger mis derechos en una disputa.',
 			],

@@ -25,9 +25,9 @@ export const es = {
 
 	home: {
 		meta: {
-			title: 'Brian Stefanovich | Arquitectura y consultoría de software',
+			title: 'Consultoría de software en Chile | Brian Stefanovich',
 			description:
-				'Aporto criterio técnico para decidir qué corregir, qué validar y cómo liderar entregas de software con consecuencias de negocio. Primera conversación sin costo.',
+				'Te ayudo a evaluar sistemas, validar nuevos negocios y liderar decisiones técnicas. Consultoría de software desde Chile para empresas de todo el mundo.',
 		},
 
 		hero: {
@@ -104,7 +104,7 @@ export const es = {
 			relatedLabel: 'Otros servicios',
 			index: {
 				meta: {
-					title: 'Servicios | Brian Stefanovich',
+					title: 'Arquitectura y consultoría de software | Brian Stefanovich',
 					description:
 						'Diagnóstico de sistemas existentes, validación de nuevos negocios con software y liderazgo técnico fraccional: tres formas de trabajo según la decisión que necesitas tomar.',
 				},
@@ -123,7 +123,7 @@ export const es = {
 					menuService: 'Consultoría técnica',
 					model: 'Precio cerrado',
 					meta: {
-						title: 'Diagnóstico técnico de un sistema existente | Brian Stefanovich',
+						title: 'Diagnóstico de software | Brian Stefanovich',
 						description:
 							'Evalúo un sistema del que depende tu negocio y comparo corregir, conservar, modernizar, reemplazar o cambiar de proveedor, con costos, riesgos y secuencia de intervención.',
 					},
@@ -187,7 +187,7 @@ export const es = {
 					menuService: 'Consultoría y desarrollo de MVP',
 					model: 'Por etapas',
 					meta: {
-						title: 'Validar un nuevo negocio con software antes de construirlo | Brian Stefanovich',
+						title: 'Validación de negocios y MVP | Brian Stefanovich',
 						description:
 							'Diseño la validación de una nueva línea de negocio: hipótesis críticas, experimentos, alcance mínimo del prototipo y criterios para continuar, cambiar de rumbo o detenerse.',
 					},
@@ -358,7 +358,7 @@ export const es = {
 
 		cases: {
 			meta: {
-				title: 'Casos | Brian Stefanovich',
+				title: 'Casos de arquitectura de software | Brian Stefanovich',
 				titleSuffix: 'Casos | Brian Stefanovich',
 				description:
 					'Proyectos y experiencia seleccionada: sistemas que evolucionan, productos que toman forma y equipos con dirección técnica.',

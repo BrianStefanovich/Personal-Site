@@ -9,9 +9,17 @@ export function getStaticPaths() {
 }
 
 const { item } = Astro.props;
+const title = `${item.seoTitle ?? item.name} | ${es.home.cases.meta.titleSuffix}`;
 ---
 
-<BaseLayout title={`${item.name} | ${es.home.cases.meta.titleSuffix}`} description={item.card} canonicalPath={`/cases/${item.slug}`}>
+<BaseLayout title={title}
+	description={item.card}
+	canonicalPath={`/cases/${item.slug}`}
+	breadcrumbs={[
+		{ name: es.nav.links[1].label, path: '/cases' },
+		{ name: item.name, path: `/cases/${item.slug}` },
+	]}
+>
 	<CaseDetail client:load item={item} />
 	<ContactSection client:visible />
 </BaseLayout>

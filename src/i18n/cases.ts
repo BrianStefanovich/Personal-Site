@@ -24,6 +24,13 @@ const logos: Record<string, CaseLogo> = {
 /** The relationship with the company, as it must be stated: via another firm, inside it, or freelance. */
 const viaLogo: Record<string, string> = { rollkall: 'crunchloop' };
 
+/** Companies with several cases need a distinct search title for each one; the rest are identified by the company name. */
+const seoTitles: Record<string, string> = {
+	'presupuestos-globaluy': 'Aplicación de presupuestos para GlobalUY',
+	'netsuite-globaluy': 'Integración con NetSuite para GlobalUY',
+	'cms-financieros-globaluy': 'CMS para instituciones financieras en GlobalUY',
+};
+
 const serviceIds: Record<string, string> = {
 	'Consultoría técnica': 'existing-systems',
 	'Consultoría y desarrollo de MVP': 'new-ventures',
@@ -46,6 +53,7 @@ function toCase(entry: Source) {
 	return {
 		slug: entry.id,
 		name,
+		seoTitle: seoTitles[entry.id] ?? null,
 		scope: scope.length ? capitalize(scope.join(' · ')) : null,
 		/** Companies without a verified logo are set as plain text; a namesake's identity is never borrowed. */
 		logo: logos[entry.logo] ?? null,

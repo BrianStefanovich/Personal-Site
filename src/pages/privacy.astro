@@ -4,6 +4,6 @@ import LegalPage from '@/components/sections/LegalPage';
 import { privacy } from '@/i18n/legal';
 ---
 
-<BaseLayout title={privacy.meta.title} description={privacy.meta.description} canonicalPath={privacy.path}>
+<BaseLayout title={privacy.meta.title} description={privacy.meta.description} canonicalPath={privacy.path} breadcrumbs={[{ name: privacy.crumb, path: privacy.path }]}>
 	<LegalPage doc={privacy} />
 </BaseLayout>
