@@ -31,14 +31,6 @@ export default function ClientLogos() {
 					<h2 className="text-headline">{clients.headline}</h2>
 					<p className="text-body text-muted">{clients.intro}</p>
 				</div>
-				<button
-					type="button"
-					onClick={() => setPaused((value) => !value)}
-					className="label-mono inline-flex min-h-11 items-center gap-2 text-sm tracking-[0.05em] text-link hover:text-ink motion-reduce:hidden"
-				>
-					<Icon weight="bold" aria-hidden="true" size={18} />
-					{paused ? clients.play : clients.pause}
-				</button>
 			</div>
 
 			<div data-paused={paused} className="logo-marquee -mx-6 md:-mx-10 xl:-mx-16">

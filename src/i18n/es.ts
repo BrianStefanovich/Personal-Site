@@ -36,7 +36,7 @@ export const es = {
 			headline: [['Tu ', { b: 'negocio' }, ' al mando.'], ['El ', { b: 'software' }, ' a tu favor.']] satisfies readonly Rich[],
 			subhead:
 				'Ayudo a decidir qué corregir, qué construir y cómo llevarlo adelante. Conecto las decisiones técnicas con tus objetivos de negocio y acompaño su ejecución.',
-			cta: 'Aclaremos tu próximo paso',
+			cta: 'Conversemos sobre tu proyecto',
 			ctaNote: 'Primera conversación de 30 minutos, sin costo ni compromiso.',
 			secondaryLink: 'Ver cómo puedo ayudarte',
 			scenariosLabel: 'Tres situaciones en las que puedo ayudarte',

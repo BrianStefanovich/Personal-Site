@@ -48,9 +48,9 @@ export default function About() {
 							{paragraph}
 						</p>
 					))}
-					<p className="mt-2 border-t border-line pt-8 font-display text-headline font-bold">
-						{about.mottoLines.map((line) => (
-							<span key={line} className="block text-balance">
+					<p className="surface-ink mt-4 self-start px-6 py-5 font-display text-[1.25rem] font-bold leading-[1.25] tracking-[-0.02em] md:px-8 md:py-6 md:text-[1.5rem]">
+						{about.mottoLines.map((line, index) => (
+							<span key={line} className={index > 0 ? 'block text-balance text-[color:var(--text-secondary)]' : 'block text-balance'}>
 								{line}
 							</span>
 						))}
