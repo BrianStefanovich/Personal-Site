@@ -298,6 +298,27 @@
 	color: var(--text-primary);
 }
 
+/* The portrait card: white in both themes, so the studio backdrop of the photo disappears into it. */
+@utility surface-photo {
+	--text-primary: #101311;
+	--text-secondary: #4a534d;
+	--border-hairline: rgba(16, 19, 17, 0.16);
+	border-radius: 18px;
+	background: #ffffff;
+	color: var(--text-primary);
+	position: relative;
+
+	/* Drawn above the photo, which runs to the card edge. */
+	&::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		border-radius: inherit;
+		box-shadow: inset 0 0 0 1px var(--border-hairline);
+		pointer-events: none;
+	}
+}
+
 /* Section tone flip: a Carbon band on a Porcelain page, a Porcelain band on a Carbon page. */
 @utility surface-inverse {
 	--surface-page: #101311;

@@ -8,6 +8,7 @@ export const es = {
 		links: [
 			{ label: 'Servicios', href: '/servicios' },
 			{ label: 'Casos', href: '/cases' },
+			{ label: 'Cómo trabajo', href: '/#como-trabajo' },
 			{ label: 'Sobre mí', href: '/#sobre-brian' },
 		],
 		cta: 'Hablemos',
@@ -256,6 +257,7 @@ export const es = {
 		},
 
 		proceso: {
+			eyebrow: 'Cómo trabajo',
 			headline: 'Me involucro en tu negocio. Avanzamos con claridad.',
 			steps: [
 				{
@@ -353,31 +355,30 @@ export const es = {
 		},
 
 		sobreBrian: {
-			headline: 'Sobre Brian',
-			subhead: 'Criterio de arquitectura conectado con la ejecución',
-			intro:
-				'Soy Brian Stefanovich, ingeniero de software y líder técnico. Trabajo en el diseño, la construcción y la evolución de sistemas, con experiencia en fintech, integraciones empresariales y plataformas utilizadas por clientes.',
-			imageAlt: 'Brian Stefanovich sosteniendo un notebook',
-			lead: 'Esa experiencia me permite conectar una conversación sobre negocio y riesgo con las decisiones de arquitectura y el trabajo de implementación. Puedo ayudarte a evaluar una inversión en software y acompañar al equipo que la lleva a la práctica.',
-			casesCta: 'Ver los casos',
-			areas: [
+			titleLines: ['Hablo de negocio contigo.', 'De arquitectura con tu equipo.'],
+			identityName: 'Soy Brian Stefanovich.',
+			identityRole: 'Arquitecto de software senior y líder técnico.',
+			imageAlt: 'Retrato de Brian Stefanovich',
+			paragraphs: [
+				'He diseñado y desarrollado software, liderado equipos y participado en la modernización de sistemas en producción. Esa experiencia me permite conectar lo que tu negocio necesita con lo que realmente implica construirlo.',
+				'Mi formación en Matemática en la Universidad de la República y en Marketing aporta dos perspectivas a mi trabajo: analizar los problemas con rigor y entender para quién estamos creando valor. Mi especialidad técnica está en el desarrollo y la arquitectura de aplicaciones, con foco en .NET y Azure.',
+				'Me involucro para entender el problema, cuestionar supuestos y hacer explícitas las alternativas. Puedo ayudarte a evaluar una propuesta de tu proveedor, convertir una oportunidad en un prototipo o acompañar a tu equipo en decisiones difíciles.',
+			],
+			mottoLines: ['Mi recomendación tiene que ayudarte a decidir.', 'Mi trabajo, a avanzar.'],
+			experienceTitle: 'Experiencia llevada a la práctica',
+			experience: [
 				{
-					title: 'Negocio',
-					body: 'Entender qué necesita conseguir la empresa y cómo el software puede contribuir.',
+					slug: 'rollkall',
+					title: 'Modernizar mientras el negocio sigue funcionando',
+					body: 'En RollKall formé parte del equipo de arquitectura y lideré la migración a .NET 8, manteniendo la entrega de nuevas funcionalidades.',
 				},
 				{
-					title: 'Producto',
-					body: 'Definir qué problema resolver, para quién y qué conviene construir primero.',
-				},
-				{
-					title: 'Arquitectura',
-					body: 'Elegir una dirección técnica teniendo en cuenta costos, restricciones y riesgos.',
-				},
-				{
-					title: 'Ingeniería',
-					body: 'Llevar las decisiones al sistema y revisar sus efectos durante la implementación.',
+					slug: 'kepler-coach',
+					title: 'Convertir un prototipo en una plataforma preparada para crecer',
+					body: 'En Kepler Coach lideré la evolución de un prototipo educativo con IA hacia una plataforma multiempresa con .NET, React y Azure.',
 				},
 			],
+			casesCta: 'Conoce los proyectos en los que he trabajado',
 		},
 
 		faq: {

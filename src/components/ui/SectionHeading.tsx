@@ -1,8 +1,9 @@
 import { cn } from '@/lib/utils';
+import type { ReactNode } from 'react';
 
 interface SectionHeadingProps {
 	eyebrow?: string;
-	title: string;
+	title: ReactNode;
 	/** The page's own title is an h1; section titles stay h2. */
 	as?: 'h1' | 'h2';
 	className?: string;
