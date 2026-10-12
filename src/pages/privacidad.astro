@@ -1,0 +1,9 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import LegalDocumento from '@/components/sections/LegalDocumento';
+import { privacidad } from '@/i18n/legal';
+---
+
+<BaseLayout title={privacidad.meta.title} description={privacidad.meta.description} canonicalPath={privacidad.path}>
+	<LegalDocumento doc={privacidad} />
+</BaseLayout>

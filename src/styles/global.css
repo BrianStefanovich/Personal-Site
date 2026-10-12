@@ -391,31 +391,6 @@
 			}
 		}
 
-		/* Hero diagram, once on load: options branch out, then the chosen path resolves. */
-		.intro-draw {
-			stroke-dasharray: 1;
-			animation: draw 550ms cubic-bezier(0.16, 1, 0.3, 1) both;
-			animation-delay: var(--d, 0ms);
-		}
-
-		.intro-pop {
-			transform-box: fill-box;
-			transform-origin: center;
-			animation: pop 450ms cubic-bezier(0.16, 1, 0.3, 1) both;
-			animation-delay: var(--d, 0ms);
-		}
-
-		@keyframes pop {
-			from {
-				opacity: 0;
-				transform: scale(0.94);
-			}
-			to {
-				opacity: 1;
-				transform: none;
-			}
-		}
-
 		@keyframes rise {
 			from {
 				opacity: 0;

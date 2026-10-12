@@ -3,63 +3,6 @@ import { es } from '@/i18n/es';
 
 const { diagrams } = es;
 
-/** Three starting points converge on one informed decision. Neutral on purpose: no outcome is pre-selected. */
-export function HeroMap({ className }: { className?: string }) {
-	const d = diagrams.hero;
-	const starts = [d.existing, d.opportunity, d.project] as const;
-
-	const wide = (
-		<Diagram label={d.label} viewBox="0 0 380 240">
-			{starts.map((label, i) => {
-				const y = 34 + i * 86;
-				return (
-					<g key={label}>
-						<Step x={0} y={y} w={178} label={label} />
-						<Edge d={`M178 ${y} C 204 ${y}, 204 120, 230 120`} />
-					</g>
-				);
-			})}
-			<Point x={230} y={120} r={5} />
-			<Flow d="M230 120 H340" />
-			<Arrowhead x={344} y={120} dir="right" tone="selected" />
-			<Terminal x={358} y={120} />
-			<Verb x={244} y={106}>
-				{d.compare}
-			</Verb>
-			<Text x={380} y={154} anchor="end" tone="selected">
-				{d.decision}
-			</Text>
-		</Diagram>
-	);
-
-	const narrow = (
-		<Diagram label={d.label} viewBox="0 0 284 215">
-			{starts.map((label, i) => {
-				const y = 17 + i * 46;
-				return (
-					<g key={label}>
-						<Step x={0} y={y} w={178} label={label} />
-						<Edge d={`M178 ${y} H206`} />
-					</g>
-				);
-			})}
-			<Edge d="M206 17 V109" />
-			<Point x={206} y={63} r={5} />
-			<Flow d="M206 63 V162" />
-			<Arrowhead x={206} y={166} dir="down" tone="selected" />
-			<Terminal x={206} y={178} />
-			<Verb x={218} y={124}>
-				{d.compare}
-			</Verb>
-			<Text x={186} y={183} anchor="end" tone="selected">
-				{d.decision}
-			</Text>
-		</Diagram>
-	);
-
-	return <DiagramFigure className={className} wide={wide} narrow={narrow} note={diagrams.note} caption={d.caption} />;
-}
-
 /** The system the client already has: a problem, a diagnosis, five equivalent options, and no recommendation drawn in advance. */
 export function ExistingSystemMap({ className }: { className?: string }) {
 	const d = diagrams.existing;

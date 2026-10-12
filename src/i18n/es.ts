@@ -27,37 +27,70 @@ export const es = {
 
 		hero: {
 			eyebrow: 'Arquitectura y consultoría de software',
-			headline: ['Arquitectura de software para decisiones que afectan tu ', { b: 'negocio' }] satisfies Rich,
+			/** One entry per line so the two halves of the promise break cleanly at every width. */
+			headline: [['Tu ', { b: 'negocio' }, ' al mando.'], ['El software a tu favor.']] satisfies readonly Rich[],
 			subhead:
-				'Soy Brian Stefanovich. Ayudo a empresas a recuperar el control de sistemas que frenan su operación, validar nuevas oportunidades con software y dar liderazgo técnico a proyectos en marcha.',
-			method: 'Primero aclaro el problema y las alternativas; después acordamos qué conviene hacer y quién lo ejecuta.',
-			cta: 'Hablemos',
+				'Ayudo a decidir qué corregir, qué construir y cómo llevarlo adelante. Conecto las decisiones técnicas con tus objetivos de negocio y acompaño su ejecución.',
+			cta: 'Aclaremos tu próximo paso',
+			ctaNote: 'Primera conversación de 30 minutos, sin costo ni compromiso.',
+			secondaryLink: 'Ver cómo puedo ayudarte',
+			scenariosLabel: 'Tres situaciones en las que puedo ayudarte',
+			scenarios: [
+				{ title: 'Cuando tu sistema te frena', text: 'Entiende qué falla y decide qué corregir, modernizar o reemplazar.' },
+				{ title: 'Cuando aparece una oportunidad', text: 'Valida un nuevo negocio antes de comprometer una inversión mayor.' },
+				{
+					title: 'Cuando tu proyecto necesita liderazgo',
+					text: 'Incorpora dirección técnica senior con una dedicación adaptada a tu proyecto.',
+				},
+			],
 			microcopy: 'Primera conversación sin costo para entender el problema y definir el siguiente paso. No incluye una auditoría de código.',
 			imageAlt: 'Brian Stefanovich',
 		},
 
 		problema: {
-			headline: '¿Qué está pasando en tu empresa?',
-			subhead: 'El trabajo empieza por entender qué decisión necesita resolver la empresa.',
+			headline: '¿Qué necesita hoy tu negocio para avanzar?',
+			subhead: 'Identifica tu situación. Te ayudo a entender las opciones y definir el siguiente paso.',
+			/** Each card answers, in order: what is happening to me, how Brian helps, what I get. `tag` and `decision` feed /servicios. */
+			outcomeLabel: 'Con qué cuentas',
 			decisionLabel: 'Decisión por tomar',
 			situations: [
 				{
+					id: 'recuperar-control',
 					tag: 'Sistema existente',
-					title: 'El sistema frena la operación y no está claro qué hacer.',
+					/** One entry per sentence so the problem breaks cleanly at every width. */
+					problem: ['Tu sistema falla.', 'Cada cambio cuesta más.'],
+					situation: 'Los problemas se repiten, tu operación se resiente y las explicaciones de tu proveedor no te permiten decidir.',
+					offer: 'Recupera el control de tu software.',
+					intervention:
+						'Reviso qué está pasando y te ayudo a decidir qué corregir, qué conservar y cuándo conviene modernizar o cambiar de solución.',
+					outcome: 'Un diagnóstico fundamentado y un plan de acción priorizado.',
+					cta: 'Quiero recuperar el control',
 					decision: 'Qué corregir, qué conservar y si conviene modernizar, reemplazar o cambiar de proveedor.',
-					link: 'Ver el diagnóstico de sistemas',
 				},
 				{
+					id: 'validar-oportunidad',
 					tag: 'Nuevo negocio',
-					title: 'Quieres abrir una línea de negocio basada en software.',
+					problem: ['Ves una oportunidad.', 'Necesitas saber si vale la inversión.'],
+					situation:
+						'Conoces tu negocio y tienes una idea. Necesitas aterrizar qué probar primero, cuánto invertir y cómo saber si tiene futuro.',
+					offer: 'Valida la oportunidad antes de comprometer más inversión.',
+					intervention: 'Defino contigo una prueba concreta y el software mínimo necesario para obtener evidencia de clientes reales.',
+					outcome: 'Un plan de validación, presupuesto y criterios para continuar, ajustar o detenerte.',
+					cta: 'Quiero evaluar mi oportunidad',
 					decision: 'Qué incertidumbre probar primero y cuándo continuar, cambiar de rumbo o detenerte.',
-					link: 'Ver la validación por etapas',
 				},
 				{
+					id: 'sumar-liderazgo',
 					tag: 'Liderazgo técnico',
-					title: 'Un proyecto necesita liderazgo técnico que hoy nadie cubre.',
+					problem: ['Tienes el proyecto.', 'Te falta liderazgo técnico.'],
+					situation:
+						'Aparece un proyecto que quieres tomar, o uno en marcha exige decisiones que tu equipo necesita resolver con apoyo senior.',
+					offer: 'Suma experiencia para dirigir la ejecución.',
+					intervention:
+						'Me integro a tu equipo con una dedicación acordada para definir la arquitectura, orientar las decisiones y acompañar el desarrollo.',
+					outcome: 'Una responsabilidad técnica definida y acompañamiento durante la ejecución.',
+					cta: 'Quiero sumar liderazgo técnico',
 					decision: 'Qué decisiones, autoridad y dedicación debe asumir una persona responsable.',
-					link: 'Ver el liderazgo fraccional',
 				},
 			],
 		},
@@ -69,7 +102,6 @@ export const es = {
 			caseLabel: 'Caso relacionado',
 			faqHeadline: 'Preguntas sobre este servicio',
 			relatedLabel: 'Otros servicios',
-			allLabel: 'Ver todos los servicios',
 			index: {
 				meta: {
 					title: 'Servicios | Brian Stefanovich',
@@ -86,6 +118,9 @@ export const es = {
 					id: 'sistemas-existentes',
 					path: '/servicios/sistemas-existentes',
 					navLabel: 'Sistemas existentes',
+					/** Menu entry: the client's goal first, the service name beneath. */
+					menuTitle: 'Recupera el control de tu software',
+					menuService: 'Consultoría técnica',
 					model: 'Precio cerrado',
 					meta: {
 						title: 'Diagnóstico técnico de un sistema existente | Brian Stefanovich',
@@ -129,6 +164,9 @@ export const es = {
 					id: 'nuevos-negocios',
 					path: '/servicios/nuevos-negocios',
 					navLabel: 'Nuevos negocios con software',
+					/** Menu entry: the client's goal first, the service name beneath. */
+					menuTitle: 'Valida tu idea de negocio',
+					menuService: 'Consultoría y desarrollo de MVP',
 					model: 'Por etapas',
 					meta: {
 						title: 'Validar un nuevo negocio con software antes de construirlo | Brian Stefanovich',
@@ -170,6 +208,9 @@ export const es = {
 					id: 'arquitecto-fraccional',
 					path: '/servicios/arquitecto-fraccional',
 					navLabel: 'Arquitecto de software fraccional',
+					/** Menu entry: the client's goal first, the service name beneath. */
+					menuTitle: 'Suma liderazgo técnico a tu equipo',
+					menuService: 'Arquitecto fraccional',
 					model: 'Mensualidad',
 					meta: {
 						title: 'Arquitecto de software fraccional | Brian Stefanovich',
@@ -215,24 +256,38 @@ export const es = {
 		},
 
 		proceso: {
-			headline: 'Cómo empieza el trabajo',
+			headline: 'Me involucro en tu negocio. Avanzamos con claridad.',
 			steps: [
 				{
-					title: 'Una conversación de 30 minutos, sin costo',
-					body: 'Entiendo el contexto, quién decide y qué necesitas conseguir, y evaluamos si puedo ayudarte. No incluye una auditoría de código ni obliga a contratar nada.',
+					title: 'Entendemos el desafío',
+					body: [
+						'Conversamos sobre lo que necesitas y reunimos la información para evaluar cómo ayudarte. Antes de compartir información sensible, acordamos su protección mediante un acuerdo de confidencialidad.',
+					],
 				},
 				{
-					title: 'Acordamos un alcance concreto',
-					body: 'Si tiene sentido trabajar juntos, definimos un diagnóstico a precio cerrado, una validación por etapas o una responsabilidad técnica mensual. Aquí empieza el servicio contratado.',
+					title: 'Conozco tu operación de cerca',
+					body: [
+						'Siempre que es posible, ',
+						{ b: 'visito tus instalaciones' },
+						' y observo cómo trabajan las personas involucradas. Hago preguntas, conecto a los equipos y facilito la conversación con tus proveedores para entender el problema completo.',
+					],
 				},
 				{
-					title: 'Comparo alternativas y acompaño lo acordado',
-					body: 'Evalúo las opciones con costos, riesgos y dependencias, recomiendo una dirección y, si lo acordamos, acompaño la ejecución. Revisamos el rumbo cuando aparece nueva evidencia.',
+					title: 'Acordamos un plan concreto',
+					body: [
+						'Investigo las alternativas y te presento una propuesta con alcance e inversión. Ajustamos el plan y dejamos definidos en el contrato los hitos, las entregas y los criterios para validarlas.',
+					],
+				},
+				{
+					title: 'Avanzamos con evidencia',
+					body: [
+						'Recibes reportes semanales, métricas de avance y documentación desde las primeras entregas. Revisamos cada hito con los criterios acordados y ajustamos el rumbo cuando hace falta.',
+					],
 				},
 			],
-			closingTitle: 'Claridad antes que complejidad',
+			closingTitle: 'El conocimiento queda en tu empresa.',
 			closing:
-				'Cada recomendación debe explicar qué resuelve, qué exige y qué consecuencias introduce. El diagnóstico es útil por sí mismo, incluso si otra persona ejecuta el plan.',
+				'Las decisiones, los documentos y los aprendizajes se entregan durante el proyecto, organizados para que tu equipo pueda utilizarlos.',
 		},
 
 		casos: {
@@ -368,16 +423,6 @@ export const es = {
 
 	diagrams: {
 		note: 'Esquema ilustrativo',
-		hero: {
-			label: 'Esquema: un sistema existente, una oportunidad nueva y un proyecto en marcha convergen en una decisión informada',
-			caption:
-				'Tres puntos de partida distintos (un sistema existente, una oportunidad nueva o un proyecto en marcha) terminan en la misma pregunta: qué decisión conviene tomar. Comparo las alternativas antes de recomendar una.',
-			existing: 'Sistema existente',
-			opportunity: 'Oportunidad nueva',
-			project: 'Proyecto en marcha',
-			compare: 'comparo',
-			decision: 'Decisión informada',
-		},
 		existing: {
 			label: 'Esquema: un problema pasa por un diagnóstico y llega a cinco alternativas equivalentes antes de la decisión',
 			caption:
@@ -417,6 +462,12 @@ export const es = {
 			{ label: 'Cómo trabajo', href: '/#como-trabajo' },
 			{ label: 'Preguntas frecuentes', href: '/#faq' },
 			{ label: 'Contacto', href: '/#contacto' },
+		],
+		company: { name: 'Stefanovich SpA', address: ['Badajoz 100, of 1014', 'Las Condes, Santiago de Chile'] },
+		legalLabel: 'Legal',
+		legal: [
+			{ label: 'Privacidad', href: '/privacidad' },
+			{ label: 'Términos', href: '/terminos' },
 		],
 		attributes: ['Riguroso', 'Intencional'],
 		tagline: 'Claridad antes que complejidad',

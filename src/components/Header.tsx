@@ -1,6 +1,5 @@
 import { CtaButton } from '@/components/CtaButton';
 import { LogoImage } from '@/components/Logo';
-import { ThemeToggle } from '@/components/ThemeToggle';
 import { es } from '@/i18n/es';
 import { CaretDownIcon } from '@phosphor-icons/react';
 import { cn } from '@/lib/utils';
@@ -123,15 +122,15 @@ function ServicesMenu({ pathname, current }: { pathname: string; current: Curren
 			{open && (
 				<div
 					id="menu-servicios"
-					className="absolute left-0 top-[calc(50%+var(--header-h)/2-2px)] z-(--z-menu) w-[22rem] border-2 border-t-0 border-line bg-page text-ink shadow-[0_16px_32px_-16px_rgba(16,19,17,0.3)]"
+					className="absolute left-0 top-[calc(50%+var(--header-h)/2-2px)] z-(--z-menu) w-[24rem] border-2 border-t-0 border-line bg-page text-ink shadow-[0_16px_32px_-16px_rgba(16,19,17,0.3)]"
 				>
 					<ul>
 						{services.map((service) => (
 							<li key={service.id} className="border-b border-line last:border-b-0">
 								<a href={service.path} aria-current={pathname === service.path ? 'page' : undefined} className={itemClass}>
-									<span className="font-display text-base font-bold leading-snug">{service.navLabel}</span>
-									<span className="label-mono text-xs text-muted transition-colors group-hover:text-page group-focus-visible:text-page">
-										{service.model}
+									<span className="font-display text-base font-bold leading-snug">{service.menuTitle}</span>
+									<span className="text-sm leading-snug text-muted transition-colors group-hover:text-page group-focus-visible:text-page">
+										{service.menuService}
 									</span>
 								</a>
 							</li>
@@ -146,7 +145,7 @@ function ServicesMenu({ pathname, current }: { pathname: string; current: Curren
 /** Mobile disclosure: the same three services, expanded inline under Servicios. */
 function MobileServices({ pathname, current, onNavigate }: { pathname: string; current: Current; onNavigate: () => void }) {
 	const [open, setOpen] = useState(pathname === SERVICES_HREF || pathname.startsWith(`${SERVICES_HREF}/`));
-	const subClass = 'block border-b border-line py-3 pl-4 text-base aria-[current]:text-link';
+	const subClass = 'flex flex-col gap-0.5 border-b border-line py-3 pl-4 aria-[current]:text-link';
 
 	return (
 		<div>
@@ -176,7 +175,8 @@ function MobileServices({ pathname, current, onNavigate }: { pathname: string; c
 								aria-current={pathname === service.path ? 'page' : undefined}
 								className={subClass}
 							>
-								{service.navLabel}
+								<span className="text-base font-semibold leading-snug">{service.menuTitle}</span>
+								<span className="text-sm leading-snug text-muted">{service.menuService}</span>
 							</a>
 						</li>
 					))}
@@ -258,7 +258,6 @@ export default function Header() {
 					</nav>
 
 					<div className="flex items-center gap-3">
-						<ThemeToggle className="max-xl:hidden" />
 						<CtaButton variant="compact" intent="other" location="header" className="hidden whitespace-nowrap sm:inline-flex">
 							{ctaLabel}
 						</CtaButton>
@@ -302,10 +301,6 @@ export default function Header() {
 								</a>
 							),
 						)}
-						<div className="flex items-center justify-between border-b border-line py-2">
-							<span className="label-mono text-base">{nav.themeLabel}</span>
-							<ThemeToggle />
-						</div>
 						<div className="mt-8 sm:hidden">
 							<CtaButton intent="other" location="menu" className="w-full" onClick={() => setMenuOpen(false)}>
 								{ctaLabel}

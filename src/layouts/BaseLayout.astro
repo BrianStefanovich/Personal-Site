@@ -56,7 +56,7 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
 		<Header client:load />
 		<div class="page-frame mt-(--header-h)">
 			<main id="contenido"><slot /></main>
-			<Footer />
+			<Footer client:visible />
 		</div>
 		<ContactDrawer client:load />
 		<script>
