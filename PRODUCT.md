@@ -54,7 +54,7 @@ Full brand system defined in [docs/manual_marca.md](docs/manual_marca.md); treat
 
 - Full page copy already drafted in Spanish: [docs/contenido_website.md](docs/contenido_website.md).
 - Creative/design direction already drafted: [docs/guia_website.md](docs/guia_website.md) (hero composition, animation timing, section-by-section intent).
-- The only real photo in use is [public/images/brian-portrait.webp](public/images/brian-portrait.webp) (portrait in the About section). The logo symbol lives in `src/components/logo-symbol-path.ts`.
+- Real photos in use: [public/images/hero-brian-1024.webp](public/images/hero-brian-1024.webp) (transparent cut-out standing on the hero floor; 640w variant alongside) and [public/images/brian-portrait.webp](public/images/brian-portrait.webp) (portrait in the About section). The logo symbol lives in `src/components/logo-symbol-path.ts`.
 - **Published cases are Kepler Coach and RollKall**, written only from what Brian's CV documents. Bavastro is held back in `es.home.casos.pending` until Brian confirms his exact role and the state of the system. Do not fabricate client details, decisions, metrics, or architecture diagrams for cases; diagrams on the site are labeled "Esquema ilustrativo".
 
 ## Product Principles

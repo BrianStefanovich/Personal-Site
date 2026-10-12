@@ -29,7 +29,7 @@ export const es = {
 		hero: {
 			eyebrow: 'Arquitectura y consultoría de software',
 			/** One entry per line so the two halves of the promise break cleanly at every width. */
-			headline: [['Tu ', { b: 'negocio' }, ' al mando.'], ['El software a tu favor.']] satisfies readonly Rich[],
+			headline: [['Tu ', { b: 'negocio' }, ' al mando.'], ['El ', { b: 'software' }, ' a tu favor.']] satisfies readonly Rich[],
 			subhead:
 				'Ayudo a decidir qué corregir, qué construir y cómo llevarlo adelante. Conecto las decisiones técnicas con tus objetivos de negocio y acompaño su ejecución.',
 			cta: 'Aclaremos tu próximo paso',
