@@ -13,6 +13,6 @@ const { service } = Astro.props;
 
 <BaseLayout title={service.meta.title} description={service.meta.description} canonicalPath={service.path}>
 	<ServiceDetail client:load service={service} />
-	<Faq client:visible id={`faq-${service.id}`} items={service.faq} headline={es.home.services.faqHeadline} />
+	<Faq client:visible id={`faq-${service.id}`} items={service.faq.items} headline={service.faq.headline} />
 	<ServiceClosing client:load service={service} />
 </BaseLayout>

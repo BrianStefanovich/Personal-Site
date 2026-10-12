@@ -101,7 +101,6 @@ export const es = {
 			getLabel: 'Qué obtienes',
 			notIncludedLabel: 'Qué no incluye',
 			caseLabel: 'Caso relacionado',
-			faqHeadline: 'Preguntas sobre este servicio',
 			relatedLabel: 'Otros servicios',
 			index: {
 				meta: {
@@ -150,16 +149,34 @@ export const es = {
 					cta: 'Evaluar mi sistema',
 					caseSlug: 'rollkall',
 					caseNote: 'Una modernización llevada de forma progresiva mientras el equipo seguía entregando funcionalidades.',
-					faq: [
-						{
-							q: '¿El diagnóstico me obliga a contratar la implementación?',
-							a: 'No. El diagnóstico y el plan deben servirte aunque otro proveedor ejecute los cambios. Cualquier acompañamiento o implementación posterior se acuerda por separado.',
-						},
-						{
-							q: '¿Trabajas con equipos existentes?',
-							a: 'Sí. Muchos de estos problemas no requieren reemplazar al equipo. Puedo trabajar junto a desarrolladores, líderes técnicos, CTOs, equipos de producto, fundadores y proveedores existentes.',
-						},
-					],
+					faq: {
+						headline: 'Recuperar el control empieza por entender tus opciones',
+						items: [
+							{
+								q: '¿Tendré que cambiar de sistema o de proveedor?',
+								a: [
+									'Eso se decide después del diagnóstico. Reviso qué funciona, qué provoca los problemas y qué alternativas tienes: corregir, conservar, modernizar o reemplazar.',
+									'Cada opción se compara por su costo, riesgo e impacto en la operación.',
+								],
+								highlight: 'Lo que ya funciona también merece conservarse.',
+							},
+							{
+								q: '¿Puedes trabajar con mi proveedor o equipo actual?',
+								a: [
+									'Sí. Puedo conversar con tu equipo y tus proveedores, revisar sus propuestas y facilitar que negocio y tecnología compartan una misma comprensión del problema.',
+									'Mi aporte es hacer claras las alternativas, las responsabilidades y los próximos pasos para que puedas decidir con fundamento.',
+								],
+							},
+							{
+								q: '¿Tengo que contratarte también para implementar los cambios?',
+								a: [
+									'No. Recibes un diagnóstico y un plan documentado que puedes llevar a tu equipo o a otro proveedor.',
+									'Si necesitas que acompañe la ejecución, acordamos esa etapa por separado.',
+								],
+								highlight: 'El plan queda en tu empresa. La decisión de cómo avanzar sigue siendo tuya.',
+							},
+						],
+					},
 				},
 				{
 					id: 'new-ventures',
@@ -198,12 +215,33 @@ export const es = {
 					cta: 'Definir qué validar',
 					caseSlug: 'kepler-coach',
 					caseNote: 'Muestra mi trabajo de arquitectura de una plataforma; no es un caso de validación de demanda.',
-					faq: [
-						{
-							q: '¿Puedes confirmar si existe mercado para una idea?',
-							a: 'Puedo ayudarte a identificar incertidumbres, diseñar pruebas y evaluar factibilidad técnica. La existencia de mercado requiere evidencia comercial (por ejemplo, conversaciones, pruebas de demanda o disposición a pagar), y una evaluación técnica no la reemplaza.',
-						},
-					],
+					faq: {
+						headline: 'Dale a tu idea una prueba concreta',
+						items: [
+							{
+								q: '¿Cómo sabremos si vale la pena invertir en mi idea?',
+								a: [
+									'Identificamos qué tendría que ser cierto para que el negocio funcione y diseñamos pruebas para contrastarlo: interés de clientes, disposición a pagar, viabilidad técnica o costos de operación.',
+									'Acordamos qué resultados justificarían continuar, ajustar o detenerse.',
+								],
+								highlight: 'Cada etapa debe darte razones para decidir la siguiente inversión.',
+							},
+							{
+								q: '¿Necesito desarrollar una aplicación completa para empezar?',
+								a: [
+									'No. Primero definimos qué necesitas aprender. A veces basta con una prueba manual o un prototipo sencillo; otras, hace falta desarrollar una primera versión funcional.',
+									'El alcance se concentra en lo necesario para poner a prueba la oportunidad con usuarios reales.',
+								],
+							},
+							{
+								q: '¿Qué ocurre si la prueba muestra que la idea necesita cambiar?',
+								a: [
+									'Revisamos lo aprendido y decidimos qué ajustar, qué volver a probar o si conviene detener la inversión.',
+									'Descubrir una limitación temprano permite replantear el proyecto antes de comprometer más recursos. Ese aprendizaje también es un resultado útil.',
+								],
+							},
+						],
+					},
 				},
 				{
 					id: 'fractional-architect',
@@ -243,16 +281,33 @@ export const es = {
 					caseSlug: 'innspiral',
 					caseNote:
 						'Muestra una dirección técnica externa con dedicación acordada, conectada con la operación que se quiere mejorar. El proyecto sigue en curso.',
-					faq: [
-						{
-							q: '¿También participas en el desarrollo?',
-							a: 'Sí. Dependiendo del problema puedo participar como consultor, arquitecto de software fraccional, líder técnico o directamente en el desarrollo. La modalidad viene después de entender qué necesita el proyecto.',
-						},
-						{
-							q: '¿Trabajas con equipos existentes?',
-							a: 'Sí. Muchos de estos problemas no requieren reemplazar al equipo. Puedo trabajar junto a desarrolladores, líderes técnicos, CTOs, equipos de producto, fundadores y proveedores existentes.',
-						},
-					],
+					faq: {
+						headline: 'Liderazgo técnico con un compromiso claro',
+						items: [
+							{
+								q: '¿Qué significa contratar un arquitecto fraccional?',
+								a: [
+									'Significa incorporar experiencia senior con una dedicación parcial acordada. Me integro al proyecto para asumir responsabilidades concretas de arquitectura y liderazgo técnico.',
+									'Antes de comenzar definimos las decisiones que delegas, mi disponibilidad, los entregables y cómo trabajaremos con tu equipo.',
+								],
+								highlight: 'Sabes con qué apoyo cuentas y para qué.',
+							},
+							{
+								q: '¿Puedes integrarte a un equipo que ya está trabajando?',
+								a: [
+									'Sí. Primero conozco el producto, las personas y las decisiones pendientes. Desde ahí, acuerdo con el equipo las prioridades, oriento la arquitectura y ayudo a resolver los obstáculos técnicos.',
+									'También puedo participar en conversaciones con negocio, proveedores o el cliente final para facilitar acuerdos y hacer explícitos los riesgos.',
+								],
+							},
+							{
+								q: '¿También participas en el desarrollo?',
+								a: [
+									'Sí, cuando el alcance lo requiere. Puedo implementar componentes, revisar código o acompañar al equipo en decisiones técnicas complejas.',
+									'Acordamos esa participación desde el inicio y confirmamos la capacidad de desarrollo necesaria. Mi dedicación se concentra donde puede aportar más al proyecto.',
+								],
+							},
+						],
+					},
 				},
 			],
 		},
@@ -355,31 +410,58 @@ export const es = {
 		},
 
 		faq: {
-			headline: 'Preguntas frecuentes',
-			featured: {
-				q: '¿Qué ocurre en la primera conversación?',
-				a: 'Durante unos 30 minutos conversamos sobre el contexto, quién decide, qué necesitas conseguir y qué evidencia o capacidad de ejecución existe. Evaluamos si puedo ayudarte y cuál podría ser el siguiente paso. Si el problema queda fuera de mi experiencia, te lo diré.',
-			},
+			headline: 'Antes de dar el siguiente paso',
+			intro: 'Respuestas claras para que sepas qué esperar al trabajar conmigo.',
 			items: [
 				{
-					q: '¿La primera conversación tiene costo?',
-					a: 'No. La primera conversación no tiene costo. No sustituye una consultoría, un diagnóstico ni una auditoría: su objetivo es obtener suficiente contexto para determinar si tiene sentido trabajar juntos.',
+					q: 'Tengo un problema, pero no sé qué servicio necesito. ¿Podemos hablar?',
+					a: ['Sí. Cuéntame qué está pasando, cómo afecta a tu negocio y qué necesitas conseguir. Yo te ayudo a ordenar el problema y evaluar qué tipo de apoyo tiene sentido.'],
+					highlight: 'Puedes llegar con preguntas. No necesitas traer un diagnóstico.',
 				},
 				{
-					q: '¿Tengo que saber qué servicio necesito?',
-					a: 'No. No espero que diagnostiques el problema antes de contactarme. Cuéntame qué está ocurriendo. A partir de ahí podemos determinar qué tipo de intervención tiene sentido.',
+					q: '¿Cómo es la primera conversación? ¿Tiene costo?',
+					a: [
+						'Es una conversación de unos 30 minutos, sin costo ni compromiso. Revisamos tu situación, la decisión que necesitas tomar y si mi experiencia puede ayudarte.',
+						'Si tiene sentido avanzar, acordamos qué información hace falta para preparar una propuesta. El diagnóstico técnico detallado corresponde a una etapa posterior, con alcance y precio definidos.',
+					],
 				},
 				{
-					q: '¿Cómo se contrata cada tipo de trabajo?',
-					a: 'Distingo el valor potencial de una oportunidad, lo que mi intervención puede influir de forma defendible y lo que la empresa puede realizar con su presupuesto, autoridad y capacidad de ejecución. Eso orienta la propuesta; el alcance y las dependencias sustentan el precio. El diagnóstico se cotiza a precio cerrado, la validación avanza por etapas y el liderazgo fraccional se acuerda con una mensualidad según dedicación, disponibilidad y responsabilidad.',
+					q: '¿Cómo sabré cuánto voy a invertir y qué recibiré?',
+					a: [
+						'Antes de comenzar, revisamos una propuesta con alcance, inversión, entregables y criterios de aceptación.',
+						'El diagnóstico tiene precio cerrado; la validación de una oportunidad se contrata por etapas; y el liderazgo técnico, mediante una mensualidad con dedicación y responsabilidades acordadas.',
+					],
+					highlight: 'Sabrás qué estás contratando antes de comprometerte.',
 				},
 				{
-					q: '¿Trabajas con una tecnología específica?',
-					a: 'No parto de una tecnología determinada. Tengo experiencia principalmente en ecosistemas .NET, JavaScript/TypeScript, React, Python, Node.js, SQL y plataformas cloud. La selección tecnológica depende del sistema, el equipo, las restricciones y el negocio.',
+					q: '¿Cómo sabré si el trabajo está avanzando?',
+					a: [
+						'Recibes reportes semanales y entregas a lo largo del proyecto. Desde el inicio acordamos hitos, métricas y criterios para validar el avance.',
+						'Además, documento las decisiones y organizo el conocimiento para que tu equipo pueda utilizarlo.',
+					],
+					highlight: 'La claridad llega durante el trabajo, desde las primeras entregas.',
 				},
 				{
-					q: '¿Trabajas de forma remota?',
-					a: 'Sí. Trabajo con empresas en Chile y con equipos internacionales de forma remota.',
+					q: '¿Trabajas a distancia o también visitas la empresa?',
+					a: [
+						'Trabajo de forma remota con empresas en Chile y equipos internacionales. Cuando aporta valor y es posible coordinarlo, visito tus instalaciones para observar la operación y conversar con las personas involucradas.',
+					],
+					highlight: 'Entender cómo se usa el software ayuda a entender qué necesita cambiar.',
+				},
+				{
+					q: '¿Podemos conversar sobre información confidencial?',
+					a: [
+						'Sí. Antes de compartir información sensible, acordamos su protección mediante un acuerdo de confidencialidad y definimos los accesos necesarios.',
+						'Para la primera conversación basta con describir el problema de forma general. Los detalles sensibles se revisan con los resguardos acordados.',
+					],
+				},
+				{
+					q: '¿Puedes ayudarme aunque usemos otra tecnología?',
+					a: [
+						'Mi especialidad está en .NET y Azure, y tengo experiencia con aplicaciones web, móviles e integraciones en distintos entornos.',
+						'Primero reviso tu sistema, tu equipo y tus objetivos. Si el desafío requiere una especialidad fuera de mi experiencia, te lo diré.',
+					],
+					highlight: 'La recomendación parte de lo que tu negocio necesita.',
 				},
 			],
 		},

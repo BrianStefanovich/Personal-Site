@@ -1,24 +1,38 @@
+import { CtaButton } from '@/components/CtaButton';
 import { Section } from '@/components/ui/Section';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { es } from '@/i18n/es';
 import { useState } from 'react';
 
-const { faq } = es.home;
-const homeItems = [faq.featured, ...faq.items];
+const { faq, hero } = es.home;
+
+interface FaqItem {
+	q: string;
+	/** One entry per paragraph. */
+	a: readonly string[];
+	/** A single memorable sentence that closes the answer. */
+	highlight?: string;
+}
 
 interface FaqProps {
 	/** Defaults to the general questions that block a first contact. */
-	items?: readonly { q: string; a: string }[];
+	items?: readonly FaqItem[];
 	headline?: string;
+	intro?: string;
+	/** Repeats the hero's booking CTA under the questions. */
+	showCta?: boolean;
 	id?: string;
 }
 
-export default function Faq({ items = homeItems, headline = faq.headline, id = 'faq' }: FaqProps) {
+export default function Faq({ items = faq.items, headline = faq.headline, intro, showCta = false, id = 'faq' }: FaqProps) {
 	const [openIndex, setOpenIndex] = useState<number | null>(0);
 
 	return (
 		<Section id={id} contentClassName="flex flex-col gap-10 md:gap-14">
-			<SectionHeading title={headline} />
+			<div className="flex flex-col gap-4">
+				<SectionHeading title={headline} />
+				{intro && <p className="text-lead max-w-[37.5rem]">{intro}</p>}
+			</div>
 
 			<ul className="border-t border-line">
 				{items.map((item, i) => {
@@ -43,13 +57,27 @@ export default function Faq({ items = homeItems, headline = faq.headline, id = '
 									</span>
 								</button>
 							</h3>
-							<div id={`${id}-panel-${i}`} role="region" aria-labelledby={`${id}-button-${i}`} hidden={!open} className="pb-7 md:pr-18">
-								<p className="text-body text-muted">{item.a}</p>
+							<div id={`${id}-panel-${i}`} role="region" aria-labelledby={`${id}-button-${i}`} hidden={!open} className="flex flex-col gap-3 pb-7 md:pr-18">
+								{item.a.map((paragraph) => (
+									<p key={paragraph} className="text-body text-muted">
+										{paragraph}
+									</p>
+								))}
+								{item.highlight && <p className="text-body font-display font-bold text-ink">{item.highlight}</p>}
 							</div>
 						</li>
 					);
 				})}
 			</ul>
+
+			{showCta && (
+				<div className="flex flex-col items-start gap-3">
+					<CtaButton intent="other" location="faq">
+						{hero.cta}
+					</CtaButton>
+					<p className="max-w-[34rem] text-sm leading-[1.5] text-muted">{hero.ctaNote}</p>
+				</div>
+			)}
 		</Section>
 	);
 }

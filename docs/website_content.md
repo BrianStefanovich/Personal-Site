@@ -307,6 +307,8 @@ I look for **the right decision for the problem, the constraints and the current
 
 # 11. Frequently asked questions
 
+> **Superseded:** the live FAQ copy lives in `src/i18n/es.ts` (`home.faq` and each service's `faq`). It follows three certainties: "I can talk without having everything figured out", "I'll know what I'm hiring" and "I keep control". Each answer resolves the doubt first, explains with something concrete, and may close with one memorable sentence. The home FAQ has seven questions and repeats the hero CTA below it; each service page has three. The questions below are the earlier draft.
+
 ### FAQ
 
 ## What happens in the first conversation?
