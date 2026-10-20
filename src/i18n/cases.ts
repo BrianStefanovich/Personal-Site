@@ -13,7 +13,6 @@ export interface CaseLogo {
 const logos: Record<string, CaseLogo> = {
 	rollkall: { src: '/images/logos/rollkall-white.svg', width: 427, height: 120, surface: 'dark', fit: 0.3 },
 	kepler: { src: '/images/logos/kepler-coach.png', width: 1000, height: 455, surface: 'light', fit: 0.62 },
-	innspiral: { src: '/images/logos/innspiral.svg', width: 282, height: 38, surface: 'light', fit: 0.15 },
 	csbyte: { src: '/images/logos/csbyte.png', width: 228, height: 59, surface: 'light', fit: 0.24 },
 	grumantech: { src: '/images/logos/grumantech.png', width: 484, height: 213, surface: 'light', fit: 0.5 },
 	vangwe: { src: '/images/logos/vangwe.svg', width: 137, height: 24, surface: 'light', fit: 0.16 },
@@ -92,7 +91,6 @@ export const workedWith: readonly { name: string; logo: CaseLogo }[] = [
 	{ name: 'Crunchloop', logo: logos.crunchloop },
 	{ name: 'RollKall', logo: logos.rollkall },
 	{ name: 'Kepler Coach', logo: logos.kepler },
-	{ name: 'INNSPIRAL', logo: logos.innspiral },
 	{ name: 'GlobalUY', logo: logos.globaluy },
 	{ name: 'CSBYTE', logo: logos.csbyte },
 	{ name: 'Vangwe', logo: logos.vangwe },

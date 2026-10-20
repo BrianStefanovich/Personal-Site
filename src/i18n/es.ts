@@ -278,9 +278,8 @@ export const es = {
 					],
 					intent: 'fractional',
 					cta: 'Conversar sobre liderazgo técnico',
-					caseSlug: 'innspiral',
-					caseNote:
-						'Muestra una dirección técnica externa con dedicación acordada, conectada con la operación que se quiere mejorar. El proyecto sigue en curso.',
+					caseSlug: null,
+					caseNote: '',
 					faq: {
 						headline: 'Liderazgo técnico con un compromiso claro',
 						items: [
@@ -395,11 +394,6 @@ export const es = {
 			mottoLines: ['Mi recomendación tiene que ayudarte a decidir.', 'Mi trabajo, a avanzar.'],
 			experienceTitle: 'Experiencia llevada a la práctica',
 			experience: [
-				{
-					slug: 'innspiral',
-					title: 'Dirección técnica para una operación de abastecimiento compleja',
-					body: 'En INNSPIRAL acompaño como arquitecto y líder técnico externo una solución de cotizaciones y abastecimiento para una constructora chilena. El proyecto sigue en curso.',
-				},
 				{
 					slug: 'kepler-coach',
 					title: 'Convertir un prototipo en una plataforma preparada para crecer',

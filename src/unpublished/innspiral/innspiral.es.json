@@ -1,0 +1,39 @@
+{
+  "_note": "NO PUBLICADO. Nada de esta carpeta se importa desde el sitio. Para publicarlo se requiere confirmación explícita de Brian; ver README.md en esta carpeta.",
+  "case": {
+    "id": "innspiral",
+    "company": "INNSPIRAL",
+    "logo": "innspiral",
+    "service": "Arquitecto fraccional",
+    "status": "Proyecto en curso",
+    "role": "Arquitectura y liderazgo técnico externo",
+    "title": "Liderazgo técnico para una operación de abastecimiento compleja",
+    "card": "Acompaño a INNSPIRAL en la arquitectura y el desarrollo de una solución de cotizaciones y abastecimiento para una constructora chilena, conectando decisiones técnicas y procesos de negocio.",
+    "story": [
+      "La coordinación de cotizaciones involucra solicitudes, proveedores, documentos, reglas de agrupación y decisiones de compra. Convertir ese recorrido en software exige comprender qué necesita resolver cada parte.",
+      "Trabajo con INNSPIRAL como arquitecto y líder técnico externo en una solución para una constructora chilena. Mi participación conecta el diseño de arquitectura con la planificación del desarrollo y la evolución de funcionalidades de captura, agrupación y seguimiento de cotizaciones.",
+      "El proyecto muestra cómo se incorpora dirección técnica senior con una dedicación acordada: decisiones fundamentadas, un equipo acompañado y un trabajo vinculado a la operación que se quiere mejorar. El desarrollo continúa; sus resultados operativos se documentarán por hitos."
+    ],
+    "takeaway": "La dirección técnica conecta el proceso de negocio con la ejecución.",
+    "cta": "Conversemos sobre el liderazgo de tu proyecto",
+    "home_priority": 1
+  },
+  "logo": {
+    "file": "innspiral.svg",
+    "publicPath": "/images/logos/innspiral.svg",
+    "width": 282,
+    "height": 38,
+    "surface": "light",
+    "fit": 0.15
+  },
+  "serviceFractional": {
+    "caseSlug": "innspiral",
+    "caseNote": "Muestra una dirección técnica externa con dedicación acordada, conectada con la operación que se quiere mejorar. El proyecto sigue en curso."
+  },
+  "aboutExperience": {
+    "slug": "innspiral",
+    "title": "Dirección técnica para una operación de abastecimiento compleja",
+    "body": "En INNSPIRAL acompaño como arquitecto y líder técnico externo una solución de cotizaciones y abastecimiento para una constructora chilena. El proyecto sigue en curso."
+  },
+  "workedWithLabel": "INNSPIRAL"
+}
