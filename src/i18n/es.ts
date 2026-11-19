@@ -102,6 +102,7 @@ export const es = {
 			notIncludedLabel: 'Qué no incluye',
 			entryOffers: {
 				title: 'Formas de empezar',
+				jump: 'Ver formas de empezar',
 				note: 'Agendar la primera reunión no implica contratar ni pagar el servicio.',
 				meeting: (minutes: number) => `Primera reunión sin costo · ${minutes} minutos`,
 			},
@@ -152,7 +153,7 @@ export const es = {
 							name: 'Inspección Exprés',
 							description:
 								'¿Tu sistema falla y nadie sabe por qué? En 5 días hábiles recibes una página con la causa probable, cuánto te cuesta al mes y qué pedirle a tu proveedor para corregirla.',
-							price: '6 UF + IVA',
+							price: { amount: '6 UF', terms: '+ IVA' },
 							cta: 'Agendar para revisar mi falla',
 						},
 						{
@@ -160,7 +161,7 @@ export const es = {
 							name: 'Segunda Opinión',
 							description:
 								'¿Tienes que aprobar una cotización o te dijeron que algo no se puede hacer? En 3 días hábiles recibes mi evaluación, las alternativas y tres preguntas para conversar con tu proveedor.',
-							price: '4 UF + IVA',
+							price: { amount: '4 UF', terms: '+ IVA' },
 							cta: 'Agendar para revisar lo que me propusieron',
 						},
 					],
@@ -236,7 +237,7 @@ export const es = {
 							name: 'El Plano',
 							description:
 								'¿Vale la pena construir tu idea? En una sesión de trabajo de 90 minutos evaluamos qué conviene construir, comprar o dejar para después. Recibes una página con mi recomendación y un rango de costo y plazo.',
-							price: '4 UF + IVA',
+							price: { amount: '4 UF', terms: '+ IVA' },
 							cta: 'Agendar para evaluar mi idea',
 							meetingNote: 'La sesión de trabajo de 90 minutos forma parte del servicio pagado',
 						},
@@ -312,7 +313,7 @@ export const es = {
 							name: 'Revisión Exprés',
 							description:
 								'¿Tienes una propuesta por presentar? Elige si quieres que revise la estimación de horas o la arquitectura. En 48 horas recibes una página con riesgos, ajustes concretos y tres preguntas para resolver con tu equipo.',
-							price: '6 UF + IVA por propuesta',
+							price: { amount: '6 UF', terms: '+ IVA por propuesta' },
 							cta: 'Agendar para conversar sobre mi propuesta',
 						},
 					],

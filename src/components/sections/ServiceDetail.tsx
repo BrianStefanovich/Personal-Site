@@ -52,13 +52,13 @@ function Bullets({ items }: { items: readonly string[] }) {
 /** A service page: who it is for, the one diagram that explains it, what is delivered, what is not, and one contextual next step. */
 export default function ServiceDetail({ service }: { service: Service }) {
 	const relatedCase = cases.items.find((item) => item.slug === service.caseSlug);
-	const entryOffers = <EntryOffers offers={service.offers} intent={service.intent} />;
 
 	return (
 		<>
 			<div hidden data-track-view="service_page_view" data-track-service={service.id} />
 
-			<Section className="surface-service-hero" contentClassName="relative flex flex-col gap-12 lg:gap-16">
+			{/* Shorter bottom padding lets the offers band show at the fold, so the visitor sees there is something to pick before scrolling. */}
+			<Section className="surface-service-hero pb-12! md:pb-14!" contentClassName="relative flex flex-col gap-12 lg:gap-16">
 				<HeroDecor />
 				<Breadcrumbs className="relative mb-0 md:mb-0" trail={[{ label: es.nav.links[0].label, href: '/services' }, { label: service.navLabel }]} />
 
@@ -69,9 +69,18 @@ export default function ServiceDetail({ service }: { service: Service }) {
 						<p className="text-lead">{service.lead}</p>
 						<p className="text-body max-w-[60ch] text-muted">{service.intro[0]}</p>
 						<div className="mt-2 flex flex-col gap-4">
-							<div>
+							<div className="flex flex-wrap items-center gap-x-8 gap-y-1">
 								<CtaButton intent={service.intent} location={`service-${service.id}`}>
 									{service.cta}
+								</CtaButton>
+								<CtaButton
+									variant="link"
+									href="#entry-offers"
+									data-track="offers_jump"
+									data-track-service={service.id}
+									data-track-location={`service-${service.id}`}
+								>
+									{services.entryOffers.jump}
 								</CtaButton>
 							</div>
 							<p className="max-w-[34rem] text-sm leading-[1.5] text-muted">{hero.microcopy}</p>
@@ -79,6 +88,8 @@ export default function ServiceDetail({ service }: { service: Service }) {
 					</div>
 				</div>
 			</Section>
+
+			<EntryOffers offers={service.offers} intent={service.intent} />
 
 			<Section contentClassName="grid gap-12 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-x-16">
 				<div className="flex flex-col gap-6">
@@ -94,7 +105,6 @@ export default function ServiceDetail({ service }: { service: Service }) {
 							<span className="font-bold text-consequence">{service.note.lead}</span> {service.note.body}
 						</p>
 					</div>
-					{service.id !== 'fractional-architect' && entryOffers}
 					<div className="flex flex-col gap-4">
 						<h2 className="label-mono text-sm font-medium text-muted">{services.notIncludedLabel}</h2>
 						<ul className="flex flex-col gap-3">
@@ -107,10 +117,6 @@ export default function ServiceDetail({ service }: { service: Service }) {
 					</div>
 				</div>
 			</Section>
-
-			{service.id === 'fractional-architect' && (
-				<Section contentClassName="max-w-[44rem]">{entryOffers}</Section>
-			)}
 
 			{relatedCase && (
 				<Section tone="inverse" className="py-6! md:py-8!">

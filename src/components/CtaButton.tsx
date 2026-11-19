@@ -54,7 +54,7 @@ export function CtaButton({ variant = 'primary', intent, offer, href, location, 
 			{...rest}
 		>
 			{children}
-			{variant === 'link' && <span aria-hidden="true">&nbsp;→</span>}
+			{variant === 'link' && <span aria-hidden="true">&nbsp;{href?.startsWith('#') ? '↓' : '→'}</span>}
 		</a>
 	);
 }
