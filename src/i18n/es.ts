@@ -161,7 +161,7 @@ export const es = {
 							name: 'Segunda Opinión',
 							description:
 								'¿Tienes que aprobar una cotización o te dijeron que algo no se puede hacer? En 3 días hábiles recibes mi evaluación, las alternativas y tres preguntas para conversar con tu proveedor.',
-							price: { amount: '4 UF', terms: '+ IVA' },
+							price: { amount: '5 UF', terms: '+ IVA' },
 							cta: 'Agendar para revisar lo que me propusieron',
 						},
 					],
