@@ -12,7 +12,7 @@ Primary: founders, business owners, and engineering leaders (CTOs, Tech Leads) i
 
 ## Product Purpose
 
-Personal consulting/architecture brand site for Brian Stefanovich (software engineer and Technical Leader). It is a single-page landing whose sole commercial goal is getting a qualified prospect to book a free 30-minute conversation. The page must earn three micro-conversions first: "this problem sounds like mine," "Brian seems to understand this kind of situation," and "I can talk to him without a high-pressure sales process."
+Personal consulting/architecture brand site for Brian Stefanovich (software engineer and Technical Leader). It is a single-page landing whose sole commercial goal is getting a qualified prospect to book a free 45-minute conversation. The page must earn three micro-conversions first: "this problem sounds like mine," "Brian seems to understand this kind of situation," and "I can talk to him without a high-pressure sales process."
 
 ## Positioning
 
@@ -62,7 +62,7 @@ Full brand system defined in [docs/brand_manual.md](docs/brand_manual.md); treat
 1. Diagnosis before prescription — never open with a solution; open with understanding the business, system, and constraints.
 2. Senior consultant, not a factory — every surface should read as judgment and trade-off reasoning, not a list of technologies or services.
 3. Explicit trade-offs over false certainty — alternatives, costs, and consequences are named, not hidden behind confidence.
-4. Low-risk first step — the entire page funnels toward one low-commitment action: a free 30-minute conversation.
+4. Low-risk first step — the entire page funnels toward one low-commitment action: a free 45-minute conversation.
 5. Claridad antes que complejidad — clarity is the brand's single differentiator; never trade it for cleverness or decoration.
 
 ## Accessibility & Inclusion

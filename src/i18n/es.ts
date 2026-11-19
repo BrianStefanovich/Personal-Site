@@ -37,7 +37,7 @@ export const es = {
 			subhead:
 				'Ayudo a decidir qué corregir, qué construir y cómo llevarlo adelante. Conecto las decisiones técnicas con tus objetivos de negocio y acompaño su ejecución.',
 			cta: 'Conversemos sobre tu proyecto',
-			ctaNote: 'Primera conversación de 30 minutos, sin costo ni compromiso.',
+			ctaNote: 'Primera conversación de 45 minutos, sin costo ni compromiso.',
 			secondaryLink: 'Ver cómo puedo ayudarte',
 			scenariosLabel: 'Tres situaciones en las que puedo ayudarte',
 			scenarios: [
@@ -460,7 +460,7 @@ export const es = {
 				{
 					q: '¿Cómo es la primera conversación? ¿Tiene costo?',
 					a: [
-						'Es una conversación de unos 30 minutos, sin costo ni compromiso. Revisamos tu situación, la decisión que necesitas tomar y si mi experiencia puede ayudarte.',
+						'Es una conversación de unos 45 minutos, sin costo ni compromiso. Revisamos tu situación, la decisión que necesitas tomar y si mi experiencia puede ayudarte.',
 						'Si tiene sentido avanzar, acordamos qué información hace falta para preparar una propuesta. El diagnóstico técnico detallado corresponde a una etapa posterior, con alcance y precio definidos.',
 					],
 				},
@@ -509,7 +509,7 @@ export const es = {
 			headline: 'Conversemos sobre la decisión que necesitas tomar',
 			lead: 'Cuéntame qué está pasando, qué necesitas conseguir y cuál es la principal decisión pendiente.',
 			intro:
-				'No necesitas saber qué servicio corresponde. En 30 minutos evaluaremos si puedo ayudarte y cuál podría ser el siguiente paso. Si el problema queda fuera de mi experiencia, te lo diré.',
+				'No necesitas saber qué servicio corresponde. En 45 minutos evaluaremos si puedo ayudarte y cuál podría ser el siguiente paso. Si el problema queda fuera de mi experiencia, te lo diré.',
 			cta: 'Hablemos',
 			emailLabel: 'O escríbeme directamente',
 			linkedinLabel: 'LinkedIn de Brian Stefanovich',
