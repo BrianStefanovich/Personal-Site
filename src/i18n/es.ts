@@ -100,6 +100,11 @@ export const es = {
 			workLabel: 'En qué trabajo',
 			getLabel: 'Qué obtienes',
 			notIncludedLabel: 'Qué no incluye',
+			entryOffers: {
+				title: 'Formas de empezar',
+				note: 'Agendar la primera reunión no implica contratar ni pagar el servicio.',
+				meeting: (minutes: number) => `Primera reunión sin costo · ${minutes} minutos`,
+			},
 			caseLabel: 'Caso relacionado',
 			relatedLabel: 'Otros servicios',
 			index: {
@@ -141,6 +146,24 @@ export const es = {
 						lead: 'No tienes que contratarme para ejecutar la recomendación.',
 						body: 'Puedes llevarla a tu equipo o a otro proveedor. Si quieres que acompañe o supervise técnicamente la ejecución, se define como una etapa independiente.',
 					},
+					offers: [
+						{
+							id: 'inspeccion-expres',
+							name: 'Inspección Exprés',
+							description:
+								'¿Tu sistema falla y nadie sabe por qué? En 5 días hábiles recibes una página con la causa probable, cuánto te cuesta al mes y qué pedirle a tu proveedor para corregirla.',
+							price: '6 UF + IVA',
+							cta: 'Agendar para revisar mi falla',
+						},
+						{
+							id: 'segunda-opinion',
+							name: 'Segunda Opinión',
+							description:
+								'¿Tienes que aprobar una cotización o te dijeron que algo no se puede hacer? En 3 días hábiles recibes mi evaluación, las alternativas y tres preguntas para conversar con tu proveedor.',
+							price: '4 UF + IVA',
+							cta: 'Agendar para revisar lo que me propusieron',
+						},
+					],
 					notIncluded: [
 						'Ejecutar la recomendación: cualquier implementación o acompañamiento posterior se acuerda por separado.',
 						'Una migración definida de antemano: ninguna se propone sin inspeccionar antes el sistema.',
@@ -207,6 +230,17 @@ export const es = {
 						lead: 'Una evaluación técnica, por sí sola, no demuestra que exista mercado.',
 						body: 'Mi criterio ayuda a evaluar factibilidad técnica y a diseñar cómo obtener evidencia comercial.',
 					},
+					offers: [
+						{
+							id: 'el-plano',
+							name: 'El Plano',
+							description:
+								'¿Vale la pena construir tu idea? En una sesión de trabajo de 90 minutos evaluamos qué conviene construir, comprar o dejar para después. Recibes una página con mi recomendación y un rango de costo y plazo.',
+							price: '4 UF + IVA',
+							cta: 'Agendar para evaluar mi idea',
+							meetingNote: 'La sesión de trabajo de 90 minutos forma parte del servicio pagado',
+						},
+					],
 					notIncluded: [
 						'Una prueba de que existe mercado: esa evidencia sale de los experimentos comerciales, no de una evaluación técnica.',
 						'Construir software por defecto: a veces la prueba adecuada es manual.',
@@ -272,6 +306,16 @@ export const es = {
 						lead: 'Cubre una brecha de liderazgo,',
 						body: 'no sustituye a las personas necesarias para desarrollar y entregar el software. Fraccional significa dedicación parcial y acotada, no un alcance abierto.',
 					},
+					offers: [
+						{
+							id: 'revision-expres',
+							name: 'Revisión Exprés',
+							description:
+								'¿Tienes una propuesta por presentar? Elige si quieres que revise la estimación de horas o la arquitectura. En 48 horas recibes una página con riesgos, ajustes concretos y tres preguntas para resolver con tu equipo.',
+							price: '6 UF + IVA por propuesta',
+							cta: 'Agendar para conversar sobre mi propuesta',
+						},
+					],
 					notIncluded: [
 						'Sustituir al equipo que desarrolla y entrega el software.',
 						'Un alcance abierto: fraccional significa dedicación parcial y acotada.',

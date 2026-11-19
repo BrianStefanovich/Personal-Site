@@ -1,4 +1,4 @@
-import { openContact, CAL_URL, type ContactIntent } from '@/lib/contact';
+import { openContact, CAL_URL, type ContactIntent, type OfferBooking } from '@/lib/contact';
 import { cn } from '@/lib/utils';
 import type { AnchorHTMLAttributes } from 'react';
 
@@ -6,6 +6,7 @@ interface CtaButtonProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, '
 	/** primary: hero and closing CTA. compact: header and service cards. outline: secondary action. link: mono text action. */
 	variant?: 'primary' | 'compact' | 'outline' | 'link';
 	intent?: ContactIntent;
+	offer?: OfferBooking;
 	href?: string;
 	/** Where the button sits on the page; reported with the click so conversions can be traced to a section. */
 	location?: string;
@@ -27,23 +28,27 @@ const variants = {
  * The page's single booking CTA: it opens the Cal.com booking popup directly, passing an intent, or follows an in-page or
  * internal link when `href` is given. Without JavaScript it goes straight to the public booking page.
  */
-export function CtaButton({ variant = 'primary', intent, href, location, className, children, onClick, ...rest }: CtaButtonProps) {
+export function CtaButton({ variant = 'primary', intent, offer, href, location, className, children, onClick, ...rest }: CtaButtonProps) {
 	const opensContact = !href;
 	return (
 		<a
-			href={href ?? CAL_URL}
+			href={href ?? offer?.url ?? CAL_URL}
 			onClick={(event) => {
-				if (opensContact) {
-					event.preventDefault();
-					openContact(intent ?? 'other');
-				}
 				onClick?.(event);
+				if (opensContact && !event.defaultPrevented && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey
+					&& openContact(intent, offer)) {
+					event.preventDefault();
+				}
 			}}
 			{...(opensContact && {
 				'aria-haspopup': 'dialog' as const,
 				'data-track': 'cta_click',
 				'data-track-location': location ?? 'page',
 				'data-track-intent': intent ?? 'other',
+				...(offer && {
+					'data-cal-config': JSON.stringify(offer.config),
+					'data-track-ticket': offer.config['metadata[ticket_id]'],
+				}),
 			})}
 			className={cn(base, variants[variant], className)}
 			{...rest}

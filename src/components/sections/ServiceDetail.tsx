@@ -1,5 +1,6 @@
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { CtaButton } from '@/components/CtaButton';
+import EntryOffers from '@/components/sections/EntryOffers';
 import { Section } from '@/components/ui/Section';
 import { es } from '@/i18n/es';
 import { ArrowUpRightIcon } from '@phosphor-icons/react';
@@ -51,6 +52,7 @@ function Bullets({ items }: { items: readonly string[] }) {
 /** A service page: who it is for, the one diagram that explains it, what is delivered, what is not, and one contextual next step. */
 export default function ServiceDetail({ service }: { service: Service }) {
 	const relatedCase = cases.items.find((item) => item.slug === service.caseSlug);
+	const entryOffers = <EntryOffers offers={service.offers} intent={service.intent} />;
 
 	return (
 		<>
@@ -92,6 +94,7 @@ export default function ServiceDetail({ service }: { service: Service }) {
 							<span className="font-bold text-consequence">{service.note.lead}</span> {service.note.body}
 						</p>
 					</div>
+					{service.id !== 'fractional-architect' && entryOffers}
 					<div className="flex flex-col gap-4">
 						<h2 className="label-mono text-sm font-medium text-muted">{services.notIncludedLabel}</h2>
 						<ul className="flex flex-col gap-3">
@@ -104,6 +107,10 @@ export default function ServiceDetail({ service }: { service: Service }) {
 					</div>
 				</div>
 			</Section>
+
+			{service.id === 'fractional-architect' && (
+				<Section contentClassName="max-w-[44rem]">{entryOffers}</Section>
+			)}
 
 			{relatedCase && (
 				<Section tone="inverse" className="py-6! md:py-8!">
